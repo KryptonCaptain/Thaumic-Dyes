@@ -1,0 +1,31 @@
+# Categories
+tc.research_category.DYES=Thaumic Dyes
+
+# Research
+tc.research_name.DYEDCRIM=Thaumaturge's Crimson Robes
+tc.research_text.DYEDCRIM=I've added my own tastes
+tc.research_page.TD.DC.1=I've recently encountered a group of cultists with quite appealing robes. Sadly their robes don't suit my needs, so after a bit of tinkering I have discovered a way to modify them for my own purposes. I feel that this discovery will extend to more things in the future, although I'm not sure what will come of this.
+
+tc.research_name.DYEDPRAETOR=Thaumic Praetor Armor
+tc.research_text.DYEDPRAETOR=I will show those praetors!
+tc.research_page.TD.DP.1=I had a fateful encounter with what seemed to be the cult's leader which ultimately ended with me acquiring his armor after his death. Using my research from before I have found a way to reinforce the armor with void metal which strangely enough allows me to channel vis easier and I believe there is some aspect in the armor that reacts with the void metal in this way. However I have been unable to figure out what causes the reaction.
+
+tc.research_name.DYEDFORTRESS=Enhanced Fortress Armor
+tc.research_text.DYEDFORTRESS=Now with salt and pepper
+tc.research_page.TD.DF.1=On my way to my warm and toasty home I bumped in to some skeletons luckily for me I had my thaumium armor on except I ran out of vis, so I pondered a bit and thought I could upholster the armor to reduce vis cost and with a long night of playing around I devised an amazing way to upgrade the thaumium fortress armor. Next time I will be able to obliterate those skeletons!
+
+# Items
+item.RobesHelmet.name=Cultist Hood
+item.RobesChestplate.name=Cultist Robe
+item.RobesLeggings.name=Cultist Leggings
+#
+item.RobesHelmet1.name=Fortress Helm
+item.RobesChestplate1.name=Fortress Cuirass
+item.RobesLeggings1.name=Fortress Thigh Guards
+#
+item.RobesHelmet2.name=Praetor Helm
+item.RobesChestplate2.name=Praetor Chestplate
+item.RobesLeggings2.name=Praetor Greaves
+#
+# Creative Tab
+itemGroup.TabTD=Thaumic Dyes
