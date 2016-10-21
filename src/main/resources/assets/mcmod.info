@@ -1,0 +1,16 @@
+[
+{
+  "modid": "TD",
+  "name": "Thaumic Dyes",
+  "description": "This mod adds in upgrades of thaumcraft armor!",
+  "version": "1.0",
+  "1.7.10": "1.7.10",
+  "url": "https://mods.curse.com/mc-mods/minecraft/251561-thaumic-dyes",
+  "updateUrl": "",
+  "authorList": ["EtsyTheDragon",Amerem],
+  "credits": "Azanor and D95 and all people who contributed to ideas!",
+  "logoFile": "logo.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]
