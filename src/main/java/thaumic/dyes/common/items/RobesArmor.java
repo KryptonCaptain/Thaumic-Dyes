@@ -154,52 +154,71 @@ public class RobesArmor extends ItemArmor implements IRepairable, IRunicArmor, I
    }
 
    @SideOnly(Side.CLIENT)
-   public boolean requiresMultipleRenderPasses() {
-      return true;
+   public boolean requiresMultipleRenderPasses()
+   {
+     return true;
    }
-
-   public static boolean hasColor() {
-      return true;
+   
+   public boolean hasColor(ItemStack par1ItemStack)
+   {
+     return true;
    }
-
-   public IIcon getIconFromDamageForRenderPass(int par1, int par2) {
-      return super.armorType == 2?this.iconLegsOver:(super.armorType == 1?this.iconChestOver:(par2 == 0?this.iconHelm:(super.armorType == 2?this.iconLegs:(super.armorType == 1?this.iconChest:this.iconBlank))));
+   
+  /* public IIcon getIconFromDamageForRenderPass(int par1, int par2)
+   {
+     return this.armorType == 2 
+    		 ? this.iconLegsOver : 
+    			 this.armorType == 1 
+    			 ? this.iconChestOver : 
+		 par2 == 0 ? this.iconHelm : 
+			 this.armorType == 2 
+			 ? this.iconLegs : 
+				 this.armorType == 1 
+				 ? this.iconChest : 
+					 this.iconBlank;
+   }*/
+   
+   public IIcon getIconFromDamageForRenderPass(int par1, int par2)
+   {
+     return this.armorType == 2 ? this.iconLegsOver : this.armorType == 1 ? this.iconChestOver : par2 == 0 ? this.iconHelm : this.armorType == 2 ? this.iconLegs : this.armorType == 1 ? this.iconChest : this.iconBlank;
    }
-
-   public int getColor(ItemStack par1ItemStack) {
-      NBTTagCompound nbttagcompound = par1ItemStack.getTagCompound();
-      if(nbttagcompound == null) {
-         return 16711680;
-      } else {
-         NBTTagCompound nbttagcompound1 = nbttagcompound.getCompoundTag("display");
-         return nbttagcompound1.hasKey("color")?nbttagcompound1.getInteger("color"):(nbttagcompound1 == null?6961280:6961280);
-      }
+   
+   public int getColor(ItemStack par1ItemStack)
+   {
+     NBTTagCompound nbttagcompound = par1ItemStack.getTagCompound();
+     if (nbttagcompound == null) {
+       return 10040115; //this is what controls default colour
+     }
+     NBTTagCompound nbttagcompound1 = nbttagcompound.getCompoundTag("display");
+     return nbttagcompound1.hasKey("color") ? nbttagcompound1.getInteger("color") : nbttagcompound1 == null ? 6961280 : 6961280; //not sure what these ones do
    }
-
-   public void removeColor(ItemStack par1ItemStack) {
-      NBTTagCompound nbttagcompound = par1ItemStack.getTagCompound();
-      if(nbttagcompound != null) {
-         NBTTagCompound nbttagcompound1 = nbttagcompound.getCompoundTag("display");
-         if(nbttagcompound1.hasKey("color")) {
-            nbttagcompound1.removeTag("color");
-         }
-      }
-
+   //reverting all these to TC void robe code also somehow fixed an issue with the dyeing recipe. not sure how, but it did
+   
+   public void removeColor(ItemStack par1ItemStack)
+   {
+     NBTTagCompound nbttagcompound = par1ItemStack.getTagCompound();
+     if (nbttagcompound != null)
+     {
+       NBTTagCompound nbttagcompound1 = nbttagcompound.getCompoundTag("display");
+       if (nbttagcompound1.hasKey("color")) {
+         nbttagcompound1.removeTag("color");
+       }
+     }
    }
-
-   public void func_82813_b(ItemStack par1ItemStack, int par2) {
-      NBTTagCompound nbttagcompound = par1ItemStack.getTagCompound();
-      if(nbttagcompound == null) {
-         nbttagcompound = new NBTTagCompound();
-         par1ItemStack.setTagCompound(nbttagcompound);
-      }
-
-      NBTTagCompound nbttagcompound1 = nbttagcompound.getCompoundTag("display");
-      if(!nbttagcompound.hasKey("display")) {
-         nbttagcompound.setTag("display", nbttagcompound1);
-      }
-
-      nbttagcompound1.setInteger("color", par2);
+   
+   public void func_82813_b(ItemStack par1ItemStack, int par2)
+   {
+     NBTTagCompound nbttagcompound = par1ItemStack.getTagCompound();
+     if (nbttagcompound == null)
+     {
+       nbttagcompound = new NBTTagCompound();
+       par1ItemStack.setTagCompound(nbttagcompound);
+     }
+     NBTTagCompound nbttagcompound1 = nbttagcompound.getCompoundTag("display");
+     if (!nbttagcompound.hasKey("display")) {
+       nbttagcompound.setTag("display", nbttagcompound1);
+     }
+     nbttagcompound1.setInteger("color", par2);
    }
 
    public ArmorProperties getProperties(EntityLivingBase player, ItemStack armor, DamageSource source, double damage, int slot) {
