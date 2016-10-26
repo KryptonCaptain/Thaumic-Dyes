@@ -230,7 +230,7 @@ public class ModelRobes
     setRotation(this.ShoulderplateTopL, 0.0F, 0.0F, -0.4363323F);
     
     this.ShoulderR = new ModelRenderer(this, 16, 45);
-    this.ShoulderR.mirror = true;
+    this.ShoulderR.mirror = true; //TODO
     this.ShoulderR.addBox(-3.5F, -2.5F, -2.5F, 5, 5, 5);
     
     this.ShoulderR.setTextureSize(128, 64);
@@ -259,7 +259,7 @@ public class ModelRobes
     this.ShoulderL.addBox(-1.5F, -2.5F, -2.5F, 5, 5, 5);
     
     this.ShoulderL.setTextureSize(128, 64);
-    this.ShoulderL.mirror = true;
+    this.ShoulderL.mirror = false; //TODO
     setRotation(this.ShoulderL, 0.0F, 0.0F, 0.0F);
     
     this.FrontclothR1 = new ModelRenderer(this, 108, 38);

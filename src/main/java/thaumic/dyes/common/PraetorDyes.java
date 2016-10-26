@@ -9,7 +9,7 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.world.World;
-import thaumic.dyes.common.items.RobesArmor2;
+import thaumic.dyes.common.items.PraetorArmor;
 
 public class PraetorDyes implements IRecipe {
    public boolean matches(InventoryCrafting par1InventoryCrafting, World par2World) {
@@ -21,7 +21,7 @@ public class PraetorDyes implements IRecipe {
          if(itemstack1 != null) {
             if(itemstack1.getItem() instanceof ItemArmor) {
                ItemArmor itemarmor = (ItemArmor)itemstack1.getItem();
-               if(!(itemarmor instanceof RobesArmor2) || itemstack != null) {
+               if(!(itemarmor instanceof PraetorArmor) || itemstack != null) {
                   return false;
                }
 
@@ -56,7 +56,7 @@ public class PraetorDyes implements IRecipe {
          if(var13 != null) {
             if(var13.getItem() instanceof ItemArmor) {
                itemarmor = (ItemArmor)var13.getItem();
-               if(!(itemarmor instanceof RobesArmor2) || itemstack != null) {
+               if(!(itemarmor instanceof PraetorArmor) || itemstack != null) {
                   return null;
                }
 

@@ -159,7 +159,7 @@ public class RobesArmor extends ItemArmor implements IRepairable, IRunicArmor, I
      return true;
    }
    
-   public boolean hasColor(ItemStack par1ItemStack)
+   public boolean hasColor(ItemStack par1ItemStack) //adding the ItemStack seems to change how dye recipe works/persists
    {
      return true;
    }

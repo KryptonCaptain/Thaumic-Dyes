@@ -32,7 +32,7 @@ public class ThaumicDyes {
       ItemHandler.registerToolMaterial();
       ItemHandler.defineItems();
       ItemHandler.registerItems();
-      TabTD.EtsyModInfo();
+
    }
 
    @EventHandler

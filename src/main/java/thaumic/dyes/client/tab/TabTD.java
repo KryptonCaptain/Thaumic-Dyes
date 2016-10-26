@@ -7,10 +7,8 @@ import thaumic.dyes.common.items.ItemHandler;
 public class TabTD {
    public static CreativeTabs TabTD = new CreativeTabs("TabTD") {
       public Item getTabIconItem() {
-         return ItemHandler.RobesHelmet;
+         return ItemHandler.itemChestCultistRobe;
       }
    };
 
-   public static void EtsyModInfo() {
-   }
 }

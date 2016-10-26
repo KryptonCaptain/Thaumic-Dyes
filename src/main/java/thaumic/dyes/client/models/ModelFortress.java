@@ -10,7 +10,7 @@ import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
 import org.lwjgl.opengl.GL11;
-import thaumic.dyes.common.items.RobesArmor1;
+import thaumic.dyes.common.items.FortressArmor;
 
 public class ModelFortress extends ModelBiped {
    ModelRenderer OrnamentL;
@@ -518,7 +518,7 @@ public class ModelFortress extends ModelBiped {
 
          for(int a = 1; a < 4; ++a) {
             ItemStack piece = ((EntityLivingBase)entity).getEquipmentInSlot(a + 1);
-            if(piece != null && piece.getItem() instanceof RobesArmor1) {
+            if(piece != null && piece.getItem() instanceof FortressArmor) {
                ++set;
                if(a == 3) {
                   if(piece.hasTagCompound() && piece.stackTagCompound.hasKey("mask")) {
