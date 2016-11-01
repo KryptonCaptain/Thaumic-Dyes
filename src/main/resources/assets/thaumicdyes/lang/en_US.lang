@@ -1,0 +1,55 @@
+durability * 11 for the helmet
+durability * 16 for the chestplate
+durability * 15 for the leggings
+durability * 13 for the boots
+
+
+add goggles for hood
+
+balance point of thaumium/iron for t1 armour
+metallum/praecantio/tutamen/pannus
+
+husk set can remain as is
+
+
+ItemResource
+0	alumentum
+1	nitor
+2	thaumium
+3	quicksilver
+4	tallow
+6	amber
+7	cloth
+8	vis filter
+9	knowledge frag
+10	mirrored glass
+11	tainted goo
+12	tendril
+13	jar label
+14	salis
+15	primal charm
+16	void metal
+17	void seed
+18	gold coin
+
+ItemShard
+0	air
+1	fire
+2	water
+3	earth
+4	ordo
+5	entropy
+6	balanced
+
+
+
+original for colour ref
+   public int getColor(ItemStack par1ItemStack) {
+      NBTTagCompound nbttagcompound = par1ItemStack.getTagCompound();
+      if(nbttagcompound == null) {
+         return 10040115; //<<<<
+      } else {
+         NBTTagCompound nbttagcompound1 = nbttagcompound.getCompoundTag("display");
+         return nbttagcompound1.hasKey("color")?nbttagcompound1.getInteger("color"):(nbttagcompound1 == null?6961280:6961280);
+      }
+   }
