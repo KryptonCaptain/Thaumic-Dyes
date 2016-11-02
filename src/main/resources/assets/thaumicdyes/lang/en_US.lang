@@ -1,32 +1,6 @@
-# Categories 
-tc.research_category.DYES=Thaumic Dyes 
- 
-# Research 
-tc.research_name.DYEDROBE=Thaumaturge's Crimson Robes 
-tc.research_text.DYEDROBE=Threads to dye for! 
-tc.research_page.TD.DC.1=The Crimson Cultists you've encountered have been rather hostile to your approach, however, you've found yourself enamoured with the robes their clerics wear. <BR>Sadly, the Crimson-styled robes don't suit your needs, so after some tinkering, you have discovered a way to modify them for your own purposes. <BR>You feel that this discovery will extend to more things in the future, although you're not sure what will come of it. 
- 
-tc.research_name.DYEDKNIGHT=Thaumaturge's Crimson Armor 
-tc.research_text.DYEDKNIGHT=Knights of the realm 
-tc.research_page.TD.DK.1=Crimson Knights are no friend of yours, but you've acquired quite the collection of their armor in numerous battles with them. Previously, you might have worn their armor as a trophy, but the recent discoveries you've made with void metal might provide the means to add your own touch to the armor.<BR>After strengthening the metal, and bleaching the cloth, you now have a pristine canvas to display your allegiances on in combat.  
- 
-tc.research_name.DYEDPRAETOR=Reinforced Praetor Armor 
-tc.research_text.DYEDPRAETOR=Paladins of fashion 
-tc.research_page.TD.DP.1=After a fateful encounter with a high ranking Crimson warrior, you have managed to obtain a set of their powerful armor. Due to the armor's exposure to strange arcane energies, it seems much more resistant to infusion of standard metals. <BR>However, it bonded with void metal faster than expected, and has adapted some of its unique traits. You will have to investigate how this armor was created at some point, as it seems beyond what you thought the Crimson Cult was capable of. 
- 
-tc.research_name.DYEDFORTRESS=Enhanced Fortress Armor 
-tc.research_text.DYEDFORTRESS=A bastion of style 
-tc.research_page.TD.DF.1=The Thaumium Fortress Armor was a crowning achievement of your magical metalworking skills, but you still feel there is room for improvement. Revelations regarding void metal have left you wondering if such a suit could be created from that dark material, but that might be beyond your skill for now. <BR>Infusing it into your existing armor is a step in the right direction, providing it with the regenerative properties of void metal, and hardening the thaumium plates. 
- 
-#Copied research 
-tc.research_name.TD.<string>= 
-tc.research_text.TD.<string>= 
-tc.research_name.TD.ARMORFORTRESS=Thaumium Fortress Armor 
-tc.research_text.TD.ARMORFORTRESS=Nothing is getting in 
-tc.research_name.TD.VOIDMETAL=Void metal 
-tc.research_text.TD.VOIDMETAL=Strange, it should feel cold... 
- 
- 
+# Creative Tab 
+itemGroup.TabTD=Thaumic Dyes
+
 # Items 
 item.CultistRobeHelm.name=Cultist Hood 
 item.CultistRobeChest.name=Cultist Robe 
@@ -43,5 +17,49 @@ item.CultistLeaderLegs.name=Reinforced Praetor Greaves
 item.CultistPlateHelm.name=Hardened Cultist Helmet 
 item.CultistPlateChest.name=Hardened Cultist Chestplate 
 item.CultistPlateLegs.name=Hardened Cultist Greaves 
-# Creative Tab 
-itemGroup.TabTD=Thaumic Dyes
+#
+item.InhabitedPlateHelm.name=Husk Helmet
+item.InhabitedPlateChest.name=Husk Chestplate
+item.InhabitedPlateLegs.name=Husk Greaves
+#
+item.IronFortressHelm.name=Iron Fortress Helmet 
+item.IronFortressChest.name=Iron Fortress Cuirass 
+item.IronFortressLegs.name=Iron Fortress Thigh Guards 
+
+
+# Categories 
+tc.research_category.DYES=Thaumic Dyes 
+ 
+# Research 
+tc.research_name.DYEDROBE=Thaumaturge's Crimson Robes 
+tc.research_text.DYEDROBE=Threads to dye for! 
+tc.research_page.TD.robe.1=The Crimson Cultists you've encountered have been rather hostile to your approach, however, you've found yourself enamoured with the robes their clerics wear. <BR>Sadly, the Crimson-styled robes don't suit your needs, so after some tinkering, you have discovered a way to modify them for your own purposes. <BR>You feel that this discovery will extend to more things in the future, although you're not sure what will come of it. 
+ 
+tc.research_name.DYEDKNIGHT=Thaumaturge's Crimson Armor 
+tc.research_text.DYEDKNIGHT=Knights of the realm 
+tc.research_page.TD.knight.1=Crimson Knights are no friend of yours, but you've acquired quite the collection of their armor in numerous battles with them. Previously, you might have worn their armor as a trophy, but the recent discoveries you've made with void metal might provide the means to add your own touch to the armor.<BR>After strengthening the metal, and bleaching the cloth, you now have a pristine canvas to display your allegiances on in combat.  
+ 
+tc.research_name.DYEDPRAETOR=Reinforced Praetor Armor 
+tc.research_text.DYEDPRAETOR=Paladins of fashion 
+tc.research_page.TD.praetor.1=After a fateful encounter with a high ranking Crimson warrior, you have managed to obtain a set of their powerful armor. Due to the armor's exposure to strange arcane energies, it seems much more resistant to infusion of standard metals. <BR>However, it bonded with void metal faster than expected, and has adapted some of its unique traits. You will have to investigate how this armor was created at some point, as it seems beyond what you thought the Crimson Cult was capable of. 
+ 
+tc.research_name.DYEDFORTRESS=Enhanced Fortress Armor 
+tc.research_text.DYEDFORTRESS=A bastion of style 
+tc.research_page.TD.fortress.1=The Thaumium Fortress Armor was a crowning achievement of your magical metalworking skills, but you still feel there is room for improvement. Revelations regarding void metal have left you wondering if such a suit could be created from that dark material, but that might be beyond your skill for now. <BR>Infusing it into your existing armor is a step in the right direction, providing it with the regenerative properties of void metal, and hardening the thaumium plates. 
+
+tc.research_name.INHABITEDPLATE=Husk Armor
+tc.research_text.INHABITEDPLATE=Eldritch security system
+tc.research_page.TD.husk.1=
+
+
+#Copied research 
+tc.research_name.TD.<string>= 
+tc.research_text.TD.<string>= 
+tc.research_name.TD.ARMORFORTRESS=Thaumium Fortress Armor 
+tc.research_text.TD.ARMORFORTRESS=Nothing is getting in 
+tc.research_name.TD.VOIDMETAL=Void metal 
+tc.research_text.TD.VOIDMETAL=Strange, it should feel cold... 
+tc.research_name.TD.THAUMIUM=Magical Metallurgy 
+tc.research_text.TD.THAUMIUM=Where metals meet magic
+tc.research_name.TD.OUTERARRIVAL=The Outer Lands 
+tc.research_text.TD.OUTERARRIVAL=We are not in Kansas anymore

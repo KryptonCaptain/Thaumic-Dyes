@@ -17,6 +17,7 @@ public class ItemHandler {
    public static ArmorMaterial PraetorArmor;
    public static ArmorMaterial FortressArmor;
    public static ArmorMaterial KnightArmor;
+   public static ArmorMaterial IronFortressArmor;
    
    public static Item itemHelmetCultistRobe;
    public static Item itemChestCultistRobe;
@@ -38,6 +39,10 @@ public class ItemHandler {
    public static Item itemHelmetInhabitedPlate;
    public static Item itemChestInhabitedPlate;
    public static Item itemLegsInhabitedPlate;
+   
+   public static Item itemHelmetIronFortress;
+   public static Item itemChestIronFortress;
+   public static Item itemLegsIronFortress;
 
 
    public static void registerItems() {
@@ -62,6 +67,10 @@ public class ItemHandler {
       GameRegistry.registerItem(itemChestInhabitedPlate, "InhabitedPlateChest");
       GameRegistry.registerItem(itemLegsInhabitedPlate, "InhabitedPlateLegs");
       
+      GameRegistry.registerItem(itemHelmetIronFortress, "IronFortressHelm");
+      GameRegistry.registerItem(itemChestIronFortress, "IronFortressChest");
+      GameRegistry.registerItem(itemLegsIronFortress, "IronFortressLegs");
+      
    }
 
    public static void defineItems() {
@@ -82,17 +91,23 @@ public class ItemHandler {
 	   itemChestCultistPlate = (new KnightArmor(KnightArmor, 4, 1)).setUnlocalizedName("CultistPlateChest").setCreativeTab(TabTD.TabTD);
 	   itemLegsCultistPlate = (new KnightArmor(KnightArmor, 4, 2)).setUnlocalizedName("CultistPlateLegs").setCreativeTab(TabTD.TabTD);
 	   
-	   itemHelmetInhabitedPlate = (new InhabitedKnightArmor(KnightArmor, 4, 0)).setUnlocalizedName("InhabitedPlateHelm").setCreativeTab(TabTD.TabTD);
-	   itemChestInhabitedPlate = (new InhabitedKnightArmor(KnightArmor, 4, 1)).setUnlocalizedName("InhabitedPlateChest").setCreativeTab(TabTD.TabTD);
-	   itemLegsInhabitedPlate = (new InhabitedKnightArmor(KnightArmor, 4, 2)).setUnlocalizedName("InhabitedPlateLegs").setCreativeTab(TabTD.TabTD);
+	   itemHelmetInhabitedPlate = (new InhabitedKnightArmor(ArmorMaterial.IRON, 4, 0)).setUnlocalizedName("InhabitedPlateHelm").setCreativeTab(TabTD.TabTD);
+	   itemChestInhabitedPlate = (new InhabitedKnightArmor(ArmorMaterial.IRON, 4, 1)).setUnlocalizedName("InhabitedPlateChest").setCreativeTab(TabTD.TabTD);
+	   itemLegsInhabitedPlate = (new InhabitedKnightArmor(ArmorMaterial.IRON, 4, 2)).setUnlocalizedName("InhabitedPlateLegs").setCreativeTab(TabTD.TabTD);
+	   
+	   itemHelmetIronFortress = (new IronFortressArmor(IronFortressArmor, 4, 0)).setUnlocalizedName("IronFortressHelm").setCreativeTab(TabTD.TabTD);
+	   itemChestIronFortress = (new IronFortressArmor(IronFortressArmor, 4, 1)).setUnlocalizedName("IronFortressChest").setCreativeTab(TabTD.TabTD);
+	   itemLegsIronFortress = (new IronFortressArmor(IronFortressArmor, 4, 2)).setUnlocalizedName("IronFortressLegs").setCreativeTab(TabTD.TabTD);
+      
 	   
    }
 
    public static void registerToolMaterial() {
-      RobesArmor = EnumHelper.addArmorMaterial("ROBESARMOR", 20, new int[]{2, 6, 5, 2}, 10);
-      PraetorArmor = EnumHelper.addArmorMaterial("ROBESARMOR", 40, new int[]{3, 8, 7, 2}, 18);
-      FortressArmor = EnumHelper.addArmorMaterial("ROBESARMOR", 50, new int[]{4, 8, 7, 4}, 18);
-      KnightArmor = EnumHelper.addArmorMaterial("ROBESARMOR", 20, new int[]{3, 7, 6, 3}, 10); 
+      RobesArmor = EnumHelper.addArmorMaterial("TD_ROBE", 20, new int[]{2, 6, 5, 1}, 15);
+      KnightArmor = EnumHelper.addArmorMaterial("TD_KNIGHT", 20, new int[]{3, 7, 6, 1}, 15); 
+      PraetorArmor = EnumHelper.addArmorMaterial("TD_PRAE", 45, new int[]{3, 7, 6, 1}, 30);
+      FortressArmor = EnumHelper.addArmorMaterial("TD_FORT", 45, new int[]{3, 7, 6, 1}, 30);
+      IronFortressArmor = EnumHelper.addArmorMaterial("TD_FORT", 25, new int[]{2, 6, 5, 2}, 12);
       
    }
 }

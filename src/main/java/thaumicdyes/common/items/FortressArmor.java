@@ -72,10 +72,10 @@ public class FortressArmor extends ItemFortressArmor implements IRepairable, IRu
    }
 
    public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack) {
-      return par2ItemStack.isItemEqual(ItemApi.getItem("itemResource", 16))?true:super.getIsRepairable(par1ItemStack, par2ItemStack);
+      return par2ItemStack.isItemEqual(ItemApi.getItem("itemResource", 2))?true:super.getIsRepairable(par1ItemStack, par2ItemStack);
    }
 
-   public void onUpdate(ItemStack stack, World world, Entity entity, int p_77663_4_, boolean p_77663_5_) {
+   /*public void onUpdate(ItemStack stack, World world, Entity entity, int p_77663_4_, boolean p_77663_5_) {
       super.onUpdate(stack, world, entity, p_77663_4_, p_77663_5_);
       if(!world.isRemote && stack.isItemDamaged() && entity.ticksExisted % 20 == 0 && entity instanceof EntityLivingBase) {
          stack.damageItem(-1, (EntityLivingBase)entity);
@@ -89,7 +89,7 @@ public class FortressArmor extends ItemFortressArmor implements IRepairable, IRu
          armor.damageItem(-1, player);
       }
 
-   }
+   }*/
 
    public int getRunicCharge(ItemStack itemstack) {
       return 0;

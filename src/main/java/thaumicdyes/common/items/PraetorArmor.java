@@ -29,7 +29,7 @@ import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.nodes.IRevealer;
 import thaumicdyes.client.models.ModelPraetor;
 
-public class PraetorArmor extends ItemArmor implements IRepairable, IRunicArmor, IVisDiscountGear, ISpecialArmor {
+public class PraetorArmor extends ItemArmor implements IRepairable, IRunicArmor, IVisDiscountGear/*, ISpecialArmor*/ {
    public IIcon iconHelm;
    public IIcon iconChest;
    public IIcon iconLegs;
@@ -66,9 +66,10 @@ public class PraetorArmor extends ItemArmor implements IRepairable, IRunicArmor,
    }
 
    public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack) {
-      return par2ItemStack.isItemEqual(ItemApi.getItem("itemResource", 16))?true:super.getIsRepairable(par1ItemStack, par2ItemStack);
+      return par2ItemStack.isItemEqual(ItemApi.getItem("itemResource", 2))?true:super.getIsRepairable(par1ItemStack, par2ItemStack);
    }
 
+   /*
    public void onUpdate(ItemStack stack, World world, Entity entity, int p_77663_4_, boolean p_77663_5_) {
       super.onUpdate(stack, world, entity, p_77663_4_, p_77663_5_);
       if(!world.isRemote && stack.isItemDamaged() && entity.ticksExisted % 20 == 0 && entity instanceof EntityLivingBase) {
@@ -83,7 +84,7 @@ public class PraetorArmor extends ItemArmor implements IRepairable, IRunicArmor,
          armor.damageItem(-1, player);
       }
 
-   }
+   }*/
 
    public int getRunicCharge(ItemStack itemstack) {
       return 0;
@@ -190,6 +191,7 @@ public class PraetorArmor extends ItemArmor implements IRepairable, IRunicArmor,
       nbttagcompound1.setInteger("color", par2);
    }
 
+   /*
    public ArmorProperties getProperties(EntityLivingBase player, ItemStack armor, DamageSource source, double damage, int slot) {
       byte priority = 0;
       double ratio = (double)super.damageReduceAmount / 25.0D;
@@ -206,7 +208,7 @@ public class PraetorArmor extends ItemArmor implements IRepairable, IRunicArmor,
 
    public int getArmorDisplay(EntityPlayer player, ItemStack armor, int slot) {
       return super.damageReduceAmount;
-   }
+   }*/
 
    public void damageArmor(EntityLivingBase entity, ItemStack stack, DamageSource source, int damage, int slot) {
       if(source != DamageSource.fall) {

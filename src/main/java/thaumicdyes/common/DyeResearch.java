@@ -35,7 +35,7 @@ public class DyeResearch {
       
       //Copy research nodes
       copy(ResearchCategories.getResearchList("ARTIFICE").research.get("ARMORFORTRESS"),"TD.ARMORFORTRESS","DYES",5,-4).setConcealed().setHidden().registerResearchItem();
-      copy(ResearchCategories.getResearchList("ELDRITCH").research.get("VOIDMETAL"),"TD.VOIDMETAL","DYES",0,-1).setConcealed().setHidden().registerResearchItem();
+      //copy(ResearchCategories.getResearchList("ELDRITCH").research.get("VOIDMETAL"),"TD.VOIDMETAL","DYES",0,-1).setConcealed().setHidden().registerResearchItem();
       copy(ResearchCategories.getResearchList("ELDRITCH").research.get("ENTEROUTER"),"TD.OUTERARRIVAL","DYES",-1,2).setConcealed().setHidden().registerResearchItem();
       copy(ResearchCategories.getResearchList("ALCHEMY").research.get("THAUMIUM"),"TD.THAUMIUM","DYES",0,-2).setConcealed().setHidden().registerResearchItem();
       
@@ -89,33 +89,33 @@ public class DyeResearch {
       //TODO Crimson Knight
       InfusionRecipe recipeKniHelm = new InfusionRecipe("DYEDKNIGHT",
 			   new ItemStack(ItemHandler.itemHelmetCultistPlate), 5, 
-			   (new AspectList()).add(Aspect.ELDRITCH, 16).add(Aspect.MAGIC, 8).add(Aspect.CLOTH, 8), 
+			   (new AspectList()).add(Aspect.ARMOR, 16).add(Aspect.MAGIC, 16).add(Aspect.CLOTH, 8).add(Aspect.METAL, 16),
 			   ItemApi.getItem("itemHelmetCultistPlate", 0), 
 			   new ItemStack[]{
 		   			ItemApi.getItem("itemResource", 14), 
-		   			ItemApi.getItem("itemResource", 16), 
-		   			ItemApi.getItem("itemResource", 16), 
-		   			ItemApi.getItem("itemResource", 16)});
+		   			ItemApi.getItem("itemResource", 2), 
+		   			ItemApi.getItem("itemResource", 7), 
+		   			ItemApi.getItem("itemResource", 2)});
       	
       InfusionRecipe recipeKniChest = new InfusionRecipe("DYEDKNIGHT",
 			   new ItemStack(ItemHandler.itemChestCultistPlate), 5, 
-			   (new AspectList()).add(Aspect.ELDRITCH, 16).add(Aspect.MAGIC, 8).add(Aspect.CLOTH, 8), 
+			   (new AspectList()).add(Aspect.ARMOR, 24).add(Aspect.MAGIC, 24).add(Aspect.CLOTH, 8).add(Aspect.METAL, 16),
 			   ItemApi.getItem("itemChestCultistPlate", 0), 
 			   new ItemStack[]{
 		   			ItemApi.getItem("itemResource", 14), 
-		   			ItemApi.getItem("itemResource", 16), 
-		   			ItemApi.getItem("itemResource", 16), 
-		   			ItemApi.getItem("itemResource", 16)});
+		   			ItemApi.getItem("itemResource", 2), 
+		   			ItemApi.getItem("itemResource", 7), 
+		   			ItemApi.getItem("itemResource", 2)});
  	   
       InfusionRecipe recipeKniLegs = new InfusionRecipe("DYEDKNIGHT",
 			   new ItemStack(ItemHandler.itemLegsCultistPlate), 5, 
-			   (new AspectList()).add(Aspect.ELDRITCH, 16).add(Aspect.MAGIC, 8).add(Aspect.CLOTH, 8), 
+			   (new AspectList()).add(Aspect.ARMOR, 20).add(Aspect.MAGIC, 20).add(Aspect.CLOTH, 8).add(Aspect.METAL, 16),
 			   ItemApi.getItem("itemLegsCultistPlate", 0), 
 			   new ItemStack[]{
 		   			ItemApi.getItem("itemResource", 14), 
-		   			ItemApi.getItem("itemResource", 16), 
-		   			ItemApi.getItem("itemResource", 16), 
-		   			ItemApi.getItem("itemResource", 16)});
+		   			ItemApi.getItem("itemResource", 2), 
+		   			ItemApi.getItem("itemResource", 7), 
+		   			ItemApi.getItem("itemResource", 2)});
       
       new ResearchItem("DYEDKNIGHT", "DYES", 
     		  (new AspectList()).add(Aspect.CLOTH, 4).add(Aspect.ARMOR, 4).add(Aspect.MAGIC, 4),
@@ -234,30 +234,30 @@ public class DyeResearch {
 			   (new AspectList()).add(Aspect.AURA, 16).add(Aspect.MAGIC, 8).add(Aspect.CRAFT, 16), 
 			   ItemApi.getItem("itemHelmetFortress", 0), 
 			   new ItemStack[]{
-				   ItemApi.getItem("itemResource", 14), 
-				   ItemApi.getItem("itemResource", 16), 
-				   ItemApi.getItem("itemResource", 16), 
-				   ItemApi.getItem("itemResource", 16)});
+				   ItemApi.getItem("itemResource", 2), 
+				   ItemApi.getItem("itemResource", 2), 
+				   ItemApi.getItem("itemResource", 7), 
+				   ItemApi.getItem("itemResource", 2)});
 			   
       InfusionRecipe recipeFortChest = new InfusionRecipe("DYEDFORTRESS", 
 			   new ItemStack(ItemHandler.itemChestFortress), 5, 
 			   (new AspectList()).add(Aspect.AURA, 16).add(Aspect.MAGIC, 8).add(Aspect.CRAFT, 16), 
 			   ItemApi.getItem("itemChestFortress", 0), 
 			   new ItemStack[]{
-		   			ItemApi.getItem("itemResource", 14), 
-		   			ItemApi.getItem("itemResource", 16), 
-		   			ItemApi.getItem("itemResource", 16), 
-		   			ItemApi.getItem("itemResource", 16)});
+		   			ItemApi.getItem("itemResource", 2), 
+		   			ItemApi.getItem("itemResource", 2), 
+		   			ItemApi.getItem("itemResource", 7), 
+		   			ItemApi.getItem("itemResource", 2)});
 	   
       InfusionRecipe recipeFortLegs = new InfusionRecipe("DYEDFORTRESS", 
 			   new ItemStack(ItemHandler.itemLegsFortress), 5, 
 			   (new AspectList()).add(Aspect.AURA, 16).add(Aspect.MAGIC, 8).add(Aspect.CRAFT, 16), 
 			   ItemApi.getItem("itemLegsFortress", 0), 
 			   new ItemStack[]{
-		   			ItemApi.getItem("itemResource", 14), 
-		   			ItemApi.getItem("itemResource", 16), 
-		   			ItemApi.getItem("itemResource", 16), 
-		   			ItemApi.getItem("itemResource", 16)});
+		   			ItemApi.getItem("itemResource", 2), 
+		   			ItemApi.getItem("itemResource", 2), 
+		   			ItemApi.getItem("itemResource", 7), 
+		   			ItemApi.getItem("itemResource", 2)});
 
       
       new ResearchItem("DYEDFORTRESS", "DYES", 
@@ -269,7 +269,7 @@ public class DyeResearch {
     				  new ResearchPage(recipeFortHelm), 
     				  new ResearchPage(recipeFortChest), 
     				  new ResearchPage(recipeFortLegs)})
-			  .setParents("TD.VOIDMETAL","TD.ARMORFORTRESS")
+			  .setParents("TD.THAUMIUM","TD.ARMORFORTRESS")
 			  .registerResearchItem();
       
       ThaumcraftApi.getCraftingRecipes().add(recipeFortHelm);
