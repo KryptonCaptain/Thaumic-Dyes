@@ -107,7 +107,7 @@ public class ItemHandler {
       KnightArmor = EnumHelper.addArmorMaterial("TD_KNIGHT", 20, new int[]{3, 7, 6, 1}, 15); 
       PraetorArmor = EnumHelper.addArmorMaterial("TD_PRAE", 45, new int[]{3, 7, 6, 1}, 30);
       FortressArmor = EnumHelper.addArmorMaterial("TD_FORT", 45, new int[]{3, 7, 6, 1}, 30);
-      IronFortressArmor = EnumHelper.addArmorMaterial("TD_FORT", 25, new int[]{2, 6, 5, 2}, 12);
+      IronFortressArmor = EnumHelper.addArmorMaterial("TD_IRONFORT", 25, new int[]{2, 6, 5, 2}, 12);
       
    }
 }

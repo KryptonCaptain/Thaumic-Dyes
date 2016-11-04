@@ -53,13 +53,13 @@ public class CultistRobes extends ItemArmor implements IRepairable, IRunicArmor,
 
    @SideOnly(Side.CLIENT)
    public void registerIcons(IIconRegister ir) {
-      this.iconHelm = ir.registerIcon("thaumicdyes:crimrobehelm");
+      this.iconHelm = ir.registerIcon("thaumicdyes:icon/crimrobehelm");
       this.iconHelmOver = ir.registerIcon("thaumicdyes:phelm");
       this.iconBlank = ir.registerIcon("thaumicdyes:blank");
       this.iconChest = ir.registerIcon("thaumicdyes:crimrobechestover");
       this.iconLegs = ir.registerIcon("thaumicdyes:crimrobelegsover");
-      this.iconChestOver = ir.registerIcon("thaumicdyes:crimrobechest");
-      this.iconLegsOver = ir.registerIcon("thaumicdyes:crimrobelegs");
+      this.iconChestOver = ir.registerIcon("thaumicdyes:icon/crimrobechest");
+      this.iconLegsOver = ir.registerIcon("thaumicdyes:icon/crimrobelegs");
    }
 
    public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
@@ -170,13 +170,13 @@ public class CultistRobes extends ItemArmor implements IRepairable, IRunicArmor,
    //TODO ICOOOOONNNNSSS
    public IIcon getIconFromDamageForRenderPass(int par1, int par2)
    {
-     return this.armorType == 2 ? this.iconLegsOver : this.armorType == 1 ? this.iconChestOver : par2 == 0 ? this.iconHelm : this.armorType == 2 ? this.iconLegs : this.armorType == 1 ? this.iconChest : this.iconBlank;
+     return this.armorType == 2 ? this.iconLegsOver : this.armorType == 1 ? this.iconChestOver : par2 == 0 ? this.iconHelm : this.armorType == 2 ? this.iconLegs : this.armorType == 1 ? this.iconChest : this.iconHelm;
    }
    
    public int getColor(ItemStack par1ItemStack) {
       NBTTagCompound nbttagcompound = par1ItemStack.getTagCompound();
       if(nbttagcompound == null) {
-         return 10040115;
+         return 16777215;
       } else {
          NBTTagCompound nbttagcompound1 = nbttagcompound.getCompoundTag("display");
          return nbttagcompound1.hasKey("color")?nbttagcompound1.getInteger("color"):(nbttagcompound1 == null?6961280:6961280);

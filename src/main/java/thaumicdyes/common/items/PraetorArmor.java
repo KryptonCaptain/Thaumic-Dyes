@@ -53,8 +53,8 @@ public class PraetorArmor extends ItemArmor implements IRepairable, IRunicArmor,
       this.iconBlank = ir.registerIcon("thaumicdyes:blank");
       this.iconChest = ir.registerIcon("thaumicdyes:pchestover");
       this.iconLegs = ir.registerIcon("thaumicdyes:plegsover");
-      this.iconChestOver = ir.registerIcon("thaumicdyes:pchest");
-      this.iconLegsOver = ir.registerIcon("thaumicdyes:plegs");
+      this.iconChestOver = ir.registerIcon("thaumicdyes:icon/pchest");
+      this.iconLegsOver = ir.registerIcon("thaumicdyes:icon/plegs");
    }
 
    public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
@@ -158,7 +158,7 @@ public class PraetorArmor extends ItemArmor implements IRepairable, IRunicArmor,
    public int getColor(ItemStack par1ItemStack) {
       NBTTagCompound nbttagcompound = par1ItemStack.getTagCompound();
       if(nbttagcompound == null) {
-         return 10040115;
+         return 16777215;
       } else {
          NBTTagCompound nbttagcompound1 = nbttagcompound.getCompoundTag("display");
          return nbttagcompound1.hasKey("color")?nbttagcompound1.getInteger("color"):(nbttagcompound1 == null?6961280:6961280);

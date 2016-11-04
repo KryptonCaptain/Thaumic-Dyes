@@ -176,6 +176,19 @@ public class IronFortressArmor extends ItemArmor implements IRepairable, IRunicA
     }
   }
   
+  //TODO mask lang file
+  
+  public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4)
+  {
+    if ((stack.hasTagCompound()) && (stack.stackTagCompound.hasKey("goggles"))) {
+      list.add(EnumChatFormatting.DARK_PURPLE + StatCollector.translateToLocal("item.ItemGoggles.name"));
+    }
+    if ((stack.hasTagCompound()) && (stack.stackTagCompound.hasKey("mask"))) {
+      list.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal(new StringBuilder().append("item.HelmetIronFortress.mask.").append(stack.stackTagCompound.getInteger("mask")).toString()));
+    }
+    super.addInformation(stack, player, list, par4);
+  }
+  
   public boolean showNodes(ItemStack itemstack, EntityLivingBase player)
   {
     return (itemstack.hasTagCompound()) && (itemstack.stackTagCompound.hasKey("goggles"));

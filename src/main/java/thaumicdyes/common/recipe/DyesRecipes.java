@@ -80,6 +80,6 @@ public class DyesRecipes {
       			new ItemStack(Items.milk_bucket), 
       			new ItemStack(Items.iron_ingot) })
 	  );
-      
+           
    }
 }

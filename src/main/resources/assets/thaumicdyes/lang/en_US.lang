@@ -22,9 +22,18 @@ item.InhabitedPlateHelm.name=Husk Helmet
 item.InhabitedPlateChest.name=Husk Chestplate
 item.InhabitedPlateLegs.name=Husk Greaves
 #
-item.IronFortressHelm.name=Iron Fortress Helmet 
+item.IronFortressHelm.name=Iron Fortress Helmet
 item.IronFortressChest.name=Iron Fortress Cuirass 
 item.IronFortressLegs.name=Iron Fortress Thigh Guards 
+#
+//item.ItemGoggles.name=Goggles of Revealing
+//item.HelmetFortress.mask.0=Grinning Devil
+//item.HelmetFortress.mask.1=Angry Ghost
+//item.HelmetFortress.mask.2=Sipping Fiend
+item.HelmetIronFortress.mask.0=Crusader
+item.HelmetIronFortress.mask.1=Angry Ghost
+item.HelmetIronFortress.mask.2=Warlord
+
 
 
 # Categories 
@@ -33,23 +42,37 @@ tc.research_category.DYES=Thaumic Dyes
 # Research 
 tc.research_name.DYEDROBE=Thaumaturge's Crimson Robes 
 tc.research_text.DYEDROBE=Threads to dye for! 
-tc.research_page.TD.robe.1=The Crimson Cultists you've encountered have been rather hostile to your approach, however, you've found yourself enamoured with the robes their clerics wear. <BR>Sadly, the Crimson-styled robes don't suit your needs, so after some tinkering, you have discovered a way to modify them for your own purposes. <BR>You feel that this discovery will extend to more things in the future, although you're not sure what will come of it. 
+tc.research_page.TD.robe.1=The Crimson Cultists you've encountered have been rather hostile to your approach, however, you've found yourself enamoured with the robes their clerics wear. <BR>Sadly, the Crimson-styled robes don't suit your needs, so after some tinkering, you have discovered a way to modify them for your own purposes. Adding a pinch of salis mundis, and some spare enchanted fabric you had lying around, has helped increase its ability to channel magic.<BR>You feel that this discovery will extend to more things in the future, although you're not sure what will come of it. 
  
 tc.research_name.DYEDKNIGHT=Thaumaturge's Crimson Armor 
 tc.research_text.DYEDKNIGHT=Knights of the realm 
-tc.research_page.TD.knight.1=Crimson Knights are no friend of yours, but you've acquired quite the collection of their armor in numerous battles with them. Previously, you might have worn their armor as a trophy, but the recent discoveries you've made with void metal might provide the means to add your own touch to the armor.<BR>After strengthening the metal, and bleaching the cloth, you now have a pristine canvas to display your allegiances on in combat.  
+tc.research_page.TD.knight.1=Crimson Knights are no friend of yours - but you've acquired quite the collection of their armor in numerous battles with them. Previously, you might have worn their armor as a trophy or warning, but now you feel it's time to add your own touch to the armor.<BR>After strengthening the metal, and weaving in some enchanted fabric, you now have a pristine canvas to display your allegiances on in combat. <BR>This armor can be dyed.
  
 tc.research_name.DYEDPRAETOR=Reinforced Praetor Armor 
 tc.research_text.DYEDPRAETOR=Paladins of fashion 
-tc.research_page.TD.praetor.1=After a fateful encounter with a high ranking Crimson warrior, you have managed to obtain a set of their powerful armor. Due to the armor's exposure to strange arcane energies, it seems much more resistant to infusion of standard metals. <BR>However, it bonded with void metal faster than expected, and has adapted some of its unique traits. You will have to investigate how this armor was created at some point, as it seems beyond what you thought the Crimson Cult was capable of. 
+tc.research_page.TD.praetor.1=After a fateful encounter with a high ranking Crimson warrior, you have managed to obtain a set of their powerful armor. Due to the armor's exposure to strange arcane energies, it seems much more accepting of magical enhancement than armor of lower ranked cultists. <BR>By infusing some thaumium into the armor, it has strengthened the metal plating, making it somewhat more durable than before, as well as making it much more accepting of enchantments. You will have to investigate how this armor was created at some point, as it seems beyond what you thought the Crimson Cult was capable of. <BR>This armor can be dyed.
  
 tc.research_name.DYEDFORTRESS=Enhanced Fortress Armor 
 tc.research_text.DYEDFORTRESS=A bastion of style 
-tc.research_page.TD.fortress.1=The Thaumium Fortress Armor was a crowning achievement of your magical metalworking skills, but you still feel there is room for improvement. Revelations regarding void metal have left you wondering if such a suit could be created from that dark material, but that might be beyond your skill for now. <BR>Infusing it into your existing armor is a step in the right direction, providing it with the regenerative properties of void metal, and hardening the thaumium plates. 
+tc.research_page.TD.fortress.1=The Thaumium Fortress Armor was a crowning achievement of your magical metalworking skills, but you still feel there is room for improvement. Specifically, room for more thaumium - because you can't have too much of a good thing, unless it becomes too heavy to wear. <BR>As expected, there was space to add a few more plates, and you've reinforced the bindings with some enchanted fabric. It should last a bit longer than before, and you think the added fabric might make it more workable for enchanting. <BR>This armor accepts faceplate upgrades, and can be dyed.
 
 tc.research_name.INHABITEDPLATE=Husk Armor
 tc.research_text.INHABITEDPLATE=Eldritch security system
-tc.research_page.TD.husk.1=
+tc.research_page.TD.husk.1=There are many strange beings roaming the outer lands, and the shambling corpses are no exception. Their body appears to be merely an empty shell, piloted by some kind of arthropod creature, which you find most unsettling. A fate you do not wish to share, should you fall in this maze. <BR>After many unsuccesful attempts, you have finally managed to capture and subdue one without the parasite destroying its host body - allowing you to remove its armor for a closer inspection. To your surprise, the armor bears a striking similarity to that of the Crimson Cult, or maybe an iteration that existed before you encountered them.
+tc.research_page.TD.husk.2=You wonder if perhaps they were part of a sect that did succeed in opening the portal and were sent through, or perhaps were a thaumaturge such as yourself, or maybe a warrior that was captured by some eldritch creature and brought back to this realm. You may never know.
+
+tc.research_name.IRONFORTRESS=Iron Fortress Armor
+tc.research_text.IRONFORTRESS=A mundane alternative
+tc.research_page.TD.ironFortress.1=The construction of your thaumium fortress armor was a great success, but has had you wondering about creating a set from alternate materials, as thaumium is expensive to produce in large quantaties. Taking the metallurgy back a step to iron has yielded some promising progress, however, due to the nature of iron, it is much more resistant to magical enhancement. <BR>Much like the thaumium version, it is designed as a set, and its protection increases with each additional piece worn. It also offers bonus protection against fire and explosions, but lacks the ability to lessen magical damage that the thaumium set has. 
+tc.research_page.TD.ironFortress.2=It is much more durable than a standard set of iron armor, and due to the craftwork involved, you find it to be slightly easier to enchant - but maybe that's just a side effect of it being constructed so close to all your arcane apparatus. However, due to the basic nature of the materials, you seem unable to add enhanced faceplates to it.
+
+tc.research_name.IRONHELMGOGGLES=Helm of Revealing
+tc.research_text.IRONHELMGOGGLES=Iron Fortress Helm Upgrade
+tc.research_page.TD.ironHelmGoggles.1=Much like with the Thaumium Fortress Armor, you have found a way to unceremoniously meld some Goggles of Revealing onto your helm. All the functionality, but none of the vis discounts. A pity.<BR>A helm can have this upgrade along with faceplates. 
+
+tc.research_name.IRONHELMAESTHETICS=Aesthetic Faceplates
+tc.research_text.IRONHELMAESTHETICS=Iron Fortress Helm Upgrade
+tc.research_page.TD.ironHelmFace.1=Since the Iron Fortress Armor lacks the innate magical properties provided by being made of thaumium, it is not possible to extend your existing faceplate designs to it. This doesn't mean it can't have faceplates in general - just not magical ones. <BR>Taking a spare Crimson Knight helm, you separate off the front section and work it on an anvil for a bit, before crafting it into your Fortress Helm. You expect a similar thing could be done with a Praetor helm.
 
 
 #Copied research 

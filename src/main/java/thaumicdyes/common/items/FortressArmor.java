@@ -55,12 +55,12 @@ public class FortressArmor extends ItemFortressArmor implements IRepairable, IRu
    @SideOnly(Side.CLIENT)
    public void registerIcons(IIconRegister ir) {
       this.iconHelm = ir.registerIcon("thaumicdyes:forthelmover");
-      this.iconHelmOver = ir.registerIcon("thaumicdyes:forthelm");
+      this.iconHelmOver = ir.registerIcon("thaumicdyes:icon/forthelm");
       this.iconBlank = ir.registerIcon("thaumicdyes:blank");
       this.iconChest = ir.registerIcon("thaumicdyes:fortchestover");
       this.iconLegs = ir.registerIcon("thaumicdyes:fortlegsover");
-      this.iconChestOver = ir.registerIcon("thaumicdyes:fortchest");
-      this.iconLegsOver = ir.registerIcon("thaumicdyes:fortlegs");
+      this.iconChestOver = ir.registerIcon("thaumicdyes:icon/fortchest");
+      this.iconLegsOver = ir.registerIcon("thaumicdyes:icon/fortlegs");
    }
 
    public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
@@ -177,7 +177,7 @@ public class FortressArmor extends ItemFortressArmor implements IRepairable, IRu
    public int getColor(ItemStack par1ItemStack) {
       NBTTagCompound nbttagcompound = par1ItemStack.getTagCompound();
       if(nbttagcompound == null) {
-         return 6961280;
+         return 16777215;
       } else {
          NBTTagCompound nbttagcompound1 = nbttagcompound.getCompoundTag("display");
          return nbttagcompound1.hasKey("color")?nbttagcompound1.getInteger("color"):(nbttagcompound1 == null?6961280:6961280);
