@@ -176,8 +176,7 @@ public class IronFortressArmor extends ItemArmor implements IRepairable, IRunicA
     }
   }
   
-  //TODO mask lang file
-  
+ 
   public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4)
   {
     if ((stack.hasTagCompound()) && (stack.stackTagCompound.hasKey("goggles"))) {

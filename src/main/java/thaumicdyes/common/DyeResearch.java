@@ -16,6 +16,7 @@ import thaumcraft.api.crafting.InfusionRecipe;
 import thaumcraft.api.research.ResearchCategories;
 import thaumcraft.api.research.ResearchItem;
 import thaumcraft.api.research.ResearchPage;
+import thaumcraft.common.config.ConfigItems;
 import thaumicdyes.common.items.ItemHandler;
 
 public class DyeResearch {
@@ -73,9 +74,10 @@ public class DyeResearch {
       new ResearchItem("DYEDROBE", "DYES", 
     		  (new AspectList()).add(Aspect.CLOTH, 4).add(Aspect.ARMOR, 4).add(Aspect.MAGIC, 4),
     		  -2, -3, 2, 
-    		  ItemApi.getItem("itemHelmetCultistRobe", 0))
+    		  new ItemStack(ItemHandler.itemHelmetCultistRobe, 0))
     		  .setPages(new ResearchPage[]{
     				  new ResearchPage("tc.research_page.TD.robe.1"), 
+    				  new ResearchPage("tc.research_page.TD.robe.2"), 
     				  new ResearchPage(recipeRobeHelm), 
     				  new ResearchPage(recipeRobeChest), 
     				  new ResearchPage(recipeRobeLegs)})
@@ -342,7 +344,7 @@ public class DyeResearch {
 			  new ItemStack(ItemHandler.itemHelmetIronFortress, 1, 32767), 
 		      new ItemStack[] { 
 		    	  new ItemStack(Items.slime_ball), 
-		    	  ItemApi.getItem("itemGoggles", 0) });
+		    	  new ItemStack(ConfigItems.itemGoggles, 1, 32767) });
 	  
 	InfusionRecipe recipeIronFortHelmKnight = new InfusionRecipe("IRONFORTRESS", new Object[] { "mask", new NBTTagInt(0) }, 2, 
 			  new AspectList().add(Aspect.CRAFT, 8).add(Aspect.ARMOR, 8), 

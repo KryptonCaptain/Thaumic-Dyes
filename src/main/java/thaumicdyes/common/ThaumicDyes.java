@@ -25,8 +25,6 @@ public class ThaumicDyes {
       serverSide = "thaumicdyes.client.proxy.ServerProxy"
    )
    public static ServerProxy proxy;
-   @Instance("TD")
-   public static ThaumicDyes modInstance;
 
    @EventHandler
    public static void PreLoad(FMLPreInitializationEvent PreEvent) {

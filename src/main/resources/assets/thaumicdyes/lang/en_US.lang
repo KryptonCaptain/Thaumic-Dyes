@@ -42,8 +42,9 @@ tc.research_category.DYES=Thaumic Dyes
 # Research 
 tc.research_name.DYEDROBE=Thaumaturge's Crimson Robes 
 tc.research_text.DYEDROBE=Threads to dye for! 
-tc.research_page.TD.robe.1=The Crimson Cultists you've encountered have been rather hostile to your approach, however, you've found yourself enamoured with the robes their clerics wear. <BR>Sadly, the Crimson-styled robes don't suit your needs, so after some tinkering, you have discovered a way to modify them for your own purposes. Adding a pinch of salis mundis, and some spare enchanted fabric you had lying around, has helped increase its ability to channel magic.<BR>You feel that this discovery will extend to more things in the future, although you're not sure what will come of it. 
- 
+tc.research_page.TD.robe.1=The Crimson Cultists you've encountered have been rather hostile to your approach, however, you've found yourself enamoured with the robes their clerics wear. <BR>Sadly, the Crimson-styled robes don't suit your needs, so after some tinkering, you have discovered a way to modify them for your own purposes. Adding a pinch of salis mundis, and some spare enchanted fabric you had lying around, has helped increase its ability to channel magic.
+tc.research_page.TD.robe.2=You feel that this discovery will extend to more things in the future, although you're not sure what will come of it. <BR>This armor can be dyed.
+
 tc.research_name.DYEDKNIGHT=Thaumaturge's Crimson Armor 
 tc.research_text.DYEDKNIGHT=Knights of the realm 
 tc.research_page.TD.knight.1=Crimson Knights are no friend of yours - but you've acquired quite the collection of their armor in numerous battles with them. Previously, you might have worn their armor as a trophy or warning, but now you feel it's time to add your own touch to the armor.<BR>After strengthening the metal, and weaving in some enchanted fabric, you now have a pristine canvas to display your allegiances on in combat. <BR>This armor can be dyed.
