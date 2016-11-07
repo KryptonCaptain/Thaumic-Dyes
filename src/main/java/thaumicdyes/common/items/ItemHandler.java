@@ -103,10 +103,10 @@ public class ItemHandler {
    }
 
    public static void registerToolMaterial() {
-      RobesArmor = EnumHelper.addArmorMaterial("TD_ROBE", 20, new int[]{2, 6, 5, 1}, 15);
-      KnightArmor = EnumHelper.addArmorMaterial("TD_KNIGHT", 20, new int[]{3, 7, 6, 1}, 15); 
-      PraetorArmor = EnumHelper.addArmorMaterial("TD_PRAE", 45, new int[]{3, 7, 6, 1}, 30);
-      FortressArmor = EnumHelper.addArmorMaterial("TD_FORT", 45, new int[]{3, 7, 6, 1}, 30);
+      RobesArmor = EnumHelper.addArmorMaterial("TD_ROBE", 20, new int[]{2, 6, 5, 1}, 18);
+      KnightArmor = EnumHelper.addArmorMaterial("TD_KNIGHT", 20, new int[]{3, 7, 6, 2}, 15); 
+      PraetorArmor = EnumHelper.addArmorMaterial("TD_PRAE", 45, new int[]{3, 7, 6, 2}, 30);
+      FortressArmor = EnumHelper.addArmorMaterial("TD_FORT", 45, new int[]{3, 7, 6, 2}, 25);
       IronFortressArmor = EnumHelper.addArmorMaterial("TD_IRONFORT", 25, new int[]{2, 6, 5, 2}, 12);
       
    }
