@@ -31,7 +31,7 @@ item.IronFortressLegs.name=Iron Fortress Thigh Guards
 //item.HelmetFortress.mask.1=Angry Ghost
 //item.HelmetFortress.mask.2=Sipping Fiend
 item.HelmetIronFortress.mask.0=Crusader
-item.HelmetIronFortress.mask.1=Angry Ghost
+item.HelmetIronFortress.mask.1=Champion
 item.HelmetIronFortress.mask.2=Warlord
 
 
@@ -74,6 +74,10 @@ tc.research_page.TD.ironHelmGoggles.1=Much like with the Thaumium Fortress Armor
 tc.research_name.IRONHELMAESTHETICS=Aesthetic Faceplates
 tc.research_text.IRONHELMAESTHETICS=Iron Fortress Helm Upgrade
 tc.research_page.TD.ironHelmFace.1=Since the Iron Fortress Armor lacks the innate magical properties provided by being made of thaumium, it is not possible to extend your existing faceplate designs to it. This doesn't mean it can't have faceplates in general - just not magical ones. <BR>Taking a spare Crimson Knight helm, you separate off the front section and work it on an anvil for a bit, before crafting it into your Fortress Helm. You expect a similar thing could be done with a Praetor helm.
+
+tc.research_name.IRONHELMHUSK=Restored Husk Faceplate
+tc.research_text.IRONHELMHUSK=Iron Fortress Helm Upgrade
+tc.research_page.TD.ironHelmFace.2=Your studies into the armor the husks in the Outer Lands wear have yielded some clues about what their armor may have looked like before it was worn away by time and strange magics. Expanding on your existing collection of faceplate designs, the restored helmet's striking gold patterning are a unique addition to your armor. <BR>Some ancient energies still leech from under its new coating, but you're sure it's nothing to worry about.
 
 
 #Copied research 

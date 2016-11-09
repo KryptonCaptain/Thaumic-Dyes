@@ -46,7 +46,7 @@ public class DyeResearch {
 			   (new AspectList()).add(Aspect.ARMOR, 8).add(Aspect.MAGIC, 16).add(Aspect.CLOTH, 16).add(Aspect.METAL, 8), 
 			   ItemApi.getItem("itemHelmetCultistRobe", 0), 
 			   new ItemStack[]{
-		   			ItemApi.getItem("itemGoggles", 0),
+		   			ItemApi.getItem("itemResource", 14),
 		   			ItemApi.getItem("itemResource", 7), 
 		   			ItemApi.getItem("itemResource", 2), 
 		   			ItemApi.getItem("itemResource", 7)});
@@ -353,14 +353,13 @@ public class DyeResearch {
 		    	  new ItemStack(Items.slime_ball), 
 		    	  ItemApi.getItem("itemHelmetCultistPlate", 0) });
 	  
-	InfusionRecipe recipeIronFortHelmPraetor = new InfusionRecipe("IRONFORTRESS", new Object[] { "mask", new NBTTagInt(2) }, 2, 
+	InfusionRecipe recipeIronFortHelmPraetor = new InfusionRecipe("IRONFORTRESS", new Object[] { "mask", new NBTTagInt(1) }, 2, 
 			  new AspectList().add(Aspect.CRAFT, 8).add(Aspect.ARMOR, 8), 
 			  new ItemStack(ItemHandler.itemHelmetIronFortress, 1, 32767), 
 		      new ItemStack[] { 
 		    	  new ItemStack(Items.slime_ball), 
 		    	  ItemApi.getItem("itemHelmetCultistLeaderPlate", 0) });
-	
-	
+		
 	new ResearchItem("IRONHELMGOGGLES", "DYES", 
 			new AspectList().add(Aspect.SENSES, 5).add(Aspect.AURA, 3).add(Aspect.ARMOR, 3), 
 			2, -1, 2, 
@@ -384,9 +383,33 @@ public class DyeResearch {
 			  .setSecondary()
 			  .registerResearchItem();
 	
+	
+	
+	InfusionRecipe recipeIronFortHelmHusk = new InfusionRecipe("IRONFORTRESS", new Object[] { "mask", new NBTTagInt(2) }, 2, 
+			  new AspectList().add(Aspect.CRAFT, 8).add(Aspect.ARMOR, 8).add(Aspect.ELDRITCH, 4).add(Aspect.EXCHANGE, 4), 
+			  new ItemStack(ItemHandler.itemHelmetIronFortress, 1, 32767), 
+		      new ItemStack[] { 
+		    	  new ItemStack(Items.slime_ball), 
+		    	  ItemApi.getItem("itemShard", 4),
+		    	  new ItemStack(ItemHandler.itemHelmetInhabitedPlate, 0),
+		    	  new ItemStack(Items.gold_ingot)});
+	
+	new ResearchItem("IRONHELMHUSK", "DYES", 
+			new AspectList().add(Aspect.CRAFT, 5).add(Aspect.ARMOR, 3).add(Aspect.ELDRITCH, 2), 
+			3, 1, 2, 
+			new ResourceLocation("thaumicdyes:textures/items/icon/shinyhuskplatehelm.png"))
+      		  .setPages(new ResearchPage[]{
+    				  new ResearchPage("tc.research_page.TD.ironHelmFace.2"),
+     				  new ResearchPage(recipeIronFortHelmHusk)})
+			  .setParents("IRONFORTRESS")
+			  .setParentsHidden("INHABITEDPLATE", "IRONHELMAESTHETICS")
+			  .setSecondary()
+			  .registerResearchItem();
+	
 	ThaumcraftApi.getCraftingRecipes().add(recipeIronFortHelmGoggles);
 	ThaumcraftApi.getCraftingRecipes().add(recipeIronFortHelmKnight);
 	ThaumcraftApi.getCraftingRecipes().add(recipeIronFortHelmPraetor);
+	ThaumcraftApi.getCraftingRecipes().add(recipeIronFortHelmHusk);
       
    }
 
