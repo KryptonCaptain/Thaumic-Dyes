@@ -23,7 +23,11 @@ import thaumicdyes.common.items.ItemHandler;
 public class DyesRecipes {
 
    public static void initRecipes() {
-      RecipeSorter.register("forge:voidrobearmordye", RobeDyes.class, Category.SHAPELESS, "after:forge:robearmordye");
+	   
+      RecipeSorter.register("forge:TDrobearmordye", RobeDyes.class, Category.SHAPELESS, "after:forge:robearmordye");
+      RecipeSorter.register("forge:TDfortressarmordye", FortressDyes.class, Category.SHAPELESS, "after:forge:robearmordye");
+      RecipeSorter.register("forge:TDpraetorarmordye", PraetorDyes.class, Category.SHAPELESS, "after:forge:robearmordye");
+      RecipeSorter.register("forge:TDknightarmordye", KnightDyes.class, Category.SHAPELESS, "after:forge:robearmordye");
       
       GameRegistry.addRecipe(new RobeDyes());
       GameRegistry.addRecipe(new FortressDyes());

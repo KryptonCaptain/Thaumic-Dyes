@@ -33,7 +33,7 @@ import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.nodes.IRevealer;
 import thaumicdyes.client.models.ModelRobes;
 
-public class CultistRobes extends ItemArmor implements IRepairable, IRunicArmor, IVisDiscountGear, IGoggles, IRevealer/*, ISpecialArmor*/, IWarpingGear {
+public class CultistRobes extends ItemArmor implements IRepairable, IRunicArmor, IVisDiscountGear, /*IGoggles, IRevealer, ISpecialArmor,*/ IWarpingGear {
    
    public IIcon iconHelm;
    public IIcon iconChest;
@@ -100,6 +100,7 @@ public class CultistRobes extends ItemArmor implements IRepairable, IRunicArmor,
       return 0;
    }
 
+   /*
    public boolean showNodes(ItemStack itemstack, EntityLivingBase player) {
       int type = ((ItemArmor)itemstack.getItem()).armorType;
       return type == 0;
@@ -108,10 +109,10 @@ public class CultistRobes extends ItemArmor implements IRepairable, IRunicArmor,
    public boolean showIngamePopups(ItemStack itemstack, EntityLivingBase player) {
       int type = ((ItemArmor)itemstack.getItem()).armorType;
       return type == 0;
-   }
+   }*/
 
    public int getVisDiscount(ItemStack stack, EntityPlayer player, Aspect aspect) {
-      return 3;
+      return 2;
    }
 
    @SideOnly(Side.CLIENT)
@@ -228,12 +229,7 @@ public class CultistRobes extends ItemArmor implements IRepairable, IRunicArmor,
       return super.damageReduceAmount;
    }*/
 
-   public void damageArmor(EntityLivingBase entity, ItemStack stack, DamageSource source, int damage, int slot) {
-      if(source != DamageSource.fall) {
-         stack.damageItem(damage, entity);
-      }
 
-   }
 
    public boolean onItemUseFirst(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side, float hitX, float hitY, float hitZ) {
       if(!world.isRemote && world.getBlock(x, y, z) == Blocks.cauldron && world.getBlockMetadata(x, y, z) > 0) {
@@ -247,6 +243,6 @@ public class CultistRobes extends ItemArmor implements IRepairable, IRunicArmor,
    }
 
    public int getWarp(ItemStack itemstack, EntityPlayer player) {
-      return 2;
+      return 1;
    }
 }

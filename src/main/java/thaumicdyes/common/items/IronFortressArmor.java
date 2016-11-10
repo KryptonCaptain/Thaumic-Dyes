@@ -27,12 +27,13 @@ import net.minecraftforge.common.ISpecialArmor.ArmorProperties;
 import thaumcraft.api.IGoggles;
 import thaumcraft.api.IRepairable;
 import thaumcraft.api.IRunicArmor;
+import thaumcraft.api.IWarpingGear;
 import thaumcraft.api.nodes.IRevealer;
 import thaumcraft.common.items.armor.ItemFortressArmor;
 import thaumicdyes.client.models.ModelIronFortress;
 
 
-public class IronFortressArmor extends ItemArmor implements IRepairable, IRunicArmor, ISpecialArmor, IGoggles, IRevealer
+public class IronFortressArmor extends ItemArmor implements IRepairable, IRunicArmor, ISpecialArmor, IGoggles, IRevealer, IWarpingGear
 {
   public IIcon iconHelm;
   public IIcon iconChest;
@@ -197,4 +198,12 @@ public class IronFortressArmor extends ItemArmor implements IRepairable, IRunicA
   {
     return (itemstack.hasTagCompound()) && (itemstack.stackTagCompound.hasKey("goggles"));
   }
+  
+  public int getWarp(ItemStack stack, EntityPlayer player) {
+	  if ((stack.hasTagCompound()) && (stack.stackTagCompound.hasKey("mask")) && (stack.stackTagCompound.getInteger("mask") == 2)) {
+		  return 1;
+	  }
+	  return 0;
+   }
+  
 }
