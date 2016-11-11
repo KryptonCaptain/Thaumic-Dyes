@@ -28,7 +28,7 @@ public class RobeDyes implements IRecipe {
                itemstack = itemstack1;
             } else {
                if(itemstack1.getItem() != Items.dye) {
-                  return true;
+                  return false;
                }
 
                arraylist.add(itemstack1);
