@@ -100,7 +100,7 @@ public class DyeResearch {
 					"SHS",
 					"   ",
 					'H',new ItemStack(ItemHandler.itemHelmetIronFortress),
-					'S',new ItemStack(ConfigItems.itemShard, 5),
+					'S',new ItemStack(ConfigItems.itemShard, 1, 5),
 					'B',new ItemStack(Items.blaze_powder)});
 	   
 	   InfusionRecipe recipeRangerChest = new InfusionRecipe("DYEDRANGER", 
@@ -151,6 +151,12 @@ public class DyeResearch {
     		  .setParents("DYEDROBE")
     		  .setParentsHidden("IRONFORTRESS")
     		  .registerResearchItem();
+      
+      ThaumcraftApi.getCraftingRecipes().add(recipeRangerHelm);
+      ThaumcraftApi.getCraftingRecipes().add(recipeRangerChest);
+      ThaumcraftApi.getCraftingRecipes().add(recipeRangerLegs);
+      ThaumcraftApi.getCraftingRecipes().add(recipeRangerHelmGoggles);
+      ThaumcraftApi.getCraftingRecipes().add(recipeRangerHelmPlate);
 	      
       //TODO Crimson Knight
       InfusionRecipe recipeKniHelm = new InfusionRecipe("DYEDKNIGHT",
