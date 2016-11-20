@@ -37,7 +37,7 @@ public class DyesRecipes {
       RecipeSorter.register("forge:TDfortressarmordye", FortressDyes.class, Category.SHAPELESS, "after:forge:TDrobearmordye");
       RecipeSorter.register("forge:TDpraetorarmordye", PraetorDyes.class, Category.SHAPELESS, "after:forge:TDrobearmordye");
       RecipeSorter.register("forge:TDknightarmordye", KnightDyes.class, Category.SHAPELESS, "after:forge:TDrobearmordye");
-      
+      RecipeSorter.register("forge:TDrangerarmordye", RangerDyes.class, Category.SHAPELESS, "after:forge:TDrobearmordye");
    }
    
    public static void initDyeRecipes() {
@@ -45,6 +45,7 @@ public class DyesRecipes {
       GameRegistry.addRecipe(new FortressDyes());
 	  GameRegistry.addRecipe(new PraetorDyes());
       GameRegistry.addRecipe(new KnightDyes());
+      GameRegistry.addRecipe(new RangerDyes());
    }
    
       

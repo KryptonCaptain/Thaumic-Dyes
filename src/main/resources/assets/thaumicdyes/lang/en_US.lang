@@ -26,6 +26,10 @@ item.IronFortressHelm.name=Iron Fortress Helmet
 item.IronFortressChest.name=Iron Fortress Cuirass 
 item.IronFortressLegs.name=Iron Fortress Thigh Guards 
 #
+item.CultistRangerHelm.name=Ranger Helm
+item.CultistRangerChest.name=Ranger Chestplate
+item.CultistRangerLegs.name=Ranger Leggings
+#
 //item.ItemGoggles.name=Goggles of Revealing
 //item.HelmetFortress.mask.0=Grinning Devil
 //item.HelmetFortress.mask.1=Angry Ghost
@@ -33,6 +37,9 @@ item.IronFortressLegs.name=Iron Fortress Thigh Guards
 item.HelmetIronFortress.mask.0=Crusader
 item.HelmetIronFortress.mask.1=Champion
 item.HelmetIronFortress.mask.2=Warlord
+
+item.HelmetCultistRanger.mask.0=Scout
+item.HelmetCultistRanger.mask.1=Guard
 
 
 
