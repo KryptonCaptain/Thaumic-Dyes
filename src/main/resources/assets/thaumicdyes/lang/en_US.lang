@@ -1,7 +1,9 @@
 # Creative Tab 
 itemGroup.TabTD=Thaumic Dyes
 
+///////////
 # Items 
+///////////
 item.CultistRobeHelm.name=Cultist Hood 
 item.CultistRobeChest.name=Cultist Robe 
 item.CultistRobeLegs.name=Cultist Leggings 
@@ -42,6 +44,9 @@ item.HelmetCultistRanger.mask.0=Scout
 item.HelmetCultistRanger.mask.1=Guard
 
 
+///////////
+# Research
+///////////
 
 # Categories 
 tc.research_category.DYES=Thaumic Dyes 
@@ -85,6 +90,13 @@ tc.research_page.TD.ironHelmFace.1=Since the Iron Fortress Armor lacks the innat
 tc.research_name.IRONHELMHUSK=Restored Husk Faceplate
 tc.research_text.IRONHELMHUSK=Iron Fortress Helm Upgrade
 tc.research_page.TD.ironHelmFace.2=Your studies into the armor the husks in the Outer Lands wear have yielded some clues about what their armor may have looked like before it was worn away by time and strange magics. Expanding on your existing collection of faceplate designs, the restored helmet's striking gold patterning are a unique addition to your armor. <BR>Some ancient energies still leech from under its new coating, but you're sure it's nothing to worry about.
+
+tc.research_name.DYEDRANGER=Thaumaturge's Ranger Armor
+tc.research_text.DYEDRANGER=Wilderness wanderers
+tc.research_page.TD.ranger.1=As comfortable as your newly upgraded robes are, they are not very practical in the field. They get caught on brambles, covered in mud, and are a little hot to wear on sunny days.<BR>Trimming away some of the fabric, and adding a few canteens for water, and a small pack, you now have the perfect set of gear for expeditions and hiking trips.
+tc.research_page.TD.ranger.2=Similar to the fortress helms it is based on, the Ranger Helm is will accept some minor modification. However, as the design of the armor is to minimise excess weight, you can't quite find the space to fit both your goggles and a faceplate.<BR>So you'll have to choose either fashion or function.
+
+
 
 
 #Copied research 

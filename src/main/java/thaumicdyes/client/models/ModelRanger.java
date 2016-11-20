@@ -464,7 +464,7 @@ public class ModelRanger extends ModelBiped {
         
         this.bipedRightLeg.addChild(this.SideclothR1);
         this.bipedRightLeg.addChild(this.SideclothR2);
-        this.bipedRightLeg.addChild(this.SideclothR3);
+        //this.bipedRightLeg.addChild(this.SideclothR3);
         
         this.bipedRightLeg.addChild(this.bottleR1);
         this.bipedRightLeg.addChild(this.bottleR2);
@@ -479,7 +479,7 @@ public class ModelRanger extends ModelBiped {
         
         this.bipedLeftLeg.addChild(this.SideclothL1);
         this.bipedLeftLeg.addChild(this.SideclothL2);
-        this.bipedLeftLeg.addChild(this.SideclothL3);
+        //this.bipedLeftLeg.addChild(this.SideclothL3);
         
         this.bipedLeftLeg.addChild(this.bottleL1);
         this.bipedLeftLeg.addChild(this.bottleL2);
