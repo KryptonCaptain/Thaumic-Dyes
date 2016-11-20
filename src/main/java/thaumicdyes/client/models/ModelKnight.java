@@ -154,13 +154,18 @@ public class ModelKnight
     this.GauntletstrapR2.setTextureSize(128, 64);
     this.GauntletstrapR2.mirror = true;
     setRotation(this.GauntletstrapR2, 0.0F, 0.0F, 0.0F);
-    
+    /*
     this.ShoulderR = new ModelRenderer(this, 56, 35);
     this.ShoulderR.addBox(-3.5F, -2.5F, -2.5F, 5, 5, 5);
     
     this.ShoulderR.setTextureSize(128, 64);
     this.ShoulderR.mirror = true; //TODO
     setRotation(this.ShoulderR, 0.0F, 0.0F, 0.0F);
+    */
+    //
+    this.ShoulderR = new ModelRenderer(this, 56, 35);
+    //this.ShoulderR.setRotationPoint(-5.0F, 2.0F, 0.0F);
+    this.ShoulderR.addBox(-3.5F, -2.5F, -2.5F, 5, 5, 5, 0.0F);
     
     this.ShoulderR0 = new ModelRenderer(this, 0, 0);
     this.ShoulderR0.addBox(-4.3F, -1.5F, -3.0F, 3, 5, 6);
@@ -203,12 +208,18 @@ public class ModelKnight
     
     this.GauntletstrapL2.setTextureSize(128, 64);
     setRotation(this.GauntletstrapL2, 0.0F, 0.0F, 0.0F);
-    
+    /*
     this.ShoulderL = new ModelRenderer(this, 56, 35);
     this.ShoulderL.addBox(-1.5F, -2.5F, -2.5F, 5, 5, 5);
     this.ShoulderL.mirror = false; //TODO
     this.ShoulderL.setTextureSize(128, 64);
     setRotation(this.ShoulderL, 0.0F, 0.0F, 0.0F);
+    */
+    //      
+    this.ShoulderL = new ModelRenderer(this, 56, 35);
+    this.ShoulderL.mirror = true;
+    //this.ShoulderL.setRotationPoint(5.0F, 2.0F, 0.0F);
+    this.ShoulderL.addBox(-1.5F, -2.5F, -2.5F, 5, 5, 5, 0.0F);
     
     this.ShoulderL0 = new ModelRenderer(this, 0, 0);
     this.ShoulderL0.addBox(1.3F, -1.5F, -3.0F, 3, 5, 6);

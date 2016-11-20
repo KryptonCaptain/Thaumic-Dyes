@@ -9,9 +9,9 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.world.World;
-import thaumicdyes.common.items.CultistRobes;
+import thaumicdyes.common.items.RangerArmor;
 
-public class RobeDyes implements IRecipe {
+public class RangerDyes implements IRecipe {
    public boolean matches(InventoryCrafting par1InventoryCrafting, World par2World) {
       ItemStack itemstack = null;
       ArrayList arraylist = new ArrayList();
@@ -21,7 +21,7 @@ public class RobeDyes implements IRecipe {
          if(itemstack1 != null) {
             if(itemstack1.getItem() instanceof ItemArmor) {
                ItemArmor itemarmor = (ItemArmor)itemstack1.getItem();
-               if(!(itemarmor instanceof CultistRobes) || itemstack != null) {
+               if(!(itemarmor instanceof RangerArmor) || itemstack != null) {
                   return false;
                }
 
@@ -56,7 +56,7 @@ public class RobeDyes implements IRecipe {
          if(var13 != null) {
             if(var13.getItem() instanceof ItemArmor) {
                itemarmor = (ItemArmor)var13.getItem();
-               if(!(itemarmor instanceof CultistRobes) || itemstack != null) {
+               if(!(itemarmor instanceof RangerArmor) || itemstack != null) {
                   return null;
                }
 

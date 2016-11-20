@@ -460,6 +460,7 @@ public class ModelIronFortress extends ModelBiped {
       super.bipedHead.addChild(this.Mask[0]);
       super.bipedHead.addChild(this.Mask[1]);
       super.bipedHead.addChild(this.Mask[2]);
+      
       super.bipedBody.cubeList.clear();
       //TODO removed
       if(f < 1.0F) {

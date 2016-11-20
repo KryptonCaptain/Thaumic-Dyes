@@ -6,14 +6,19 @@ import java.util.ArrayList;
 
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.CraftingManager;
+import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.nbt.NBTTagByte;
 import net.minecraft.nbt.NBTTagInt;
 import net.minecraftforge.oredict.RecipeSorter;
 import net.minecraftforge.oredict.RecipeSorter.Category;
+import net.minecraftforge.oredict.ShapedOreRecipe;
+import net.minecraftforge.oredict.ShapelessOreRecipe;
 import thaumcraft.api.ItemApi;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
+import thaumcraft.common.lib.crafting.ShapelessNBTOreRecipe;
 import thaumicdyes.common.DyeResearch;
 import thaumicdyes.common.recipe.RobeDyes;
 import thaumicdyes.common.recipe.FortressDyes;
@@ -24,20 +29,29 @@ public class DyesRecipes {
 
    public static void initRecipes() {
 	   
-      RecipeSorter.register("forge:TDrobearmordye", RobeDyes.class, Category.SHAPELESS, "after:forge:robearmordye");
-      RecipeSorter.register("forge:TDfortressarmordye", FortressDyes.class, Category.SHAPELESS, "after:forge:robearmordye");
-      RecipeSorter.register("forge:TDpraetorarmordye", PraetorDyes.class, Category.SHAPELESS, "after:forge:robearmordye");
-      RecipeSorter.register("forge:TDknightarmordye", KnightDyes.class, Category.SHAPELESS, "after:forge:robearmordye");
-      
-      GameRegistry.addRecipe(new RobeDyes());
+	  initDyeRecipes();
+	  initInfusionRecipes(); 
+	   
+	  RecipeSorter.register("forge:shapelessorenbt", ShapelessNBTOreRecipe.class, RecipeSorter.Category.SHAPELESS, "after:forge:shapelessore");
+      RecipeSorter.register("forge:TDrobearmordye", RobeDyes.class, Category.SHAPELESS, "after:forge:shapelessorenbt");
+      RecipeSorter.register("forge:TDfortressarmordye", FortressDyes.class, Category.SHAPELESS, "after:forge:TDrobearmordye");
+      RecipeSorter.register("forge:TDpraetorarmordye", PraetorDyes.class, Category.SHAPELESS, "after:forge:TDrobearmordye");
+      RecipeSorter.register("forge:TDknightarmordye", KnightDyes.class, Category.SHAPELESS, "after:forge:TDrobearmordye");
+      RecipeSorter.register("forge:TDrangerarmordye", RangerDyes.class, Category.SHAPELESS, "after:forge:TDrobearmordye");
+   }
+   
+   public static void initDyeRecipes() {
+	  GameRegistry.addRecipe(new RobeDyes());
       GameRegistry.addRecipe(new FortressDyes());
-      GameRegistry.addRecipe(new PraetorDyes());
+	  GameRegistry.addRecipe(new PraetorDyes());
       GameRegistry.addRecipe(new KnightDyes());
+      GameRegistry.addRecipe(new RangerDyes());
+   }
+   
       
-      //Infusion extras
-      
-      //Add fortress mask recipes
-      
+   public static void initInfusionRecipes() {
+	      
+     //Add fortress mask recipes
       DyeResearch.recipes.put("HelmGoggles", 												//?src: new NBTTagByte(1)
     		  ThaumcraftApi.addInfusionCraftingRecipe("HELMGOGGLES", new Object[] { "goggles", new NBTTagByte((byte) 1) }, 5, 
     		  new AspectList().add(Aspect.SENSES, 32).add(Aspect.AURA, 16).add(Aspect.ARMOR, 16), 
@@ -85,5 +99,26 @@ public class DyesRecipes {
       			new ItemStack(Items.iron_ingot) })
 	  );
            
+   }
+   
+   static IRecipe oreDictRecipe(ItemStack res, Object[] params)
+   {
+     IRecipe rec = new ShapedOreRecipe(res, params);
+     CraftingManager.getInstance().getRecipeList().add(rec);
+     return rec;
+   }
+   
+   static IRecipe shapelessOreDictRecipe(ItemStack res, Object[] params)
+   {
+     IRecipe rec = new ShapelessOreRecipe(res, params);
+     CraftingManager.getInstance().getRecipeList().add(rec);
+     return rec;
+   }
+   
+   static IRecipe shapelessNBTOreRecipe(ItemStack res, Object[] params)
+   {
+     IRecipe rec = new ShapelessNBTOreRecipe(res, params);
+     CraftingManager.getInstance().getRecipeList().add(rec);
+     return rec;
    }
 }

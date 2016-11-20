@@ -147,8 +147,10 @@ public class ModelPraetor extends ModelBiped {
       this.GauntletL2 = new ModelRenderer(this, 102, 37);
       this.GauntletL2.addBox(4.0F, 3.5F, -2.0F, 1, 5, 4);
       this.setRotation(this.GauntletL2, 0.0F, 0.0F, 0.1675516F);
+      
       this.ShoulderR = new ModelRenderer(this, 56, 35);
-      this.ShoulderR.addBox(-3.5F, -2.5F, -2.5F, 5, 5, 5);
+      this.ShoulderR.addBox(-3.5F, -2.5F, -2.5F, 5, 5, 5, 0.0F);
+      
       this.ShoulderR1 = new ModelRenderer(this, 0, 0);
       this.ShoulderR1.addBox(-4.3F, -1.5F, -3.0F, 3, 5, 6);
       this.setRotation(this.ShoulderR1, 0.0F, 0.0F, 0.7853982F);
@@ -164,8 +166,11 @@ public class ModelPraetor extends ModelBiped {
       this.ShoulderR4 = new ModelRenderer(this, 18, 4);
       this.ShoulderR4.addBox(-2.3F, -1.5F, -4.0F, 1, 6, 1);
       this.setRotation(this.ShoulderR4, 0.0F, 0.0F, 0.7853982F);
+
       this.ShoulderL = new ModelRenderer(this, 56, 35);
-      this.ShoulderL.addBox(-1.5F, -2.5F, -2.5F, 5, 5, 5);
+      this.ShoulderL.mirror = true;
+      this.ShoulderL.addBox(-1.5F, -2.5F, -2.5F, 5, 5, 5, 0.0F);
+      
       this.ShoulderL1 = new ModelRenderer(this, 0, 0);
       this.ShoulderL1.addBox(1.3F, -1.5F, -3.0F, 3, 5, 6);
       this.setRotation(this.ShoulderL1, 0.0F, 0.0F, -0.7853982F);
@@ -217,6 +222,7 @@ public class ModelPraetor extends ModelBiped {
       this.BackpanelL3 = new ModelRenderer(this, 116, 13);
       this.BackpanelL3.addBox(2.0F, 2.5F, -2.5F, 1, 4, 5);
       this.setRotation(this.BackpanelL3, 0.0F, 0.0F, -0.1396263F);
+      
       super.bipedHeadwear.cubeList.clear();
       super.bipedHead.cubeList.clear();
       super.bipedHead.addChild(this.Helmet);
@@ -226,6 +232,7 @@ public class ModelPraetor extends ModelBiped {
       super.bipedBody.addChild(this.Mbelt);
       super.bipedBody.addChild(this.MbeltL);
       super.bipedBody.addChild(this.MbeltR);
+      
       if(f >= 1.0F) {
          super.bipedBody.addChild(this.BeltL);
          super.bipedBody.addChild(this.BeltR);
@@ -258,6 +265,7 @@ public class ModelPraetor extends ModelBiped {
       super.bipedRightArm.addChild(this.GauntletR2);
       super.bipedRightArm.addChild(this.GauntletstrapR1);
       super.bipedRightArm.addChild(this.GauntletstrapR2);
+      
       super.bipedLeftArm.cubeList.clear();
       super.bipedLeftArm.addChild(this.ShoulderL);
       super.bipedLeftArm.addChild(this.ShoulderL1);
@@ -269,10 +277,12 @@ public class ModelPraetor extends ModelBiped {
       super.bipedLeftArm.addChild(this.GauntletL2);
       super.bipedLeftArm.addChild(this.GauntletstrapL1);
       super.bipedLeftArm.addChild(this.GauntletstrapL2);
+      
       super.bipedRightLeg.addChild(this.BackpanelR1);
       super.bipedRightLeg.addChild(this.BackpanelR2);
       super.bipedRightLeg.addChild(this.BackpanelR3);
       super.bipedRightLeg.addChild(this.BackpanelR4);
+      
       super.bipedLeftLeg.addChild(this.BackpanelL1);
       super.bipedLeftLeg.addChild(this.BackpanelL2);
       super.bipedLeftLeg.addChild(this.BackpanelL3);

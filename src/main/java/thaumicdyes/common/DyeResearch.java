@@ -2,6 +2,7 @@ package thaumicdyes.common;
 
 import java.util.HashMap;
 
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -13,6 +14,7 @@ import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.crafting.InfusionRecipe;
+import thaumcraft.api.crafting.ShapedArcaneRecipe;
 import thaumcraft.api.research.ResearchCategories;
 import thaumcraft.api.research.ResearchItem;
 import thaumcraft.api.research.ResearchPage;
@@ -87,6 +89,68 @@ public class DyeResearch {
       ThaumcraftApi.getCraftingRecipes().add(recipeRobeHelm);
       ThaumcraftApi.getCraftingRecipes().add(recipeRobeChest);
       ThaumcraftApi.getCraftingRecipes().add(recipeRobeLegs);
+      
+      
+      //TODO Ranger
+      ShapedArcaneRecipe recipeRangerHelm = new ShapedArcaneRecipe("DYEDRANGER",
+			   new ItemStack(ItemHandler.itemHelmetCultistRanger), 
+			   (new AspectList()).add(Aspect.FIRE, 8).add(Aspect.ENTROPY, 20).add(Aspect.ORDER, 16), 
+			   new Object[]{
+					" B ",
+					"SHS",
+					"   ",
+					'H',new ItemStack(ItemHandler.itemHelmetIronFortress),
+					'S',new ItemStack(ConfigItems.itemShard, 5),
+					'B',new ItemStack(Items.blaze_powder)});
+	   
+	   InfusionRecipe recipeRangerChest = new InfusionRecipe("DYEDRANGER", 
+			   new ItemStack(ItemHandler.itemChestCultistRanger), 3, 
+			   (new AspectList()).add(Aspect.CRAFT, 8).add(Aspect.TRAVEL, 8).add(Aspect.VOID, 8),  
+			   new ItemStack(ItemHandler.itemChestCultistRobe, 0), 
+			   new ItemStack[]{
+				   new ItemStack(Blocks.chest),
+				   new ItemStack(Blocks.wool)});
+			   
+	   InfusionRecipe recipeRangerLegs = new InfusionRecipe("DYEDRANGER",
+			   new ItemStack(ItemHandler.itemLegsCultistRanger), 3, 
+			   (new AspectList()).add(Aspect.TRAVEL, 4).add(Aspect.VOID, 8).add(Aspect.CRAFT, 8),  
+			   new ItemStack(ItemHandler.itemLegsCultistRobe, 0), 
+			   new ItemStack[]{
+				   new ItemStack(Items.blaze_powder),
+				   new ItemStack(Items.glass_bottle),
+				   new ItemStack(Items.clay_ball),
+				   new ItemStack(Items.glass_bottle)});
+	   
+		InfusionRecipe recipeRangerHelmGoggles = new InfusionRecipe("HELMGOGGLES", new Object[] { "mask", new NBTTagInt(0) }, 3, 
+				  new AspectList().add(Aspect.SENSES, 16).add(Aspect.AURA, 8).add(Aspect.ARMOR, 8), 
+				  new ItemStack(ItemHandler.itemHelmetCultistRanger, 1, 32767), 
+			      new ItemStack[] { 
+			    	  ItemApi.getItem("itemResource", 7), 
+			    	  new ItemStack(ConfigItems.itemGoggles, 1, 32767) });
+		  
+		InfusionRecipe recipeRangerHelmPlate = new InfusionRecipe("DYEDRANGER", new Object[] { "mask", new NBTTagInt(1) }, 2, 
+				  new AspectList().add(Aspect.CRAFT, 8).add(Aspect.ARMOR, 8), 
+				  new ItemStack(ItemHandler.itemHelmetCultistRanger, 1, 32767), 
+			      new ItemStack[] { 
+			    	  new ItemStack(Items.slime_ball), 
+			    	  ItemApi.getItem("itemResource", 2) });
+      
+      new ResearchItem("DYEDRANGER", "DYES", 
+    		  (new AspectList()).add(Aspect.CLOTH, 4).add(Aspect.ARMOR, 4).add(Aspect.MAGIC, 4).add(Aspect.TRAVEL, 4),
+    		  -3, -5, 2, 
+    		  new ItemStack(ItemHandler.itemChestCultistRanger, 0))
+    		  .setPages(new ResearchPage[]{
+    				  new ResearchPage("tc.research_page.TD.ranger.1"),
+    				  new ResearchPage(recipeRangerHelm),
+    				  new ResearchPage(recipeRangerChest),
+    				  new ResearchPage(recipeRangerLegs),
+    				  new ResearchPage("tc.research_page.TD.ranger.2"),
+    				  new ResearchPage(recipeRangerHelmGoggles),
+    				  new ResearchPage(recipeRangerHelmPlate)
+    		  			})
+    		  .setParents("DYEDROBE")
+    		  .setParentsHidden("IRONFORTRESS")
+    		  .registerResearchItem();
 	      
       //TODO Crimson Knight
       InfusionRecipe recipeKniHelm = new InfusionRecipe("DYEDKNIGHT",

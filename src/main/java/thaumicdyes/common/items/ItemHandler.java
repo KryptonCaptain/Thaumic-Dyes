@@ -43,6 +43,10 @@ public class ItemHandler {
    public static Item itemHelmetIronFortress;
    public static Item itemChestIronFortress;
    public static Item itemLegsIronFortress;
+   
+   public static Item itemHelmetCultistRanger;
+   public static Item itemChestCultistRanger;
+   public static Item itemLegsCultistRanger;
 
 
    public static void registerItems() {
@@ -70,6 +74,10 @@ public class ItemHandler {
       GameRegistry.registerItem(itemHelmetIronFortress, "IronFortressHelm");
       GameRegistry.registerItem(itemChestIronFortress, "IronFortressChest");
       GameRegistry.registerItem(itemLegsIronFortress, "IronFortressLegs");
+      
+      GameRegistry.registerItem(itemHelmetCultistRanger, "CultistRangerHelm");
+      GameRegistry.registerItem(itemChestCultistRanger, "CultistRangerChest");
+      GameRegistry.registerItem(itemLegsCultistRanger, "CultistRangerLegs");
       
    }
 
@@ -99,12 +107,15 @@ public class ItemHandler {
 	   itemChestIronFortress = (new IronFortressArmor(IronFortressArmor, 4, 1)).setUnlocalizedName("IronFortressChest").setCreativeTab(TabTD.TabTD);
 	   itemLegsIronFortress = (new IronFortressArmor(IronFortressArmor, 4, 2)).setUnlocalizedName("IronFortressLegs").setCreativeTab(TabTD.TabTD);
       
-	   
+	   itemHelmetCultistRanger = (new RangerArmor(RobesArmor, 4, 0)).setUnlocalizedName("CultistRangerHelm").setCreativeTab(TabTD.TabTD);
+	   itemChestCultistRanger = (new RangerArmor(RobesArmor, 4, 1)).setUnlocalizedName("CultistRangerChest").setCreativeTab(TabTD.TabTD);
+	   itemLegsCultistRanger = (new RangerArmor(RobesArmor, 4, 2)).setUnlocalizedName("CultistRangerLegs").setCreativeTab(TabTD.TabTD);
+      
    }
 
    public static void registerToolMaterial() {
-      RobesArmor = EnumHelper.addArmorMaterial("TD_ROBE", 20, new int[]{2, 6, 5, 1}, 15);
-      KnightArmor = EnumHelper.addArmorMaterial("TD_KNIGHT", 20, new int[]{3, 7, 6, 1}, 15); 
+      RobesArmor = EnumHelper.addArmorMaterial("TD_ROBE", 15, new int[]{2, 6, 5, 1}, 15);
+      KnightArmor = EnumHelper.addArmorMaterial("TD_KNIGHT", 20, new int[]{2, 6, 5, 1}, 12); 
       PraetorArmor = EnumHelper.addArmorMaterial("TD_PRAE", 45, new int[]{3, 7, 6, 1}, 30);
       FortressArmor = EnumHelper.addArmorMaterial("TD_FORT", 45, new int[]{3, 7, 6, 1}, 30);
       IronFortressArmor = EnumHelper.addArmorMaterial("TD_IRONFORT", 25, new int[]{2, 6, 5, 2}, 12);
