@@ -33,7 +33,7 @@ import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.nodes.IRevealer;
 import thaumicdyes.client.models.ModelRobes;
 
-public class CultistRobes extends ItemArmor implements IRepairable, IRunicArmor, IVisDiscountGear, /*IGoggles, IRevealer, ISpecialArmor,*/ IWarpingGear {
+public class ThaumiumRobeArmor extends ItemArmor implements IRepairable, IRunicArmor, IVisDiscountGear, IGoggles, IRevealer, /*ISpecialArmor,*/ IWarpingGear {
    
    public IIcon iconHelm;
    public IIcon iconChest;
@@ -46,24 +46,24 @@ public class CultistRobes extends ItemArmor implements IRepairable, IRunicArmor,
    ModelBiped model2 = null;
    ModelBiped model = null;
 
-   public CultistRobes(ArmorMaterial enumarmormaterial, int j, int k) {
+   public ThaumiumRobeArmor(ArmorMaterial enumarmormaterial, int j, int k) {
       super(enumarmormaterial, j, k);
       this.setCreativeTab(CreativeTabs.tabCombat);
    }
 
    @SideOnly(Side.CLIENT)
    public void registerIcons(IIconRegister ir) {
-      this.iconHelm = ir.registerIcon("thaumicdyes:icon/crimrobehelm"); //
+      this.iconHelm = ir.registerIcon("thaumicdyes:icon/thaumiumrobehelm"); //
       this.iconHelmOver = ir.registerIcon("thaumicdyes:phelm");
       this.iconBlank = ir.registerIcon("thaumicdyes:blank");
       this.iconChest = ir.registerIcon("thaumicdyes:crimrobechestover");
       this.iconLegs = ir.registerIcon("thaumicdyes:crimrobelegsover");
-      this.iconChestOver = ir.registerIcon("thaumicdyes:icon/crimrobechest"); //
-      this.iconLegsOver = ir.registerIcon("thaumicdyes:icon/crimrobelegs"); //
+      this.iconChestOver = ir.registerIcon("thaumicdyes:icon/thaumiumrobechest"); //
+      this.iconLegsOver = ir.registerIcon("thaumicdyes:icon/thaumiumrobelegs"); //
    }
 
    public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
-      return type == null?"thaumicdyes:textures/models/armor/robe_armor_overlay.png":"thaumicdyes:textures/models/armor/crim_robe_armor.png";
+      return type == null?"thaumicdyes:textures/models/armor/thaumium_robe_armor_overlay.png":"thaumicdyes:textures/models/armor/thaumium_robe_armor.png";
    }
 
    public EnumRarity getRarity(ItemStack itemstack) {
@@ -100,7 +100,7 @@ public class CultistRobes extends ItemArmor implements IRepairable, IRunicArmor,
       return 0;
    }
 
-   /*
+   
    public boolean showNodes(ItemStack itemstack, EntityLivingBase player) {
       int type = ((ItemArmor)itemstack.getItem()).armorType;
       return type == 0;
@@ -109,10 +109,10 @@ public class CultistRobes extends ItemArmor implements IRepairable, IRunicArmor,
    public boolean showIngamePopups(ItemStack itemstack, EntityLivingBase player) {
       int type = ((ItemArmor)itemstack.getItem()).armorType;
       return type == 0;
-   }*/
+   }
 
    public int getVisDiscount(ItemStack stack, EntityPlayer player, Aspect aspect) {
-      return 2;
+      return 3;
    }
 
    @SideOnly(Side.CLIENT)
@@ -243,6 +243,6 @@ public class CultistRobes extends ItemArmor implements IRepairable, IRunicArmor,
    }
 
    public int getWarp(ItemStack itemstack, EntityPlayer player) {
-      return 1;
+      return 0;
    }
 }

@@ -32,6 +32,16 @@ item.CultistRangerHelm.name=Ranger Helm
 item.CultistRangerChest.name=Ranger Chestplate
 item.CultistRangerLegs.name=Ranger Leggings
 #
+item.VoidRobeHelm.name=Bleached Void Robe Hood
+item.VoidRobeChest.name=Bleached Void Robe
+item.VoidRobeLegs.name=Bleached Void Robe Leggings
+#
+item.ThaumiumRobeHelm.name=Thaumium Robe Hood
+item.ThaumiumRobeChest.name=Thaumium Robe
+item.ThaumiumRobeLegs.name=Thaumium Robe Leggings
+#
+
+
 //item.ItemGoggles.name=Goggles of Revealing
 //item.HelmetFortress.mask.0=Grinning Devil
 //item.HelmetFortress.mask.1=Angry Ghost
@@ -110,3 +120,5 @@ tc.research_name.TD.THAUMIUM=Magical Metallurgy
 tc.research_text.TD.THAUMIUM=Where metals meet magic
 tc.research_name.TD.OUTERARRIVAL=The Outer Lands 
 tc.research_text.TD.OUTERARRIVAL=We are not in Kansas anymore
+tc.research_name.TD.VOIDROBE=Void Thaumaturge Robes
+tc.research_text.TD.VOIDROBE=Otherworldly Style 
