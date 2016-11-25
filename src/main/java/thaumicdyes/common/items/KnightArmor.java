@@ -9,6 +9,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemArmor;
@@ -66,7 +67,7 @@ public class KnightArmor extends ItemArmor implements IRepairable, IRunicArmor, 
    }
 
    public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack) {
-      return par2ItemStack.isItemEqual(ItemApi.getItem("itemResource", 2))?true:super.getIsRepairable(par1ItemStack, par2ItemStack);
+      return par2ItemStack.isItemEqual(new ItemStack(Items.iron_ingot))?true:super.getIsRepairable(par1ItemStack, par2ItemStack);
    }
 
    /*

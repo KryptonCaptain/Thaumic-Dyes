@@ -10,6 +10,7 @@ import thaumicdyes.common.items.CultistRobes;
 import thaumicdyes.common.items.FortressArmor;
 import thaumicdyes.common.items.PraetorArmor;
 import thaumicdyes.common.items.KnightArmor;
+import thaumcraft.api.ThaumcraftApi;
 
 public class ItemHandler {
    public static ToolMaterial Robes;
@@ -47,6 +48,14 @@ public class ItemHandler {
    public static Item itemHelmetCultistRanger;
    public static Item itemChestCultistRanger;
    public static Item itemLegsCultistRanger;
+   
+   public static Item itemHelmetVoidRobe;
+   public static Item itemChestVoidRobe;
+   public static Item itemLegsVoidRobe;
+   
+   public static Item itemHelmetThaumiumRobe;
+   public static Item itemChestThaumiumRobe;
+   public static Item itemLegsThaumiumRobe;
 
 
    public static void registerItems() {
@@ -78,6 +87,14 @@ public class ItemHandler {
       GameRegistry.registerItem(itemHelmetCultistRanger, "CultistRangerHelm");
       GameRegistry.registerItem(itemChestCultistRanger, "CultistRangerChest");
       GameRegistry.registerItem(itemLegsCultistRanger, "CultistRangerLegs");
+      
+      GameRegistry.registerItem(itemHelmetVoidRobe, "VoidRobeHelm");
+      GameRegistry.registerItem(itemChestVoidRobe, "VoidRobeChest");
+      GameRegistry.registerItem(itemLegsVoidRobe, "VoidRobeLegs");
+      
+      GameRegistry.registerItem(itemHelmetThaumiumRobe, "ThaumiumRobeHelm");
+      GameRegistry.registerItem(itemChestThaumiumRobe, "ThaumiumRobeChest");
+      GameRegistry.registerItem(itemLegsThaumiumRobe, "ThaumiumRobeLegs");
       
    }
 
@@ -111,6 +128,15 @@ public class ItemHandler {
 	   itemChestCultistRanger = (new RangerArmor(RobesArmor, 4, 1)).setUnlocalizedName("CultistRangerChest").setCreativeTab(TabTD.TabTD);
 	   itemLegsCultistRanger = (new RangerArmor(RobesArmor, 4, 2)).setUnlocalizedName("CultistRangerLegs").setCreativeTab(TabTD.TabTD);
       
+	   itemHelmetVoidRobe = (new VoidRobeArmor(ThaumcraftApi.armorMatVoid, 4, 0)).setUnlocalizedName("VoidRobeHelm").setCreativeTab(TabTD.TabTD);
+	   itemChestVoidRobe = (new VoidRobeArmor(ThaumcraftApi.armorMatVoid, 4, 1)).setUnlocalizedName("VoidRobeChest").setCreativeTab(TabTD.TabTD);
+	   itemLegsVoidRobe = (new VoidRobeArmor(ThaumcraftApi.armorMatVoid, 4, 2)).setUnlocalizedName("VoidRobeLegs").setCreativeTab(TabTD.TabTD);
+       
+	   itemHelmetThaumiumRobe = (new ThaumiumRobeArmor(ThaumcraftApi.armorMatThaumium, 4, 0)).setUnlocalizedName("ThaumiumRobeHelm").setCreativeTab(TabTD.TabTD);
+	   itemChestThaumiumRobe = (new ThaumiumRobeArmor(ThaumcraftApi.armorMatThaumium, 4, 1)).setUnlocalizedName("ThaumiumRobeChest").setCreativeTab(TabTD.TabTD);
+	   itemLegsThaumiumRobe = (new ThaumiumRobeArmor(ThaumcraftApi.armorMatThaumium, 4, 2)).setUnlocalizedName("ThaumiumRobeLegs").setCreativeTab(TabTD.TabTD);
+       
+	   
    }
 
    public static void registerToolMaterial() {

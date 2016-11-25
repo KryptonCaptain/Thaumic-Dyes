@@ -32,6 +32,16 @@ item.CultistRangerHelm.name=Ranger Helm
 item.CultistRangerChest.name=Ranger Chestplate
 item.CultistRangerLegs.name=Ranger Leggings
 #
+item.VoidRobeHelm.name=Bleached Void Robe Hood
+item.VoidRobeChest.name=Bleached Void Robe
+item.VoidRobeLegs.name=Bleached Void Robe Leggings
+#
+item.ThaumiumRobeHelm.name=Thaumium Robe Hood
+item.ThaumiumRobeChest.name=Thaumium Robe
+item.ThaumiumRobeLegs.name=Thaumium Robe Leggings
+#
+
+
 //item.ItemGoggles.name=Goggles of Revealing
 //item.HelmetFortress.mask.0=Grinning Devil
 //item.HelmetFortress.mask.1=Angry Ghost
@@ -52,52 +62,57 @@ item.HelmetCultistRanger.mask.1=Guard
 tc.research_category.DYES=Thaumic Dyes 
  
 # Research 
-tc.research_name.DYEDROBE=Thaumaturge's Crimson Robes 
-tc.research_text.DYEDROBE=Threads to dye for! 
+tc.research_name.TD.DYEDROBE=Thaumaturge's Crimson Robes 
+tc.research_text.TD.DYEDROBE=Threads to dye for! 
 tc.research_page.TD.robe.1=The Crimson Cultists you've encountered have been rather hostile to your approach, however, you've found yourself enamoured with the robes their clerics wear. <BR>Sadly, the Crimson-styled robes don't suit your needs, so after some tinkering, you have discovered a way to modify them for your own purposes. Adding a pinch of salis mundis, and some spare enchanted fabric you had lying around, has helped increase its ability to channel magic.
 tc.research_page.TD.robe.2=You feel that this discovery will extend to more things in the future, although you're not sure what will come of it. <BR>This armor can be dyed.
 
-tc.research_name.DYEDKNIGHT=Thaumaturge's Crimson Armor 
-tc.research_text.DYEDKNIGHT=Knights of the realm 
+tc.research_name.TD.DYEDKNIGHT=Thaumaturge's Crimson Armor 
+tc.research_text.TD.DYEDKNIGHT=Knights of the realm 
 tc.research_page.TD.knight.1=Crimson Knights are no friend of yours - but you've acquired quite the collection of their armor in numerous battles with them. Previously, you might have worn their armor as a trophy or warning, but now you feel it's time to add your own touch to the armor.<BR>After strengthening the metal, and weaving in some enchanted fabric, you now have a pristine canvas to display your allegiances on in combat. <BR>This armor can be dyed.
  
-tc.research_name.DYEDPRAETOR=Reinforced Praetor Armor 
-tc.research_text.DYEDPRAETOR=Paladins of fashion 
+tc.research_name.TD.DYEDPRAETOR=Reinforced Praetor Armor 
+tc.research_text.TD.DYEDPRAETOR=Paladins of fashion 
 tc.research_page.TD.praetor.1=After a fateful encounter with a high ranking Crimson warrior, you have managed to obtain a set of their powerful armor. Due to the armor's exposure to strange arcane energies, it seems much more accepting of magical enhancement than armor of lower ranked cultists. <BR>By infusing some thaumium into the armor, it has strengthened the metal plating, making it somewhat more durable than before, as well as making it much more accepting of enchantments. You will have to investigate how this armor was created at some point, as it seems beyond what you thought the Crimson Cult was capable of. <BR>This armor can be dyed.
  
-tc.research_name.DYEDFORTRESS=Enhanced Fortress Armor 
-tc.research_text.DYEDFORTRESS=A bastion of style 
+tc.research_name.TD.DYEDFORTRESS=Enhanced Fortress Armor 
+tc.research_text.TD.DYEDFORTRESS=A bastion of style 
 tc.research_page.TD.fortress.1=The Thaumium Fortress Armor was a crowning achievement of your magical metalworking skills, but you still feel there is room for improvement. Specifically, room for more thaumium - because you can't have too much of a good thing, unless it becomes too heavy to wear. <BR>As expected, there was space to add a few more plates, and you've reinforced the bindings with some enchanted fabric. It should last a bit longer than before, and you think the added fabric might make it more workable for enchanting. <BR>This armor accepts faceplate upgrades, and can be dyed.
 
-tc.research_name.INHABITEDPLATE=Husk Armor
-tc.research_text.INHABITEDPLATE=Eldritch security system
+tc.research_name.TD.INHABITEDPLATE=Husk Armor
+tc.research_text.TD.INHABITEDPLATE=Eldritch security system
 tc.research_page.TD.husk.1=There are many strange beings roaming the outer lands, and the shambling corpses are no exception. Their body appears to be merely an empty shell, piloted by some kind of arthropod creature, which you find most unsettling. A fate you do not wish to share, should you fall in this maze. <BR>After many unsuccesful attempts, you have finally managed to capture and subdue one without the parasite destroying its host body - allowing you to remove its armor for a closer inspection. To your surprise, the armor bears a striking similarity to that of the Crimson Cult, or maybe an iteration that existed before you encountered them.
 tc.research_page.TD.husk.2=You wonder if perhaps they were part of a sect that did succeed in opening the portal and were sent through, or perhaps were a thaumaturge such as yourself, or maybe a warrior that was captured by some eldritch creature and brought back to this realm. You may never know.
 
-tc.research_name.IRONFORTRESS=Iron Fortress Armor
-tc.research_text.IRONFORTRESS=A mundane alternative
+tc.research_name.TD.IRONFORTRESS=Iron Fortress Armor
+tc.research_text.TD.IRONFORTRESS=A mundane alternative
 tc.research_page.TD.ironFortress.1=The construction of your thaumium fortress armor was a great success, but has had you wondering about creating a set from alternate materials, as thaumium is expensive to produce in large quantaties. Taking the metallurgy back a step to iron has yielded some promising progress, however, due to the nature of iron, it is much more resistant to magical enhancement. <BR>Much like the thaumium version, it is designed as a set, and its protection increases with each additional piece worn. It also offers bonus protection against fire and explosions, but lacks the ability to lessen magical damage that the thaumium set has. 
 tc.research_page.TD.ironFortress.2=It is much more durable than a standard set of iron armor, and due to the craftwork involved, you find it to be slightly easier to enchant - but maybe that's just a side effect of it being constructed so close to all your arcane apparatus. However, due to the basic nature of the materials, you seem unable to add enhanced faceplates to it.
 
-tc.research_name.IRONHELMGOGGLES=Helm of Revealing
-tc.research_text.IRONHELMGOGGLES=Iron Fortress Helm Upgrade
+tc.research_name.TD.IRONHELMGOGGLES=Helm of Revealing
+tc.research_text.TD.IRONHELMGOGGLES=Iron Fortress Helm Upgrade
 tc.research_page.TD.ironHelmGoggles.1=Much like with the Thaumium Fortress Armor, you have found a way to unceremoniously meld some Goggles of Revealing onto your helm. All the functionality, but none of the vis discounts. A pity.<BR>A helm can have this upgrade along with faceplates. 
 
-tc.research_name.IRONHELMAESTHETICS=Aesthetic Faceplates
-tc.research_text.IRONHELMAESTHETICS=Iron Fortress Helm Upgrade
+tc.research_name.TD.IRONHELMAESTHETICS=Aesthetic Faceplates
+tc.research_text.TD.IRONHELMAESTHETICS=Iron Fortress Helm Upgrade
 tc.research_page.TD.ironHelmFace.1=Since the Iron Fortress Armor lacks the innate magical properties provided by being made of thaumium, it is not possible to extend your existing faceplate designs to it. This doesn't mean it can't have faceplates in general - just not magical ones. <BR>Taking a spare Crimson Knight helm, you separate off the front section and work it on an anvil for a bit, before crafting it into your Fortress Helm. You expect a similar thing could be done with a Praetor helm.
 
-tc.research_name.IRONHELMHUSK=Restored Husk Faceplate
-tc.research_text.IRONHELMHUSK=Iron Fortress Helm Upgrade
+tc.research_name.TD.IRONHELMHUSK=Restored Husk Faceplate
+tc.research_text.TD.IRONHELMHUSK=Iron Fortress Helm Upgrade
 tc.research_page.TD.ironHelmFace.2=Your studies into the armor the husks in the Outer Lands wear have yielded some clues about what their armor may have looked like before it was worn away by time and strange magics. Expanding on your existing collection of faceplate designs, the restored helmet's striking gold patterning are a unique addition to your armor. <BR>Some ancient energies still leech from under its new coating, but you're sure it's nothing to worry about.
 
-tc.research_name.DYEDRANGER=Thaumaturge's Ranger Armor
-tc.research_text.DYEDRANGER=Wilderness wanderers
+tc.research_name.TD.DYEDRANGER=Thaumaturge's Ranger Armor
+tc.research_text.TD.DYEDRANGER=Wilderness wanderers
 tc.research_page.TD.ranger.1=As comfortable as your newly upgraded robes are, they are not very practical in the field. They get caught on brambles, covered in mud, and are a little hot to wear on sunny days.<BR>Trimming away some of the fabric, and adding a few canteens for water, and a small pack, you now have the perfect set of gear for expeditions and hiking trips.
 tc.research_page.TD.ranger.2=Similar to the fortress helms it is based on, the Ranger Helm is will accept some minor modification. However, as the design of the armor is to minimise excess weight, you can't quite find the space to fit both your goggles and a faceplate.<BR>So you'll have to choose either fashion or function.
 
+tc.research_name.TD.VOIDROBE=Bleached Void Robes
+tc.research_text.TD.VOIDROBE=50 shades less dark
+tc.research_page.TD.voidrobe.1=While experimenting with your crucible, some essentia boiled over and splashed up on you - ruining a perfectly good set of robes, by leeching all the color out of where it hit. However, there might be a use for such a mix.<BR>Your Void Robes, though dyeable, are quite dark and dull, no matter how much dye you've tried to use. Perhaps bathing them in this essentia mix will lighten them up a little.
 
-
+tc.research_name.TD.THAUMIUMROBE=Thaumium Robes
+tc.research_text.TD.THAUMIUMROBE=The Thaumaturge's Thaumium Threads
+tc.research_page.TD.thaumrobe.1=For a while now, you've been struggling to find a compromise between your robes and other armor - having to choose between defence or utility. But no longer! Recent tests and study of the Crimson Robes have revealed a design which allows for both.<BR>Taking some thaumium armor and reconstructing it over a set of thaumaturge's robes, has created a set of lightly armored robes that offer both protection against both physical and magical attacks.<BR>The hood gains the benefits of the goggles used to craft it.<BR>This armor can be dyed.
 
 #Copied research 
 tc.research_name.TD.<string>= 
@@ -110,3 +125,5 @@ tc.research_name.TD.THAUMIUM=Magical Metallurgy
 tc.research_text.TD.THAUMIUM=Where metals meet magic
 tc.research_name.TD.OUTERARRIVAL=The Outer Lands 
 tc.research_text.TD.OUTERARRIVAL=We are not in Kansas anymore
+tc.research_name.TD.VOIDFORTRESS=Void Thaumaturge Robes
+tc.research_text.TD.VOIDFORTRESS=Otherworldly Style 
