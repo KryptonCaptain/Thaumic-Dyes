@@ -33,7 +33,7 @@ import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.nodes.IRevealer;
 import thaumicdyes.client.models.ModelRobes;
 
-public class ThaumiumRobeArmor extends ItemArmor implements IRepairable, IRunicArmor, IVisDiscountGear, IGoggles, IRevealer, /*ISpecialArmor,*/ IWarpingGear {
+public class ThaumiumRobeArmor extends ItemArmor implements IRepairable, IRunicArmor, IVisDiscountGear, IGoggles, IRevealer, ISpecialArmor, IWarpingGear {
    
    public IIcon iconHelm;
    public IIcon iconChest;
@@ -76,7 +76,7 @@ public class ThaumiumRobeArmor extends ItemArmor implements IRepairable, IRunicA
    }
 
    public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack) {
-      return par2ItemStack.isItemEqual(ItemApi.getItem("itemResource", 7))?true:super.getIsRepairable(par1ItemStack, par2ItemStack);
+      return par2ItemStack.isItemEqual(ItemApi.getItem("itemResource", 2))?true:super.getIsRepairable(par1ItemStack, par2ItemStack);
    }
 
    /*
@@ -112,7 +112,7 @@ public class ThaumiumRobeArmor extends ItemArmor implements IRepairable, IRunicA
    }
 
    public int getVisDiscount(ItemStack stack, EntityPlayer player, Aspect aspect) {
-      return 3;
+	   return this.armorType == 0 ? 5 : 3;
    }
 
    @SideOnly(Side.CLIENT)
@@ -210,7 +210,7 @@ public class ThaumiumRobeArmor extends ItemArmor implements IRepairable, IRunicA
       nbttagcompound1.setInteger("color", par2);
    }
 
-   /*
+   
    public ArmorProperties getProperties(EntityLivingBase player, ItemStack armor, DamageSource source, double damage, int slot) {
       byte priority = 0;
       double ratio = (double)super.damageReduceAmount / 25.0D;
@@ -227,9 +227,14 @@ public class ThaumiumRobeArmor extends ItemArmor implements IRepairable, IRunicA
 
    public int getArmorDisplay(EntityPlayer player, ItemStack armor, int slot) {
       return super.damageReduceAmount;
-   }*/
-
-
+   }
+   
+   public void damageArmor(EntityLivingBase entity, ItemStack stack, DamageSource source, int damage, int slot)
+   {
+     if (source != DamageSource.fall) {
+       stack.damageItem(damage, entity);
+     }
+   }
 
    public boolean onItemUseFirst(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side, float hitX, float hitY, float hitZ) {
       if(!world.isRemote && world.getBlock(x, y, z) == Blocks.cauldron && world.getBlockMetadata(x, y, z) > 0) {

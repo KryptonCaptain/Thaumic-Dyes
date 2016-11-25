@@ -118,7 +118,7 @@ public class IronFortressArmor extends ItemArmor implements IRepairable, IRunicA
   
   public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack)
   {
-    return par2ItemStack.isItemEqual(new ItemStack(Items.iron_ingot, 1, 0)) ? true : super.getIsRepairable(par1ItemStack, par2ItemStack);
+    return par2ItemStack.isItemEqual(new ItemStack(Items.iron_ingot)) ? true : super.getIsRepairable(par1ItemStack, par2ItemStack);
   }
   
   public int getRunicCharge(ItemStack itemstack)
