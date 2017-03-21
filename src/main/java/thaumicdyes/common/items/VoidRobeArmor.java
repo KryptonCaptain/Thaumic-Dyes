@@ -66,7 +66,7 @@ public class VoidRobeArmor
   
   public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
   {
-    return type == null ? "thaumicdyes:textures/models/armor/robe_armor_overlay.png" : "thaumicdyes:textures/models/armor/void_robe_armor.png";
+    return type == null ? "thaumicdyes:textures/models/robe_armor_overlay.png" : "thaumicdyes:textures/models/void_robe_armor.png";
   }
   
   public EnumRarity getRarity(ItemStack itemstack)

@@ -53,7 +53,7 @@ public class InhabitedKnightArmor extends ItemArmor implements IRepairable, IRun
 
    public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
    {
-     return "thaumicdyes:textures/models/armor/zombie_plate_armor.png";
+     return "thaumicdyes:textures/models/zombie_plate_armor.png";
    }
 
    public EnumRarity getRarity(ItemStack itemstack) {

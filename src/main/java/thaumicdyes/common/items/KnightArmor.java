@@ -59,7 +59,7 @@ public class KnightArmor extends ItemArmor implements IRepairable, IRunicArmor, 
    }
 
    public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
-      return type == null?"thaumicdyes:textures/models/armor/cultist_plate_armor_overlay.png":"thaumicdyes:textures/models/armor/cultist_plate_armor.png";
+      return type == null?"thaumicdyes:textures/models/cultist_plate_armor_overlay.png":"thaumicdyes:textures/models/cultist_plate_armor.png";
    }
 
    public EnumRarity getRarity(ItemStack itemstack) {

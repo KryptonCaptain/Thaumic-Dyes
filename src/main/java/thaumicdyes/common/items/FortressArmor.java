@@ -64,7 +64,7 @@ public class FortressArmor extends ItemFortressArmor implements IRepairable, IRu
    }
 
    public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
-      return type == null?"thaumicdyes:textures/models/armor/fortress_armor_overlay.png":"thaumicdyes:textures/models/armor/fortress_armor.png";
+      return type == null?"thaumicdyes:textures/models/fortress_armor_overlay.png":"thaumicdyes:textures/models/fortress_armor.png";
    }
 
    public EnumRarity getRarity(ItemStack itemstack) {

@@ -40,9 +40,10 @@ public class DyeResearch {
       //Copy research nodes
       copy(ResearchCategories.getResearchList("ARTIFICE").research.get("ARMORFORTRESS"),"TD.ARMORFORTRESS","DYES",5,-3).setConcealed().setHidden().registerResearchItem();
       //copy(ResearchCategories.getResearchList("ELDRITCH").research.get("VOIDMETAL"),"TD.VOIDMETAL","DYES",0,-1).setConcealed().setHidden().registerResearchItem();
-      copy(ResearchCategories.getResearchList("ELDRITCH").research.get("ENTEROUTER"),"TD.OUTERARRIVAL","DYES",-4,2).setConcealed().setHidden().registerResearchItem();
+      copy(ResearchCategories.getResearchList("ELDRITCH").research.get("ENTEROUTER"),"TD.OUTERARRIVAL","DYES",-3,4).setConcealed().setHidden().registerResearchItem();
       copy(ResearchCategories.getResearchList("ALCHEMY").research.get("THAUMIUM"),"TD.THAUMIUM","DYES",0,-2).setConcealed().setHidden().registerResearchItem();
-      copy(ResearchCategories.getResearchList("ELDRITCH").research.get("ARMORVOIDFORTRESS"),"TD.VOIDFORTRESS","DYES",-2,4).setConcealed().setHidden().registerResearchItem();
+      copy(ResearchCategories.getResearchList("ELDRITCH").research.get("ARMORVOIDFORTRESS"),"TD.VOIDFORTRESS","DYES",0,4).setConcealed().setHidden().registerResearchItem();
+      
       
       
       //TODO Crimson Robes
@@ -230,7 +231,7 @@ public class DyeResearch {
       
       new ResearchItem("TD.INHABITEDPLATE", "DYES", 
 		  (new AspectList()).add(Aspect.ENTROPY, 4).add(Aspect.EXCHANGE, 4).add(Aspect.ELDRITCH, 4),
-          -2, 1, 2, 
+          -4, 2, 2, 
 		  new ItemStack(ItemHandler.itemHelmetInhabitedPlate, 0))
 		  .setPages(new ResearchPage[]{
 				  new ResearchPage("tc.research_page.TD.husk.1"), 
@@ -376,7 +377,7 @@ public class DyeResearch {
             
       new ResearchItem("TD.IRONFORTRESS", "DYES", 
     		  (new AspectList()).add(Aspect.ARMOR, 5).add(Aspect.METAL, 5).add(Aspect.CRAFT, 5),
-    		  4, 0, 2, 
+    		  5, -1, 2, 
     		  new ItemStack(ItemHandler.itemHelmetIronFortress, 0))
       		  .setPages(new ResearchPage[]{
     				  new ResearchPage("tc.research_page.TD.ironFortress.1"),
@@ -415,7 +416,7 @@ public class DyeResearch {
 		
 	new ResearchItem("TD.IRONHELMGOGGLES", "DYES", 
 			new AspectList().add(Aspect.SENSES, 5).add(Aspect.AURA, 3).add(Aspect.ARMOR, 3), 
-			2, 0, 2, 
+			7, -1, 2, 
 			ItemApi.getItem("itemGoggles", 0))
       		  .setPages(new ResearchPage[]{
     				  new ResearchPage("tc.research_page.TD.ironHelmGoggles.1"),
@@ -427,7 +428,7 @@ public class DyeResearch {
 	
 	new ResearchItem("TD.IRONHELMAESTHETICS", "DYES", 
 			new AspectList().add(Aspect.CRAFT, 5).add(Aspect.ARMOR, 3), 
-			2, 1, 2, 
+			7, 0, 2, 
 			ItemApi.getItem("itemHelmetCultistPlate", 0))
       		  .setPages(new ResearchPage[]{
     				  new ResearchPage("tc.research_page.TD.ironHelmFace.1"),
@@ -449,7 +450,7 @@ public class DyeResearch {
 	
 	new ResearchItem("TD.IRONHELMHUSK", "DYES", 
 			new AspectList().add(Aspect.CRAFT, 5).add(Aspect.ARMOR, 3).add(Aspect.ELDRITCH, 2), 
-			3, 2, 2, 
+			6, 1, 2, 
 			new ResourceLocation("thaumicdyes:textures/items/icon/shinyhuskplatehelm.png"))
       		  .setPages(new ResearchPage[]{
     				  new ResearchPage("tc.research_page.TD.ironHelmFace.2"),
@@ -480,7 +481,7 @@ public class DyeResearch {
             
      new ResearchItem("TD.VOIDROBE", "DYES", 
     		  (new AspectList()).add(Aspect.ARMOR, 5).add(Aspect.METAL, 5).add(Aspect.CRAFT, 5),
-    		  0, 3, 2, 
+    		  2, 4, 2, 
     		  new ItemStack(ItemHandler.itemChestVoidRobe, 0))
       		  .setPages(new ResearchPage[]{
     				  new ResearchPage("tc.research_page.TD.voidrobe.1"),
@@ -544,6 +545,60 @@ public class DyeResearch {
 				  .setParents("TD.THAUMIUM", "GOGGLES", "ENCHFABRIC")
 				  .registerResearchItem();
       
+      //TODO boots
+	      
+	      copy(ResearchCategories.getResearchList("ARTIFICE").research.get("BOOTSTRAVELLER"),"TD.BOOTSTRAVELLER","DYES",-1,1).setConcealed().setHidden().registerResearchItem();
+	      //Thaumium
+	      
+	      InfusionRecipe recipeThaumBoots = ThaumcraftApi.addInfusionCraftingRecipe("TD.THAUMIUMBOOTS", 
+					new ItemStack(ItemHandler.itemBootsThaumiumTraveller), 4, 
+					new AspectList().add(Aspect.METAL, 16).add(Aspect.ARMOR, 16).add(Aspect.CLOTH, 16).add(Aspect.MAGIC, 16).add(Aspect.TRAVEL, 8), 
+					ItemApi.getItem("itemBootsTraveller", 0), 
+					new ItemStack[] { 
+	    	  			new ItemStack(Items.leather), 
+		    			new ItemStack(ConfigItems.itemResource, 1, 2), 
+		    			new ItemStack(ConfigItems.itemResource, 1, 2), 
+		    			new ItemStack(ConfigItems.itemResource, 1, 14), 
+		    			new ItemStack(ConfigItems.itemResource, 1, 7), 
+		    			new ItemStack(ConfigItems.itemResource, 1, 7)});
+	      
+	      
+	      new ResearchItem("TD.THAUMIUMBOOTS", "DYES", 
+	    		  (new AspectList()).add(Aspect.ARMOR, 5).add(Aspect.CLOTH, 5).add(Aspect.TRAVEL, 5),
+	    		  1, 0, 2, 
+	    		  new ItemStack(ItemHandler.itemBootsThaumiumTraveller, 0))
+	      		  .setPages(new ResearchPage[]{
+	    				  new ResearchPage("tc.research_page.TD.thaumboots.1"),
+	    				  new ResearchPage(recipeThaumBoots)})
+				  .setParents("TD.THAUMIUM", "TD.BOOTSTRAVELLER")
+				  .registerResearchItem();
+	      
+	      //Void
+	      
+	      InfusionRecipe recipeVoidBoots = ThaumcraftApi.addInfusionCraftingRecipe("TD.VOIDBOOTS", 
+					new ItemStack(ItemHandler.itemBootsVoidTraveller), 4, 
+					new AspectList().add(Aspect.METAL, 16).add(Aspect.ARMOR, 16).add(Aspect.CLOTH, 16).add(Aspect.MAGIC, 16).add(Aspect.TRAVEL, 8).add(Aspect.ELDRITCH, 16).add(Aspect.VOID, 8), 
+					ItemApi.getItem("itemBootsTraveller", 0), 
+					new ItemStack[] { 
+	    	  			new ItemStack(Items.leather), 
+		    			new ItemStack(ConfigItems.itemResource, 1, 16), 
+		    			new ItemStack(ConfigItems.itemResource, 1, 2), 
+		    			new ItemStack(ConfigItems.itemResource, 1, 14), 
+		    			new ItemStack(ConfigItems.itemResource, 1, 7), 
+		    			new ItemStack(ConfigItems.itemResource, 1, 7)});
+	      
+	      
+	      new ResearchItem("TD.VOIDBOOTS", "DYES", 
+	    		  (new AspectList()).add(Aspect.ARMOR, 5).add(Aspect.CLOTH, 5).add(Aspect.TRAVEL, 5).add(Aspect.ELDRITCH, 5),
+	    		  1, 2, 2, 
+	    		  new ItemStack(ItemHandler.itemBootsVoidTraveller, 0))
+	      		  .setPages(new ResearchPage[]{
+	    				  new ResearchPage("tc.research_page.TD.voidboots.1"),
+	    				  new ResearchPage(recipeVoidBoots)})
+				  .setParents("TD.VOIDFORTRESS", "TD.BOOTSTRAVELLER")
+				  .registerResearchItem();
+	      
+	      
    }
 
    
