@@ -53,6 +53,11 @@ public class IronFortressArmor extends ItemArmor implements IRepairable, IRunicA
     this.iconLegs = ir.registerIcon("thaumicdyes:icon/ironfortresslegs");
   }
   
+  public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
+  {
+    return "thaumicdyes:textures/models/iron_fortress_armor.png";
+  }
+  
   @SideOnly(Side.CLIENT)
   public IIcon getIconFromDamage(int par1)
   {
@@ -106,10 +111,6 @@ public class IronFortressArmor extends ItemArmor implements IRepairable, IRunicA
      return this.model;
   }
   
-  public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
-  {
-    return "thaumicdyes:textures/models/armor/iron_fortress_armor.png";
-  }
   
   public EnumRarity getRarity(ItemStack itemstack)
   {

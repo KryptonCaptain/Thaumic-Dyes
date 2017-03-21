@@ -62,7 +62,7 @@ public class RangerArmor extends ItemArmor implements IRepairable, IRunicArmor, 
    }
 
    public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
-      return type == null?"thaumicdyes:textures/models/armor/ranger_armor_overlay.png":"thaumicdyes:textures/models/armor/ranger_armor.png";
+      return type == null?"thaumicdyes:textures/models/ranger_armor_overlay.png":"thaumicdyes:textures/models/ranger_armor.png";
    }
 
    public EnumRarity getRarity(ItemStack itemstack) {

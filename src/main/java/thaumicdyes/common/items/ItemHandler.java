@@ -56,6 +56,9 @@ public class ItemHandler {
    public static Item itemHelmetThaumiumRobe;
    public static Item itemChestThaumiumRobe;
    public static Item itemLegsThaumiumRobe;
+   
+   public static Item itemBootsThaumiumTraveller;
+   public static Item itemBootsVoidTraveller;
 
 
    public static void registerItems() {
@@ -96,6 +99,10 @@ public class ItemHandler {
       GameRegistry.registerItem(itemChestThaumiumRobe, "ThaumiumRobeChest");
       GameRegistry.registerItem(itemLegsThaumiumRobe, "ThaumiumRobeLegs");
       
+      GameRegistry.registerItem(itemBootsThaumiumTraveller, "BootsThaumiumTraveller");
+      GameRegistry.registerItem(itemBootsVoidTraveller, "BootsVoidTraveller");
+      
+      
    }
 
    public static void defineItems() {
@@ -131,11 +138,14 @@ public class ItemHandler {
 	   itemHelmetVoidRobe = (new VoidRobeArmor(ThaumcraftApi.armorMatVoid, 4, 0)).setUnlocalizedName("VoidRobeHelm").setCreativeTab(TabTD.TabTD);
 	   itemChestVoidRobe = (new VoidRobeArmor(ThaumcraftApi.armorMatVoid, 4, 1)).setUnlocalizedName("VoidRobeChest").setCreativeTab(TabTD.TabTD);
 	   itemLegsVoidRobe = (new VoidRobeArmor(ThaumcraftApi.armorMatVoid, 4, 2)).setUnlocalizedName("VoidRobeLegs").setCreativeTab(TabTD.TabTD);
-       
+       //boot
+	   itemBootsVoidTraveller = (new VoidBoots(ThaumcraftApi.armorMatVoid, 4, 3)).setUnlocalizedName("VoidTrvlBoots").setCreativeTab(TabTD.TabTD);
+	   
 	   itemHelmetThaumiumRobe = (new ThaumiumRobeArmor(ThaumcraftApi.armorMatThaumium, 4, 0)).setUnlocalizedName("ThaumiumRobeHelm").setCreativeTab(TabTD.TabTD);
 	   itemChestThaumiumRobe = (new ThaumiumRobeArmor(ThaumcraftApi.armorMatThaumium, 4, 1)).setUnlocalizedName("ThaumiumRobeChest").setCreativeTab(TabTD.TabTD);
 	   itemLegsThaumiumRobe = (new ThaumiumRobeArmor(ThaumcraftApi.armorMatThaumium, 4, 2)).setUnlocalizedName("ThaumiumRobeLegs").setCreativeTab(TabTD.TabTD);
-       
+       //boot
+	   itemBootsThaumiumTraveller = (new ThaumiumBoots(ThaumcraftApi.armorMatThaumium, 4, 3)).setUnlocalizedName("ThaumiumTrvlBoots").setCreativeTab(TabTD.TabTD);
 	   
    }
 

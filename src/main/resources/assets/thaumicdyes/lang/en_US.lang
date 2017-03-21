@@ -40,6 +40,9 @@ item.ThaumiumRobeHelm.name=Thaumium Robe Hood
 item.ThaumiumRobeChest.name=Thaumium Robe
 item.ThaumiumRobeLegs.name=Thaumium Robe Leggings
 #
+item.ThaumiumTrvlBoots.name=Thaumium Boots of the Explorer
+item.VoidTrvlBoots.name=Void Boots of the Wanderer
+
 
 
 //item.ItemGoggles.name=Goggles of Revealing
@@ -114,9 +117,21 @@ tc.research_name.TD.THAUMIUMROBE=Thaumium Robes
 tc.research_text.TD.THAUMIUMROBE=The Thaumaturge's Thaumium Threads
 tc.research_page.TD.thaumrobe.1=For a while now, you've been struggling to find a compromise between your robes and other armor - having to choose between defence or utility. But no longer! Recent tests and study of the Crimson Robes have revealed a design which allows for both.<BR>Taking some thaumium armor and reconstructing it over a set of thaumaturge's robes, has created a set of lightly armored robes that offer both protection against both physical and magical attacks.<BR>The hood gains the benefits of the goggles used to craft it.<BR>This armor can be dyed.
 
+
+tc.research_name.TD.THAUMIUMBOOTS=Thaumium Boots of the Explorer
+tc.research_text.TD.THAUMIUMBOOTS=A step in the right direction
+tc.research_page.TD.thaumboots.1=The Boots of the Traveller have served you well, but they still leave much to be desired in the way of protection. Your advancements with thaumium and infusion might hold the key to taking the boots to the next level.<BR>These new boots provide a slight speed and fall reduction increase over the old ones. Excellent.
+
+
+tc.research_name.TD.VOIDBOOTS=Void Boots of the Wanderer
+tc.research_text.TD.VOIDBOOTS=Completing the set
+tc.research_page.TD.voidboots.1=The Void Thaumaturge's Robe has everything you could ever want - disturbingly comfortable cloth, better vis channelling, seemingly bottomless pockets, and solid defensive protection. But the one thing it doesn't have is a matching pair of boots, and you think it's time to fix that.<BR>Applying the same methods you used to create the robes on the Boots of the Traveller has resulted in the sleekest footwear this side of the ethereal plane. With greatly increased speed and fall reduction, you won't quite be able to leap tall buildings, but you'll be a match to keep up with.
+
+
+
 #Copied research 
-tc.research_name.TD.<string>= 
-tc.research_text.TD.<string>= 
+tc.research_name.TD.<string>=
+tc.research_text.TD.<string>=
 tc.research_name.TD.ARMORFORTRESS=Thaumium Fortress Armor 
 tc.research_text.TD.ARMORFORTRESS=Nothing is getting in 
 tc.research_name.TD.VOIDMETAL=Void metal 
@@ -126,4 +141,7 @@ tc.research_text.TD.THAUMIUM=Where metals meet magic
 tc.research_name.TD.OUTERARRIVAL=The Outer Lands 
 tc.research_text.TD.OUTERARRIVAL=We are not in Kansas anymore
 tc.research_name.TD.VOIDFORTRESS=Void Thaumaturge Robes
-tc.research_text.TD.VOIDFORTRESS=Otherworldly Style 
+tc.research_text.TD.VOIDFORTRESS=Otherworldly Style
+tc.research_name.TD.BOOTSTRAVELLER=Boots of the Traveler
+tc.research_text.TD.BOOTSTRAVELLER=These boots were made for walking
+

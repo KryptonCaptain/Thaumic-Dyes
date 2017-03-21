@@ -63,11 +63,11 @@ public class ThaumiumRobeArmor extends ItemArmor implements IRepairable, IRunicA
    }
 
    public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
-      return type == null?"thaumicdyes:textures/models/armor/thaumium_robe_armor_overlay.png":"thaumicdyes:textures/models/armor/thaumium_robe_armor.png";
+      return type == null?"thaumicdyes:textures/models/thaumium_robe_armor_overlay.png":"thaumicdyes:textures/models/thaumium_robe_armor.png";
    }
 
    public EnumRarity getRarity(ItemStack itemstack) {
-      return EnumRarity.uncommon;
+      return EnumRarity.rare;
    }
 
    public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4) {

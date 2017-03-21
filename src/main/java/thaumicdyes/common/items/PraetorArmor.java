@@ -59,7 +59,7 @@ public class PraetorArmor extends ItemArmor implements IRepairable, IRunicArmor,
    }
 
    public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
-      return type == null?"thaumicdyes:textures/models/armor/praetor_armor_overlay.png":"thaumicdyes:textures/models/armor/praetor_armor.png";
+      return type == null?"thaumicdyes:textures/models/praetor_armor_overlay.png":"thaumicdyes:textures/models/praetor_armor.png";
    }
 
    public EnumRarity getRarity(ItemStack itemstack) {
