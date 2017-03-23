@@ -4,44 +4,58 @@ itemGroup.TabTD=Thaumic Dyes
 ///////////
 # Items 
 ///////////
-item.CultistRobeHelm.name=Cultist Hood 
-item.CultistRobeChest.name=Cultist Robe 
-item.CultistRobeLegs.name=Cultist Leggings 
+item.itemHelmetCultistRobeDyed.name=Cultist Hood 
+item.itemChestCultistRobeDyed.name=Cultist Robe 
+item.itemLegsCultistRobeDyed.name=Cultist Leggings 
 # 
-item.FortressHelm.name=Enhanced Fortress Helmet 
-item.FortressChest.name=Enhanced Fortress Cuirass 
-item.FortressLegs.name=Enhanced Fortress Thigh Guards 
+item.itemHelmetFortressDyed.name=Enhanced Fortress Helmet 
+item.itemChestFortressDyed.name=Enhanced Fortress Cuirass 
+item.itemLegsFortressDyed.name=Enhanced Fortress Thigh Guards 
 # 
-item.CultistLeaderHelm.name=Reinforced Praetor Helmet 
-item.CultistLeaderChest.name=Reinforced Praetor Chestplate 
-item.CultistLeaderLegs.name=Reinforced Praetor Greaves 
+item.itemHelmetCultistLeaderDyed.name=Reinforced Praetor Helmet 
+item.itemChestCultistLeaderDyed.name=Reinforced Praetor Chestplate 
+item.itemLegsCultistLeaderDyed.name=Reinforced Praetor Greaves 
 # 
-item.CultistPlateHelm.name=Hardened Cultist Helmet 
-item.CultistPlateChest.name=Hardened Cultist Chestplate 
-item.CultistPlateLegs.name=Hardened Cultist Greaves 
+item.itemHelmetCultistKnightDyed.name=Hardened Cultist Helmet 
+item.itemChestCultistKnightDyed.name=Hardened Cultist Chestplate 
+item.itemLegsCultistKnightDyed.name=Hardened Cultist Greaves 
 #
-item.InhabitedPlateHelm.name=Husk Helmet
-item.InhabitedPlateChest.name=Husk Chestplate
-item.InhabitedPlateLegs.name=Husk Greaves
+item.itemHelmetInhabitedPlate.name=Husk Helmet
+item.itemChestInhabitedPlate.name=Husk Chestplate
+item.itemLegsInhabitedPlate.name=Husk Greaves
 #
-item.IronFortressHelm.name=Iron Fortress Helmet
-item.IronFortressChest.name=Iron Fortress Cuirass 
-item.IronFortressLegs.name=Iron Fortress Thigh Guards 
+item.itemHelmetIronFortress.name=Iron Fortress Helmet
+item.itemChestIronFortress.name=Iron Fortress Cuirass 
+item.itemLegsIronFortress.name=Iron Fortress Thigh Guards 
 #
-item.CultistRangerHelm.name=Ranger Helm
-item.CultistRangerChest.name=Ranger Chestplate
-item.CultistRangerLegs.name=Ranger Leggings
+item.itemHelmetCultistRangerDyed.name=Ranger Helm
+item.itemChestCultistRangerDyed.name=Ranger Chestplate
+item.itemLegsCultistRangerDyed.name=Ranger Leggings
 #
-item.VoidRobeHelm.name=Bleached Void Robe Hood
-item.VoidRobeChest.name=Bleached Void Robe
-item.VoidRobeLegs.name=Bleached Void Robe Leggings
+item.itemHelmetVoidRobeDyed.name=Bleached Void Robe Hood
+item.itemChestVoidRobeDyed.name=Bleached Void Robe
+item.itemLegsVoidRobeDyed.name=Bleached Void Robe Leggings
 #
-item.ThaumiumRobeHelm.name=Thaumium Robe Hood
-item.ThaumiumRobeChest.name=Thaumium Robe
-item.ThaumiumRobeLegs.name=Thaumium Robe Leggings
+item.itemHelmetThaumiumRobeDyed.name=Thaumium Robe Hood
+item.itemChestThaumiumRobeDyed.name=Thaumium Robe
+item.itemLegsThaumiumRobeDyed.name=Thaumium Robe Leggings
 #
-item.ThaumiumTrvlBoots.name=Thaumium Boots of the Explorer
-item.VoidTrvlBoots.name=Void Boots of the Wanderer
+item.itemBootsThaumiumTraveller.name=Thaumium Boots of the Explorer
+item.itemBootsVoidTraveller.name=Void Boots of the Wanderer
+#
+item.itemHelmetCultistPaladin.name=Crimson Paladin Helm
+#
+item.itemHelmetCultistArcher.name=Crimson Archer Helm
+item.itemChestCultistArcher.name=Crimson Archer Chestplate
+item.itemLegsCultistArcher.name=Crimson Archer Leggings
+
+item.itemHelmetCultistArcherDyed.name=Archer Helm
+item.itemChestCultistArcherDyed.name=Archer Chestplate
+item.itemLegsCultistArcherDyed.name=Archer Leggings
+
+item.itemHelmetCultistRanger.name=Crimson Ranger Helm
+item.itemChestCultistRanger.name=Crimson Ranger Chestplate
+item.itemLegsCultistRanger.name=Crimson Ranger Leggings
 
 
 

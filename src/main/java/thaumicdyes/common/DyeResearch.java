@@ -48,7 +48,7 @@ public class DyeResearch {
       
       //TODO Crimson Robes
 	   InfusionRecipe recipeRobeHelm = ThaumcraftApi.addInfusionCraftingRecipe("TD.DYEDROBE",
-			   new ItemStack(ItemHandler.itemHelmetCultistRobe), 3, 
+			   new ItemStack(ItemHandler.itemHelmetCultistRobeDyed), 3, 
 			   (new AspectList()).add(Aspect.ARMOR, 8).add(Aspect.MAGIC, 16).add(Aspect.CLOTH, 16).add(Aspect.METAL, 8), 
 			   ItemApi.getItem("itemHelmetCultistRobe", 0), 
 			   new ItemStack[]{
@@ -58,7 +58,7 @@ public class DyeResearch {
 		   			ItemApi.getItem("itemResource", 7)});
 	   
 	   InfusionRecipe recipeRobeChest = ThaumcraftApi.addInfusionCraftingRecipe("TD.DYEDROBE", 
-			   new ItemStack(ItemHandler.itemChestCultistRobe), 3, 
+			   new ItemStack(ItemHandler.itemChestCultistRobeDyed), 3, 
 			   (new AspectList()).add(Aspect.ARMOR, 12).add(Aspect.MAGIC, 24).add(Aspect.CLOTH, 24).add(Aspect.METAL, 8),  
 			   ItemApi.getItem("itemChestCultistRobe", 0), 
 			   new ItemStack[]{
@@ -68,7 +68,7 @@ public class DyeResearch {
 				   ItemApi.getItem("itemResource", 7)});
 			   
 	   InfusionRecipe recipeRobeLegs = ThaumcraftApi.addInfusionCraftingRecipe("TD.DYEDROBE",
-			   new ItemStack(ItemHandler.itemLegsCultistRobe), 3, 
+			   new ItemStack(ItemHandler.itemLegsCultistRobeDyed), 3, 
 			   (new AspectList()).add(Aspect.ARMOR, 10).add(Aspect.MAGIC, 20).add(Aspect.CLOTH, 20).add(Aspect.METAL, 8),  
 			   ItemApi.getItem("itemLegsCultistRobe", 0), 
 			   new ItemStack[]{
@@ -80,7 +80,7 @@ public class DyeResearch {
       new ResearchItem("TD.DYEDROBE", "DYES", 
     		  (new AspectList()).add(Aspect.CLOTH, 4).add(Aspect.ARMOR, 4).add(Aspect.MAGIC, 4),
     		  -2, -3, 2, 
-    		  new ItemStack(ItemHandler.itemHelmetCultistRobe, 0))
+    		  new ItemStack(ItemHandler.itemHelmetCultistRobeDyed, 0))
     		  .setPages(new ResearchPage[]{
     				  new ResearchPage("tc.research_page.TD.robe.1"), 
     				  new ResearchPage("tc.research_page.TD.robe.2"), 
@@ -106,7 +106,7 @@ public class DyeResearch {
 	   InfusionRecipe recipeRangerChest = ThaumcraftApi.addInfusionCraftingRecipe("TD.DYEDRANGER", 
 			   new ItemStack(ItemHandler.itemChestCultistRanger), 3, 
 			   (new AspectList()).add(Aspect.CRAFT, 8).add(Aspect.TRAVEL, 8).add(Aspect.VOID, 8),  
-			   new ItemStack(ItemHandler.itemChestCultistRobe, 0), 
+			   new ItemStack(ItemHandler.itemChestCultistRobeDyed, 0), 
 			   new ItemStack[]{
 				   new ItemStack(Blocks.chest),
 				   new ItemStack(Blocks.wool)});
@@ -114,7 +114,7 @@ public class DyeResearch {
 	   InfusionRecipe recipeRangerLegs = ThaumcraftApi.addInfusionCraftingRecipe("TD.DYEDRANGER",
 			   new ItemStack(ItemHandler.itemLegsCultistRanger), 3, 
 			   (new AspectList()).add(Aspect.TRAVEL, 4).add(Aspect.VOID, 8).add(Aspect.CRAFT, 8),  
-			   new ItemStack(ItemHandler.itemLegsCultistRobe, 0), 
+			   new ItemStack(ItemHandler.itemLegsCultistRobeDyed, 0), 
 			   new ItemStack[]{
 				   new ItemStack(Items.blaze_powder),
 				   new ItemStack(Items.glass_bottle),
@@ -156,7 +156,7 @@ public class DyeResearch {
 	      
       //TODO Crimson Knight
       InfusionRecipe recipeKniHelm = ThaumcraftApi.addInfusionCraftingRecipe("TD.DYEDKNIGHT",
-			   new ItemStack(ItemHandler.itemHelmetCultistPlate), 3, 
+			   new ItemStack(ItemHandler.itemHelmetCultistKnightDyed), 3, 
 			   (new AspectList()).add(Aspect.ARMOR, 16).add(Aspect.MAGIC, 16).add(Aspect.CLOTH, 8).add(Aspect.METAL, 16),
 			   ItemApi.getItem("itemHelmetCultistPlate", 0), 
 			   new ItemStack[]{
@@ -166,7 +166,7 @@ public class DyeResearch {
 		   			ItemApi.getItem("itemResource", 2)});
       	
       InfusionRecipe recipeKniChest = ThaumcraftApi.addInfusionCraftingRecipe("TD.DYEDKNIGHT",
-			   new ItemStack(ItemHandler.itemChestCultistPlate), 3, 
+			   new ItemStack(ItemHandler.itemChestCultistKnightDyed), 3, 
 			   (new AspectList()).add(Aspect.ARMOR, 24).add(Aspect.MAGIC, 24).add(Aspect.CLOTH, 8).add(Aspect.METAL, 16),
 			   ItemApi.getItem("itemChestCultistPlate", 0), 
 			   new ItemStack[]{
@@ -176,7 +176,7 @@ public class DyeResearch {
 		   			ItemApi.getItem("itemResource", 2)});
  	   
       InfusionRecipe recipeKniLegs = ThaumcraftApi.addInfusionCraftingRecipe("TD.DYEDKNIGHT",
-			   new ItemStack(ItemHandler.itemLegsCultistPlate), 3, 
+			   new ItemStack(ItemHandler.itemLegsCultistKnightDyed), 3, 
 			   (new AspectList()).add(Aspect.ARMOR, 20).add(Aspect.MAGIC, 20).add(Aspect.CLOTH, 8).add(Aspect.METAL, 16),
 			   ItemApi.getItem("itemLegsCultistPlate", 0), 
 			   new ItemStack[]{
@@ -247,7 +247,7 @@ public class DyeResearch {
     	
       //TODO Crimson Praetor
       InfusionRecipe recipePraeHelm = ThaumcraftApi.addInfusionCraftingRecipe("TD.DYEDPRAETOR", 
-			   new ItemStack(ItemHandler.itemHelmetCultistLeaderPlate), 5, 
+			   new ItemStack(ItemHandler.itemHelmetCultistLeaderDyed), 5, 
 			   (new AspectList()).add(Aspect.ARMOR, 16).add(Aspect.MAGIC, 16).add(Aspect.CLOTH, 8).add(Aspect.METAL, 16),
 			   ItemApi.getItem("itemHelmetCultistLeaderPlate", 0), 
 			   new ItemStack[]{
@@ -257,7 +257,7 @@ public class DyeResearch {
 		  			ItemApi.getItem("itemResource", 2)});
 	  
       InfusionRecipe recipePraeChest = ThaumcraftApi.addInfusionCraftingRecipe("TD.DYEDPRAETOR", 
-			   new ItemStack(ItemHandler.itemChestCultistLeaderPlate), 5, 
+			   new ItemStack(ItemHandler.itemChestCultistLeaderDyed), 5, 
 			   (new AspectList()).add(Aspect.ARMOR, 24).add(Aspect.MAGIC, 24).add(Aspect.CLOTH, 8).add(Aspect.METAL, 16), 
 			   ItemApi.getItem("itemChestCultistLeaderPlate", 0), 
 			   new ItemStack[]{
@@ -267,7 +267,7 @@ public class DyeResearch {
 		  			ItemApi.getItem("itemResource", 2)});
 	  
       InfusionRecipe recipePraeLegs = ThaumcraftApi.addInfusionCraftingRecipe("TD.DYEDPRAETOR", 
-			   new ItemStack(ItemHandler.itemLegsCultistLeaderPlate), 5, 
+			   new ItemStack(ItemHandler.itemLegsCultistLeaderDyed), 5, 
 			   (new AspectList()).add(Aspect.ARMOR, 20).add(Aspect.MAGIC, 20).add(Aspect.CLOTH, 8).add(Aspect.METAL, 16), 
 			   ItemApi.getItem("itemLegsCultistLeaderPlate", 0), 
 			   new ItemStack[]{
@@ -293,7 +293,7 @@ public class DyeResearch {
       
       //TODO Thaum Fortress
       InfusionRecipe recipeFortHelm = ThaumcraftApi.addInfusionCraftingRecipe("TD.DYEDFORTRESS", 
-			   new ItemStack(ItemHandler.itemHelmetFortress), 5, 
+			   new ItemStack(ItemHandler.itemHelmetFortressDyed), 5, 
 			   (new AspectList()).add(Aspect.ARMOR, 16).add(Aspect.MAGIC, 16).add(Aspect.CLOTH, 8).add(Aspect.METAL, 16), 
 			   ItemApi.getItem("itemHelmetFortress", 0), 
 			   new ItemStack[]{
@@ -303,7 +303,7 @@ public class DyeResearch {
 				   ItemApi.getItem("itemResource", 2)});
 			   
       InfusionRecipe recipeFortChest = ThaumcraftApi.addInfusionCraftingRecipe("TD.DYEDFORTRESS", 
-			   new ItemStack(ItemHandler.itemChestFortress), 5, 
+			   new ItemStack(ItemHandler.itemChestFortressDyed), 5, 
 			   (new AspectList()).add(Aspect.ARMOR, 24).add(Aspect.MAGIC, 24).add(Aspect.CLOTH, 8).add(Aspect.METAL, 16), 
 			   ItemApi.getItem("itemChestFortress", 0), 
 			   new ItemStack[]{
@@ -313,7 +313,7 @@ public class DyeResearch {
 		   			ItemApi.getItem("itemResource", 2)});
 	   
       InfusionRecipe recipeFortLegs = ThaumcraftApi.addInfusionCraftingRecipe("TD.DYEDFORTRESS", 
-			   new ItemStack(ItemHandler.itemLegsFortress), 5, 
+			   new ItemStack(ItemHandler.itemLegsFortressDyed), 5, 
 			   (new AspectList()).add(Aspect.ARMOR, 20).add(Aspect.MAGIC, 20).add(Aspect.CLOTH, 8).add(Aspect.METAL, 16),
 			   ItemApi.getItem("itemLegsFortress", 0), 
 			   new ItemStack[]{
@@ -326,7 +326,7 @@ public class DyeResearch {
       new ResearchItem("TD.DYEDFORTRESS", "DYES", 
     		  (new AspectList()).add(Aspect.CLOTH, 5).add(Aspect.ARMOR, 5).add(Aspect.MAGIC, 5),
     		  3, -2, 5, 
-    		  new ItemStack(ItemHandler.itemHelmetFortress, 0))
+    		  new ItemStack(ItemHandler.itemHelmetFortressDyed, 0))
     		  .setPages(new ResearchPage[]{
     				  new ResearchPage("tc.research_page.TD.fortress.1"), 
     				  new ResearchPage(recipeFortHelm), 
@@ -465,24 +465,24 @@ public class DyeResearch {
 	//TODO VOID ROBE
 	
 	CrucibleRecipe recipeVoidRobeHelm = ThaumcraftApi.addCrucibleRecipe("TD.DYEDFORTRESS", 
-			new ItemStack(ItemHandler.itemHelmetVoidRobe), 
+			new ItemStack(ItemHandler.itemHelmetVoidRobeDyed), 
 			ItemApi.getItem("itemHelmetVoidRobe", 0), 
 			(new AspectList()).add(Aspect.CLOTH, 8).add(Aspect.ENTROPY, 4).add(Aspect.EXCHANGE, 8));
 			   
 	CrucibleRecipe recipeVoidRobeChest = ThaumcraftApi.addCrucibleRecipe("TD.DYEDFORTRESS", 
-			new ItemStack(ItemHandler.itemChestVoidRobe), 
+			new ItemStack(ItemHandler.itemChestVoidRobeDyed), 
 			ItemApi.getItem("itemChestVoidRobe", 0), 
 			(new AspectList()).add(Aspect.CLOTH, 8).add(Aspect.ENTROPY, 4).add(Aspect.EXCHANGE, 8));
 	
 	CrucibleRecipe recipeVoidRobeLegs = ThaumcraftApi.addCrucibleRecipe("TD.DYEDFORTRESS", 
-			new ItemStack(ItemHandler.itemLegsVoidRobe), 
+			new ItemStack(ItemHandler.itemLegsVoidRobeDyed), 
 			ItemApi.getItem("itemLegsVoidRobe", 0), 
 			(new AspectList()).add(Aspect.CLOTH, 8).add(Aspect.ENTROPY, 4).add(Aspect.EXCHANGE, 8));
             
      new ResearchItem("TD.VOIDROBE", "DYES", 
     		  (new AspectList()).add(Aspect.ARMOR, 5).add(Aspect.METAL, 5).add(Aspect.CRAFT, 5),
     		  2, 4, 2, 
-    		  new ItemStack(ItemHandler.itemChestVoidRobe, 0))
+    		  new ItemStack(ItemHandler.itemChestVoidRobeDyed, 0))
       		  .setPages(new ResearchPage[]{
     				  new ResearchPage("tc.research_page.TD.voidrobe.1"),
     				  new ResearchPage(recipeVoidRobeHelm),
@@ -498,7 +498,7 @@ public class DyeResearch {
 	//TODO Thaumium robe
 				   
 	    InfusionRecipe recipeThaumRobeHelm = ThaumcraftApi.addInfusionCraftingRecipe("TD.THAUMIUMROBE", 
-				new ItemStack(ItemHandler.itemHelmetThaumiumRobe), 4, 
+				new ItemStack(ItemHandler.itemHelmetThaumiumRobeDyed), 4, 
 				new AspectList().add(Aspect.METAL, 16).add(Aspect.SENSES, 16).add(Aspect.ARMOR, 16).add(Aspect.CLOTH, 16).add(Aspect.MAGIC, 16), 
 				ItemApi.getItem("itemHelmetThaumium", 0), 
 				new ItemStack[] { 
@@ -510,7 +510,7 @@ public class DyeResearch {
 	    			new ItemStack(ConfigItems.itemResource, 1, 7) });
 			    
 	    InfusionRecipe recipeThaumRobeChest = ThaumcraftApi.addInfusionCraftingRecipe("TD.THAUMIUMROBE", 
-				new ItemStack(ItemHandler.itemChestThaumiumRobe), 4, 
+				new ItemStack(ItemHandler.itemChestThaumiumRobeDyed), 4, 
 				new AspectList().add(Aspect.METAL, 24).add(Aspect.ARMOR, 24).add(Aspect.CLOTH, 24).add(Aspect.MAGIC, 16), 
 				ItemApi.getItem("itemChestThaumium", 0), 
 				new ItemStack[] { 
@@ -522,7 +522,7 @@ public class DyeResearch {
 	    			new ItemStack(Items.leather) });
 			    
 	    InfusionRecipe recipeThaumRobeLegs = ThaumcraftApi.addInfusionCraftingRecipe("TD.THAUMIUMROBE", 
-				new ItemStack(ItemHandler.itemLegsThaumiumRobe), 4, 
+				new ItemStack(ItemHandler.itemLegsThaumiumRobeDyed), 4, 
 				new AspectList().add(Aspect.METAL, 20).add(Aspect.ARMOR, 20).add(Aspect.CLOTH, 20).add(Aspect.MAGIC, 16), 
 				ItemApi.getItem("itemLegsThaumium", 0), 
 				new ItemStack[] { 
@@ -536,7 +536,7 @@ public class DyeResearch {
 	      new ResearchItem("TD.THAUMIUMROBE", "DYES", 
 	    		  (new AspectList()).add(Aspect.ARMOR, 5).add(Aspect.CLOTH, 5).add(Aspect.CRAFT, 5),
 	    		  2, -4, 2, 
-	    		  new ItemStack(ItemHandler.itemChestThaumiumRobe, 0))
+	    		  new ItemStack(ItemHandler.itemChestThaumiumRobeDyed, 0))
 	      		  .setPages(new ResearchPage[]{
 	    				  new ResearchPage("tc.research_page.TD.thaumrobe.1"),
 	    				  new ResearchPage(recipeThaumRobeHelm), 
