@@ -36,7 +36,7 @@ import thaumcraft.api.nodes.IRevealer;
 import thaumicdyes.client.models.ModelIronFortress;
 import thaumicdyes.client.models.ModelRanger;
 
-public class RangerArmor extends ItemArmor implements IRepairable, IRunicArmor, IVisDiscountGear, IGoggles, IRevealer, IWarpingGear/*, ISpecialArmor*/ {
+public class CultistRangerDyed extends ItemArmor implements IRepairable, IRunicArmor, IVisDiscountGear, IGoggles, IRevealer, IWarpingGear/*, ISpecialArmor*/ {
    public IIcon iconHelm;
    public IIcon iconChest;
    public IIcon iconLegs;
@@ -45,24 +45,35 @@ public class RangerArmor extends ItemArmor implements IRepairable, IRunicArmor, 
    public IIcon iconBlank;
    public IIcon iconHelmOver;
 
-   public RangerArmor(ArmorMaterial enumarmormaterial, int j, int k) {
+   public CultistRangerDyed(ArmorMaterial enumarmormaterial, int j, int k) {
       super(enumarmormaterial, j, k);
       this.setCreativeTab(CreativeTabs.tabCombat);
    }
 
    @SideOnly(Side.CLIENT)
    public void registerIcons(IIconRegister ir) {
-      this.iconHelm = ir.registerIcon("thaumicdyes:cultistplatehelmover");
-      this.iconHelmOver = ir.registerIcon("thaumicdyes:icon/rangerhelm"); //
+      this.iconHelmOver = ir.registerIcon("thaumicdyes:icon/cultist_ranger_helm"); //
+      this.iconChestOver = ir.registerIcon("thaumicdyes:icon/cultist_ranger_chest"); //
+      this.iconLegsOver = ir.registerIcon("thaumicdyes:icon/cultist_ranger_legs"); //
       this.iconBlank = ir.registerIcon("thaumicdyes:blank");
-      this.iconChest = ir.registerIcon("thaumicdyes:cultistplatechestover");
-      this.iconLegs = ir.registerIcon("thaumicdyes:cultistplatelegsover");
-      this.iconChestOver = ir.registerIcon("thaumicdyes:icon/rangerchest"); //
-      this.iconLegsOver = ir.registerIcon("thaumicdyes:icon/rangerlegs"); //
+      this.iconChest = ir.registerIcon("thaumicdyes:blank");
+      this.iconLegs = ir.registerIcon("thaumicdyes:blank");
+      this.iconHelm = ir.registerIcon("thaumicdyes:blank");
    }
 
    public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
-      return type == null?"thaumicdyes:textures/models/ranger_armor_overlay.png":"thaumicdyes:textures/models/ranger_armor.png";
+      return type == null?"thaumicdyes:textures/models/cultist_ranger_overlay.png":"thaumicdyes:textures/models/cultist_ranger_base.png";
+   }
+   
+   @SideOnly(Side.CLIENT)
+   public boolean requiresMultipleRenderPasses()
+   {
+     return true;
+   }
+   
+   //helm over
+   public IIcon getIconFromDamageForRenderPass(int par1, int par2) {
+     return super.armorType == 2?this.iconLegsOver:(super.armorType == 1?this.iconChestOver:(super.armorType == 0?this.iconHelmOver:(super.armorType == 2?this.iconLegs:(super.armorType == 1?this.iconChest:(super.armorType == 0?this.iconHelm:this.iconBlank)))));
    }
 
    public EnumRarity getRarity(ItemStack itemstack) {
@@ -150,19 +161,11 @@ public class RangerArmor extends ItemArmor implements IRepairable, IRunicArmor, 
       return this.model;
    }
 
-   @SideOnly(Side.CLIENT)
-   public boolean requiresMultipleRenderPasses() {
-      return true;
-   }
 
    public boolean hasColor(ItemStack par1ItemStack)
    {
      return true;
    }
-
-   public IIcon getIconFromDamageForRenderPass(int par1, int par2) {
-	      return super.armorType == 2?this.iconLegsOver:(super.armorType == 1?this.iconChestOver:(super.armorType == 0?this.iconHelmOver:(super.armorType == 2?this.iconLegs:(super.armorType == 1?this.iconChest:(super.armorType == 0?this.iconHelm:this.iconBlank)))));
-	   }
 
    public int getColor(ItemStack par1ItemStack) {
 	      NBTTagCompound nbttagcompound = par1ItemStack.getTagCompound();

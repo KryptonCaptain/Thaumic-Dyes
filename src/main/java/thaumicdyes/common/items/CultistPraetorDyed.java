@@ -30,7 +30,7 @@ import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.nodes.IRevealer;
 import thaumicdyes.client.models.ModelPraetor;
 
-public class PraetorArmor extends ItemArmor implements IRepairable, IRunicArmor, IVisDiscountGear/*, ISpecialArmor*/ {
+public class CultistPraetorDyed extends ItemArmor implements IRepairable, IRunicArmor, IVisDiscountGear/*, ISpecialArmor*/ {
    public IIcon iconHelm;
    public IIcon iconChest;
    public IIcon iconLegs;
@@ -42,24 +42,35 @@ public class PraetorArmor extends ItemArmor implements IRepairable, IRunicArmor,
    ModelBiped model2 = null;
    ModelBiped model = null;
 
-   public PraetorArmor(ArmorMaterial enumarmormaterial, int j, int k) {
+   public CultistPraetorDyed(ArmorMaterial enumarmormaterial, int j, int k) {
       super(enumarmormaterial, j, k);
       this.setCreativeTab(CreativeTabs.tabCombat);
    }
 
    @SideOnly(Side.CLIENT)
    public void registerIcons(IIconRegister ir) {
-      this.iconHelm = ir.registerIcon("thaumicdyes:phelmover");
-      this.iconHelmOver = ir.registerIcon("thaumicdyes:phelm");
+      this.iconHelmOver = ir.registerIcon("thaumicdyes:icon/cultist_leader_helm");
+      this.iconChestOver = ir.registerIcon("thaumicdyes:icon/cultist_leader_chest");
+      this.iconLegsOver = ir.registerIcon("thaumicdyes:icon/cultist_leader_legs");
       this.iconBlank = ir.registerIcon("thaumicdyes:blank");
-      this.iconChest = ir.registerIcon("thaumicdyes:pchestover");
-      this.iconLegs = ir.registerIcon("thaumicdyes:plegsover");
-      this.iconChestOver = ir.registerIcon("thaumicdyes:icon/pchest");
-      this.iconLegsOver = ir.registerIcon("thaumicdyes:icon/plegs");
+      this.iconChest = ir.registerIcon("thaumicdyes:blank");
+      this.iconLegs = ir.registerIcon("thaumicdyes:blank");
+      this.iconHelm = ir.registerIcon("thaumicdyes:blank");
    }
 
    public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
-      return type == null?"thaumicdyes:textures/models/praetor_armor_overlay.png":"thaumicdyes:textures/models/praetor_armor.png";
+      return type == null?"thaumicdyes:textures/models/cultist_praetor_overlay.png":"thaumicdyes:textures/models/cultist_praetor_base.png";
+   }
+   
+   @SideOnly(Side.CLIENT)
+   public boolean requiresMultipleRenderPasses()
+   {
+     return true;
+   }
+   
+   //helm over
+   public IIcon getIconFromDamageForRenderPass(int par1, int par2) {
+     return super.armorType == 2?this.iconLegsOver:(super.armorType == 1?this.iconChestOver:(super.armorType == 0?this.iconHelmOver:(super.armorType == 2?this.iconLegs:(super.armorType == 1?this.iconChest:(super.armorType == 0?this.iconHelm:this.iconBlank)))));
    }
 
    public EnumRarity getRarity(ItemStack itemstack) {
@@ -142,18 +153,10 @@ public class PraetorArmor extends ItemArmor implements IRepairable, IRunicArmor,
       return this.model;
    }
 
-   @SideOnly(Side.CLIENT)
-   public boolean requiresMultipleRenderPasses() {
-      return true;
-   }
 
    public boolean hasColor(ItemStack par1ItemStack)
    {
      return true;
-   }
-
-   public IIcon getIconFromDamageForRenderPass(int par1, int par2) {
-      return super.armorType == 2 ? this.iconLegsOver : (super.armorType == 1 ? this.iconChestOver : (super.armorType == 0 ? this.iconHelmOver : (super.armorType == 2 ? this.iconLegs : (super.armorType == 1 ? this.iconChest : (super.armorType == 0 ? this.iconHelm : this.iconBlank)))));
    }
 
    public int getColor(ItemStack par1ItemStack) {

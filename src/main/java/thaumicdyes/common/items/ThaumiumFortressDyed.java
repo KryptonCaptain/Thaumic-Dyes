@@ -1,8 +1,9 @@
 package thaumicdyes.common.items;
 
+import java.util.List;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.util.List;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -31,10 +32,10 @@ import thaumcraft.api.IWarpingGear;
 import thaumcraft.api.ItemApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.nodes.IRevealer;
-import thaumicdyes.client.models.ModelRobes;
+import thaumcraft.common.items.armor.ItemFortressArmor;
+import thaumicdyes.client.models.ModelFortress;
 
-public class ThaumiumRobeArmor extends ItemArmor implements IRepairable, IRunicArmor, IVisDiscountGear, IGoggles, IRevealer, ISpecialArmor, IWarpingGear {
-   
+public class ThaumiumFortressDyed extends ItemFortressArmor implements IRepairable, IRunicArmor, IVisDiscountGear, IGoggles, IRevealer, ISpecialArmor, IWarpingGear {
    public IIcon iconHelm;
    public IIcon iconChest;
    public IIcon iconLegs;
@@ -46,41 +47,46 @@ public class ThaumiumRobeArmor extends ItemArmor implements IRepairable, IRunicA
    ModelBiped model2 = null;
    ModelBiped model = null;
 
-   public ThaumiumRobeArmor(ArmorMaterial enumarmormaterial, int j, int k) {
+   public ThaumiumFortressDyed(ArmorMaterial enumarmormaterial, int j, int k) {
       super(enumarmormaterial, j, k);
       this.setCreativeTab(CreativeTabs.tabCombat);
    }
 
    @SideOnly(Side.CLIENT)
    public void registerIcons(IIconRegister ir) {
-      this.iconHelm = ir.registerIcon("thaumicdyes:icon/thaumiumrobehelm"); //
-      this.iconHelmOver = ir.registerIcon("thaumicdyes:phelm");
+      this.iconHelmOver = ir.registerIcon("thaumicdyes:icon/fortress_helm");
+      this.iconChestOver = ir.registerIcon("thaumicdyes:icon/fortress_chest");
+      this.iconLegsOver = ir.registerIcon("thaumicdyes:icon/fortress_legs");
       this.iconBlank = ir.registerIcon("thaumicdyes:blank");
-      this.iconChest = ir.registerIcon("thaumicdyes:crimrobechestover");
-      this.iconLegs = ir.registerIcon("thaumicdyes:crimrobelegsover");
-      this.iconChestOver = ir.registerIcon("thaumicdyes:icon/thaumiumrobechest"); //
-      this.iconLegsOver = ir.registerIcon("thaumicdyes:icon/thaumiumrobelegs"); //
+      this.iconChest = ir.registerIcon("thaumicdyes:blank");
+      this.iconLegs = ir.registerIcon("thaumicdyes:blank");
+      this.iconHelm = ir.registerIcon("thaumicdyes:blank");
    }
 
    public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
-      return type == null?"thaumicdyes:textures/models/thaumium_robe_armor_overlay.png":"thaumicdyes:textures/models/thaumium_robe_armor.png";
+      return type == null?"thaumicdyes:textures/models/fortress_armor_overlay.png":"thaumicdyes:textures/models/fortress_armor_base.png";
+   }
+   
+   @SideOnly(Side.CLIENT)
+   public boolean requiresMultipleRenderPasses()
+   {
+     return true;
+   }
+   
+   //helm over
+   public IIcon getIconFromDamageForRenderPass(int par1, int par2) {
+     return super.armorType == 2?this.iconLegsOver:(super.armorType == 1?this.iconChestOver:(super.armorType == 0?this.iconHelmOver:(super.armorType == 2?this.iconLegs:(super.armorType == 1?this.iconChest:(super.armorType == 0?this.iconHelm:this.iconBlank)))));
    }
 
    public EnumRarity getRarity(ItemStack itemstack) {
       return EnumRarity.rare;
    }
 
-   public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4) {
-      list.add(EnumChatFormatting.DARK_PURPLE + StatCollector.translateToLocal("tc.visdiscount") + ": " + this.getVisDiscount(stack, player, (Aspect)null) + "%");
-      super.addInformation(stack, player, list, par4);
-   }
-
    public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack) {
       return par2ItemStack.isItemEqual(ItemApi.getItem("itemResource", 2))?true:super.getIsRepairable(par1ItemStack, par2ItemStack);
    }
 
-   /*
-   public void onUpdate(ItemStack stack, World world, Entity entity, int p_77663_4_, boolean p_77663_5_) {
+   /*public void onUpdate(ItemStack stack, World world, Entity entity, int p_77663_4_, boolean p_77663_5_) {
       super.onUpdate(stack, world, entity, p_77663_4_, p_77663_5_);
       if(!world.isRemote && stack.isItemDamaged() && entity.ticksExisted % 20 == 0 && entity instanceof EntityLivingBase) {
          stack.damageItem(-1, (EntityLivingBase)entity);
@@ -100,30 +106,36 @@ public class ThaumiumRobeArmor extends ItemArmor implements IRepairable, IRunicA
       return 0;
    }
 
-   
-   public boolean showNodes(ItemStack itemstack, EntityLivingBase player) {
-      int type = ((ItemArmor)itemstack.getItem()).armorType;
-      return type == 0;
+   public boolean showNodes(ItemStack itemstack, EntityLivingBase player)
+   {
+     return (itemstack.hasTagCompound()) && (itemstack.stackTagCompound.hasKey("goggles"));
    }
-
-   public boolean showIngamePopups(ItemStack itemstack, EntityLivingBase player) {
-      int type = ((ItemArmor)itemstack.getItem()).armorType;
-      return type == 0;
+   
+   public boolean showIngamePopups(ItemStack itemstack, EntityLivingBase player)
+   {
+     return (itemstack.hasTagCompound()) && (itemstack.stackTagCompound.hasKey("goggles"));
    }
 
    public int getVisDiscount(ItemStack stack, EntityPlayer player, Aspect aspect) {
-	   return this.armorType == 0 ? 5 : 3;
+      return 0;
    }
+   
+   //TODO only uncomment if adding vis discount, else shows 0%
+   /*
+   public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4) {
+      list.add(EnumChatFormatting.DARK_PURPLE + StatCollector.translateToLocal("tc.visdiscount") + ": " + this.getVisDiscount(stack, player, (Aspect)null) + "%");
+      super.addInformation(stack, player, list, par4);
+   }*/
 
    @SideOnly(Side.CLIENT)
    public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, int armorSlot) {
       int type = ((ItemArmor)itemStack.getItem()).armorType;
       if(this.model1 == null) {
-         this.model1 = new ModelRobes(1.0F);
+         this.model1 = new ModelFortress(1.0F);
       }
 
       if(this.model2 == null) {
-         this.model2 = new ModelRobes(0.5F);
+         this.model2 = new ModelFortress(0.5F);
       }
 
       if(type != 1 && type != 3) {
@@ -158,22 +170,12 @@ public class ThaumiumRobeArmor extends ItemArmor implements IRepairable, IRunicA
       return this.model;
    }
 
-   @SideOnly(Side.CLIENT)
-   public boolean requiresMultipleRenderPasses()
-   {
-     return true;
-   }
-   
+
    public boolean hasColor(ItemStack par1ItemStack)
    {
      return true;
    }
-   //TODO ICOOOOONNNNSSS
-   public IIcon getIconFromDamageForRenderPass(int par1, int par2)
-   {
-     return this.armorType == 2 ? this.iconLegsOver : this.armorType == 1 ? this.iconChestOver : par2 == 0 ? this.iconHelm : this.armorType == 2 ? this.iconLegs : this.armorType == 1 ? this.iconChest : this.iconHelm;
-   }
-   
+
    public int getColor(ItemStack par1ItemStack) {
       NBTTagCompound nbttagcompound = par1ItemStack.getTagCompound();
       if(nbttagcompound == null) {
@@ -209,31 +211,54 @@ public class ThaumiumRobeArmor extends ItemArmor implements IRepairable, IRunicA
 
       nbttagcompound1.setInteger("color", par2);
    }
-
    
-   public ArmorProperties getProperties(EntityLivingBase player, ItemStack armor, DamageSource source, double damage, int slot) {
-      byte priority = 0;
-      double ratio = (double)super.damageReduceAmount / 25.0D;
-      if(source.isMagicDamage()) {
-         priority = 1;
-         ratio = (double)super.damageReduceAmount / 35.0D;
-      } else if(source.isUnblockable()) {
-         priority = 0;
-         ratio = 0.0D;
-      }
-
-      return new ArmorProperties(priority, ratio, armor.getMaxDamage() + 1 - armor.getItemDamage());
+   public ISpecialArmor.ArmorProperties getProperties(EntityLivingBase player, ItemStack armor, DamageSource source, double damage, int slot)
+   {
+     int priority = 0;
+     double ratio = this.damageReduceAmount / 25.0D;
+     if (source.isMagicDamage() == true)
+     {
+       priority = 1;
+       ratio = this.damageReduceAmount / 35.0D;
+     }
+     else if ((source.isFireDamage() == true) || (source.isExplosion()))
+     {
+       priority = 1;
+       ratio = this.damageReduceAmount / 20.0D;
+     }
+     else if (source.isUnblockable())
+     {
+       priority = 0;
+       ratio = 0.0D;
+     }
+     if ((player instanceof EntityPlayer))
+     {
+       double set = 0.875D;
+       for (int a = 1; a < 4; a++)
+       {
+         ItemStack piece = ((EntityPlayer)player).inventory.armorInventory[a];
+         if ((piece != null) && ((piece.getItem() instanceof ItemFortressArmor)))
+         {
+           set += 0.125D;
+           if ((piece.hasTagCompound()) && (piece.stackTagCompound.hasKey("mask"))) {
+             set += 0.05D;
+           }
+         }
+       }
+       ratio *= set;
+     }
+     return new ISpecialArmor.ArmorProperties(priority, ratio, armor.getMaxDamage() + 1 - armor.getItemDamage());
    }
 
    public int getArmorDisplay(EntityPlayer player, ItemStack armor, int slot) {
       return super.damageReduceAmount;
    }
-   
-   public void damageArmor(EntityLivingBase entity, ItemStack stack, DamageSource source, int damage, int slot)
-   {
-     if (source != DamageSource.fall) {
-       stack.damageItem(damage, entity);
-     }
+
+   public void damageArmor(EntityLivingBase entity, ItemStack stack, DamageSource source, int damage, int slot) {
+      if(source != DamageSource.fall) {
+         stack.damageItem(damage, entity);
+      }
+
    }
 
    public boolean onItemUseFirst(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side, float hitX, float hitY, float hitZ) {

@@ -7,7 +7,7 @@ import thaumicdyes.common.items.ItemHandler;
 public class TabTD {
    public static CreativeTabs TabTD = new CreativeTabs("TabTD") {
       public Item getTabIconItem() {
-         return ItemHandler.itemChestCultistRobe;
+         return ItemHandler.itemChestCultistRobeDyed;
       }
    };
 

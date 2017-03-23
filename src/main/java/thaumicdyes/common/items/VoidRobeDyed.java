@@ -36,18 +36,19 @@ import thaumcraft.api.nodes.IRevealer;
 import thaumicdyes.client.models.ModelRobes;
 
 
-public class VoidRobeArmor
+public class VoidRobeDyed
   extends ItemArmor
   implements IRepairable, IRunicArmor, IVisDiscountGear, IGoggles, IRevealer, ISpecialArmor, IWarpingGear
 {
   public IIcon iconHelm;
   public IIcon iconChest;
   public IIcon iconLegs;
+  public IIcon iconHelmOver;
   public IIcon iconChestOver;
   public IIcon iconLegsOver;
   public IIcon iconBlank;
   
-  public VoidRobeArmor(ItemArmor.ArmorMaterial enumarmormaterial, int j, int k)
+  public VoidRobeDyed(ItemArmor.ArmorMaterial enumarmormaterial, int j, int k)
   {
     super(enumarmormaterial, j, k);
     this.setCreativeTab(CreativeTabs.tabCombat);
@@ -56,17 +57,29 @@ public class VoidRobeArmor
   @SideOnly(Side.CLIENT)
   public void registerIcons(IIconRegister ir)
   {
-    this.iconHelm = ir.registerIcon("thaumicdyes:icon/voidrobehelm"); //
-    this.iconBlank = ir.registerIcon("thaumcraft:blank");
-    this.iconChest = ir.registerIcon("thaumcraft:voidrobechestover");
-    this.iconLegs = ir.registerIcon("thaumcraft:voidrobelegsover");
-    this.iconChestOver = ir.registerIcon("thaumicdyes:icon/voidrobechest"); //
-    this.iconLegsOver = ir.registerIcon("thaumicdyes:icon/voidrobelegs"); //
+    this.iconHelmOver = ir.registerIcon("thaumicdyes:icon/void_robe_helm"); //
+    this.iconChestOver = ir.registerIcon("thaumicdyes:icon/void_robe_chest"); //
+    this.iconLegsOver = ir.registerIcon("thaumicdyes:icon/void_robe_legs"); //
+    this.iconBlank = ir.registerIcon("thaumicdyes:blank");
+    this.iconChest = ir.registerIcon("thaumicdyes:blank");
+    this.iconLegs = ir.registerIcon("thaumicdyes:blank");
+	this.iconHelm = ir.registerIcon("thaumicdyes:blank");
   }
   
   public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
   {
-    return type == null ? "thaumicdyes:textures/models/robe_armor_overlay.png" : "thaumicdyes:textures/models/void_robe_armor.png";
+    return type == null ? "thaumicdyes:textures/models/robe_armor_overlay.png" : "thaumicdyes:textures/models/void_robe_base.png";
+  }
+  
+  @SideOnly(Side.CLIENT)
+  public boolean requiresMultipleRenderPasses()
+  {
+    return true;
+  }
+  
+  //helm over
+  public IIcon getIconFromDamageForRenderPass(int par1, int par2) {
+    return super.armorType == 2?this.iconLegsOver:(super.armorType == 1?this.iconChestOver:(super.armorType == 0?this.iconHelmOver:(super.armorType == 2?this.iconLegs:(super.armorType == 1?this.iconChest:(super.armorType == 0?this.iconHelm:this.iconBlank)))));
   }
   
   public EnumRarity getRarity(ItemStack itemstack)
@@ -172,20 +185,10 @@ public class VoidRobeArmor
     return this.model;
   }
   
-  @SideOnly(Side.CLIENT)
-  public boolean requiresMultipleRenderPasses()
-  {
-    return true;
-  }
   
   public boolean hasColor(ItemStack par1ItemStack)
   {
     return true;
-  }
-  
-  public IIcon getIconFromDamageForRenderPass(int par1, int par2)
-  {
-    return this.armorType == 2 ? this.iconLegsOver : this.armorType == 1 ? this.iconChestOver : par2 == 0 ? this.iconHelm : this.armorType == 2 ? this.iconLegs : this.armorType == 1 ? this.iconChest : this.iconHelm;
   }
   
   public int getColor(ItemStack par1ItemStack)

@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 import org.lwjgl.opengl.GL11;
 
-import thaumicdyes.common.items.RangerArmor;
+import thaumicdyes.common.items.CultistRangerDyed;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
@@ -495,7 +495,7 @@ public class ModelRanger extends ModelBiped {
 
            for(int a = 1; a < 4; ++a) {
               ItemStack piece = ((EntityLivingBase)entity).getEquipmentInSlot(a + 1);
-              if(piece != null && piece.getItem() instanceof RangerArmor) {
+              if(piece != null && piece.getItem() instanceof CultistRangerDyed) {
                  ++set;
                  if(a == 3) {
                     if(piece.hasTagCompound() && piece.stackTagCompound.hasKey("mask")) {

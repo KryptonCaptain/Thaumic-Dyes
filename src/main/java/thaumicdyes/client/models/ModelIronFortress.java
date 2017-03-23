@@ -13,7 +13,7 @@ import net.minecraft.util.MathHelper;
 
 import org.lwjgl.opengl.GL11;
 
-import thaumicdyes.common.items.FortressArmor;
+import thaumicdyes.common.items.ThaumiumFortressDyed;
 import thaumicdyes.common.items.IronFortressArmor;
 
 public class ModelIronFortress extends ModelBiped {

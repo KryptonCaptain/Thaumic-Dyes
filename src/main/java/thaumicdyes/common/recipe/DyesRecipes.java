@@ -20,9 +20,9 @@ import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.common.lib.crafting.ShapelessNBTOreRecipe;
 import thaumicdyes.common.DyeResearch;
-import thaumicdyes.common.recipe.RobeDyes;
+import thaumicdyes.common.recipe.CultistRobeDyes;
 import thaumicdyes.common.recipe.FortressDyes;
-import thaumicdyes.common.recipe.PraetorDyes;
+import thaumicdyes.common.recipe.CultistPraetorDyes;
 import thaumicdyes.common.items.ItemHandler;
 
 public class DyesRecipes {
@@ -33,23 +33,25 @@ public class DyesRecipes {
 	  initInfusionRecipes(); 
 	   
 	  RecipeSorter.register("forge:shapelessorenbt", ShapelessNBTOreRecipe.class, RecipeSorter.Category.SHAPELESS, "after:forge:shapelessore");
-      RecipeSorter.register("forge:TDrobearmordye", RobeDyes.class, Category.SHAPELESS, "after:forge:shapelessorenbt");
+      RecipeSorter.register("forge:TDrobearmordye", CultistRobeDyes.class, Category.SHAPELESS, "after:forge:shapelessorenbt");
       RecipeSorter.register("forge:TDfortressarmordye", FortressDyes.class, Category.SHAPELESS, "after:forge:TDrobearmordye");
-      RecipeSorter.register("forge:TDpraetorarmordye", PraetorDyes.class, Category.SHAPELESS, "after:forge:TDrobearmordye");
-      RecipeSorter.register("forge:TDknightarmordye", KnightDyes.class, Category.SHAPELESS, "after:forge:TDrobearmordye");
-      RecipeSorter.register("forge:TDrangerarmordye", RangerDyes.class, Category.SHAPELESS, "after:forge:TDrobearmordye");
+      RecipeSorter.register("forge:TDpraetorarmordye", CultistPraetorDyes.class, Category.SHAPELESS, "after:forge:TDrobearmordye");
+      RecipeSorter.register("forge:TDknightarmordye", CultistKnightDyes.class, Category.SHAPELESS, "after:forge:TDrobearmordye");
+      RecipeSorter.register("forge:TDrangerarmordye", CultistRangerDyes.class, Category.SHAPELESS, "after:forge:TDrobearmordye");
       RecipeSorter.register("forge:TDvoidrobearmordye", VoidRobeDyes.class, Category.SHAPELESS, "after:forge:TDrobearmordye");
       RecipeSorter.register("forge:TDthaumiumrobearmordye", ThaumiumRobeDyes.class, Category.SHAPELESS, "after:forge:TDrobearmordye");
+      RecipeSorter.register("forge:TDarcherarmordye", CultistArcherDyes.class, Category.SHAPELESS, "after:forge:TDrobearmordye");
    }
    
    public static void initDyeRecipes() {
-	  GameRegistry.addRecipe(new RobeDyes());
+	  GameRegistry.addRecipe(new CultistRobeDyes());
       GameRegistry.addRecipe(new FortressDyes());
-	  GameRegistry.addRecipe(new PraetorDyes());
-      GameRegistry.addRecipe(new KnightDyes());
-      GameRegistry.addRecipe(new RangerDyes());
+	  GameRegistry.addRecipe(new CultistPraetorDyes());
+      GameRegistry.addRecipe(new CultistKnightDyes());
+      GameRegistry.addRecipe(new CultistRangerDyes());
       GameRegistry.addRecipe(new VoidRobeDyes());
       GameRegistry.addRecipe(new ThaumiumRobeDyes());
+      GameRegistry.addRecipe(new CultistArcherDyes());
    }
    
       
@@ -59,7 +61,7 @@ public class DyesRecipes {
       DyeResearch.recipes.put("HelmGoggles", 												//?src: new NBTTagByte(1)
     		  ThaumcraftApi.addInfusionCraftingRecipe("HELMGOGGLES", new Object[] { "goggles", new NBTTagByte((byte) 1) }, 5, 
     		  new AspectList().add(Aspect.SENSES, 32).add(Aspect.AURA, 16).add(Aspect.ARMOR, 16), 
-    		  new ItemStack(ItemHandler.itemHelmetFortress, 1, 32767), 
+    		  new ItemStack(ItemHandler.itemHelmetFortressDyed, 1, 32767), 
 		      new ItemStack[] { 
 		    	  new ItemStack(Items.slime_ball), 
 		    	  ItemApi.getItem("itemGoggles", 0) })
@@ -68,7 +70,7 @@ public class DyesRecipes {
       DyeResearch.recipes.put("MaskGrinningDevil",
     		ThaumcraftApi.addInfusionCraftingRecipe("MASKGRINNINGDEVIL", new Object[] { "mask", new NBTTagInt(0) }, 8, 
       		new AspectList().add(Aspect.MIND, 64).add(Aspect.HEAL, 64).add(Aspect.ARMOR, 16), 
-      		new ItemStack(ItemHandler.itemHelmetFortress, 1, 32767), 
+      		new ItemStack(ItemHandler.itemHelmetFortressDyed, 1, 32767), 
   			new ItemStack[] { 
   				new ItemStack(Items.dye, 1, 0), 
   				new ItemStack(Items.iron_ingot), 
@@ -81,7 +83,7 @@ public class DyesRecipes {
       DyeResearch.recipes.put("MaskAngryGhost",
     		ThaumcraftApi.addInfusionCraftingRecipe("MASKANGRYGHOST", new Object[] { "mask", new NBTTagInt(1) }, 8, 
       		new AspectList().add(Aspect.ENTROPY, 64).add(Aspect.DEATH, 64).add(Aspect.ARMOR, 16), 
-      		new ItemStack(ItemHandler.itemHelmetFortress, 1, 32767), 
+      		new ItemStack(ItemHandler.itemHelmetFortressDyed, 1, 32767), 
       		new ItemStack[] { 
       			new ItemStack(Items.dye, 1, 15), 
       			new ItemStack(Items.iron_ingot), 
@@ -94,7 +96,7 @@ public class DyesRecipes {
       DyeResearch.recipes.put("MaskSippingFiend",
     		ThaumcraftApi.addInfusionCraftingRecipe("MASKSIPPINGFIEND", new Object[] { "mask", new NBTTagInt(2) }, 8, 
       		new AspectList().add(Aspect.UNDEAD, 64).add(Aspect.LIFE, 64).add(Aspect.ARMOR, 16), 
-      		new ItemStack(ItemHandler.itemHelmetFortress, 1, 32767), 
+      		new ItemStack(ItemHandler.itemHelmetFortressDyed, 1, 32767), 
       			new ItemStack[] { new ItemStack(Items.dye, 1, 1), 
       			new ItemStack(Items.iron_ingot), 
       			new ItemStack(Items.leather), 

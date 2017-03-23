@@ -45,9 +45,9 @@ public class InhabitedKnightArmor extends ItemArmor implements IRepairable, IRun
 
    @SideOnly(Side.CLIENT)
    public void registerIcons(IIconRegister ir) {
-      this.iconHelm = ir.registerIcon("thaumicdyes:icon/huskplatehelm");
-      this.iconChest = ir.registerIcon("thaumicdyes:icon/huskplatechest");
-      this.iconLegs = ir.registerIcon("thaumicdyes:icon/huskplatelegs");
+      this.iconHelm = ir.registerIcon("thaumicdyes:icon/husk_plate_helm");
+      this.iconChest = ir.registerIcon("thaumicdyes:icon/husk_plate_chest");
+      this.iconLegs = ir.registerIcon("thaumicdyes:icon/husk_plate_legs");
 
    }
 
@@ -70,8 +70,8 @@ public class InhabitedKnightArmor extends ItemArmor implements IRepairable, IRun
    }
    
    public int getWarp(ItemStack itemstack, EntityPlayer player) {
-	      return 2;
-	   }
+	      return 1;
+   }
    
    @SideOnly(Side.CLIENT)
    public IIcon getIconFromDamage(int par1)
