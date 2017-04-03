@@ -37,7 +37,7 @@ import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.nodes.IRevealer;
 import thaumicdyes.client.models.ModelRanger2;
 
-public class CultistRanger extends ItemArmor implements IRepairable, IRunicArmor, IVisDiscountGear/*, ISpecialArmor*/ {
+public class CultistRanger extends ItemArmor implements IRepairable, IRunicArmor, IVisDiscountGear, IWarpingGear/*, ISpecialArmor*/ {
    public IIcon iconHelm;
    public IIcon iconChest;
    public IIcon iconLegs;
@@ -83,7 +83,11 @@ public class CultistRanger extends ItemArmor implements IRepairable, IRunicArmor
 
 
    public int getVisDiscount(ItemStack stack, EntityPlayer player, Aspect aspect) {
-	   return this.armorType == 0 ? 0 : 2;
+	   return this.armorType == 0 ? 0 : 1;
+   }
+   
+   public int getWarp(ItemStack itemstack, EntityPlayer player) {
+	      return 1;
    }
    
 

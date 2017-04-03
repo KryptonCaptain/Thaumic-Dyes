@@ -1,5 +1,5 @@
 # Creative Tab 
-itemGroup.TabTD=Thaumic Dyes
+itemGroup.thaumicdyes=Thaumic Dyes
 
 ///////////
 # Items 
@@ -56,6 +56,8 @@ item.itemLegsCultistArcherDyed.name=Archer Leggings
 item.itemHelmetCultistRanger.name=Crimson Ranger Helm
 item.itemChestCultistRanger.name=Crimson Ranger Chestplate
 item.itemLegsCultistRanger.name=Crimson Ranger Leggings
+#
+item.itemFabricResource.name=Crimson Weave
 
 
 
