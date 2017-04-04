@@ -47,17 +47,20 @@ item.itemHelmetCultistPaladin.name=Crimson Paladin Helm
 #
 item.itemHelmetCultistArcher.name=Crimson Archer Helm
 item.itemChestCultistArcher.name=Crimson Archer Chestplate
-item.itemLegsCultistArcher.name=Crimson Archer Leggings
+item.itemLegsCultistArcher.name=Crimson Archer Greaves
 
 item.itemHelmetCultistArcherDyed.name=Archer Helm
 item.itemChestCultistArcherDyed.name=Archer Chestplate
-item.itemLegsCultistArcherDyed.name=Archer Leggings
+item.itemLegsCultistArcherDyed.name=Archer Greaves
 
 item.itemHelmetCultistRanger.name=Crimson Ranger Helm
 item.itemChestCultistRanger.name=Crimson Ranger Chestplate
 item.itemLegsCultistRanger.name=Crimson Ranger Leggings
 #
 item.itemFabricResource.name=Crimson Weave
+#
+item.itemHelmetSunKnight.name=Solaire Helm
+item.itemChestSunKnight.name=Solaire Chestplate
 
 
 
@@ -86,8 +89,8 @@ tc.research_text.TD.DYEDROBE=Threads to dye for!
 tc.research_page.TD.robe.1=The Crimson Cultists you've encountered have been rather hostile to your approach, however, you've found yourself enamoured with the robes their clerics wear. <BR>Sadly, the Crimson-styled robes don't suit your needs, so after some tinkering, you have discovered a way to modify them for your own purposes. Adding a pinch of salis mundis, and some spare enchanted fabric you had lying around, has helped increase its ability to channel magic.
 tc.research_page.TD.robe.2=You feel that this discovery will extend to more things in the future, although you're not sure what will come of it. <BR>This armor can be dyed.
 
-tc.research_name.TD.DYEDKNIGHT=Thaumaturge's Crimson Armor 
-tc.research_text.TD.DYEDKNIGHT=Knights of the realm 
+tc.research_name.TD.DYEDKNIGHT=Thaumaturge's Knight Armor 
+tc.research_text.TD.DYEDKNIGHT=Protecters of the realm 
 tc.research_page.TD.knight.1=Crimson Knights are no friend of yours - but you've acquired quite the collection of their armor in numerous battles with them. Previously, you might have worn their armor as a trophy or warning, but now you feel it's time to add your own touch to the armor.<BR>After strengthening the metal, and weaving in some enchanted fabric, you now have a pristine canvas to display your allegiances on in combat. <BR>This armor can be dyed.
  
 tc.research_name.TD.DYEDPRAETOR=Reinforced Praetor Armor 
@@ -132,12 +135,10 @@ tc.research_page.TD.voidrobe.1=While experimenting with your crucible, some esse
 tc.research_name.TD.THAUMIUMROBE=Thaumium Robes
 tc.research_text.TD.THAUMIUMROBE=The Thaumaturge's Thaumium Threads
 tc.research_page.TD.thaumrobe.1=For a while now, you've been struggling to find a compromise between your robes and other armor - having to choose between defence or utility. But no longer! Recent tests and study of the Crimson Robes have revealed a design which allows for both.<BR>Taking some thaumium armor and reconstructing it over a set of thaumaturge's robes, has created a set of lightly armored robes that offer both protection against both physical and magical attacks.<BR>The hood gains the benefits of the goggles used to craft it.<BR>This armor can be dyed.
-
-
+#
 tc.research_name.TD.THAUMIUMBOOTS=Thaumium Boots of the Explorer
 tc.research_text.TD.THAUMIUMBOOTS=A step in the right direction
 tc.research_page.TD.thaumboots.1=The Boots of the Traveller have served you well, but they still leave much to be desired in the way of protection. Your advancements with thaumium and infusion might hold the key to taking the boots to the next level.<BR>These new boots provide a slight speed and fall reduction increase over the old ones. Excellent.
-
 
 tc.research_name.TD.VOIDBOOTS=Void Boots of the Wanderer
 tc.research_text.TD.VOIDBOOTS=Completing the set
@@ -146,8 +147,9 @@ tc.research_page.TD.voidboots.1=The Void Thaumaturge's Robe has everything you c
 
 
 #Copied research 
-tc.research_name.TD.<string>=
-tc.research_text.TD.<string>=
+tc.research_name.TD.UUUU=
+tc.research_text.TD.UUUU=
+tc.research_page.TD.UUUU=
 tc.research_name.TD.ARMORFORTRESS=Thaumium Fortress Armor 
 tc.research_text.TD.ARMORFORTRESS=Nothing is getting in 
 tc.research_name.TD.VOIDMETAL=Void metal 
