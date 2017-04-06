@@ -55,7 +55,7 @@ public class IronFortressArmor extends ItemArmor implements IRepairable, IRunicA
   
   public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
   {
-    return "thaumicdyes:textures/models/iron_fortress_armor.png";
+    return "thaumicdyes:textures/models/iron_fortress_armor2.png";
   }
   
   @SideOnly(Side.CLIENT)

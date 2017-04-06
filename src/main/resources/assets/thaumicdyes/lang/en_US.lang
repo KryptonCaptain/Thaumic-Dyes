@@ -16,9 +16,9 @@ item.itemHelmetCultistLeaderDyed.name=Reinforced Praetor Helmet
 item.itemChestCultistLeaderDyed.name=Reinforced Praetor Chestplate 
 item.itemLegsCultistLeaderDyed.name=Reinforced Praetor Greaves 
 # 
-item.itemHelmetCultistKnightDyed.name=Hardened Cultist Helmet 
-item.itemChestCultistKnightDyed.name=Hardened Cultist Chestplate 
-item.itemLegsCultistKnightDyed.name=Hardened Cultist Greaves 
+item.itemHelmetCultistKnightDyed.name=Cultist Helmet 
+item.itemChestCultistKnightDyed.name=Cultist Chestplate 
+item.itemLegsCultistKnightDyed.name=Cultist Greaves 
 #
 item.itemHelmetInhabitedPlate.name=Husk Helmet
 item.itemChestInhabitedPlate.name=Husk Chestplate
@@ -70,10 +70,11 @@ item.itemChestSunKnight.name=Solaire Chestplate
 //item.HelmetFortress.mask.2=Sipping Fiend
 item.HelmetIronFortress.mask.0=Crusader
 item.HelmetIronFortress.mask.1=Champion
-item.HelmetIronFortress.mask.2=Warlord
+item.HelmetIronFortress.mask.2=Husk
 
 item.HelmetCultistRanger.mask.0=Scout
 item.HelmetCultistRanger.mask.1=Guard
+
 
 
 ///////////
@@ -119,14 +120,14 @@ tc.research_name.TD.IRONHELMAESTHETICS=Aesthetic Faceplates
 tc.research_text.TD.IRONHELMAESTHETICS=Iron Fortress Helm Upgrade
 tc.research_page.TD.ironHelmFace.1=Since the Iron Fortress Armor lacks the innate magical properties provided by being made of thaumium, it is not possible to extend your existing faceplate designs to it. This doesn't mean it can't have faceplates in general - just not magical ones. <BR>Taking a spare Crimson Knight helm, you separate off the front section and work it on an anvil for a bit, before crafting it into your Fortress Helm. You expect a similar thing could be done with a Praetor helm.
 
-tc.research_name.TD.IRONHELMHUSK=Restored Husk Faceplate
+tc.research_name.TD.IRONHELMHUSK=Husk Faceplate
 tc.research_text.TD.IRONHELMHUSK=Iron Fortress Helm Upgrade
-tc.research_page.TD.ironHelmFace.2=Your studies into the armor the husks in the Outer Lands wear have yielded some clues about what their armor may have looked like before it was worn away by time and strange magics. Expanding on your existing collection of faceplate designs, the restored helmet's striking gold patterning are a unique addition to your armor. <BR>Some ancient energies still leech from under its new coating, but you're sure it's nothing to worry about.
+tc.research_page.TD.ironHelmFace.2=Your studies into the armor the husks in the Outer Lands wear have yielded some clues about the history of the Crimson Cult, but you're here to make history, not read it. <BR>Prying the helmet off a husk, and the crab out of the helmet, you've gained a terrifying trophy that you could craft into your Fortress Helm.<BR>Some ancient energies still leech from underneath it, but you're sure it's nothing to worry about.
 
 tc.research_name.TD.DYEDRANGER=Thaumaturge's Ranger Armor
 tc.research_text.TD.DYEDRANGER=Wilderness wanderers
-tc.research_page.TD.ranger.1=As comfortable as your newly upgraded robes are, they are not very practical in the field. They get caught on brambles, covered in mud, and are a little hot to wear on sunny days.<BR>Trimming away some of the fabric, and adding a few canteens for water, and a small pack, you now have the perfect set of gear for expeditions and hiking trips.
-tc.research_page.TD.ranger.2=Similar to the fortress helms it is based on, the Ranger Helm is will accept some minor modification. However, as the design of the armor is to minimise excess weight, you can't quite find the space to fit both your goggles and a faceplate.<BR>So you'll have to choose either fashion or function.
+tc.research_page.TD.ranger.1=The ranger armor is the perfect set for the thaumaturge on the go. A light helmet to keep the sun away, backpack, bedroll, and canteens mean you could easily stay in the field for a few days at a time. But just because you can, doesn't mean you need to - camping isn't for everyone. Though wise thaumaturges know they can discover more outside than at their desks.
+tc.research_page.TD.ranger.2=Similar to the fortress helms it shares its design with, the Ranger Helm is will accept some minor modification. However, as the design of the armor is to minimise excess weight, you can't quite find the space to fit both your goggles and a faceplate.<BR>So you'll have to choose either fashion or function.
 
 tc.research_name.TD.VOIDROBE=Bleached Void Robes
 tc.research_text.TD.VOIDROBE=50 shades less dark
@@ -143,7 +144,44 @@ tc.research_page.TD.thaumboots.1=The Boots of the Traveller have served you well
 tc.research_name.TD.VOIDBOOTS=Void Boots of the Wanderer
 tc.research_text.TD.VOIDBOOTS=Completing the set
 tc.research_page.TD.voidboots.1=The Void Thaumaturge's Robe has everything you could ever want - disturbingly comfortable cloth, better vis channelling, seemingly bottomless pockets, and solid defensive protection. But the one thing it doesn't have is a matching pair of boots, and you think it's time to fix that.<BR>Applying the same methods you used to create the robes on the Boots of the Traveller has resulted in the sleekest footwear this side of the ethereal plane. With greatly increased speed and fall reduction, you won't quite be able to leap tall buildings, but you'll be a match to keep up with.
+#
+tc.research_name.TD.CRIMSON=Crimson Armorsmithing
+tc.research_text.TD.CRIMSON=Sect of Protection
+tc.research_page.TD.crimson.1=A closer study of the Crimson Rites manual you found has provided the key to deciphering other chapters within it, revealing more of their knowledge to you.<BR>This discovery has references to the techniques used by cultist blacksmiths to create the armor they wear. Perhaps you had underestimated their knowledge and skills in thaumaturgy.<BR>For armor that is so intricately detailed, you were not expecting the methods to be as simple as the Crimson manual would have you believe. Perhaps you will be able to use your superior mastery of magic to improve upon them.
+tc.research_page.TD.crimson.2=While the boots were easy enough to reconstruct, the other armor you've "relieved" various cultists of sustained too much damage in the process.<BR>You might need to take a closer look at them in the field before you can decipher other pages of the tome. Caution is advised.<BR>However, there are also depictions of other sets within the pages that you haven't seen before, as well as damaged and missing pages. Perhaps there are other clues to decode them - it may be worth trying to piece together some of those fragments cultists carry.
+tc.research_page.TD.crimson.3=The crimson armor appears to be woven with a material similar to enchanted fabric. It should be relatively easy to replicate it based on that.<BR>However, the process seems to damage its ability to efficiently channel vis. 
 
+tc.research_name.TD.CRIMSONCLERIC=Crimson Cleric Robes
+tc.research_text.TD.CRIMSONCLERIC=Heretical Chanters
+tc.research_page.TD.crimsonCleric.1=Reciting strange verses, and hidden beneath their long robes, the mages of the Crimson Cult have taken a more proactive approach to unlocking the secrets of the ancients. It is unclear how they originally discovered the ritual of opening, but what you have observed indicates that they are attemping to use their own life force to fuel it. A most dangerous practice. Thankfully, they seems to be missing a crucial step to completing the ritual, at least for now...
+
+tc.research_name.TD.CRIMSONKNIGHT=Crimson Knight Armor
+tc.research_text.TD.CRIMSONKNIGHT=Bloody Crusaders
+tc.research_page.TD.crimsonKnight.1=Moderately armored, and swords at the ready, the knights of the Crimson Cult stand ready to protect and defend sites of interest claimed by their organisation. Often seen in large numbers accompanying a several clerics, they pose a threat to both new and seasoned thaumaturges - using their numbers and strength to press the advantage.<BR>However, it is best to engage them at a distance when possible, as knights lack ranged capabilites.
+
+tc.research_name.TD.CRIMSONLEADER=Crimson Praetor Armor
+tc.research_text.TD.CRIMSONLEADER=The High Champion
+tc.research_page.TD.crimsonLeader.1=A rare sight to come across, Crimson Praetors are the highest ranking cultists you've encountered, and can more than hold their own in combat. Deployed both as field-commanders and champions, it is their duty to protect high value relics and sites. Often enhanced with powerful magic, they are a true adversary to any thaumaturge, but the treasure they guard is often well worth the risk.
+
+tc.research_name.TD.CRIMSONRANGER=Crimson Ranger Robes
+tc.research_text.TD.CRIMSONRANGER=Roaming Reds
+tc.research_page.TD.crimsonRanger.1=That so many eldritch sites have seen Crimson occupation is no mere coincidence - someone has to be finding them, and that seems to be the purpose of the Ranger. Scouts and explorers, rangers travel fast and light, tasked with finding artifacts and sites that may be of interest to Crimson mages.<BR>You've not encountered any yet, but they may well be watching the progress you've been making...
+
+tc.research_name.TD.CRIMSONARCHER=Crimson Archer Armor
+tc.research_text.TD.CRIMSONARCHER=Ranged Defenders
+tc.research_page.TD.crimsonArcher.1=Crimson Archers don't seem to be deployed to the wilderness very often, garrisoned instead at the Crimson Citadel and regional outposts. They are the initial line of defense against unwanted guests, firing from atop the citadel walls, or from lookout towers to substantial range. Unless you have a sturdy barricade to hide behind, it'd be best to avoid engaging them.
+
+tc.research_name.TD.PALADIN=Crimson Paladin
+tc.research_text.TD.PALADIN=Regal Warrior
+tc.research_page.TD.paladin.1=While Praetors are a veritable threat on their own, the Crimson tome makes several references to a ceremony of ascension to Paladin for only a select few. These chosen ones receive a special helm to denote their status, which, based on the images in the tome, bear similar designs to that found on the Husks in the outer realm. Most curious.<BR>For now however, the exact purpose of the Crimson Paladin remains shrouded in mystery.
+
+tc.research_name.TD.DYEDARCHER=Archer's Battledress
+tc.research_text.TD.DYEDARCHER=Nock. Draw. Loose.
+tc.research_page.TD.archer.1=While wands are often a prime ranged combat tool, sometimes there's a job that a good old bow and arrow will do better. Like shooting apples or sending messages. Of death.<BR>Though the Crimson Archer's armor might be nice, it just needs that little extra touch up that only you can do. The red has to go.
+
+tc.research_name.TD.SUNNYD=Solaire's Gift
+tc.research_text.TD.SUNNYD=Deus Vult
+tc.research_page.TD.sunnyD.1=A scrap of paper, and some rough sketches. That's all you could recover. The handwriting was only just legible, and blood stained the page. The message was short.<BR>§oGit gud, scrub. Praise the sun!§r<BR>You have no idea what it means, but the armor looks nice. <BR>Nice for crusading in. <BR>You also have a strange desire to raise your arms up in some kind of salute while wearing it. How odd.
 
 
 #Copied research 

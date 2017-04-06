@@ -23,6 +23,7 @@ public class ItemHandler {
    public static ArmorMaterial KnightArmor;
    public static ArmorMaterial IronFortressArmor;
    
+
    public static Item itemHelmetCultistRobeDyed;
    public static Item itemChestCultistRobeDyed;
    public static Item itemLegsCultistRobeDyed;
@@ -85,6 +86,7 @@ public class ItemHandler {
 
 
    public static void registerItems() {
+	   
       GameRegistry.registerItem(itemHelmetCultistRobeDyed, "CultistRobeHelm");
       GameRegistry.registerItem(itemChestCultistRobeDyed, "CultistRobeChest");
       GameRegistry.registerItem(itemLegsCultistRobeDyed, "CultistRobeLegs");
@@ -148,6 +150,7 @@ public class ItemHandler {
    }
 
    public static void defineItems() {
+	   
 	   itemHelmetCultistRobeDyed = (new CultistRobesDyed(RobesArmor, 4, 0)).setUnlocalizedName("itemHelmetCultistRobeDyed").setCreativeTab(ThaumicDyes.tabTD);
 	   itemChestCultistRobeDyed = (new CultistRobesDyed(RobesArmor, 4, 1)).setUnlocalizedName("itemChestCultistRobeDyed").setCreativeTab(ThaumicDyes.tabTD);
 	   itemLegsCultistRobeDyed = (new CultistRobesDyed(RobesArmor, 4, 2)).setUnlocalizedName("itemLegsCultistRobeDyed").setCreativeTab(ThaumicDyes.tabTD);
