@@ -20,7 +20,7 @@ import thaumicdyes.common.items.ItemHandler;
 @Mod(
    modid = "thaumicdyes",
    name = "Thaumic Dyes",
-   version = "1.6.0",
+   version = "${version}",
    dependencies = "required-after:Thaumcraft@[4.2.3.5,)"
 )
 public class ThaumicDyes {

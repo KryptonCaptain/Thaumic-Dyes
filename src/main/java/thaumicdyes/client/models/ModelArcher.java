@@ -70,6 +70,8 @@ public class ModelArcher extends ModelBiped {
 	private ModelRenderer ClothBackL1;
 	private ModelRenderer ClothBackL2;
 	private ModelRenderer ClothBackL3;
+	
+	public ModelRenderer MbeltB;
   
   public ModelArcher(float f)
   {
@@ -113,6 +115,11 @@ public class ModelArcher extends ModelBiped {
     this.Mbelt = new ModelRenderer(this, 16, 55);
     this.Mbelt.setRotationPoint(0.0F, 0.0F, 0.0F);
     this.Mbelt.addBox(-4.0F, 7.0F, -3.0F, 8, 5, 1, 0.0F);
+    
+    this.MbeltB = new ModelRenderer(this, 16, 55);
+    this.MbeltB.addBox(-4.0F, 7.0F, -4.0F, 8, 5, 1);
+    this.MbeltB.setTextureSize(128, 64);
+    setRotation(this.MbeltB, 0.0F, 3.141593F, 0.0F);
 
     this.ShoulderR = new ModelRenderer(this, 16, 45);
     this.ShoulderR.setRotationPoint(0.0F, 0.0F, 0.0F);
@@ -377,6 +384,7 @@ public class ModelArcher extends ModelBiped {
     this.bipedBody.addChild(this.Mbelt);
     this.bipedBody.addChild(this.MbeltL);
     this.bipedBody.addChild(this.MbeltR);
+    this.bipedBody.addChild(this.MbeltB);
     if (f >= 1.0F)
     {
       this.bipedBody.addChild(this.Quiver);

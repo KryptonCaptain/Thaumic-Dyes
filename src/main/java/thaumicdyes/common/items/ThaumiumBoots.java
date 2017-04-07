@@ -28,20 +28,29 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ThaumiumBoots extends ItemBootsTraveller implements IRepairable, IVisDiscountGear, IRunicArmor {
+public class ThaumiumBoots extends ItemArmor implements IRepairable, IVisDiscountGear, IRunicArmor {
 	
    //public IIcon iconBoot;
 	
    public ThaumiumBoots(ArmorMaterial enumarmormaterial, int j, int k) {
 	      super(enumarmormaterial, j, k);
+	      setMaxDamage(325);
 	      this.setCreativeTab(CreativeTabs.tabCombat);
 	      MinecraftForge.EVENT_BUS.register(this);
    }
+   
+   public IIcon icon;
    
    @SideOnly(Side.CLIENT)
    public void registerIcons(IIconRegister ir)
    {
      this.icon = ir.registerIcon("thaumicdyes:bootsThaumiumTrv");
+   }
+   
+   @SideOnly(Side.CLIENT)
+   public IIcon getIconFromDamage(int par1)
+   {
+     return this.icon;
    }
    
    public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)

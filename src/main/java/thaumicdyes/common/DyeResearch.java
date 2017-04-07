@@ -459,6 +459,7 @@ public class DyeResearch {
     				  new ResearchPage(recipeRobeLegs)})
     		  //.setParents("TD.THAUMIUM", "ENCHFABRIC") //WIP
     		  .setParents("TD.CRIMSONCLERIC")
+    		  .setConcealed()
     		  .registerResearchItem();
       
       
@@ -505,6 +506,7 @@ public class DyeResearch {
     				  new ResearchPage(recipeKniLegs)})
     		  //.setParents("TD.THAUMIUM", "ENCHFABRIC") //WIP
     		  .setParents("TD.CRIMSONKNIGHT")
+    		  .setConcealed()
     		  .registerResearchItem();
       
       
@@ -551,7 +553,7 @@ public class DyeResearch {
     				  new ResearchPage(recipePraeChest), 
     				  new ResearchPage(recipePraeLegs)})
 			  .setParents("TD.CRIMSONLEADER") //change to "DYEDKNIGHT" once implemented
-			  //.setConcealed()
+			  .setConcealed()
 			  .registerResearchItem();
       
       
@@ -615,7 +617,7 @@ public class DyeResearch {
     				  new ResearchPage(recipeRangerHelmPlate)
     		  			})
     		  .setParents("TD.CRIMSONRANGER")
-    		  //.setConcealed()
+    		  .setConcealed()
     		  .registerResearchItem();
       
       
@@ -663,7 +665,7 @@ public class DyeResearch {
     				  new ResearchPage(recipeArcherLegsDyed)
     				  })
 			  .setParents("TD.CRIMSONARCHER") //change to "DYEDKNIGHT" once implemented
-			  //.setConcealed()
+			  .setConcealed()
 			  .registerResearchItem();
       
       
@@ -759,7 +761,7 @@ public class DyeResearch {
 				  new ResearchPage(recipeHuskChest), 
 				  new ResearchPage(recipeHuskLegs)})
 		  .setParents(/*"DYEDKNIGHT",*/ "TD.OUTERARRIVAL")
-		  .setConcealed()
+		  //.setConcealed()
 		  .registerResearchItem();
       ThaumcraftApi.addWarpToResearch("TD.INHABITEDPLATE", 2);
       	  
@@ -818,7 +820,7 @@ public class DyeResearch {
 	  				  })
 				  .setParents("TD.ARMORFORTRESS")
 				  .setSecondary()
-				  .setConcealed()
+				  //.setConcealed()
 				  .registerResearchItem();
 			
 			
