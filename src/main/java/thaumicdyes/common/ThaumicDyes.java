@@ -46,7 +46,7 @@ public class ThaumicDyes {
    @EventHandler
    public static void PostInit(FMLPostInitializationEvent PostEvent) {
       DyeResearch.addResearch();
-      //ItemHandler.addAspects;
+      ItemHandler.addAspects();
       
       ThaumcraftApi.registerEntityTag("Thaumcraft.CultistLeader", new AspectList().add(Aspect.ELDRITCH, 2).add(Aspect.MAN, 2).add(Aspect.ENTROPY, 1).add(Aspect.MAGIC, 2), new ThaumcraftApi.EntityTagsNBT[0]);
    }

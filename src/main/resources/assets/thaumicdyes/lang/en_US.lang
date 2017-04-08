@@ -183,6 +183,10 @@ tc.research_name.TD.SUNNYD=Solaire's Gift
 tc.research_text.TD.SUNNYD=Deus Vult
 tc.research_page.TD.sunnyD.1=A scrap of paper, and some rough sketches. That's all you could recover. The handwriting was only just legible, and blood stained the page. The message was short.<BR>§oGit gud, scrub. Praise the sun!§r<BR>You have no idea what it means, but the armor looks nice. <BR>Nice for crusading in. <BR>You also have a strange desire to raise your arms up in some kind of salute while wearing it. How odd.
 
+tc.research_name.TD.CRIMSONBANNER=Crimson Cult Banner
+tc.research_text.TD.CRIMSONBANNER=Flag of the red regiment
+tc.research_page.TD.crimsonBanner.1=While banners are an excellent decorative addition to your home, the Crimson Cult isn't particularly fond of your tendancy to steal their banners from occupied sites. And they're not always easy to find either - there simply isn't enough crimson banners to go around.<BR>The solution of course, is to make your own, by weaving some gold thread through a red banner. Presto change-o. They'd never be able to tell it's a copy.
+
 
 #Copied research 
 tc.research_name.TD.UUUU=

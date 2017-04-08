@@ -2,11 +2,13 @@ package thaumicdyes.common;
 
 import java.util.HashMap;
 
+import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagByte;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagInt;
 import net.minecraft.util.ResourceLocation;
 import thaumcraft.api.ItemApi;
@@ -19,6 +21,7 @@ import thaumcraft.api.crafting.ShapedArcaneRecipe;
 import thaumcraft.api.research.ResearchCategories;
 import thaumcraft.api.research.ResearchItem;
 import thaumcraft.api.research.ResearchPage;
+import thaumcraft.common.config.ConfigBlocks;
 import thaumcraft.common.config.ConfigItems;
 import thaumicdyes.common.items.ItemHandler;
 
@@ -71,6 +74,9 @@ public class DyeResearch {
 					'R',new ItemStack(ItemHandler.itemFabricResource)
 					});
       
+       
+      
+      
       
       new ResearchItem("TD.CRIMSON", "DYES", 
     		  (new AspectList()).add(Aspect.ELDRITCH, 4).add(Aspect.ARMOR, 4).add(Aspect.MAGIC, 4),
@@ -91,6 +97,44 @@ public class DyeResearch {
     		  //.setEntityTriggers("Thaumcraft.CultistLeader")
     		  .registerResearchItem();
       ThaumcraftApi.addWarpToResearch("TD.CRIMSON", 1);
+      
+      
+      /////////////
+      //BANNER
+      
+      ItemStack banner = new ItemStack(ConfigBlocks.blockWoodenDevice,1,8);
+      		//banner.stackTagCompound = new NBTTagCompound();
+      		//banner.stackTagCompound.setByte("color", (byte) -1);
+		
+      ItemStack bannerR = new ItemStack(ConfigBlocks.blockWoodenDevice,1,8);
+			bannerR.stackTagCompound = new NBTTagCompound();
+			bannerR.stackTagCompound.setByte("color", (byte) 14);
+  
+	  ShapedArcaneRecipe recipeCrimsonBanner = ThaumcraftApi.addArcaneCraftingRecipe("TD.CRIMSONBANNER",
+			  banner, 
+			  (new AspectList()).add(Aspect.ORDER, 5), 
+			  new Object[]{
+				"g g",
+				"gBg",
+				"g g",
+				'B',bannerR,
+				'g',new ItemStack(Items.gold_nugget)
+				});
+     
+	  new ResearchItem("TD.CRIMSONBANNER", "DYES", 
+    		  (new AspectList()).add(Aspect.CLOTH, 2).add(Aspect.SENSES, 1),
+    		  -1, -1, 2, 
+    		  new ItemStack(ConfigBlocks.blockWoodenDevice, 1, 8))
+    		  .setPages(new ResearchPage[]{
+    				  new ResearchPage("tc.research_page.TD.crimsonBanner.1"),
+    				  new ResearchPage(recipeCrimsonBanner)
+    				  })
+    		  .setParents("TD.CRIMSON", "BANNERS")
+    		  .setConcealed()
+    		  .setSecondary()
+    		  //.setEntityTriggers("Thaumcraft.CultistLeader")
+    		  .registerResearchItem();
+		
       
       
       /////////////

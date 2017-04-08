@@ -14,6 +14,8 @@ import thaumicdyes.common.items.CultistPaladin;
 import thaumicdyes.common.items.CultistPraetorDyed;
 import thaumicdyes.common.items.CultistKnightDyed;
 import thaumcraft.api.ThaumcraftApi;
+import thaumcraft.api.aspects.Aspect;
+import thaumcraft.api.aspects.AspectList;
 
 public class ItemHandler {
    public static ToolMaterial Robes;
@@ -140,7 +142,6 @@ public class ItemHandler {
       GameRegistry.registerItem(itemChestCultistArcherDyed, "CultistArcherChestDyed");
       GameRegistry.registerItem(itemLegsCultistArcherDyed, "CultistArcherLegsDyed");
       
-      
       GameRegistry.registerItem(itemFabricResource, "itemFabricResource");
       
       GameRegistry.registerItem(itemHelmetSunKnight, "SunKnightHelm");
@@ -205,10 +206,8 @@ public class ItemHandler {
 	   itemHelmetCultistArcherDyed = (new CultistArcherDyed(KnightArmor, 4, 0)).setUnlocalizedName("itemHelmetCultistArcherDyed").setCreativeTab(ThaumicDyes.tabTD);
 	   itemChestCultistArcherDyed = (new CultistArcherDyed(KnightArmor, 4, 1)).setUnlocalizedName("itemChestCultistArcherDyed").setCreativeTab(ThaumicDyes.tabTD);
 	   itemLegsCultistArcherDyed = (new CultistArcherDyed(KnightArmor, 4, 2)).setUnlocalizedName("itemLegsCultistArcherDyed").setCreativeTab(ThaumicDyes.tabTD);
-	   
 	   	   
 	   itemFabricResource = (new ItemFabricResource()).setUnlocalizedName("itemFabricResource").setCreativeTab(ThaumicDyes.tabTD);
-	   
 	   
 	   itemHelmetSunKnight = (new SunKnight(ArmorMaterial.IRON, 4, 0)).setUnlocalizedName("itemHelmetSunKnight").setCreativeTab(ThaumicDyes.tabTD);
 	   itemChestSunKnight = (new SunKnight(ArmorMaterial.IRON, 4, 1)).setUnlocalizedName("itemChestSunKnight").setCreativeTab(ThaumicDyes.tabTD);
@@ -216,6 +215,108 @@ public class ItemHandler {
    
    public static void addAspects() {
 	   
+	   //TODO crimson
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemHelmetCultistPaladin), 
+			   new AspectList().add(Aspect.METAL, 6).add(Aspect.GREED, 3).add(Aspect.ELDRITCH, 2));
+	   
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemHelmetCultistRanger), 
+			   new AspectList().add(Aspect.METAL, 3).add(Aspect.CLOTH, 2).add(Aspect.ELDRITCH, 1).add(Aspect.TRAVEL, 1));
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemChestCultistRanger), 
+			   new AspectList().add(Aspect.METAL, 3).add(Aspect.CLOTH, 2).add(Aspect.ELDRITCH, 1).add(Aspect.TRAVEL, 1));
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemLegsCultistRanger), 
+			   new AspectList().add(Aspect.METAL, 3).add(Aspect.CLOTH, 2).add(Aspect.ELDRITCH, 1).add(Aspect.TRAVEL, 1));
+	   
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemHelmetCultistArcher), 
+			   new AspectList().add(Aspect.METAL, 5).add(Aspect.ELDRITCH, 1).add(Aspect.WEAPON, 1));
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemChestCultistArcher), 
+			   new AspectList().add(Aspect.METAL, 5).add(Aspect.ELDRITCH, 1).add(Aspect.WEAPON, 1));
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemLegsCultistArcher), 
+			   new AspectList().add(Aspect.METAL, 5).add(Aspect.ELDRITCH, 1).add(Aspect.WEAPON, 1));
+	   
+	   //TODO dyed
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemHelmetCultistRobeDyed), 
+			   new AspectList().add(Aspect.METAL, 4).add(Aspect.CLOTH, 3).add(Aspect.ELDRITCH, 1).add(Aspect.SENSES, 1).add(Aspect.MAGIC, 2));
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemChestCultistRobeDyed), 
+			   new AspectList().add(Aspect.METAL, 4).add(Aspect.CLOTH, 3).add(Aspect.ELDRITCH, 1).add(Aspect.SENSES, 1).add(Aspect.MAGIC, 2));
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemLegsCultistRobeDyed), 
+			   new AspectList().add(Aspect.METAL, 4).add(Aspect.CLOTH, 3).add(Aspect.ELDRITCH, 1).add(Aspect.SENSES, 1).add(Aspect.MAGIC, 2));
+	   
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemHelmetCultistKnightDyed), 
+			   new AspectList().add(Aspect.METAL, 6).add(Aspect.CLOTH, 1).add(Aspect.ELDRITCH, 1).add(Aspect.SENSES, 1));
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemChestCultistKnightDyed), 
+			   new AspectList().add(Aspect.METAL, 6).add(Aspect.CLOTH, 1).add(Aspect.ELDRITCH, 1).add(Aspect.SENSES, 1));
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemLegsCultistKnightDyed), 
+			   new AspectList().add(Aspect.METAL, 6).add(Aspect.CLOTH, 1).add(Aspect.ELDRITCH, 1).add(Aspect.SENSES, 1));
+	   
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemHelmetCultistLeaderDyed), 
+			   new AspectList().add(Aspect.METAL, 6).add(Aspect.CLOTH, 1).add(Aspect.ELDRITCH, 2).add(Aspect.SENSES, 1));
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemChestCultistLeaderDyed), 
+			   new AspectList().add(Aspect.METAL, 6).add(Aspect.CLOTH, 1).add(Aspect.ELDRITCH, 2).add(Aspect.SENSES, 1));
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemLegsCultistLeaderDyed), 
+			   new AspectList().add(Aspect.METAL, 6).add(Aspect.CLOTH, 1).add(Aspect.ELDRITCH, 2).add(Aspect.SENSES, 1));
+	   
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemHelmetCultistRangerDyed), 
+			   new AspectList().add(Aspect.METAL, 4).add(Aspect.CLOTH, 3).add(Aspect.ELDRITCH, 1).add(Aspect.SENSES, 1).add(Aspect.TRAVEL, 1));
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemChestCultistRangerDyed), 
+			   new AspectList().add(Aspect.METAL, 4).add(Aspect.CLOTH, 3).add(Aspect.ELDRITCH, 1).add(Aspect.SENSES, 1).add(Aspect.TRAVEL, 1));
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemLegsCultistRangerDyed), 
+			   new AspectList().add(Aspect.METAL, 4).add(Aspect.CLOTH, 3).add(Aspect.ELDRITCH, 1).add(Aspect.SENSES, 1).add(Aspect.TRAVEL, 1));
+	   
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemHelmetCultistArcherDyed), 
+			   new AspectList().add(Aspect.METAL, 6).add(Aspect.CLOTH, 1).add(Aspect.ELDRITCH, 1).add(Aspect.SENSES, 1).add(Aspect.WEAPON, 1));
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemChestCultistArcherDyed), 
+			   new AspectList().add(Aspect.METAL, 6).add(Aspect.CLOTH, 1).add(Aspect.ELDRITCH, 1).add(Aspect.SENSES, 1).add(Aspect.WEAPON, 1));
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemLegsCultistArcherDyed), 
+			   new AspectList().add(Aspect.METAL, 6).add(Aspect.CLOTH, 1).add(Aspect.ELDRITCH, 1).add(Aspect.SENSES, 1).add(Aspect.WEAPON, 1));
+	   
+	   //TODO eldritch
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemHelmetInhabitedPlate), 
+			   new AspectList().add(Aspect.METAL, 5).add(Aspect.UNDEAD, 1).add(Aspect.ELDRITCH, 4).add(Aspect.ENTROPY, 2));
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemChestInhabitedPlate), 
+			   new AspectList().add(Aspect.METAL, 5).add(Aspect.UNDEAD, 1).add(Aspect.ELDRITCH, 4).add(Aspect.ENTROPY, 2));
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemLegsInhabitedPlate), 
+			   new AspectList().add(Aspect.METAL, 5).add(Aspect.UNDEAD, 1).add(Aspect.ELDRITCH, 4).add(Aspect.ENTROPY, 2));
+	   //TODO iron tier
+	   
+	   //TODO thaumium tier
+	   
+	   //TODO void tier
+	   
+	   
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemFabricResource), 
+			   new AspectList().add(Aspect.CLOTH, 4).add(Aspect.ELDRITCH, 1).add(Aspect.MAGIC, 2));
+   
+	   /*
+	   ThaumcraftApi.registerObjectTag(new ItemStack(), new AspectList().add(Aspect., 1).add(Aspect., 1));
+	   
+	    
+	    	
+	    ThaumcraftApi.registerObjectTag(new ItemStack(ConfigItems.itemBootsCultist, 1, 32767), 
+	    	new AspectList().add(Aspect.METAL, 4).add(Aspect.ELDRITCH, 1));
+	   
+	   
+
+	   itemHelmetFortressDyed;
+	   itemChestFortressDyed;
+	   itemLegsFortressDyed;
+
+	   itemHelmetIronFortress;
+	   itemChestIronFortress;
+	   itemLegsIronFortress;
+
+	   itemHelmetVoidRobeDyed;
+	   itemChestVoidRobeDyed;
+	   itemLegsVoidRobeDyed;
+	   itemHelmetThaumiumRobeDyed;
+	   itemChestThaumiumRobeDyed;
+	   itemLegsThaumiumRobeDyed;
+	   itemBootsThaumiumTraveller;
+	   itemBootsVoidTraveller;
+
+	   itemHelmetSunKnight;
+	   itemChestSunKnight;
+   		*/
+   
    }
 
    public static void registerToolMaterial() {
