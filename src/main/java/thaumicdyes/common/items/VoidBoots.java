@@ -30,18 +30,27 @@ import thaumcraft.common.Thaumcraft;
 import thaumcraft.common.items.armor.Hover;
 import thaumcraft.common.items.armor.ItemBootsTraveller;
 
-public class VoidBoots extends ItemBootsTraveller implements IRepairable, IVisDiscountGear, IWarpingGear, IRunicArmor {
+public class VoidBoots extends ItemArmor implements IRepairable, IVisDiscountGear, IWarpingGear, IRunicArmor {
 	
    public VoidBoots(ArmorMaterial enumarmormaterial, int j, int k) {
 	      super(enumarmormaterial, j, k);
+	      setMaxDamage(130);
 	      this.setCreativeTab(CreativeTabs.tabCombat);
 	      MinecraftForge.EVENT_BUS.register(this);
    }
+   
+   public IIcon icon;
    
    @SideOnly(Side.CLIENT)
    public void registerIcons(IIconRegister ir)
    {
      this.icon = ir.registerIcon("thaumicdyes:bootsVoidTrv");
+   }
+   
+   @SideOnly(Side.CLIENT)
+   public IIcon getIconFromDamage(int par1)
+   {
+     return this.icon;
    }
    
    public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
@@ -128,7 +137,7 @@ public class VoidBoots extends ItemBootsTraveller implements IRepairable, IVisDi
    public void playerJumps(LivingEvent.LivingJumpEvent event)
    {
      if (((event.entity instanceof EntityPlayer)) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0) != null) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0).getItem() == ItemHandler.itemBootsVoidTraveller)) {
-       event.entityLiving.motionY += 0.2750000059604645D;
+       event.entityLiving.motionY += 0.35D;
      }
    }
 	

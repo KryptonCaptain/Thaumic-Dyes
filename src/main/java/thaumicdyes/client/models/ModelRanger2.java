@@ -18,7 +18,7 @@ import net.minecraft.util.MathHelper;
  * Cultist_ranger.tcn - TechneToTabulaImporter
  * Created using Tabula 4.1.1
  */
-public class ModelRanger extends ModelBiped {
+public class ModelRanger2 extends ModelBiped {
 	
 	ModelRenderer Helmet;
 	ModelRenderer[] Mask;
@@ -85,7 +85,7 @@ public class ModelRanger extends ModelBiped {
     
     private static HashMap hasMask = new HashMap();
 
-    public ModelRanger(float f) {
+    public ModelRanger2(float f) {
     	this.textureWidth = 128;
     	this.textureHeight = 64;
         
@@ -564,13 +564,16 @@ public class ModelRanger extends ModelBiped {
       int mask = hasMask.containsKey(Integer.valueOf(entity.getEntityId()))?((Integer)hasMask.get(Integer.valueOf(entity.getEntityId()))).intValue():-1;
       
 
-      for(int var11 = 0; var11 < 2; ++var11) {
+      this.Mask[0].isHidden = true;
+      this.Mask[1].isHidden = false;
+      
+      /*for(int var11 = 0; var11 < 2; ++var11) {
          if(mask == var11) {
             this.Mask[var11].isHidden = false;
          } else {
             this.Mask[var11].isHidden = true;
          }
-      }
+      }*/
     }
 
     /**

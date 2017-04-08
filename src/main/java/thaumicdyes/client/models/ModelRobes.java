@@ -9,9 +9,7 @@ import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.util.MathHelper;
 import org.lwjgl.opengl.GL11;
 
-public class ModelRobes
-  extends ModelBiped
-{
+public class ModelRobes extends ModelBiped {
   ModelRenderer Hood1;
   ModelRenderer Hood2;
   ModelRenderer Hood3;
@@ -516,6 +514,7 @@ public class ModelRobes
     
     this.ClothBackR1.rotateAngleX = (this.ClothBackL1.rotateAngleX = -c + 0.1047198F);
     this.ClothBackR2.rotateAngleX = (this.ClothBackL2.rotateAngleX = this.ClothBackR3.rotateAngleX = this.ClothBackL3.rotateAngleX = -c + 0.2268928F);
+    
     if (this.isChild)
     {
       float f6 = 2.0F;

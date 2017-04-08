@@ -1,5 +1,7 @@
 package thaumicdyes.common.items;
 
+import java.util.List;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.model.ModelBiped;
@@ -12,21 +14,30 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.EnumRarity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagInt;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.IIcon;
+import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
+import net.minecraftforge.common.ISpecialArmor;
+import net.minecraftforge.common.ISpecialArmor.ArmorProperties;
 import thaumcraft.api.IGoggles;
 import thaumcraft.api.IRepairable;
 import thaumcraft.api.IRunicArmor;
+import thaumcraft.api.IVisDiscountGear;
 import thaumcraft.api.IWarpingGear;
 import thaumcraft.api.ItemApi;
-import thaumicdyes.client.models.ModelKnight;
+import thaumcraft.api.aspects.Aspect;
+import thaumcraft.api.nodes.IRevealer;
+import thaumicdyes.client.models.ModelRanger2;
 
-public class InhabitedKnightArmor extends ItemArmor implements IRepairable, IRunicArmor, IWarpingGear {
+public class CultistRanger extends ItemArmor implements IRepairable, IRunicArmor, IVisDiscountGear, IWarpingGear/*, ISpecialArmor*/ {
    public IIcon iconHelm;
    public IIcon iconChest;
    public IIcon iconLegs;
@@ -34,43 +45,21 @@ public class InhabitedKnightArmor extends ItemArmor implements IRepairable, IRun
    public IIcon iconLegsOver;
    public IIcon iconBlank;
    public IIcon iconHelmOver;
-   ModelBiped model1 = null;
-   ModelBiped model2 = null;
-   ModelBiped model = null;
 
-   public InhabitedKnightArmor(ArmorMaterial enumarmormaterial, int j, int k) {
+   public CultistRanger(ArmorMaterial enumarmormaterial, int j, int k) {
       super(enumarmormaterial, j, k);
       this.setCreativeTab(CreativeTabs.tabCombat);
    }
 
    @SideOnly(Side.CLIENT)
    public void registerIcons(IIconRegister ir) {
-      this.iconHelm = ir.registerIcon("thaumicdyes:icon/husk_plate_helm");
-      this.iconChest = ir.registerIcon("thaumicdyes:icon/husk_plate_chest");
-      this.iconLegs = ir.registerIcon("thaumicdyes:icon/husk_plate_legs");
-
+      this.iconHelm = ir.registerIcon("thaumicdyes:icon/cultist_ranger_helm"); //
+      this.iconChest = ir.registerIcon("thaumicdyes:icon/cultist_ranger_chest2"); //
+      this.iconLegs = ir.registerIcon("thaumicdyes:icon/cultist_ranger_legs2"); //
    }
 
-   public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
-   {
-     return "thaumicdyes:textures/models/zombie_plate_armor.png";
-   }
-
-   public EnumRarity getRarity(ItemStack itemstack) {
-      return EnumRarity.uncommon;
-   }
-
-   public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack) {
-      return par2ItemStack.isItemEqual(new ItemStack(Items.iron_ingot))?true:super.getIsRepairable(par1ItemStack, par2ItemStack);
-   }
-   
-   public int getRunicCharge(ItemStack itemstack)
-   {
-     return 0;
-   }
-   
-   public int getWarp(ItemStack itemstack, EntityPlayer player) {
-	      return 1;
+   public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
+      return "thaumicdyes:textures/models/cultist_ranger_armor.png";
    }
    
    @SideOnly(Side.CLIENT)
@@ -79,16 +68,42 @@ public class InhabitedKnightArmor extends ItemArmor implements IRepairable, IRun
      return this.armorType == 1 ? this.iconChest : this.armorType == 0 ? this.iconHelm : this.iconLegs;
    }
 
+   public EnumRarity getRarity(ItemStack itemstack) {
+      return EnumRarity.uncommon;
+   }
+   
+   public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack) {
+      return par2ItemStack.isItemEqual(new ItemStack(Items.iron_ingot))?true:super.getIsRepairable(par1ItemStack, par2ItemStack);
+   }
+   
 
+   public int getRunicCharge(ItemStack itemstack) {
+      return 0;
+   }
+
+
+   public int getVisDiscount(ItemStack stack, EntityPlayer player, Aspect aspect) {
+	   return this.armorType == 0 ? 0 : 1;
+   }
+   
+   public int getWarp(ItemStack itemstack, EntityPlayer player) {
+	      return 1;
+   }
+   
+
+   ModelBiped model1 = null;
+   ModelBiped model2 = null;
+   ModelBiped model = null;
+   
    @SideOnly(Side.CLIENT)
    public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, int armorSlot) {
       int type = ((ItemArmor)itemStack.getItem()).armorType;
       if(this.model1 == null) {
-         this.model1 = new ModelKnight(1.0F);
+         this.model1 = new ModelRanger2(1.0F);
       }
 
       if(this.model2 == null) {
-         this.model2 = new ModelKnight(0.5F);
+         this.model2 = new ModelRanger2(0.5F);
       }
 
       if(type != 1 && type != 3) {
@@ -123,16 +138,34 @@ public class InhabitedKnightArmor extends ItemArmor implements IRepairable, IRun
       return this.model;
    }
 
-
-   public int getArmorDisplay(EntityPlayer player, ItemStack armor, int slot) {
-      return super.damageReduceAmount;
-   }
-
+  
    public void damageArmor(EntityLivingBase entity, ItemStack stack, DamageSource source, int damage, int slot) {
       if(source != DamageSource.fall) {
          stack.damageItem(damage, entity);
       }
 
    }
-
+   
+   public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4)
+   {
+     if ((stack.hasTagCompound()) && (stack.stackTagCompound.hasKey("mask")) && (stack.stackTagCompound.getInteger("mask") == 0)) {
+       list.add(EnumChatFormatting.DARK_PURPLE + StatCollector.translateToLocal("item.ItemGoggles.name"));
+     }
+     if ((stack.hasTagCompound()) && (stack.stackTagCompound.hasKey("mask"))) {
+         list.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal(new StringBuilder().append("item.HelmetCultistRanger.mask.").append(stack.stackTagCompound.getInteger("mask")).toString()));
+       }
+     list.add(EnumChatFormatting.DARK_PURPLE + StatCollector.translateToLocal("tc.visdiscount") + ": " + this.getVisDiscount(stack, player, (Aspect)null) + "%");
+     super.addInformation(stack, player, list, par4);
+   }
+   
+   public boolean showNodes(ItemStack itemstack, EntityLivingBase player)
+   {
+     return ((itemstack.hasTagCompound()) && (itemstack.stackTagCompound.hasKey("mask")) && (itemstack.stackTagCompound.getInteger("mask") == 0));
+   }
+   
+   public boolean showIngamePopups(ItemStack itemstack, EntityLivingBase player)
+   {
+     return ((itemstack.hasTagCompound()) && (itemstack.stackTagCompound.hasKey("mask")) && (itemstack.stackTagCompound.getInteger("mask") == 0));
+   }
+      
 }

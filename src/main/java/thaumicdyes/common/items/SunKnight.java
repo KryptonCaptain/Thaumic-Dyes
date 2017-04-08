@@ -19,14 +19,18 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
+import net.minecraftforge.common.ISpecialArmor;
+import net.minecraftforge.common.ISpecialArmor.ArmorProperties;
 import thaumcraft.api.IGoggles;
 import thaumcraft.api.IRepairable;
 import thaumcraft.api.IRunicArmor;
-import thaumcraft.api.IWarpingGear;
+import thaumcraft.api.IVisDiscountGear;
 import thaumcraft.api.ItemApi;
+import thaumcraft.api.aspects.Aspect;
+import thaumcraft.api.nodes.IRevealer;
 import thaumicdyes.client.models.ModelKnight;
 
-public class InhabitedKnightArmor extends ItemArmor implements IRepairable, IRunicArmor, IWarpingGear {
+public class SunKnight extends ItemArmor implements IRepairable, IRunicArmor/*, ISpecialArmor*/ {
    public IIcon iconHelm;
    public IIcon iconChest;
    public IIcon iconLegs;
@@ -38,24 +42,42 @@ public class InhabitedKnightArmor extends ItemArmor implements IRepairable, IRun
    ModelBiped model2 = null;
    ModelBiped model = null;
 
-   public InhabitedKnightArmor(ArmorMaterial enumarmormaterial, int j, int k) {
+   public SunKnight(ArmorMaterial enumarmormaterial, int j, int k) {
       super(enumarmormaterial, j, k);
       this.setCreativeTab(CreativeTabs.tabCombat);
    }
 
    @SideOnly(Side.CLIENT)
    public void registerIcons(IIconRegister ir) {
-      this.iconHelm = ir.registerIcon("thaumicdyes:icon/husk_plate_helm");
-      this.iconChest = ir.registerIcon("thaumicdyes:icon/husk_plate_chest");
-      this.iconLegs = ir.registerIcon("thaumicdyes:icon/husk_plate_legs");
-
+      this.iconHelmOver = ir.registerIcon("thaumicdyes:icon/sun_plate_helm");//
+      this.iconChestOver = ir.registerIcon("thaumicdyes:icon/sun_plate_chest");//
+      this.iconLegsOver = ir.registerIcon("thaumicdyes:icon/cultist_plate_legs");//
+      this.iconBlank = ir.registerIcon("thaumicdyes:blank");
+      this.iconChest = ir.registerIcon("thaumicdyes:blank");
+      this.iconLegs = ir.registerIcon("thaumicdyes:blank");
+      this.iconHelm = ir.registerIcon("thaumicdyes:blank");
+   }
+   /*
+   public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
+      return type == null?"thaumicdyes:textures/models/cultist_knight_overlay.png":"thaumicdyes:textures/models/cultist_knight_base.png";
+   }*/
+   
+   
+   public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
+	      return "thaumicdyes:textures/models/sun_plate_armor.png";
    }
 
-   public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
+   @SideOnly(Side.CLIENT)
+   public boolean requiresMultipleRenderPasses()
    {
-     return "thaumicdyes:textures/models/zombie_plate_armor.png";
+     return true;
    }
-
+   
+   //helm over
+   public IIcon getIconFromDamageForRenderPass(int par1, int par2) {
+     return super.armorType == 2?this.iconLegsOver:(super.armorType == 1?this.iconChestOver:(super.armorType == 0?this.iconHelmOver:(super.armorType == 2?this.iconLegs:(super.armorType == 1?this.iconChest:(super.armorType == 0?this.iconHelm:this.iconBlank)))));
+   }
+   
    public EnumRarity getRarity(ItemStack itemstack) {
       return EnumRarity.uncommon;
    }
@@ -63,20 +85,26 @@ public class InhabitedKnightArmor extends ItemArmor implements IRepairable, IRun
    public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack) {
       return par2ItemStack.isItemEqual(new ItemStack(Items.iron_ingot))?true:super.getIsRepairable(par1ItemStack, par2ItemStack);
    }
-   
-   public int getRunicCharge(ItemStack itemstack)
-   {
-     return 0;
+
+   /*
+   public void onUpdate(ItemStack stack, World world, Entity entity, int p_77663_4_, boolean p_77663_5_) {
+      super.onUpdate(stack, world, entity, p_77663_4_, p_77663_5_);
+      if(!world.isRemote && stack.isItemDamaged() && entity.ticksExisted % 20 == 0 && entity instanceof EntityLivingBase) {
+         stack.damageItem(-1, (EntityLivingBase)entity);
+      }
+
    }
-   
-   public int getWarp(ItemStack itemstack, EntityPlayer player) {
-	      return 1;
-   }
-   
-   @SideOnly(Side.CLIENT)
-   public IIcon getIconFromDamage(int par1)
-   {
-     return this.armorType == 1 ? this.iconChest : this.armorType == 0 ? this.iconHelm : this.iconLegs;
+
+   public void onArmorTick(World world, EntityPlayer player, ItemStack armor) {
+      super.onArmorTick(world, player, armor);
+      if(!world.isRemote && armor.getItemDamage() > 0 && player.ticksExisted % 20 == 0) {
+         armor.damageItem(-1, player);
+      }
+
+   }*/
+
+   public int getRunicCharge(ItemStack itemstack) {
+      return 0;
    }
 
 
@@ -123,10 +151,24 @@ public class InhabitedKnightArmor extends ItemArmor implements IRepairable, IRun
       return this.model;
    }
 
+   /*
+   public ArmorProperties getProperties(EntityLivingBase player, ItemStack armor, DamageSource source, double damage, int slot) {
+      byte priority = 0;
+      double ratio = (double)super.damageReduceAmount / 25.0D;
+      if(source.isMagicDamage()) {
+         priority = 1;
+         ratio = (double)super.damageReduceAmount / 35.0D;
+      } else if(source.isUnblockable()) {
+         priority = 0;
+         ratio = 0.0D;
+      }
+
+      return new ArmorProperties(priority, ratio, armor.getMaxDamage() + 1 - armor.getItemDamage());
+   }
 
    public int getArmorDisplay(EntityPlayer player, ItemStack armor, int slot) {
       return super.damageReduceAmount;
-   }
+   }*/
 
    public void damageArmor(EntityLivingBase entity, ItemStack stack, DamageSource source, int damage, int slot) {
       if(source != DamageSource.fall) {

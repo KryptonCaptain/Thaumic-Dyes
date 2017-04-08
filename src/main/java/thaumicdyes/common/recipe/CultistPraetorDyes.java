@@ -9,9 +9,9 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.world.World;
-import thaumicdyes.common.items.PraetorArmor;
+import thaumicdyes.common.items.CultistPraetorDyed;
 
-public class PraetorDyes implements IRecipe {
+public class CultistPraetorDyes implements IRecipe {
    public boolean matches(InventoryCrafting par1InventoryCrafting, World par2World) {
       ItemStack itemstack = null;
       ArrayList arraylist = new ArrayList();
@@ -21,7 +21,7 @@ public class PraetorDyes implements IRecipe {
          if(itemstack1 != null) {
             if(itemstack1.getItem() instanceof ItemArmor) {
                ItemArmor itemarmor = (ItemArmor)itemstack1.getItem();
-               if(!(itemarmor instanceof PraetorArmor) || itemstack != null) {
+               if(!(itemarmor instanceof CultistPraetorDyed) || itemstack != null) {
                   return false;
                }
 
@@ -56,7 +56,7 @@ public class PraetorDyes implements IRecipe {
          if(var13 != null) {
             if(var13.getItem() instanceof ItemArmor) {
                itemarmor = (ItemArmor)var13.getItem();
-               if(!(itemarmor instanceof PraetorArmor) || itemstack != null) {
+               if(!(itemarmor instanceof CultistPraetorDyed) || itemstack != null) {
                   return null;
                }
 

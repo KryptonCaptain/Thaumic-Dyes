@@ -48,14 +48,14 @@ public class IronFortressArmor extends ItemArmor implements IRepairable, IRunicA
   @SideOnly(Side.CLIENT)
   public void registerIcons(IIconRegister ir)
   {
-    this.iconHelm = ir.registerIcon("thaumicdyes:icon/ironfortresshelm");
-    this.iconChest = ir.registerIcon("thaumicdyes:icon/ironfortresschest");
-    this.iconLegs = ir.registerIcon("thaumicdyes:icon/ironfortresslegs");
+    this.iconHelm = ir.registerIcon("thaumicdyes:icon/iron_fortress_helm");
+    this.iconChest = ir.registerIcon("thaumicdyes:icon/iron_fortress_chest");
+    this.iconLegs = ir.registerIcon("thaumicdyes:icon/iron_fortress_legs");
   }
   
   public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
   {
-    return "thaumicdyes:textures/models/iron_fortress_armor.png";
+    return "thaumicdyes:textures/models/iron_fortress_armor2.png";
   }
   
   @SideOnly(Side.CLIENT)
