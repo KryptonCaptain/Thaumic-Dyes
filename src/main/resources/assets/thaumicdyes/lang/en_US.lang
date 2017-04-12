@@ -63,17 +63,28 @@ item.itemHelmetSunKnight.name=Solaire Helm
 item.itemChestSunKnight.name=Solaire Chestplate
 
 
-
-//item.ItemGoggles.name=Goggles of Revealing
-//item.HelmetFortress.mask.0=Grinning Devil
-//item.HelmetFortress.mask.1=Angry Ghost
-//item.HelmetFortress.mask.2=Sipping Fiend
 item.HelmetIronFortress.mask.0=Crusader
 item.HelmetIronFortress.mask.1=Champion
 item.HelmetIronFortress.mask.2=Husk
 
 item.HelmetCultistRanger.mask.0=Scout
 item.HelmetCultistRanger.mask.1=Guard
+
+
+//Experimental
+item.ItemHelmetRunic.name=Runic Headpiece
+item.ItemChestplateRunic.name=Runic Chestpiece
+item.ItemLeggingsRunic.name=Runic Legpiece
+item.ItemBootsRunic.name=Runic Footpiece
+item.ItemGogglesRunic.name=Runic Goggles of Revealing
+item.ItemBootsTravellerRunic.name=Runic Boots of the Traveller
+item.runic.charge=Charge
+item.runic.upgrade.1=Energized
+item.runic.upgrade.2=Augmented
+item.runic.upgrade.3=Kinetic Feedback
+item.runic.upgrade.4=Revitalizing Feedback
+item.runic.upgrade.5=Hardened
+item.runic.upgrade.6=Emergency Shielding
 
 
 

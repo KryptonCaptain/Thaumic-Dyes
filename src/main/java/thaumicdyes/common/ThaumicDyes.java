@@ -1,6 +1,7 @@
 package thaumicdyes.common;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -16,6 +17,7 @@ import thaumicdyes.client.tab.TabTD;
 import thaumicdyes.common.recipe.DyesRecipes;
 import thaumicdyes.common.DyeResearch;
 import thaumicdyes.common.items.ItemHandler;
+import thaumicdyes.common.lib.EventHandlerLegacy;
 
 @Mod(
    modid = "thaumicdyes",
@@ -29,12 +31,17 @@ public class ThaumicDyes {
       serverSide = "thaumicdyes.client.proxy.ServerProxy"
    )
    public static ServerProxy proxy;
+   
+   public EventHandlerLegacy legacyEventHandler;
 
    @EventHandler
-   public static void PreInit(FMLPreInitializationEvent PreEvent) {
+   public void PreInit(FMLPreInitializationEvent PreEvent) {
       ItemHandler.registerToolMaterial();
       ItemHandler.defineItems();
       ItemHandler.registerItems();
+      
+      this.legacyEventHandler = new EventHandlerLegacy();
+      MinecraftForge.EVENT_BUS.register(this.legacyEventHandler);
 
    }
 
