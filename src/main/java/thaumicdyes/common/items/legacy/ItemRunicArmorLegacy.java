@@ -30,7 +30,6 @@ public class ItemRunicArmorLegacy extends ItemArmor implements ISpecialArmor, IR
     public IIcon iconLegs;
     public IIcon iconBoots;
     public static HashMap<Integer, Long> nextTick;
-    public static HashMap<String, Integer> upgradeCooldown;
     
     public ItemRunicArmorLegacy(ArmorMaterial enumarmormaterial, int j, int k) {
         super(enumarmormaterial, j, k);
@@ -65,17 +64,17 @@ public class ItemRunicArmorLegacy extends ItemArmor implements ISpecialArmor, IR
     
     public int getRunicCharge(ItemStack itemstack) {
     	//return (this.armorType == 0) ? itemstack.getMaxDamage() : ((this.armorType == 1) ? itemstack.getMaxDamage() : ((this.armorType == 2) ? itemstack.getMaxDamage() : itemstack.getMaxDamage()));
-    	return 0;
-    	/*
+    	//return 0;
+    	//math wasn't behaving, so values are manual
     	if ((itemstack.hasTagCompound()) && (itemstack.stackTagCompound.hasKey("upgrade")) && (itemstack.stackTagCompound.getInteger("upgrade") == 2)) {
     		return (this.armorType == 0) ?  12 : ((this.armorType == 1) ? 36 : ((this.armorType == 2) ? 24 : 12 ));
   	  }
     	return (this.armorType == 0) ? 8 : ((this.armorType == 1) ? 24 : ((this.armorType == 2) ? 16 : 8 ));
-    	*/
+    	
 	}
     
     public void addInformation(final ItemStack stack, final EntityPlayer player, final List list, final boolean par4) {
-        list.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal("item.runic.charge") + ": " + (stack.getMaxDamage() - stack.getItemDamage()) + "/" + stack.getMaxDamage());
+        //list.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal("item.runic.charge") + ": " + (stack.getMaxDamage() - stack.getItemDamage()) + "/" + stack.getMaxDamage());
         final int u = getUpgrade(stack);
         if (u > 0) {
             list.add(EnumChatFormatting.DARK_AQUA + StatCollector.translateToLocal("item.runic.upgrade." + u));
@@ -94,14 +93,37 @@ public class ItemRunicArmorLegacy extends ItemArmor implements ISpecialArmor, IR
         return false;
     }
     
-    public ISpecialArmor.ArmorProperties getProperties(final EntityLivingBase player, final ItemStack armor, final DamageSource source, final double damage, final int slot) {
+    /*
+    public ArmorProperties getProperties(final EntityLivingBase player, final ItemStack armor, final DamageSource source, final double damage, final int slot) {
         int dra = ((ItemArmor)armor.getItem()).damageReduceAmount;
         if (getUpgrade(armor) == 5) {
-            dra *= 2;
+            dra *= 4;
         }
         
         return new ISpecialArmor.ArmorProperties(1, dra / 25.0, (int)damage);
+        return new ArmorProperties(1, (getArmorMaterial().getDamageReductionAmount(armorType) * 0.05)*3, (int)damage);
+        
+    }*/
+    
+    public ArmorProperties getProperties(EntityLivingBase player, ItemStack armor, DamageSource source, double damage, int slot)
+    {
+      int priority = 0;
+      double ratio = this.damageReduceAmount / 25.0D;
+      if (getUpgrade(armor) == 5)
+      {
+        priority = 1;
+        ratio = this.damageReduceAmount / 12.5D;
+      }
+      else if (source.isUnblockable())
+      {
+        priority = 0;
+        ratio = 0.0D;
+      }
+
+      return new ArmorProperties(priority, ratio, armor.getMaxDamage() + 1 - armor.getItemDamage());
     }
+    
+    
     
     public int getArmorDisplay(final EntityPlayer player, final ItemStack armor, final int slot) {
         int dra = ((ItemArmor)armor.getItem()).damageReduceAmount;
@@ -149,7 +171,7 @@ public class ItemRunicArmorLegacy extends ItemArmor implements ISpecialArmor, IR
     
     static {
         ItemRunicArmorLegacy.nextTick = new HashMap<Integer, Long>();
-        ItemRunicArmorLegacy.upgradeCooldown = new HashMap<String, Integer>();
+
     }
 
 }
