@@ -1,6 +1,7 @@
 package thaumicdyes.common;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -14,8 +15,10 @@ import thaumcraft.api.aspects.AspectList;
 import thaumicdyes.client.proxy.ServerProxy;
 import thaumicdyes.client.tab.TabTD;
 import thaumicdyes.common.recipe.DyesRecipes;
-import thaumicdyes.common.DyeResearch;
+import thaumicdyes.common.ConfigResearch;
 import thaumicdyes.common.items.ItemHandler;
+import thaumicdyes.common.lib.EventHandlerLegacy;
+//import thaumicdyes.common.lib.EventHandlerLegacy;
 
 @Mod(
    modid = "thaumicdyes",
@@ -29,12 +32,19 @@ public class ThaumicDyes {
       serverSide = "thaumicdyes.client.proxy.ServerProxy"
    )
    public static ServerProxy proxy;
+   
+   public EventHandlerLegacy legacyEventHandler;
 
    @EventHandler
-   public static void PreInit(FMLPreInitializationEvent PreEvent) {
+   public void PreInit(FMLPreInitializationEvent PreEvent) {
       ItemHandler.registerToolMaterial();
       ItemHandler.defineItems();
       ItemHandler.registerItems();
+      
+      /* Too hard to make behave right now*/
+      this.legacyEventHandler = new EventHandlerLegacy();
+      MinecraftForge.EVENT_BUS.register(this.legacyEventHandler);
+      
 
    }
 
@@ -45,7 +55,8 @@ public class ThaumicDyes {
 
    @EventHandler
    public static void PostInit(FMLPostInitializationEvent PostEvent) {
-      DyeResearch.addResearch();
+	  ConfigRecipes.init(); 
+      ConfigResearch.addResearch();
       ItemHandler.addAspects();
       
       ThaumcraftApi.registerEntityTag("Thaumcraft.CultistLeader", new AspectList().add(Aspect.ELDRITCH, 2).add(Aspect.MAN, 2).add(Aspect.ENTROPY, 1).add(Aspect.MAGIC, 2), new ThaumcraftApi.EntityTagsNBT[0]);

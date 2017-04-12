@@ -13,6 +13,9 @@ import thaumicdyes.common.items.ThaumiumFortressDyed;
 import thaumicdyes.common.items.CultistPaladin;
 import thaumicdyes.common.items.CultistPraetorDyed;
 import thaumicdyes.common.items.CultistKnightDyed;
+import thaumicdyes.common.items.legacy.ItemRunicArmorLegacy;
+import thaumicdyes.common.items.legacy.ItemRunicBootsTraveller;
+import thaumicdyes.common.items.legacy.ItemRunicGoggles;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
@@ -85,6 +88,13 @@ public class ItemHandler {
    public static Item itemChestSunKnight;
    
    
+   public static Item itemHelmetRunicLegacy;
+   public static Item itemChestRunicLegacy;
+   public static Item itemLegsRunicLegacy;
+   public static Item itemBootsRunicLegacy;
+   public static Item itemGogglesRunicLegacy;
+   public static Item itemBootsTravellerRunicLegacy;
+   
 
 
    public static void registerItems() {
@@ -146,6 +156,13 @@ public class ItemHandler {
       
       GameRegistry.registerItem(itemHelmetSunKnight, "SunKnightHelm");
       GameRegistry.registerItem(itemChestSunKnight, "SunKnightChest");
+      
+      GameRegistry.registerItem(itemHelmetRunicLegacy, "ItemRunicHelmet");
+      GameRegistry.registerItem(itemChestRunicLegacy, "ItemRunicChest");
+      GameRegistry.registerItem(itemLegsRunicLegacy, "ItemRunicLegs");
+      GameRegistry.registerItem(itemBootsRunicLegacy, "ItemRunicBoots");
+      GameRegistry.registerItem(itemGogglesRunicLegacy, "ItemRunicGoggles");
+      GameRegistry.registerItem(itemBootsTravellerRunicLegacy, "ItemRunicBootsTraveller");
       
       
    }
@@ -211,6 +228,15 @@ public class ItemHandler {
 	   
 	   itemHelmetSunKnight = (new SunKnight(ArmorMaterial.IRON, 4, 0)).setUnlocalizedName("itemHelmetSunKnight").setCreativeTab(ThaumicDyes.tabTD);
 	   itemChestSunKnight = (new SunKnight(ArmorMaterial.IRON, 4, 1)).setUnlocalizedName("itemChestSunKnight").setCreativeTab(ThaumicDyes.tabTD);
+	   
+	   //legacy runic armor
+	   itemHelmetRunicLegacy = (new ItemRunicArmorLegacy(ThaumcraftApi.armorMatSpecial, 4, 0)).setUnlocalizedName("ItemHelmetRunic").setCreativeTab(ThaumicDyes.tabTD);
+	   itemChestRunicLegacy = (new ItemRunicArmorLegacy(ThaumcraftApi.armorMatSpecial, 4, 1)).setUnlocalizedName("ItemChestplateRunic").setCreativeTab(ThaumicDyes.tabTD);
+	   itemLegsRunicLegacy = (new ItemRunicArmorLegacy(ThaumcraftApi.armorMatSpecial, 4, 2)).setUnlocalizedName("ItemLeggingsRunic").setCreativeTab(ThaumicDyes.tabTD);
+	   itemBootsRunicLegacy = (new ItemRunicArmorLegacy(ThaumcraftApi.armorMatSpecial, 4, 3)).setUnlocalizedName("ItemBootsRunic").setCreativeTab(ThaumicDyes.tabTD);;
+	   itemGogglesRunicLegacy = (new ItemRunicGoggles(ThaumcraftApi.armorMatSpecial, 4, 0)).setUnlocalizedName("ItemGogglesRunic").setCreativeTab(ThaumicDyes.tabTD);
+	   itemBootsTravellerRunicLegacy = (new ItemRunicBootsTraveller(ThaumcraftApi.armorMatSpecial, 4, 3)).setUnlocalizedName("ItemBootsTravellerRunic").setCreativeTab(ThaumicDyes.tabTD);;
+	   
    }
    
    public static void addAspects() {
