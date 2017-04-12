@@ -198,25 +198,25 @@ tc.research_name.TD.CRIMSONBANNER=Crimson Cult Banner
 tc.research_text.TD.CRIMSONBANNER=Flag of the red regiment
 tc.research_page.TD.crimsonBanner.1=While banners are an excellent decorative addition to your home, the Crimson Cult isn't particularly fond of your tendancy to steal their banners from occupied sites. And they're not always easy to find either - there simply isn't enough crimson banners to go around.<BR>The solution of course, is to make your own, by weaving some gold thread through a red banner. Presto change-o. They'd never be able to tell it's a copy.
 
-tc.research_name.RUNICARMOR=Runic Armor
-tc.research_text.RUNICARMOR=Shields up!
-tc.research_page.RUNICARMOR.1=Your research into protective magics have led you to discover Runic Armor. The name is misleading though since it is not armor in the traditional sense, but a collection of charms, seals and similar protective devices worn with your everyday clothes.<BR>These devices create a barrier of magical energy that wards out most types of damage. The armor has a pool of hit points from which damage is subtracted first, protecting the wearer from all harm. Once this pool is depleted the wearer starts taking damage as normal.<BR>The pool replenishes over time, but even when depleted
-tc.research_page.RUNICARMOR.2=the armor offers protection roughly equivalent to that of leather armor.<BR>The armor offers no protection from damage suffered due to drowning, starvation or similar environmental hazards.<BR>Due to its nature the armor cannot be enchanted by normal means, but you are sure there are ways to improve its effectiveness - you just need to discover them.
+tc.research_name.TD.RUNICARMOR=Runic Armor
+tc.research_text.TD.RUNICARMOR=Shielded legacy
+tc.research_page.TD.RUNICARMOR.1=Your research into protective magics have led you to discover Runic Armor. The name is misleading though since it is not armor in the traditional sense, but a collection of charms, seals and similar protective devices worn with your everyday clothes.<BR>These devices create a barrier of magical energy that wards out most types of damage. The armor has a pool of hit points from which damage is subtracted first, protecting the wearer from all harm. Once this pool is depleted the wearer starts taking damage as normal.
+tc.research_page.TD.RUNICARMOR.2=The pool replenishes over time, requiring §2Terra§0 and §eAer§0 vis to replenish its charge, but even when depleted the armor offers protection roughly equivalent to that of leather armor.<BR>The armor offers no protection from damage suffered due to drowning, starvation or similar environmental hazards.<BR>Due to its nature the armor cannot be enchanted by normal means, but you are sure there are ways to improve its effectiveness - you just need to discover them.
 
-tc.research_name.RUNICARMORUPGRADES=Runic Armor Upgrades
-tc.research_text.RUNICARMORUPGRADES=Shields to maximum!
-tc.research_page.RUNICARMORUPGRADES.1=Improving Runic Armor has turned out to be easier than expected. You have discovered several augmentations that can be applied to it, though only a single augmentation can be applied at a time.<LINE>§nEnergetic§r<BR>This augmentation will replenish the runic charge 20% quicker than normal.<BR>§nAugmented§r<BR>This upgrade increases the amount of charge a piece of runic armor has.
-tc.research_page.RUNICARMORUPGRADES.2=§nKinetic Feedback§r<BR>When your shielding is breached this upgrade will release a detonation of kinetic energy. The damage and force of the detonation increases depending on how many pieces of armor has this upgrade. This ability has a 30 second cooldown.<BR>§nRevitalizing Feedback§r<BR>When your runic shielding is breached it will release a pulse of regenerative energy into its wearer that will last for a few seconds. The strength of this effect increases for each piece of armor with this upgrade. This effect has a 30 second cooldown.
-tc.research_page.RUNICARMORUPGRADES.3=§nHardened§r<BR>This upgrade doubles the amount of mundane armor protection a piece of runic armor provides once it's shielding has been breached.
+tc.research_name.TD.RUNICARMORUPGRADES=Runic Armor Upgrades
+tc.research_text.TD.RUNICARMORUPGRADES=Shields to maximum!
+tc.research_page.TD.RUNICARMORUPGRADES.1=Improving Runic Armor has turned out to be easier than expected. You have discovered several augmentations that can be applied to it, though only a single augmentation can be applied at a time.<LINE>§nAugmented§r<BR>This upgrade increases the amount of charge a piece of runic armor has.<BR>§nHardened§r<BR>This upgrade doubles the amount of mundane armor protection a piece of runic armor provides once it's shielding has been breached.
+tc.research_page.TD.RUNICARMORUPGRADES.2=§nKinetic Feedback§r<BR>When your shielding is breached this upgrade will release a detonation of kinetic energy. The damage and force of the detonation increases depending on how many pieces of armor has this upgrade. This ability has a 30 second cooldown.<BR>§nRevitalizing Feedback§r<BR>When your runic shielding is breached it will release a pulse of regenerative energy into its wearer that will last for a few seconds. The strength of this effect increases for each piece of armor with this upgrade. This effect has a 30 second cooldown.
+tc.research_page.TD.RUNICARMORUPGRADES.3=§nHardened§r<BR>This upgrade doubles the amount of mundane armor protection a piece of runic armor provides once it's shielding has been breached.
 //<BR>§nEmergency Shielding§r<BR>When the runic shield is breached this upgrade will instantly add 8 (or more) charge spread amongst the armor pieces you are wearing. Each runic armor piece with this upgrade adds 8 charge. This ability has a two minute cooldown.
 
-tc.research_name.RUNICGOGGLES=Runic Goggles of Revealing
-tc.research_text.RUNICGOGGLES=The best of both worlds
-tc.research_page.RUNICGOGGLES.1=While being protected by Runic Armor is vital, you also need the utility of Goggles of Revealing to perform your thaumaturgical tasks. Why not have both?<BR>By affixing the charms of the runic headgear to a pair of goggles, you can enjoy the benefits of both.
+tc.research_name.TD.RUNICGOGGLES=Runic Goggles of Revealing
+tc.research_text.TD.RUNICGOGGLES=The best of both worlds
+tc.research_page.TD.RUNICGOGGLES.1=While being protected by Runic Armor is vital, you also need the utility of Goggles of Revealing to perform your thaumaturgical tasks. Why not have both?<BR>By affixing the charms of the runic headgear to a pair of goggles, you can enjoy the benefits of both.
 
-tc.research_name.RUNICBOOTSTRAVELLER=Runic Boots of the Traveller
-tc.research_text.RUNICBOOTSTRAVELLER=The best of both worlds
-tc.research_page.RUNICBOOTSTRAVELLER.1=While being protected by Runic Armor is vital, you have begun to miss the speed granted by your Boots of Travelling. Why not have both?<BR>By affixing the charms of the runic footgear to a pair of boots of travelling, you can enjoy the benefits of both.
+tc.research_name.TD.RUNICBOOTSTRAVELLER=Runic Boots of the Traveller
+tc.research_text.TD.RUNICBOOTSTRAVELLER=The best of both worlds
+tc.research_page.TD.RUNICBOOTSTRAVELLER.1=While being protected by Runic Armor is vital, you have begun to miss the speed granted by your Boots of Travelling. Why not have both?<BR>By affixing the charms of the runic footgear to a pair of boots of travelling, you can enjoy the benefits of both.
 
 
 

@@ -43,7 +43,13 @@ public class ConfigResearch {
       //copy(ResearchCategories.getResearchList("ELDRITCH").research.get("VOIDMETAL"),"TD.VOIDMETAL","DYES",0,-1).setConcealed().setHidden().registerResearchItem();
       
       researchCrimson();
-      
+      researchCrimsonDyed();
+      researchEldritch();
+      researchIron();
+      researchThaumium();
+      researchVoid();
+      researchBoots();
+      researchRunic();
       
    }
       
@@ -1147,11 +1153,11 @@ public class ConfigResearch {
       //base
       new ResearchItem("TD.RUNICARMOR", "DYES", 
     		  new AspectList().add(Aspect.ARMOR, 8).add(Aspect.AIR, 5).add(Aspect.MAGIC, 5).add(Aspect.ENERGY, 5).add(Aspect.MIND, 3),
-    		  7, 4, 3, 
+    		  7, 1, 3, 
     		  new ItemStack(ItemHandler.itemChestRunicLegacy))
       		  .setPages(new ResearchPage[] { 
-      				  new ResearchPage("tc.research_page.RUNICARMOR.1"), 
-      				  new ResearchPage("tc.research_page.RUNICARMOR.2"), 
+      				  new ResearchPage("tc.research_page.TD.RUNICARMOR.1"), 
+      				  new ResearchPage("tc.research_page.TD.RUNICARMOR.2"), 
       				  new ResearchPage((InfusionRecipe)recipes.get("RunicArmorHelm")), 
       				  new ResearchPage((InfusionRecipe)recipes.get("RunicArmorChest")), 
       				  new ResearchPage((InfusionRecipe)recipes.get("RunicArmorLegs")), 
@@ -1166,10 +1172,10 @@ public class ConfigResearch {
       //goggles+boots
       new ResearchItem("TD.RUNICGOGGLES", "DYES", 
     		  new AspectList().add(Aspect.SENSES, 8).add(Aspect.MAGIC, 5).add(Aspect.ARMOR, 5).add(Aspect.AURA, 3),
-    		  9, 3, 2, 
+    		  6, 3, 2, 
     		  new ItemStack(ItemHandler.itemGogglesRunicLegacy))
       		  .setPages(new ResearchPage[] { 
-      				  new ResearchPage("tc.research_page.RUNICGOGGLES.1"), 
+      				  new ResearchPage("tc.research_page.TD.RUNICGOGGLES.1"), 
       				  new ResearchPage((InfusionRecipe)recipes.get("RunicGoggles")) 
       				  })
 			  .setParents("GOGGLES", "TD.RUNICARMOR")
@@ -1179,10 +1185,10 @@ public class ConfigResearch {
       
       new ResearchItem("TD.RUNICBOOTSTRAVELLER", "DYES",
     		  new AspectList().add(Aspect.TRAVEL, 8).add(Aspect.WATER, 5).add(Aspect.ARMOR, 5).add(Aspect.FLIGHT, 5),
-    		  6, 2, 2, 
+    		  5, 0, 2, 
     		  new ItemStack(ItemHandler.itemBootsTravellerRunicLegacy))
       		  .setPages(new ResearchPage[] { 
-      				  new ResearchPage("tc.research_page.RUNICBOOTSTRAVELLER.1"), 
+      				  new ResearchPage("tc.research_page.TD.RUNICBOOTSTRAVELLER.1"), 
       				  new ResearchPage((InfusionRecipe)recipes.get("RunicBootsTraveller")) 
       				  })
 			  .setParents("TD.BOOTSTRAVELLER", "TD.RUNICARMOR")
@@ -1207,14 +1213,14 @@ public class ConfigResearch {
         rc5.add((InfusionRecipe)recipes.get("RAU5_" + a));
         rc6.add((InfusionRecipe)recipes.get("RAU6_" + a));
       }
-      new ResearchItem("RUNICARMORUPGRADES", "ARTIFICE", 
+      
+      new ResearchItem("TD.RUNICARMORUPGRADES", "DYES", 
     		  new AspectList().add(Aspect.MAGIC, 8).add(Aspect.ARMOR, 5).add(Aspect.ORDER, 5).add(Aspect.MIND, 3),
-    		  4, 5, 2, 
+    		  8, 3, 2, 
     		  new ResourceLocation("thaumcraft", "textures/misc/r_runicupg.png"))
 		      .setPages(new ResearchPage[] { 
-		    		  new ResearchPage("tc.research_page.RUNICARMORUPGRADES.1"), 
-		    		  new ResearchPage("tc.research_page.RUNICARMORUPGRADES.2"), 
-		    		  new ResearchPage("tc.research_page.RUNICARMORUPGRADES.3"), 
+		    		  new ResearchPage("tc.research_page.TD.RUNICARMORUPGRADES.1"), 
+		    		  new ResearchPage("tc.research_page.TD.RUNICARMORUPGRADES.2"),  
 		    		  //new ResearchPage((InfusionRecipe[])rc1.toArray(new InfusionRecipe[0])), 
 		    		  new ResearchPage((InfusionRecipe[])rc2.toArray(new InfusionRecipe[0])), 
 		    		  new ResearchPage((InfusionRecipe[])rc3.toArray(new InfusionRecipe[0])), 
