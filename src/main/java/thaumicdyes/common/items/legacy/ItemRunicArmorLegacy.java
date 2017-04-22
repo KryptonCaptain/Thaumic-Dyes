@@ -20,6 +20,7 @@ import net.minecraftforge.common.ISpecialArmor;
 import net.minecraftforge.common.MinecraftForge;
 import thaumcraft.api.IRunicArmor;
 import thaumcraft.common.Thaumcraft;
+import thaumicdyes.common.ThaumicDyes;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -33,7 +34,7 @@ public class ItemRunicArmorLegacy extends ItemArmor implements ISpecialArmor, IR
     
     public ItemRunicArmorLegacy(ArmorMaterial enumarmormaterial, int j, int k) {
         super(enumarmormaterial, j, k);
-        this.setCreativeTab(Thaumcraft.tabTC);
+        this.setCreativeTab(ThaumicDyes.tabTD);
         MinecraftForge.EVENT_BUS.register(this);
     }
     

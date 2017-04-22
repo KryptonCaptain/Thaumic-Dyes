@@ -16,6 +16,7 @@ import thaumicdyes.common.items.CultistKnightDyed;
 import thaumicdyes.common.items.legacy.ItemRunicArmorLegacy;
 import thaumicdyes.common.items.legacy.ItemRunicBootsTraveller;
 import thaumicdyes.common.items.legacy.ItemRunicGoggles;
+import thaumicdyes.common.items.legacy.ItemTXAncientMask;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
@@ -95,6 +96,8 @@ public class ItemHandler {
    public static Item itemGogglesRunicLegacy;
    public static Item itemBootsTravellerRunicLegacy;
    
+   public static Item itemHelmetMaskTX;
+   
 
 
    public static void registerItems() {
@@ -164,6 +167,8 @@ public class ItemHandler {
       GameRegistry.registerItem(itemGogglesRunicLegacy, "ItemRunicGoggles");
       GameRegistry.registerItem(itemBootsTravellerRunicLegacy, "ItemRunicBootsTraveller");
       
+      
+      GameRegistry.registerItem(itemHelmetMaskTX, "ItemMaskEvil");
       
    }
 
@@ -237,11 +242,14 @@ public class ItemHandler {
 	   itemGogglesRunicLegacy = (new ItemRunicGoggles(ThaumcraftApi.armorMatSpecial, 4, 0)).setUnlocalizedName("ItemGogglesRunic").setCreativeTab(ThaumicDyes.tabTD);
 	   itemBootsTravellerRunicLegacy = (new ItemRunicBootsTraveller(ThaumcraftApi.armorMatSpecial, 4, 3)).setUnlocalizedName("ItemBootsTravellerRunic").setCreativeTab(ThaumicDyes.tabTD);;
 	   
+	   //legacy TX
+	   itemHelmetMaskTX = (new ItemTXAncientMask(ThaumcraftApi.armorMatSpecial, 2, 0)).setUnlocalizedName("ItemHelmetMask").setCreativeTab(ThaumicDyes.tabTD);
+	   
    }
    
    public static void addAspects() {
 	   
-	   //TODO crimson
+	   //crimson
 	   ThaumcraftApi.registerObjectTag(new ItemStack(itemHelmetCultistPaladin), 
 			   new AspectList().add(Aspect.METAL, 6).add(Aspect.GREED, 3).add(Aspect.ELDRITCH, 2));
 	   
@@ -259,7 +267,7 @@ public class ItemHandler {
 	   ThaumcraftApi.registerObjectTag(new ItemStack(itemLegsCultistArcher), 
 			   new AspectList().add(Aspect.METAL, 5).add(Aspect.ELDRITCH, 1).add(Aspect.WEAPON, 1));
 	   
-	   //TODO dyed
+	   //dyed
 	   ThaumcraftApi.registerObjectTag(new ItemStack(itemHelmetCultistRobeDyed), 
 			   new AspectList().add(Aspect.METAL, 4).add(Aspect.CLOTH, 3).add(Aspect.ELDRITCH, 1).add(Aspect.SENSES, 1).add(Aspect.MAGIC, 2));
 	   ThaumcraftApi.registerObjectTag(new ItemStack(itemChestCultistRobeDyed), 
@@ -295,18 +303,18 @@ public class ItemHandler {
 	   ThaumcraftApi.registerObjectTag(new ItemStack(itemLegsCultistArcherDyed), 
 			   new AspectList().add(Aspect.METAL, 6).add(Aspect.CLOTH, 1).add(Aspect.ELDRITCH, 1).add(Aspect.SENSES, 1).add(Aspect.WEAPON, 1));
 	   
-	   //TODO eldritch
+	   //eldritch
 	   ThaumcraftApi.registerObjectTag(new ItemStack(itemHelmetInhabitedPlate), 
 			   new AspectList().add(Aspect.METAL, 5).add(Aspect.UNDEAD, 1).add(Aspect.ELDRITCH, 4).add(Aspect.ENTROPY, 2));
 	   ThaumcraftApi.registerObjectTag(new ItemStack(itemChestInhabitedPlate), 
 			   new AspectList().add(Aspect.METAL, 5).add(Aspect.UNDEAD, 1).add(Aspect.ELDRITCH, 4).add(Aspect.ENTROPY, 2));
 	   ThaumcraftApi.registerObjectTag(new ItemStack(itemLegsInhabitedPlate), 
 			   new AspectList().add(Aspect.METAL, 5).add(Aspect.UNDEAD, 1).add(Aspect.ELDRITCH, 4).add(Aspect.ENTROPY, 2));
-	   //TODO iron tier
+	   //iron tier
 	   
-	   //TODO thaumium tier
+	   //thaumium tier
 	   
-	   //TODO void tier
+	   // void tier
 	   
 	   
 	   ThaumcraftApi.registerObjectTag(new ItemStack(itemFabricResource), 
