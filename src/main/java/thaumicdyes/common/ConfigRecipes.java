@@ -279,6 +279,82 @@ public class ConfigRecipes {
 	    		new Object[] { "upgrade", new NBTTagByte((byte) 6) }, 3, new AspectList().add(Aspect.MAGIC, 16)
 	    		.add(Aspect.ENERGY, 16).add(Aspect.CRYSTAL, 16), new ItemStack(ItemHandler.itemBootsTravellerRunicLegacy), new ItemStack[] { new ItemStack(ConfigItems.itemResource, 1, 14), new ItemStack(Blocks.glass), new ItemStack(ConfigItems.itemShard, 1, 0), new ItemStack(ConfigItems.itemShard, 1, 0), new ItemStack(ConfigItems.itemShard, 1, 0) }));
 		*/
+	    
+	    
+	    //Enhanced
+	    
+	  //upgrade 2
+	    ConfigResearch.recipes.put("ERAU2_0", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
+	    		new Object[] { "upgrade", new NBTTagByte((byte) 2) }, 3, new AspectList().add(Aspect.MAGIC, 32)
+	    		.add(Aspect.ARMOR, 16), new ItemStack(ItemHandler.itemHelmetRunicTX), new ItemStack[] { new ItemStack(ConfigItems.itemResource, 1, 14), new ItemStack(Items.flint), new ItemStack(ConfigItems.itemShard, 1, 4), new ItemStack(ConfigItems.itemShard, 1, 4), new ItemStack(ConfigItems.itemShard, 1, 4) }));
+	    
+	    ConfigResearch.recipes.put("ERAU2_1", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
+	    		new Object[] { "upgrade", new NBTTagByte((byte) 2) }, 3, new AspectList().add(Aspect.MAGIC, 32)
+	    		.add(Aspect.ARMOR, 16), new ItemStack(ItemHandler.itemChestRunicTX), new ItemStack[] { new ItemStack(ConfigItems.itemResource, 1, 14), new ItemStack(Items.flint), new ItemStack(ConfigItems.itemShard, 1, 4), new ItemStack(ConfigItems.itemShard, 1, 4), new ItemStack(ConfigItems.itemShard, 1, 4) }));
+	    
+	    ConfigResearch.recipes.put("ERAU2_2", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
+	    		new Object[] { "upgrade", new NBTTagByte((byte) 2) }, 3, new AspectList().add(Aspect.MAGIC, 32)
+	    		.add(Aspect.ARMOR, 16), new ItemStack(ItemHandler.itemLegsRunicTX), new ItemStack[] { new ItemStack(ConfigItems.itemResource, 1, 14), new ItemStack(Items.flint), new ItemStack(ConfigItems.itemShard, 1, 4), new ItemStack(ConfigItems.itemShard, 1, 4), new ItemStack(ConfigItems.itemShard, 1, 4) }));
+	    
+	    ConfigResearch.recipes.put("ERAU2_3", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
+	    		new Object[] { "upgrade", new NBTTagByte((byte) 2) }, 3, new AspectList().add(Aspect.MAGIC, 32)
+	    		.add(Aspect.ARMOR, 16), new ItemStack(ItemHandler.itemBootsRunicTX), new ItemStack[] { new ItemStack(ConfigItems.itemResource, 1, 14), new ItemStack(Items.flint), new ItemStack(ConfigItems.itemShard, 1, 4), new ItemStack(ConfigItems.itemShard, 1, 4), new ItemStack(ConfigItems.itemShard, 1, 4) }));
+		
+		//upgrade 3
+	    ConfigResearch.recipes.put("ERAU3_0", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
+	    		new Object[] { "upgrade", new NBTTagByte((byte) 3) }, 3, new AspectList().add(Aspect.MAGIC, 16)
+	    		.add(Aspect.AIR, 16).add(Aspect.MOTION, 16), new ItemStack(ItemHandler.itemHelmetRunicTX), new ItemStack[] { new ItemStack(ConfigItems.itemResource, 1, 14), new ItemStack(Items.gunpowder), new ItemStack(ConfigItems.itemShard, 1, 5), new ItemStack(ConfigItems.itemShard, 1, 5), new ItemStack(ConfigItems.itemShard, 1, 5) }));
+	    
+	    ConfigResearch.recipes.put("ERAU3_1", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
+	    		new Object[] { "upgrade", new NBTTagByte((byte) 3) }, 3, new AspectList().add(Aspect.MAGIC, 16)
+	    		.add(Aspect.AIR, 16).add(Aspect.MOTION, 16), new ItemStack(ItemHandler.itemChestRunicTX), new ItemStack[] { new ItemStack(ConfigItems.itemResource, 1, 14), new ItemStack(Items.gunpowder), new ItemStack(ConfigItems.itemShard, 1, 5), new ItemStack(ConfigItems.itemShard, 1, 5), new ItemStack(ConfigItems.itemShard, 1, 5) }));
+	    
+	    ConfigResearch.recipes.put("ERAU3_2", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
+	    		new Object[] { "upgrade", new NBTTagByte((byte) 3) }, 3, new AspectList().add(Aspect.MAGIC, 16)
+	    		.add(Aspect.AIR, 16).add(Aspect.MOTION, 16), new ItemStack(ItemHandler.itemLegsRunicTX), new ItemStack[] { new ItemStack(ConfigItems.itemResource, 1, 14), new ItemStack(Items.gunpowder), new ItemStack(ConfigItems.itemShard, 1, 5), new ItemStack(ConfigItems.itemShard, 1, 5), new ItemStack(ConfigItems.itemShard, 1, 5) }));
+	    
+	    ConfigResearch.recipes.put("ERAU3_3", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
+	    		new Object[] { "upgrade", new NBTTagByte((byte) 3) }, 3, new AspectList().add(Aspect.MAGIC, 16)
+	    		.add(Aspect.AIR, 16).add(Aspect.MOTION, 16), new ItemStack(ItemHandler.itemBootsRunicTX), new ItemStack[] { new ItemStack(ConfigItems.itemResource, 1, 14), new ItemStack(Items.gunpowder), new ItemStack(ConfigItems.itemShard, 1, 5), new ItemStack(ConfigItems.itemShard, 1, 5), new ItemStack(ConfigItems.itemShard, 1, 5) }));
+		
+		//upgrade 4
+	    ConfigResearch.recipes.put("ERAU4_0", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
+	    		new Object[] { "upgrade", new NBTTagByte((byte) 4) }, 3, new AspectList().add(Aspect.MAGIC, 16)
+	    		.add(Aspect.LIFE, 16).add(Aspect.HEAL, 16), new ItemStack(ItemHandler.itemHelmetRunicTX), new ItemStack[] { new ItemStack(ConfigItems.itemResource, 1, 14), new ItemStack(Items.golden_apple), new ItemStack(ConfigItems.itemShard, 1, 2), new ItemStack(ConfigItems.itemShard, 1, 2), new ItemStack(ConfigItems.itemShard, 1, 2) }));
+	    
+	    ConfigResearch.recipes.put("ERAU4_1", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
+	    		new Object[] { "upgrade", new NBTTagByte((byte) 4) }, 3, new AspectList().add(Aspect.MAGIC, 16)
+	    		.add(Aspect.LIFE, 16).add(Aspect.HEAL, 16), new ItemStack(ItemHandler.itemChestRunicTX), new ItemStack[] { new ItemStack(ConfigItems.itemResource, 1, 14), new ItemStack(Items.golden_apple), new ItemStack(ConfigItems.itemShard, 1, 2), new ItemStack(ConfigItems.itemShard, 1, 2), new ItemStack(ConfigItems.itemShard, 1, 2) }));
+	    
+	    ConfigResearch.recipes.put("ERAU4_2", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
+	    		new Object[] { "upgrade", new NBTTagByte((byte) 4) }, 3, new AspectList().add(Aspect.MAGIC, 16)
+	    		.add(Aspect.LIFE, 16).add(Aspect.HEAL, 16), new ItemStack(ItemHandler.itemLegsRunicTX), new ItemStack[] { new ItemStack(ConfigItems.itemResource, 1, 14), new ItemStack(Items.golden_apple), new ItemStack(ConfigItems.itemShard, 1, 2), new ItemStack(ConfigItems.itemShard, 1, 2), new ItemStack(ConfigItems.itemShard, 1, 2) }));
+	    
+	    ConfigResearch.recipes.put("ERAU4_3", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
+	    		new Object[] { "upgrade", new NBTTagByte((byte) 4) }, 3, new AspectList().add(Aspect.MAGIC, 16)
+	    		.add(Aspect.LIFE, 16).add(Aspect.HEAL, 16), new ItemStack(ItemHandler.itemBootsRunicTX), new ItemStack[] { new ItemStack(ConfigItems.itemResource, 1, 14), new ItemStack(Items.golden_apple), new ItemStack(ConfigItems.itemShard, 1, 2), new ItemStack(ConfigItems.itemShard, 1, 2), new ItemStack(ConfigItems.itemShard, 1, 2) }));
+		
+		//upgrade 5
+	    ConfigResearch.recipes.put("ERAU5_0", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
+	    		new Object[] { "upgrade", new NBTTagByte((byte) 5) }, 3, new AspectList().add(Aspect.MAGIC, 16)
+	    		.add(Aspect.EARTH, 16).add(Aspect.METAL, 16), new ItemStack(ItemHandler.itemHelmetRunicTX), new ItemStack[] { new ItemStack(ConfigItems.itemResource, 1, 14), new ItemStack(Items.iron_ingot), new ItemStack(ConfigItems.itemShard, 1, 3), new ItemStack(ConfigItems.itemShard, 1, 3), new ItemStack(ConfigItems.itemShard, 1, 3) }));
+	    
+	    ConfigResearch.recipes.put("ERAU5_1", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
+	    		new Object[] { "upgrade", new NBTTagByte((byte) 5) }, 3, new AspectList().add(Aspect.MAGIC, 16)
+	    		.add(Aspect.EARTH, 16).add(Aspect.METAL, 16), new ItemStack(ItemHandler.itemChestRunicTX), new ItemStack[] { new ItemStack(ConfigItems.itemResource, 1, 14), new ItemStack(Items.iron_ingot), new ItemStack(ConfigItems.itemShard, 1, 3), new ItemStack(ConfigItems.itemShard, 1, 3), new ItemStack(ConfigItems.itemShard, 1, 3) }));
+	    
+	    ConfigResearch.recipes.put("ERAU5_2", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
+	    		new Object[] { "upgrade", new NBTTagByte((byte) 5) }, 3, new AspectList().add(Aspect.MAGIC, 16)
+	    		.add(Aspect.EARTH, 16).add(Aspect.METAL, 16), new ItemStack(ItemHandler.itemLegsRunicTX), new ItemStack[] { new ItemStack(ConfigItems.itemResource, 1, 14), new ItemStack(Items.iron_ingot), new ItemStack(ConfigItems.itemShard, 1, 3), new ItemStack(ConfigItems.itemShard, 1, 3), new ItemStack(ConfigItems.itemShard, 1, 3) }));
+	    
+	    ConfigResearch.recipes.put("ERAU5_3", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
+	    		new Object[] { "upgrade", new NBTTagByte((byte) 5) }, 3, new AspectList().add(Aspect.MAGIC, 16)
+	    		.add(Aspect.EARTH, 16).add(Aspect.METAL, 16), new ItemStack(ItemHandler.itemBootsRunicTX), new ItemStack[] { new ItemStack(ConfigItems.itemResource, 1, 14), new ItemStack(Items.iron_ingot), new ItemStack(ConfigItems.itemShard, 1, 3), new ItemStack(ConfigItems.itemShard, 1, 3), new ItemStack(ConfigItems.itemShard, 1, 3) }));
+		
+	    
+	    
+	    
+	    
 	}
 	
 	

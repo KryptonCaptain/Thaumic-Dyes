@@ -19,8 +19,10 @@ import thaumicdyes.client.tab.TabTD;
 import thaumicdyes.common.recipe.DyesRecipes;
 import thaumicdyes.common.ConfigResearch;
 import thaumicdyes.common.items.ItemHandler;
-import thaumicdyes.common.lib.EventHandlerLegacy;
-import thaumicdyes.common.lib.EventHandlerTXMask;
+import thaumicdyes.common.lib.event.EventHandlerEntity;
+import thaumicdyes.common.lib.event.EventHandlerLegacyRunic;
+import thaumicdyes.common.lib.event.EventHandlerLegacyRunicTX;
+import thaumicdyes.common.lib.event.EventHandlerTXMask;
 
 
 @Mod(
@@ -38,8 +40,10 @@ public class ThaumicDyes {
    
    public static FMLEventChannel channel;
    
-   public EventHandlerLegacy legacyEventHandler;
+   public EventHandlerLegacyRunic legacyEventHandler;
+   public EventHandlerLegacyRunicTX legacyEventHandlerTX;
    public EventHandlerTXMask maskEventHandler;
+   public EventHandlerEntity entityEventHandler;
    
    
    @EventHandler
@@ -49,8 +53,14 @@ public class ThaumicDyes {
 	   ItemHandler.registerItems();
       
 	   /* Too hard to make behave right now*/
-	   this.legacyEventHandler = new EventHandlerLegacy();
+	   this.legacyEventHandler = new EventHandlerLegacyRunic();
 	   MinecraftForge.EVENT_BUS.register(this.legacyEventHandler);
+	   
+	   this.legacyEventHandlerTX = new EventHandlerLegacyRunicTX();
+	   MinecraftForge.EVENT_BUS.register(this.legacyEventHandlerTX);
+	   
+	   this.entityEventHandler = new EventHandlerEntity();
+	   MinecraftForge.EVENT_BUS.register(this.entityEventHandler);
       
       
    }

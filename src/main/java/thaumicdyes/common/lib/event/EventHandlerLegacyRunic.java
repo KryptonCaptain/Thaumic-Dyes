@@ -1,4 +1,4 @@
-package thaumicdyes.common.lib;
+package thaumicdyes.common.lib.event;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -19,11 +19,11 @@ import thaumicdyes.common.items.legacy.ItemRunicArmorLegacy;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 
-public class EventHandlerLegacy //extends EventHandlerRunic
+public class EventHandlerLegacyRunic
 {
 	
     public static HashMap<Integer, ArrayList<Integer>> linkedEntities;
-    private HashMap<String, Integer> upgradeCooldown = new HashMap();
+    public static HashMap<String, Integer> upgradeCooldown = new HashMap();
     
     @SubscribeEvent
     public void livingTick(final LivingEvent.LivingUpdateEvent event) {

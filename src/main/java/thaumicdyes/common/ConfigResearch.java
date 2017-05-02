@@ -1232,6 +1232,32 @@ public class ConfigResearch {
 		      .setSecondary()
 		      .setConcealed()
 		      .registerResearchItem();
+      
+      
+      //TODO Enhanced runic
+      /*
+      //base
+      new ResearchItem("TD.ENHANCEDRUNICARMOR", "DYES", 
+    		  new AspectList().add(Aspect.ARMOR, 8).add(Aspect.AIR, 5).add(Aspect.MAGIC, 5).add(Aspect.ENERGY, 5).add(Aspect.MIND, 3),
+    		  7, 1, 3, 
+    		  new ItemStack(ItemHandler.itemChestRunicTX))
+      		  .setPages(new ResearchPage[] { 
+      				  new ResearchPage("tc.research_page.TD.ENHANCEDRUNICARMOR.1"), 
+      				  new ResearchPage("tc.research_page.TD.ENHANCEDRUNICARMOR.2"), 
+      				  new ResearchPage((InfusionRecipe)recipes.get("RunicArmorHelmEnh")), 
+      				  new ResearchPage((InfusionRecipe)recipes.get("RunicArmorChestEnh")), 
+      				  new ResearchPage((InfusionRecipe)recipes.get("RunicArmorLegsEnh")), 
+      				  new ResearchPage((InfusionRecipe)recipes.get("RunicArmorBootsEnh")) 
+      				  })
+			  //.setParentsHidden("")
+			  .setParents("TD.RUNICARMOR")
+			  .setConcealed()
+			  .registerResearchItem();
+       */
+      
+      
+      
+      
 			      
    }
 	      

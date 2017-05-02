@@ -1,4 +1,4 @@
-package thaumicdyes.common.lib;
+package thaumicdyes.common.lib.event;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufOutputStream;

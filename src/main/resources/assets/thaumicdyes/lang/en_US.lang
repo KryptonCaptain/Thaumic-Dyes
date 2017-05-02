@@ -79,12 +79,22 @@ item.ItemBootsRunic.name=Runic Footpiece
 item.ItemGogglesRunic.name=Runic Goggles of Revealing
 item.ItemBootsTravellerRunic.name=Runic Boots of the Traveller
 
-item.runic.upgrade.1=Energized
-item.runic.upgrade.2=Augmented
-item.runic.upgrade.3=Kinetic Feedback
-item.runic.upgrade.4=Revitalizing Feedback
-item.runic.upgrade.5=Hardened
-item.runic.upgrade.6=Emergency Shielding
+item.runic.upgrade.0= - No upgrade
+item.runic.upgrade.1= - Energized
+item.runic.upgrade.2= - Augmented
+item.runic.upgrade.3= - Kinetic Feedback
+item.runic.upgrade.4= - Revitalizing Feedback
+item.runic.upgrade.5= - Hardened
+item.runic.upgrade.6= - Emergency Shielding
+
+//Legacy TX
+item.ItemMaskEvil.name=Mask of Cruelty
+death.attack.witherMask=%1$s was withered away by %2$s
+
+item.ItemHelmetRunicEnhanced.name=Enhanced Runic Headpiece
+item.ItemChestplateRunicEnhanced.name=Enhanced Runic Chestpiece
+item.ItemLeggingsRunicEnhanced.name=Enhanced Runic Legpiece
+item.ItemBootsRunicEnhanced.name=Enhanced Runic Footpiece
 
 
 
@@ -200,7 +210,7 @@ tc.research_page.TD.crimsonBanner.1=While banners are an excellent decorative ad
 
 tc.research_name.TD.RUNICARMOR=Runic Armor
 tc.research_text.TD.RUNICARMOR=Shielded legacy
-tc.research_page.TD.RUNICARMOR.1=Your research into protective magics have led you to discover Runic Armor. The name is misleading though since it is not armor in the traditional sense, but a collection of charms, seals and similar protective devices worn with your everyday clothes.<BR>These devices create a barrier of magical energy that wards out most types of damage. The armor has a pool of hit points from which damage is subtracted first, protecting the wearer from all harm. Once this pool is depleted the wearer starts taking damage as normal.
+tc.research_page.TD.RUNICARMOR.1=Your research into protective magics have led you to discover Runic Armor. The name is misleading though since it is not armor in the traditional sense, but a collection of charms, seals and similar protective devices worn with your everyday clothes.<BR>These devices create a barrier of magical energy that wards out most types of damage. The armor's shielding provides a pool of hit points from which damage is subtracted first, protecting the wearer from all harm. Once this pool is depleted the wearer starts taking damage as normal.
 tc.research_page.TD.RUNICARMOR.2=The pool replenishes over time, requiring §2Terra§0 and §eAer§0 vis to replenish its charge, but even when depleted the armor offers protection roughly equivalent to that of leather armor.<BR>The armor offers no protection from damage suffered due to drowning, starvation or similar environmental hazards.<BR>Due to its nature the armor cannot be enchanted by normal means, but you are sure there are ways to improve its effectiveness - you just need to discover them.
 
 tc.research_name.TD.RUNICARMORUPGRADES=Runic Armor Upgrades
@@ -218,6 +228,13 @@ tc.research_name.TD.RUNICBOOTSTRAVELLER=Runic Boots of the Traveller
 tc.research_text.TD.RUNICBOOTSTRAVELLER=The best of both worlds
 tc.research_page.TD.RUNICBOOTSTRAVELLER.1=While being protected by Runic Armor is vital, you have begun to miss the speed granted by your Boots of Travelling. Why not have both?<BR>By affixing the charms of the runic footgear to a pair of boots of travelling, you can enjoy the benefits of both.
 
+
+
+--Enhanced Runic Armor
+tc.research_name.TD.ENHANCEDRUNICARMOR=Enhanced Runic Armor
+tc.research_text.TD.ENHANCEDRUNICARMOR=Double or nothing
+tc.research_page.TD.ENHANCEDRUNICARMOR.1=Your extensive research into augmenting Runic Armor has left you disappointed at the armor's ability to only hold one augment. You also miss the mystical discount granted from wearing your Thaumaturge's Robes. Instead of being discouraged, you have developed a 'suit' of Enhanced Runic Armor that satisfies these grievances.<BR><BR>Each piece of this armor can hold not one, but two augments, allowing for even more protection. This armor also grants a passive vis discount much like your robes. There is but one catch - the cost.
+tc.research_page.TD.ENHANCEDRUNICARMOR.2=Keep in mind that the inital creation of the Enhanced armor will wipe existing augments. <BR><BR>In the case that you want to overwrite an augment placed on the Enhanced armor, you may right click while holding it to swap positions of the augments. The augment displayed first is the one that will be overwritten.<BR><BR>[Recipes pending... leave feedback]
 
 
 

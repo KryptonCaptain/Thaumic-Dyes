@@ -21,11 +21,12 @@ import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.util.IIcon;
 import thaumcraft.api.IGoggles;
 import thaumcraft.api.IRepairable;
+import thaumcraft.api.IRunicArmor;
 import thaumcraft.api.ItemApi;
 import thaumcraft.api.nodes.IRevealer;
 import thaumcraft.api.IVisDiscountGear;
 
-public class ItemTXAncientMask extends ItemArmor implements IVisDiscountGear, IRepairable
+public class ItemTXAncientMask extends ItemArmor implements IVisDiscountGear, IRepairable, IRunicArmor
 {
     public IIcon iconHelm;
     
@@ -71,5 +72,10 @@ public class ItemTXAncientMask extends ItemArmor implements IVisDiscountGear, IR
     public EnumRarity getRarity(final ItemStack itemstack) {
         return EnumRarity.rare;
     }
+
+	@Override
+	public int getRunicCharge(ItemStack itemstack) {
+		return 0;
+	}
 }
 
