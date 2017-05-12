@@ -68,9 +68,9 @@ public class ItemRunicArmorLegacy extends ItemArmor implements ISpecialArmor, IR
     	//return 0;
     	//math wasn't behaving, so values are manual
     	if ((itemstack.hasTagCompound()) && (itemstack.stackTagCompound.hasKey("upgrade")) && (itemstack.stackTagCompound.getInteger("upgrade") == 2)) {
-    		return (this.armorType == 0) ?  12 : ((this.armorType == 1) ? 36 : ((this.armorType == 2) ? 24 : 12 ));
+    		return (this.armorType == 0) ?  12 : ((this.armorType == 1) ? 36 : ((this.armorType == 2) ? 24 : 12 )); //TODO 84 total, TBA
   	  }
-    	return (this.armorType == 0) ? 8 : ((this.armorType == 1) ? 24 : ((this.armorType == 2) ? 16 : 8 ));
+    	return (this.armorType == 0) ? 8 : ((this.armorType == 1) ? 24 : ((this.armorType == 2) ? 16 : 8 )); //56 total
     	
 	}
     
@@ -113,7 +113,7 @@ public class ItemRunicArmorLegacy extends ItemArmor implements ISpecialArmor, IR
       if (getUpgrade(armor) == 5)
       {
         priority = 1;
-        ratio = this.damageReduceAmount / 12.5D;
+        ratio = this.damageReduceAmount / 12.5D; //more classic manual values
       }
       else if (source.isUnblockable())
       {

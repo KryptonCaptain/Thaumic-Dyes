@@ -3,6 +3,7 @@ package thaumicdyes.common.items.legacy;
 import java.util.List;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
@@ -10,25 +11,32 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.IIcon;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ISpecialArmor;
 import net.minecraftforge.common.ISpecialArmor.ArmorProperties;
+import thaumcraft.api.IRunicArmor;
 import thaumcraft.api.aspects.Aspect;
 import thaumicdyes.common.ThaumicDyes;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 
-public class ItemTXRunicArmorEnhanced extends ItemRunicArmorLegacy {
+public class ItemTXRunicArmorEnhanced /*extends ItemRunicArmorLegacy*/ extends ItemArmor implements ISpecialArmor, IRunicArmor {
 
 	public ItemTXRunicArmorEnhanced(ItemArmor.ArmorMaterial enumarmormaterial, int j, int k) {
 		super(enumarmormaterial, j, k);
 		this.setCreativeTab(ThaumicDyes.tabTD);
 	}
 	
+	public IIcon iconHelm;
+    public IIcon iconChest;
+    public IIcon iconLegs;
+    public IIcon iconBoots;
 	
-	@Override
+	
+	//@Override
     public int getMaxDamage(ItemStack stack) {
 	    int md = ((ItemArmor)stack.getItem()).damageReduceAmount * 8;
 
@@ -43,7 +51,7 @@ public class ItemTXRunicArmorEnhanced extends ItemRunicArmorLegacy {
 	    return md;
     }
 	
-	@Override
+	//@Override
     public int getRunicCharge(ItemStack itemstack) {
     	//return (this.armorType == 0) ? itemstack.getMaxDamage() : ((this.armorType == 1) ? itemstack.getMaxDamage() : ((this.armorType == 2) ? itemstack.getMaxDamage() : itemstack.getMaxDamage()));
     	//return 0;
@@ -54,21 +62,21 @@ public class ItemTXRunicArmorEnhanced extends ItemRunicArmorLegacy {
     		if ( ((itemstack.hasTagCompound()) && (itemstack.stackTagCompound.hasKey("upgrade")) && (itemstack.stackTagCompound.getInteger("upgrade") == 2))
     	    		&& ((itemstack.hasTagCompound()) && (itemstack.stackTagCompound.hasKey("upgrade2")) && (itemstack.stackTagCompound.getInteger("upgrade2") == 2)) )
     	    	{
-    			return (this.armorType == 0) ?  16 : ((this.armorType == 1) ? 48 : ((this.armorType == 2) ? 32 : 16 ));
+    			return (this.armorType == 0) ?  16 : ((this.armorType == 1) ? 48 : ((this.armorType == 2) ? 32 : 16 )); //TODO 112 total
     	    	}
     		else {
-    			return (this.armorType == 0) ?  12 : ((this.armorType == 1) ? 36 : ((this.armorType == 2) ? 24 : 12 ));
+    			return (this.armorType == 0) ?  12 : ((this.armorType == 1) ? 36 : ((this.armorType == 2) ? 24 : 12 )); //84 total
     		}	
     		
   	  }
-    	return (this.armorType == 0) ? 8 : ((this.armorType == 1) ? 24 : ((this.armorType == 2) ? 16 : 8 ));
+    	return (this.armorType == 0) ? 8 : ((this.armorType == 1) ? 24 : ((this.armorType == 2) ? 16 : 8 )); //56 total
     	
 	}
 	
 	
 	
 	
-	@Override
+	//@Override
 	public ArmorProperties getProperties(EntityLivingBase player, ItemStack armor, DamageSource source, double damage, int slot)
 	{
 		int priority = 0;
@@ -77,7 +85,7 @@ public class ItemTXRunicArmorEnhanced extends ItemRunicArmorLegacy {
 	    if (getUpgrade1(armor) == 5 || getUpgrade2(armor) == 5) {
 		    if (getUpgrade1(armor) == 5 && getUpgrade2(armor) == 5) {
 		    	priority = 1;
-		        ratio = this.damageReduceAmount / 8.3D;
+		        ratio = this.damageReduceAmount / 8.3D; //more classic manual values
 		    }
 		    else {
 		    	priority = 1;
@@ -93,7 +101,7 @@ public class ItemTXRunicArmorEnhanced extends ItemRunicArmorLegacy {
 	}
 	  
 	
-	@Override
+	//@Override
 	public int getArmorDisplay(EntityPlayer player, ItemStack armor, int slot) {
 	    int dra = ((ItemArmor)armor.getItem()).damageReduceAmount;
 	    if (getUpgrade1(armor) == 5 || getUpgrade2(armor) == 5) {
@@ -106,12 +114,16 @@ public class ItemTXRunicArmorEnhanced extends ItemRunicArmorLegacy {
 	    }
 		return dra;
 	}
+	
+	public void damageArmor(final EntityLivingBase entity, final ItemStack stack, final DamageSource source, final int damage, final int slot) {
+    }
 
 	@Override
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4)
     {
 	    //list.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal("item.runic.charge") + ": " + (stack.getMaxDamage() - stack.getItemDamage()) + "/" + stack.getMaxDamage());
-	    int u = getUpgrade1(stack);
+	    
+		int u = getUpgrade1(stack);
 	    if (u < 7) {
 	      list.add(EnumChatFormatting.DARK_AQUA + StatCollector.translateToLocal(new StringBuilder().append("item.runic.upgrade.").append(u).toString()) );
 	    }
@@ -167,6 +179,15 @@ public class ItemTXRunicArmorEnhanced extends ItemRunicArmorLegacy {
 	    this.iconLegs = ir.registerIcon("thaumicdyes:enhancedRunicLeggings");
 	    this.iconBoots = ir.registerIcon("thaumicdyes:enhancedRunicBoots");
 	}
+	
+	@SideOnly(Side.CLIENT)
+    public IIcon getIconFromDamage(final int par1) {
+        return (this.armorType == 0) ? this.iconHelm : ((this.armorType == 1) ? this.iconChest : ((this.armorType == 2) ? this.iconLegs : this.iconBoots));
+    }
+	
+	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
+        return "thaumicdyes:textures/items/blank.png";
+    }
 	  
 	
     public boolean onItemUse(ItemStack item, EntityPlayer player, World world, int par4, int par5, int par6, int par7, float par8, float par9, float par10)

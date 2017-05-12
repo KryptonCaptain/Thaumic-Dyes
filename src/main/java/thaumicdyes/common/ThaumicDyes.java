@@ -20,8 +20,8 @@ import thaumicdyes.common.recipe.DyesRecipes;
 import thaumicdyes.common.ConfigResearch;
 import thaumicdyes.common.items.ItemHandler;
 import thaumicdyes.common.lib.event.EventHandlerEntity;
-import thaumicdyes.common.lib.event.EventHandlerLegacyRunic;
-import thaumicdyes.common.lib.event.EventHandlerLegacyRunicTX;
+import thaumicdyes.common.lib.event.EventHandlerRunicLegacy;
+import thaumicdyes.common.lib.event.EventHandlerRunicTX;
 import thaumicdyes.common.lib.event.EventHandlerTXMask;
 
 
@@ -40,8 +40,8 @@ public class ThaumicDyes {
    
    public static FMLEventChannel channel;
    
-   public EventHandlerLegacyRunic legacyEventHandler;
-   public EventHandlerLegacyRunicTX legacyEventHandlerTX;
+   public EventHandlerRunicLegacy legacyEventHandler;
+   public EventHandlerRunicTX legacyEventHandlerTX;
    public EventHandlerTXMask maskEventHandler;
    public EventHandlerEntity entityEventHandler;
    
@@ -53,10 +53,10 @@ public class ThaumicDyes {
 	   ItemHandler.registerItems();
       
 	   /* Too hard to make behave right now*/
-	   this.legacyEventHandler = new EventHandlerLegacyRunic();
+	   this.legacyEventHandler = new EventHandlerRunicLegacy();
 	   MinecraftForge.EVENT_BUS.register(this.legacyEventHandler);
 	   
-	   this.legacyEventHandlerTX = new EventHandlerLegacyRunicTX();
+	   this.legacyEventHandlerTX = new EventHandlerRunicTX();
 	   MinecraftForge.EVENT_BUS.register(this.legacyEventHandlerTX);
 	   
 	   this.entityEventHandler = new EventHandlerEntity();

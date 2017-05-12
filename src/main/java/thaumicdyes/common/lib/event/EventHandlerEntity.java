@@ -5,6 +5,7 @@ import java.util.List;
 import thaumcraft.common.lib.utils.EntityUtils;
 import thaumicdyes.common.items.ItemHandler;
 import thaumicdyes.common.items.legacy.ItemTXAncientMask;
+import thaumicdyes.common.lib.DamageSourceTX;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.EntityLivingBase;
@@ -56,7 +57,8 @@ public class EventHandlerEntity {
 	            if ((entity instanceof EntityCreature)) {
 	              ((EntityCreature)entity).setTarget(player);
 	            }
-	            ((EntityLivingBase)entity).addPotionEffect(new PotionEffect(Potion.wither.getId(), 80));
+	            //((EntityLivingBase)entity).addPotionEffect(new PotionEffect(Potion.wither.getId(), 80));
+	            ((EntityLivingBase)entity).attackEntityFrom(DamageSourceTX.witherPlayerDamage(player), 1);
 	            
 	            if (player.inventory.armorItemInSlot(3) != null) {
             		player.inventory.armorItemInSlot(3).damageItem(1, player);

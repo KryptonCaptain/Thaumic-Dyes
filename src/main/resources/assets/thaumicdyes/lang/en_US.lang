@@ -66,6 +66,7 @@ item.itemChestSunKnight.name=Solaire Chestplate
 item.HelmetIronFortress.mask.0=Crusader
 item.HelmetIronFortress.mask.1=Champion
 item.HelmetIronFortress.mask.2=Husk
+item.HelmetIronFortress.mask.3=Warlord 
 
 item.HelmetCultistRanger.mask.0=Scout
 item.HelmetCultistRanger.mask.1=Guard
@@ -80,15 +81,15 @@ item.ItemGogglesRunic.name=Runic Goggles of Revealing
 item.ItemBootsTravellerRunic.name=Runic Boots of the Traveller
 
 item.runic.upgrade.0= - No upgrade
-item.runic.upgrade.1= - Energized
-item.runic.upgrade.2= - Augmented
+item.runic.upgrade.1= - Energized // NYI
+item.runic.upgrade.2= - Augmented Shielding
 item.runic.upgrade.3= - Kinetic Feedback
 item.runic.upgrade.4= - Revitalizing Feedback
 item.runic.upgrade.5= - Hardened
 item.runic.upgrade.6= - Emergency Shielding
 
 //Legacy TX
-item.ItemMaskEvil.name=Mask of Cruelty
+item.ItemMaskEvil.name=Mask of Cruelty (WIP)
 death.attack.witherMask=%1$s was withered away by %2$s
 
 item.ItemHelmetRunicEnhanced.name=Enhanced Runic Headpiece
@@ -144,6 +145,9 @@ tc.research_page.TD.ironHelmFace.1=Since the Iron Fortress Armor lacks the innat
 tc.research_name.TD.IRONHELMHUSK=Husk Faceplate
 tc.research_text.TD.IRONHELMHUSK=Iron Fortress Helm Upgrade
 tc.research_page.TD.ironHelmFace.2=Your studies into the armor the husks in the Outer Lands wear have yielded some clues about the history of the Crimson Cult, but you're here to make history, not read it. <BR>Prying the helmet off a husk, and the crab out of the helmet, you've gained a terrifying trophy that you could craft into your Fortress Helm.<BR>Some ancient energies still leech from underneath it, but you're sure it's nothing to worry about.
+
+tc.research_name.TD.IRONHELMHUSKCLASSIC=Restored Husk Faceplate 
+tc.research_page.TD.ironHelmFaceClassic.2=Your studies into the armor the husks in the Outer Lands wear have yielded some clues about what their armor may have looked like before it was worn away by time and strange magics. Expanding on your existing collection of faceplate designs, the restored helmet's striking gold patterning are a unique addition to your armor. <BR>Some ancient energies still leech from under its new coating, but you're sure it's nothing to worry about.
 
 tc.research_name.TD.DYEDRANGER=Thaumaturge's Ranger Armor
 tc.research_text.TD.DYEDRANGER=Wilderness wanderers
@@ -215,10 +219,10 @@ tc.research_page.TD.RUNICARMOR.2=The pool replenishes over time, requiring §2Te
 
 tc.research_name.TD.RUNICARMORUPGRADES=Runic Armor Upgrades
 tc.research_text.TD.RUNICARMORUPGRADES=Shields to maximum!
-tc.research_page.TD.RUNICARMORUPGRADES.1=Improving Runic Armor has turned out to be easier than expected. You have discovered several augmentations that can be applied to it, though only a single augmentation can be applied at a time.<LINE>§nAugmented§r<BR>This upgrade increases the amount of charge a piece of runic armor has.<BR>§nHardened§r<BR>This upgrade doubles the amount of mundane armor protection a piece of runic armor provides once it's shielding has been breached.
+tc.research_page.TD.RUNICARMORUPGRADES.1=Improving Runic Armor has turned out to be easier than expected. You have discovered several augmentations that can be applied to it, though only a single augmentation can be applied at a time.<LINE>§nAugmented§r<BR>This upgrade increases the amount of charge a piece of runic armor has by 50%.<BR>§nHardened§r<BR>This upgrade doubles the amount of mundane armor protection a piece of runic armor provides once it's shielding has been breached.
 tc.research_page.TD.RUNICARMORUPGRADES.2=§nKinetic Feedback§r<BR>When your shielding is breached this upgrade will release a detonation of kinetic energy. The damage and force of the detonation increases depending on how many pieces of armor has this upgrade. This ability has a 30 second cooldown.<BR>§nRevitalizing Feedback§r<BR>When your runic shielding is breached it will release a pulse of regenerative energy into its wearer that will last for a few seconds. The strength of this effect increases for each piece of armor with this upgrade. This effect has a 30 second cooldown.
-tc.research_page.TD.RUNICARMORUPGRADES.3=§nHardened§r<BR>This upgrade doubles the amount of mundane armor protection a piece of runic armor provides once it's shielding has been breached.
-//<BR>§nEmergency Shielding§r<BR>When the runic shield is breached this upgrade will instantly add 8 (or more) charge spread amongst the armor pieces you are wearing. Each runic armor piece with this upgrade adds 8 charge. This ability has a two minute cooldown.
+tc.research_page.TD.RUNICARMORUPGRADES.3=§nEmergency Shielding§r<BR>When your runic shield is breached this upgrade will instantly add 8 (or more) charge. Each runic armor piece with this upgrade adds 8 charge. This ability has a two minute cooldown.
+tc.research_page.TD.RUNICARMORUPGRADES.4=Enhanced Runic Armor is a masterwork of your magical prowess, and augmentations will only make it stronger, but how strong is it? To make work easier for future thaumaturges, you've included your calculations.<LINE>A fully §nHardened§r set will provide the wearer with a full armor bar.<BR>Twin §nAugmented Shielding§r upgrades will double the maximum shielding of a piece.<BR>Slotting seven §nEmergency Shielding§r upgrades provides the capability to fully restore the shielding of a non-augmented set when breached.
 
 tc.research_name.TD.RUNICGOGGLES=Runic Goggles of Revealing
 tc.research_text.TD.RUNICGOGGLES=The best of both worlds
