@@ -2,27 +2,24 @@ package thaumicdyes.common;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.common.MinecraftForge;
-import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.SidedProxy;
-import cpw.mods.fml.common.Mod.EventHandler;
-import cpw.mods.fml.common.Mod.Instance;
-import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.event.FMLPostInitializationEvent;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.network.FMLEventChannel;
-import cpw.mods.fml.common.network.NetworkRegistry;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 import thaumicdyes.client.proxy.ServerProxy;
 import thaumicdyes.client.tab.TabTD;
-import thaumicdyes.common.recipe.DyesRecipes;
-import thaumicdyes.common.ConfigResearch;
 import thaumicdyes.common.items.ItemHandler;
 import thaumicdyes.common.lib.event.EventHandlerEntity;
 import thaumicdyes.common.lib.event.EventHandlerRunicLegacy;
-import thaumicdyes.common.lib.event.EventHandlerRunicTX;
 import thaumicdyes.common.lib.event.EventHandlerTXMask;
+import thaumicdyes.common.recipe.DyesRecipes;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.FMLEventChannel;
+import cpw.mods.fml.common.network.NetworkRegistry;
 
 
 @Mod(
@@ -41,7 +38,6 @@ public class ThaumicDyes {
    public static FMLEventChannel channel;
    
    public EventHandlerRunicLegacy legacyEventHandler;
-   public EventHandlerRunicTX legacyEventHandlerTX;
    public EventHandlerTXMask maskEventHandler;
    public EventHandlerEntity entityEventHandler;
    
@@ -55,9 +51,6 @@ public class ThaumicDyes {
 	   /* Too hard to make behave right now*/
 	   this.legacyEventHandler = new EventHandlerRunicLegacy();
 	   MinecraftForge.EVENT_BUS.register(this.legacyEventHandler);
-	   
-	   this.legacyEventHandlerTX = new EventHandlerRunicTX();
-	   MinecraftForge.EVENT_BUS.register(this.legacyEventHandlerTX);
 	   
 	   this.entityEventHandler = new EventHandlerEntity();
 	   MinecraftForge.EVENT_BUS.register(this.entityEventHandler);

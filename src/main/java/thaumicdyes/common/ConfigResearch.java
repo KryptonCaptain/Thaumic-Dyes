@@ -1221,17 +1221,18 @@ public class ConfigResearch {
 		      .setPages(new ResearchPage[] { 
 		    		  new ResearchPage("tc.research_page.TD.RUNICARMORUPGRADES.1"), 
 		    		  new ResearchPage("tc.research_page.TD.RUNICARMORUPGRADES.2"), 
-		    		  new ResearchPage("tc.research_page.TD.RUNICARMORUPGRADES.3"),
-		    		  //new ResearchPage((InfusionRecipe[])rc1.toArray(new InfusionRecipe[0])), 
+		    		  new ResearchPage((InfusionRecipe[])rc1.toArray(new InfusionRecipe[0])), 
 		    		  new ResearchPage((InfusionRecipe[])rc2.toArray(new InfusionRecipe[0])), 
+		    		  new ResearchPage("tc.research_page.TD.RUNICARMORUPGRADES.3"),
 		    		  new ResearchPage((InfusionRecipe[])rc3.toArray(new InfusionRecipe[0])), 
 		    		  new ResearchPage((InfusionRecipe[])rc4.toArray(new InfusionRecipe[0])), 
+		    		  new ResearchPage("tc.research_page.TD.RUNICARMORUPGRADES.4"),
 		    		  new ResearchPage((InfusionRecipe[])rc5.toArray(new InfusionRecipe[0])), 
 		    		  new ResearchPage((InfusionRecipe[])rc6.toArray(new InfusionRecipe[0])),
-		    		  new ResearchPage("TD.ENHANCEDRUNICARMOR", "tc.research_page.TD.RUNICARMORUPGRADES.4")
+		    		  new ResearchPage("TD.ENHANCEDRUNICARMOR", "tc.research_page.TD.RUNICARMORUPGRADES.5")
 		      })
 		      .setParents("TD.RUNICARMOR")
-		      .setParentsHidden("RUNICCHARGED", "RUNICHEALING", "RUNICKINETIC", "RUNICEMERGENCY")
+		      .setParentsHidden("RUNICHEALING", "RUNICKINETIC", "RUNICEMERGENCY")
 		      .setSecondary()
 		      .setConcealed()
 		      .registerResearchItem();

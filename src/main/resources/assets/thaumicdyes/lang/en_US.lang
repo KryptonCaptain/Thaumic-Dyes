@@ -81,7 +81,7 @@ item.ItemGogglesRunic.name=Runic Goggles of Revealing
 item.ItemBootsTravellerRunic.name=Runic Boots of the Traveller
 
 item.runic.upgrade.0= - No upgrade
-item.runic.upgrade.1= - Energized // NYI
+item.runic.upgrade.1= - Berserker
 item.runic.upgrade.2= - Augmented Shielding
 item.runic.upgrade.3= - Kinetic Feedback
 item.runic.upgrade.4= - Revitalizing Feedback
@@ -219,10 +219,11 @@ tc.research_page.TD.RUNICARMOR.2=The pool replenishes over time, requiring §2Te
 
 tc.research_name.TD.RUNICARMORUPGRADES=Runic Armor Upgrades
 tc.research_text.TD.RUNICARMORUPGRADES=Shields to maximum!
-tc.research_page.TD.RUNICARMORUPGRADES.1=Improving Runic Armor has turned out to be easier than expected. You have discovered several augmentations that can be applied to it, though only a single augmentation can be applied at a time.<LINE>§nAugmented§r<BR>This upgrade increases the amount of charge a piece of runic armor has by 50%.<BR>§nHardened§r<BR>This upgrade doubles the amount of mundane armor protection a piece of runic armor provides once it's shielding has been breached.
-tc.research_page.TD.RUNICARMORUPGRADES.2=§nKinetic Feedback§r<BR>When your shielding is breached this upgrade will release a detonation of kinetic energy. The damage and force of the detonation increases depending on how many pieces of armor has this upgrade. This ability has a 30 second cooldown.<BR>§nRevitalizing Feedback§r<BR>When your runic shielding is breached it will release a pulse of regenerative energy into its wearer that will last for a few seconds. The strength of this effect increases for each piece of armor with this upgrade. This effect has a 30 second cooldown.
-tc.research_page.TD.RUNICARMORUPGRADES.3=§nEmergency Shielding§r<BR>When your runic shield is breached this upgrade will instantly add 8 (or more) charge. Each runic armor piece with this upgrade adds 8 charge. This ability has a two minute cooldown.
-tc.research_page.TD.RUNICARMORUPGRADES.4=Enhanced Runic Armor is a masterwork of your magical prowess, and augmentations will only make it stronger, but how strong is it? To make work easier for future thaumaturges, you've included your calculations.<LINE>A fully §nHardened§r set will provide the wearer with a full armor bar.<BR>Twin §nAugmented Shielding§r upgrades will double the maximum shielding of a piece.<BR>Slotting seven §nEmergency Shielding§r upgrades provides the capability to fully restore the shielding of a non-augmented set when breached.
+tc.research_page.TD.RUNICARMORUPGRADES.1=Improving Runic Armor has turned out to be easier than expected. You have discovered several augmentations that can be applied to it, some of which were learned from your earlier experiments with runic baubles. <BR>However, only a single augmentation can be applied at a time. It seems magic has its own "sanity limits" sometimes.<BR>It is worth noting that having the same augment on all pieces may have additional unknown effects.
+tc.research_page.TD.RUNICARMORUPGRADES.2=§nBerserker§r<BR>When your shielding is breached it will release a burst of magical strength into its wearer that will last for a few seconds. The strength of this effect increases for each upgrade.<BR> This effect has a 1 minute cooldown.<BR>§nAugmented Shielding§r<BR>This upgrade increases the amount of charge a piece of runic armor has by 50%.
+tc.research_page.TD.RUNICARMORUPGRADES.3=§nKinetic Feedback§r<BR>When your shielding is breached this upgrade will release a detonation of kinetic energy. The damage and force of the detonation increases depending on how many upgrades are present. <BR>This ability has a 30 second cooldown.<BR>§nRevitalizing Feedback§r<BR>When your shielding is breached it will release a pulse of regenerative energy into its wearer that will last for a few seconds. The strength of this effect increases for each upgrade. <BR>This effect has a 30 second cooldown.
+tc.research_page.TD.RUNICARMORUPGRADES.4=§nHardened§r<BR>This upgrade doubles the amount of mundane armor protection a piece of runic armor provides once it's shielding has been breached.<BR>§nEmergency Shielding§r<BR>When your shield is breached this upgrade will instantly add 8 (or more) charge. Each runic armor piece with this upgrade adds 8 charge. <BR>This ability has a two minute cooldown.
+tc.research_page.TD.RUNICARMORUPGRADES.5=Enhanced Runic Armor is a masterwork of your magical prowess, and augmentations will only make it stronger, but how strong is it? To make work easier for future thaumaturges, you've included your calculations.<LINE>A fully §nHardened§r set will provide the wearer with a full armor bar.<BR>Twin §nAugmented Shielding§r upgrades will double the maximum shielding of a piece.<BR>Slotting seven §nEmergency Shielding§r upgrades provides the capability to fully restore the shielding of a non-augmented set when breached.
 
 tc.research_name.TD.RUNICGOGGLES=Runic Goggles of Revealing
 tc.research_text.TD.RUNICGOGGLES=The best of both worlds
@@ -230,7 +231,7 @@ tc.research_page.TD.RUNICGOGGLES.1=While being protected by Runic Armor is vital
 
 tc.research_name.TD.RUNICBOOTSTRAVELLER=Runic Boots of the Traveller
 tc.research_text.TD.RUNICBOOTSTRAVELLER=The best of both worlds
-tc.research_page.TD.RUNICBOOTSTRAVELLER.1=While being protected by Runic Armor is vital, you have begun to miss the speed granted by your Boots of Travelling. Why not have both?<BR>By affixing the charms of the runic footgear to a pair of boots of travelling, you can enjoy the benefits of both.
+tc.research_page.TD.RUNICBOOTSTRAVELLER.1=While being protected by Runic Armor is vital, you have begun to miss the speed granted by your Boots of Travelling. Why not have both?<BR>By affixing the charms of the runic footgear to a pair of boots of travelling, you can enjoy the benefits of both.<BR>You haven't had any luck repeating this procedure on other variants of the Boots of the Traveller, but perhaps you will have better luck in the future.
 
 
 

@@ -23,18 +23,13 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 
-public class ItemTXRunicArmorEnhanced /*extends ItemRunicArmorLegacy*/ extends ItemArmor implements ISpecialArmor, IRunicArmor {
+public class ItemTXRunicArmorEnhanced extends ItemRunicArmorLegacy  {
 
 	public ItemTXRunicArmorEnhanced(ItemArmor.ArmorMaterial enumarmormaterial, int j, int k) {
 		super(enumarmormaterial, j, k);
 		this.setCreativeTab(ThaumicDyes.tabTD);
 	}
-	
-	public IIcon iconHelm;
-    public IIcon iconChest;
-    public IIcon iconLegs;
-    public IIcon iconBoots;
-	
+		
 	
 	//@Override
     public int getMaxDamage(ItemStack stack) {
@@ -115,8 +110,6 @@ public class ItemTXRunicArmorEnhanced /*extends ItemRunicArmorLegacy*/ extends I
 		return dra;
 	}
 	
-	public void damageArmor(final EntityLivingBase entity, final ItemStack stack, final DamageSource source, final int damage, final int slot) {
-    }
 
 	@Override
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4)
@@ -179,15 +172,6 @@ public class ItemTXRunicArmorEnhanced /*extends ItemRunicArmorLegacy*/ extends I
 	    this.iconLegs = ir.registerIcon("thaumicdyes:enhancedRunicLeggings");
 	    this.iconBoots = ir.registerIcon("thaumicdyes:enhancedRunicBoots");
 	}
-	
-	@SideOnly(Side.CLIENT)
-    public IIcon getIconFromDamage(final int par1) {
-        return (this.armorType == 0) ? this.iconHelm : ((this.armorType == 1) ? this.iconChest : ((this.armorType == 2) ? this.iconLegs : this.iconBoots));
-    }
-	
-	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
-        return "thaumicdyes:textures/items/blank.png";
-    }
 	  
 	
     public boolean onItemUse(ItemStack item, EntityPlayer player, World world, int par4, int par5, int par6, int par7, float par8, float par9, float par10)
