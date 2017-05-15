@@ -1153,7 +1153,7 @@ public class ConfigResearch {
       //base
       new ResearchItem("TD.RUNICARMOR", "DYES", 
     		  new AspectList().add(Aspect.ARMOR, 8).add(Aspect.AIR, 5).add(Aspect.MAGIC, 5).add(Aspect.ENERGY, 5).add(Aspect.MIND, 3),
-    		  7, 1, 3, 
+    		  8, 3, 3, 
     		  new ItemStack(ItemHandler.itemChestRunicLegacy))
       		  .setPages(new ResearchPage[] { 
       				  new ResearchPage("tc.research_page.TD.RUNICARMOR.1"), 
@@ -1163,16 +1163,16 @@ public class ConfigResearch {
       				  new ResearchPage((InfusionRecipe)recipes.get("RunicArmorLegs")), 
       				  new ResearchPage((InfusionRecipe)recipes.get("RunicArmorBoots")) 
       				  })
-			  .setParentsHidden("INFUSION", "RUNICARMOR")
-			  .setParents("ENCHFABRIC")
+			  .setParents("INFUSION", "RUNICARMOR")
 			  .setConcealed()
+			  .setSpecial()
 			  .registerResearchItem();
       
       /////////////
       //goggles+boots
       new ResearchItem("TD.RUNICGOGGLES", "DYES", 
     		  new AspectList().add(Aspect.SENSES, 8).add(Aspect.MAGIC, 5).add(Aspect.ARMOR, 5).add(Aspect.AURA, 3),
-    		  6, 3, 2, 
+    		  7, 1, 2, 
     		  new ItemStack(ItemHandler.itemGogglesRunicLegacy))
       		  .setPages(new ResearchPage[] { 
       				  new ResearchPage("tc.research_page.TD.RUNICGOGGLES.1"), 
@@ -1185,7 +1185,7 @@ public class ConfigResearch {
       
       new ResearchItem("TD.RUNICBOOTSTRAVELLER", "DYES",
     		  new AspectList().add(Aspect.TRAVEL, 8).add(Aspect.WATER, 5).add(Aspect.ARMOR, 5).add(Aspect.FLIGHT, 5),
-    		  5, 0, 2, 
+    		  5, 2, 2, 
     		  new ItemStack(ItemHandler.itemBootsTravellerRunicLegacy))
       		  .setPages(new ResearchPage[] { 
       				  new ResearchPage("tc.research_page.TD.RUNICBOOTSTRAVELLER.1"), 
@@ -1216,20 +1216,20 @@ public class ConfigResearch {
       
       new ResearchItem("TD.RUNICARMORUPGRADES", "DYES", 
     		  new AspectList().add(Aspect.MAGIC, 8).add(Aspect.ARMOR, 5).add(Aspect.ORDER, 5).add(Aspect.MIND, 3),
-    		  8, 3, 2, 
+    		  7, 4, 3, 
     		  new ResourceLocation("thaumcraft", "textures/misc/r_runicupg.png"))
 		      .setPages(new ResearchPage[] { 
 		    		  new ResearchPage("tc.research_page.TD.RUNICARMORUPGRADES.1"), 
 		    		  new ResearchPage("tc.research_page.TD.RUNICARMORUPGRADES.2"), 
+		    		  new ResearchPage("tc.research_page.TD.RUNICARMORUPGRADES.3"),
+		    		  new ResearchPage("tc.research_page.TD.RUNICARMORUPGRADES.4"),
+		    		  new ResearchPage("TD.ENHANCEDRUNICARMOR", "tc.research_page.TD.RUNICARMORUPGRADES.5"),
 		    		  new ResearchPage((InfusionRecipe[])rc1.toArray(new InfusionRecipe[0])), 
 		    		  new ResearchPage((InfusionRecipe[])rc2.toArray(new InfusionRecipe[0])), 
-		    		  new ResearchPage("tc.research_page.TD.RUNICARMORUPGRADES.3"),
 		    		  new ResearchPage((InfusionRecipe[])rc3.toArray(new InfusionRecipe[0])), 
 		    		  new ResearchPage((InfusionRecipe[])rc4.toArray(new InfusionRecipe[0])), 
-		    		  new ResearchPage("tc.research_page.TD.RUNICARMORUPGRADES.4"),
 		    		  new ResearchPage((InfusionRecipe[])rc5.toArray(new InfusionRecipe[0])), 
-		    		  new ResearchPage((InfusionRecipe[])rc6.toArray(new InfusionRecipe[0])),
-		    		  new ResearchPage("TD.ENHANCEDRUNICARMOR", "tc.research_page.TD.RUNICARMORUPGRADES.5")
+		    		  new ResearchPage((InfusionRecipe[])rc6.toArray(new InfusionRecipe[0]))
 		      })
 		      .setParents("TD.RUNICARMOR")
 		      .setParentsHidden("RUNICHEALING", "RUNICKINETIC", "RUNICEMERGENCY")
@@ -1241,20 +1241,25 @@ public class ConfigResearch {
       //TODO Enhanced runic
       
       //base
+      ArrayList<InfusionRecipe> enhR = new ArrayList();
+      for (int a = 0; a <= 3; a++)
+      {
+        enhR.add((InfusionRecipe)recipes.get("EnhRunicArmor" + a));
+      }
+      
       new ResearchItem("TD.ENHANCEDRUNICARMOR", "DYES", 
     		  new AspectList().add(Aspect.ARMOR, 8).add(Aspect.AIR, 5).add(Aspect.MAGIC, 5).add(Aspect.ENERGY, 5).add(Aspect.MIND, 3),
-    		  7, 4, 3, 
+    		  10, 3, 3, 
     		  new ItemStack(ItemHandler.itemChestRunicTX))
       		  .setPages(new ResearchPage[] { 
       				  new ResearchPage("tc.research_page.TD.ENHANCEDRUNICARMOR.1"), 
       				  new ResearchPage("tc.research_page.TD.ENHANCEDRUNICARMOR.2"), 
-      				  new ResearchPage((InfusionRecipe)recipes.get("EnhRunicArmorHelm")), 
-      				  new ResearchPage((InfusionRecipe)recipes.get("EnhRunicArmorChest")), 
-      				  new ResearchPage((InfusionRecipe)recipes.get("EnhRunicArmorLegs")), 
-      				  new ResearchPage((InfusionRecipe)recipes.get("EnhRunicArmorBoots")) 
+      				  new ResearchPage((InfusionRecipe[])enhR.toArray(new InfusionRecipe[0])) 
+      				 
       				  })
 			  //.setParentsHidden("")
 			  .setParents("TD.RUNICARMOR")
+			  //.setParentsHidden("PRIMPEARL")
 			  .setConcealed()
 			  .registerResearchItem();
        

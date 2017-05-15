@@ -6,6 +6,7 @@ import java.util.HashMap;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
@@ -35,6 +36,7 @@ public class EventHandlerRunicLegacy {
     	    	
     	if (event.entity instanceof EntityPlayer) {
             final EntityPlayer player = (EntityPlayer)event.entity;
+            
             
             String key = "0";
             
@@ -92,6 +94,7 @@ public class EventHandlerRunicLegacy {
         	int berserker = 0;
             int kinetic = 0;
             int healing = 0;
+            //int hardened = 0;
             int emergency = 0;
             
             final EntityPlayer player = (EntityPlayer)event.entity;
@@ -102,16 +105,16 @@ public class EventHandlerRunicLegacy {
             for (int a = 0; a < 4; ++a) {
                 if (player.inventory.armorItemInSlot(a) != null && (player.inventory.armorItemInSlot(a).getItem() instanceof ItemRunicArmorLegacy) )  { //this should cover the enhanced one too
                     
-                	if (ItemRunicArmorLegacy.getUpgrade1(player.inventory.armorItemInSlot(a)) == 1) {
+                	if (ItemRunicArmorLegacy.getUpgrade(player.inventory.armorItemInSlot(a)) == 1) {
                         berserker++;
                     }                	
-                	else if (ItemRunicArmorLegacy.getUpgrade1(player.inventory.armorItemInSlot(a)) == 3) {
+                	else if (ItemRunicArmorLegacy.getUpgrade(player.inventory.armorItemInSlot(a)) == 3) {
                 		kinetic++;
                     }
-                    else if (ItemRunicArmorLegacy.getUpgrade1(player.inventory.armorItemInSlot(a)) == 4) {
+                    else if (ItemRunicArmorLegacy.getUpgrade(player.inventory.armorItemInSlot(a)) == 4) {
                     	healing++;
                     }
-                    else if (ItemRunicArmorLegacy.getUpgrade1(player.inventory.armorItemInSlot(a)) == 6) {
+                    else if (ItemRunicArmorLegacy.getUpgrade(player.inventory.armorItemInSlot(a)) == 6) {
                     	emergency++;
                     }
                 }
@@ -120,11 +123,14 @@ public class EventHandlerRunicLegacy {
     	        { 
     		        if (ItemTXRunicArmorEnhanced.getUpgrade2(player.inventory.armorItemInSlot(a)) == 1) { 
     		        	berserker++; 
-    		        }  if (ItemTXRunicArmorEnhanced.getUpgrade2(player.inventory.armorItemInSlot(a)) == 3) { 
+    		        }  
+    		        if (ItemTXRunicArmorEnhanced.getUpgrade2(player.inventory.armorItemInSlot(a)) == 3) { 
     		        	kinetic++; 
-    		        } else if (ItemTXRunicArmorEnhanced.getUpgrade2(player.inventory.armorItemInSlot(a)) == 4) { 
+    		        } 
+    		        else if (ItemTXRunicArmorEnhanced.getUpgrade2(player.inventory.armorItemInSlot(a)) == 4) { 
     		        	healing++; 
-    		        } else if (ItemTXRunicArmorEnhanced.getUpgrade2(player.inventory.armorItemInSlot(a)) == 6) { 
+    		        } 
+    		        else if (ItemTXRunicArmorEnhanced.getUpgrade2(player.inventory.armorItemInSlot(a)) == 6) { 
     		        	emergency++; 
     		        }  
     	        }
@@ -146,10 +152,10 @@ public class EventHandlerRunicLegacy {
             
             key = player.getEntityId() + ":" + 1;
             if (charge <= 0 && berserker > 0 && !this.upgradeCooldown.containsKey(key)) {
-                this.upgradeCooldown.put(key, 1200);
-                player.addPotionEffect(new PotionEffect(Potion.damageBoost.id, 200, berserker));
+                this.upgradeCooldown.put(key, 400);
+                player.addPotionEffect(new PotionEffect(Potion.damageBoost.id, (100*(berserker)), berserker));
                 if (berserker >= 4) {
-                	player.addPotionEffect(new PotionEffect(Potion.resistance.id, 200+(100*(berserker-4)), berserker-3));
+                	player.addPotionEffect(new PotionEffect(Potion.resistance.id, 200+(100*(berserker-4)), berserker-4));
                 }
                 player.worldObj.playSoundAtEntity((Entity)player, "thaumcraft:runicShieldEffect", 1.0f, 1.0f);
             }
@@ -169,6 +175,9 @@ public class EventHandlerRunicLegacy {
                 //healing--;
                 this.upgradeCooldown.put(key, 600);
                 player.addPotionEffect(new PotionEffect(Potion.regeneration.id, 200, healing));
+                if (healing >= 4) {
+                	player.addPotionEffect(new PotionEffect(Potion.field_76444_x.id, 200+(100*(healing-4)), (int)healing/2));
+                }
                 player.worldObj.playSoundAtEntity((Entity)player, "thaumcraft:runicShieldEffect", 1.0f, 1.0f);
             }
             

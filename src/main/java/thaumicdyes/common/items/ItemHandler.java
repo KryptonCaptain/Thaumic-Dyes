@@ -29,7 +29,6 @@ public class ItemHandler {
    public static ArmorMaterial FortressArmor;
    public static ArmorMaterial KnightArmor;
    public static ArmorMaterial IronFortressArmor;
-   
 
    public static Item itemHelmetCultistRobeDyed;
    public static Item itemChestCultistRobeDyed;
@@ -89,7 +88,6 @@ public class ItemHandler {
    public static Item itemHelmetSunKnight;
    public static Item itemChestSunKnight;
    
-   
    public static Item itemHelmetRunicLegacy;
    public static Item itemChestRunicLegacy;
    public static Item itemLegsRunicLegacy;
@@ -98,6 +96,7 @@ public class ItemHandler {
    public static Item itemBootsTravellerRunicLegacy;
    
    public static Item itemHelmetMaskTX;
+   
    public static Item itemHelmetRunicTX;
    public static Item itemChestRunicTX;
    public static Item itemLegsRunicTX;
@@ -172,8 +171,8 @@ public class ItemHandler {
       GameRegistry.registerItem(itemGogglesRunicLegacy, "ItemRunicGoggles");
       GameRegistry.registerItem(itemBootsTravellerRunicLegacy, "ItemRunicBootsTraveller");
       
+      //GameRegistry.registerItem(itemHelmetMaskTX, "ItemMaskEvil");
       
-      GameRegistry.registerItem(itemHelmetMaskTX, "ItemMaskEvil");
       GameRegistry.registerItem(itemHelmetRunicTX, "ItemRunicHelmetEnhanced");
       GameRegistry.registerItem(itemChestRunicTX, "ItemRunicChestEnhanced");
       GameRegistry.registerItem(itemLegsRunicTX, "ItemRunicLegsEnhanced");
@@ -261,7 +260,7 @@ public class ItemHandler {
 	   
    }
    
-   public static void addAspects() {
+   public static void addAspects() { //TODO aspects
 	   
 	   //crimson
 	   ThaumcraftApi.registerObjectTag(new ItemStack(itemHelmetCultistPaladin), 
@@ -330,7 +329,28 @@ public class ItemHandler {
 	   
 	   // void tier
 	   
+	   //runic
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemHelmetRunicLegacy), 
+			   new AspectList().add(Aspect.ARMOR, 4).add(Aspect.ENERGY, 12).add(Aspect.MAGIC, 8).add(Aspect.GREED, 5).add(Aspect.VOID, 4) );
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemChestRunicLegacy), 
+			   new AspectList().add(Aspect.ARMOR, 12).add(Aspect.ENERGY, 36).add(Aspect.MAGIC, 24).add(Aspect.GREED, 5).add(Aspect.VOID, 4) );
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemLegsRunicLegacy), 
+			   new AspectList().add(Aspect.ARMOR, 8).add(Aspect.ENERGY, 24).add(Aspect.MAGIC, 16).add(Aspect.GREED, 5).add(Aspect.VOID, 4) );
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemBootsRunicLegacy), 
+			   new AspectList().add(Aspect.ARMOR, 4).add(Aspect.ENERGY, 12).add(Aspect.MAGIC, 8).add(Aspect.GREED, 5).add(Aspect.VOID, 4) );
 	   
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemHelmetRunicTX), 
+			   new AspectList().add(Aspect.ARMOR, 4).add(Aspect.ENERGY, 12).add(Aspect.MAGIC, 8).add(Aspect.GREED, 10).add(Aspect.VOID, 4).add(Aspect.ORDER, 6) );
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemChestRunicTX), 
+			   new AspectList().add(Aspect.ARMOR, 12).add(Aspect.ENERGY, 36).add(Aspect.MAGIC, 24).add(Aspect.GREED, 10).add(Aspect.VOID, 4).add(Aspect.ORDER, 6) );
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemLegsRunicTX), 
+			   new AspectList().add(Aspect.ARMOR, 8).add(Aspect.ENERGY, 24).add(Aspect.MAGIC, 16).add(Aspect.GREED, 10).add(Aspect.VOID, 4).add(Aspect.ORDER, 6) );
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemBootsRunicTX), 
+			   new AspectList().add(Aspect.ARMOR, 4).add(Aspect.ENERGY, 12).add(Aspect.MAGIC, 8).add(Aspect.GREED, 10).add(Aspect.VOID, 4).add(Aspect.ORDER, 6) );
+	   
+	   
+	   
+	   //other
 	   ThaumcraftApi.registerObjectTag(new ItemStack(itemFabricResource), 
 			   new AspectList().add(Aspect.CLOTH, 4).add(Aspect.ELDRITCH, 1).add(Aspect.MAGIC, 2));
    

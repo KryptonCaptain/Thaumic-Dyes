@@ -57,7 +57,7 @@ public class ItemRunicArmorLegacy extends ItemArmor implements ISpecialArmor, IR
     
     public int getMaxDamage(final ItemStack stack) {
         int md = ((ItemArmor)stack.getItem()).damageReduceAmount * 8;
-        if (getUpgrade1(stack) == 2) {
+        if (getUpgrade(stack) == 2) {
             md *= (int)1.5;
         }
         return md;
@@ -76,7 +76,7 @@ public class ItemRunicArmorLegacy extends ItemArmor implements ISpecialArmor, IR
     
     public void addInformation(final ItemStack stack, final EntityPlayer player, final List list, final boolean par4) {
         //list.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal("item.runic.charge") + ": " + (stack.getMaxDamage() - stack.getItemDamage()) + "/" + stack.getMaxDamage());
-        final int u = getUpgrade1(stack);
+        final int u = getUpgrade(stack);
         if (u > 0) {
             list.add(EnumChatFormatting.DARK_AQUA + StatCollector.translateToLocal("item.runic.upgrade." + u));
         }
@@ -110,7 +110,7 @@ public class ItemRunicArmorLegacy extends ItemArmor implements ISpecialArmor, IR
     {
       int priority = 0;
       double ratio = this.damageReduceAmount / 25.0D;
-      if (getUpgrade1(armor) == 5)
+      if (getUpgrade(armor) == 5)
       {
         priority = 1;
         ratio = this.damageReduceAmount / 12.5D; //more classic manual values
@@ -128,7 +128,7 @@ public class ItemRunicArmorLegacy extends ItemArmor implements ISpecialArmor, IR
     
     public int getArmorDisplay(final EntityPlayer player, final ItemStack armor, final int slot) {
         int dra = ((ItemArmor)armor.getItem()).damageReduceAmount;
-        if (getUpgrade1(armor) == 5) {
+        if (getUpgrade(armor) == 5) {
             dra *= 2;
         }
         return dra;
@@ -149,7 +149,7 @@ public class ItemRunicArmorLegacy extends ItemArmor implements ISpecialArmor, IR
             if (armor.getItemDamage() > 0) {
                 int rate = 1000;
                 for (int a = 0; a < 4; ++a) {
-                    if (player.inventory.armorItemInSlot(a) != null && player.inventory.armorItemInSlot(a).getItem() instanceof ItemRunicArmorLegacy && getUpgrade1(player.inventory.armorItemInSlot(a)) == 1) {
+                    if (player.inventory.armorItemInSlot(a) != null && player.inventory.armorItemInSlot(a).getItem() instanceof ItemRunicArmorLegacy && getUpgrade(player.inventory.armorItemInSlot(a)) == 1) {
                         rate -= 150;
                     }
                 }
@@ -163,7 +163,7 @@ public class ItemRunicArmorLegacy extends ItemArmor implements ISpecialArmor, IR
         }
     }
     
-    public static int getUpgrade1(final ItemStack armor) {
+    public static int getUpgrade(final ItemStack armor) {
         if (armor.hasTagCompound() && armor.stackTagCompound.hasKey("upgrade")) {
             return armor.stackTagCompound.getByte("upgrade");
         }

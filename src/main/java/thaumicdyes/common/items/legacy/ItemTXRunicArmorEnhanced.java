@@ -35,8 +35,8 @@ public class ItemTXRunicArmorEnhanced extends ItemRunicArmorLegacy  {
     public int getMaxDamage(ItemStack stack) {
 	    int md = ((ItemArmor)stack.getItem()).damageReduceAmount * 8;
 
-	    if (getUpgrade1(stack) == 2 || getUpgrade2(stack) == 2) {
-	    	if (getUpgrade1(stack) == 2 && getUpgrade2(stack) == 2) {
+	    if (getUpgrade(stack) == 2 || getUpgrade2(stack) == 2) {
+	    	if (getUpgrade(stack) == 2 && getUpgrade2(stack) == 2) {
 	    		md *= (int)2.0;
 	    	}
 	    	else {
@@ -77,10 +77,10 @@ public class ItemTXRunicArmorEnhanced extends ItemRunicArmorLegacy  {
 		int priority = 0;
 		double ratio = this.damageReduceAmount / 25.0D;
 	      
-	    if (getUpgrade1(armor) == 5 || getUpgrade2(armor) == 5) {
-		    if (getUpgrade1(armor) == 5 && getUpgrade2(armor) == 5) {
+	    if (getUpgrade(armor) == 5 || getUpgrade2(armor) == 5) {
+		    if (getUpgrade(armor) == 5 && getUpgrade2(armor) == 5) {
 		    	priority = 1;
-		        ratio = this.damageReduceAmount / 8.3D; //more classic manual values
+		        ratio = this.damageReduceAmount / 8.3D; //more classic manual values, 25/3
 		    }
 		    else {
 		    	priority = 1;
@@ -99,8 +99,8 @@ public class ItemTXRunicArmorEnhanced extends ItemRunicArmorLegacy  {
 	//@Override
 	public int getArmorDisplay(EntityPlayer player, ItemStack armor, int slot) {
 	    int dra = ((ItemArmor)armor.getItem()).damageReduceAmount;
-	    if (getUpgrade1(armor) == 5 || getUpgrade2(armor) == 5) {
-		    if (getUpgrade1(armor) == 5 && getUpgrade2(armor) == 5) {
+	    if (getUpgrade(armor) == 5 || getUpgrade2(armor) == 5) {
+		    if (getUpgrade(armor) == 5 && getUpgrade2(armor) == 5) {
 		    	dra *= 3;
 		    }
 		    else {
@@ -116,7 +116,7 @@ public class ItemTXRunicArmorEnhanced extends ItemRunicArmorLegacy  {
     {
 	    //list.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal("item.runic.charge") + ": " + (stack.getMaxDamage() - stack.getItemDamage()) + "/" + stack.getMaxDamage());
 	    
-		int u = getUpgrade1(stack);
+		int u = getUpgrade(stack);
 	    if (u < 7) {
 	      list.add(EnumChatFormatting.DARK_AQUA + StatCollector.translateToLocal(new StringBuilder().append("item.runic.upgrade.").append(u).toString()) );
 	    }
@@ -143,17 +143,11 @@ public class ItemTXRunicArmorEnhanced extends ItemRunicArmorLegacy  {
 		}
 		return 0;
 	}
-	public static int getUpgrade1(ItemStack armor)
+	public static int getUpgrade(ItemStack armor)
 	{
 	    if ((armor.hasTagCompound()) && (armor.stackTagCompound.hasKey("upgrade"))) {
 	    	return armor.stackTagCompound.getByte("upgrade");
 		}
-		return 0;
-	}
-	
-
-	public static int getUpgrade(ItemStack armor)
-	{
 		return 0;
 	}
 	
@@ -176,8 +170,8 @@ public class ItemTXRunicArmorEnhanced extends ItemRunicArmorLegacy  {
 	
     public boolean onItemUse(ItemStack item, EntityPlayer player, World world, int par4, int par5, int par6, int par7, float par8, float par9, float par10)
     {
-    	if (this.getUpgrade1(item) <7 && this.getUpgrade2(item) <7) {
-    		int u1 = this.getUpgrade1(item);
+    	if (this.getUpgrade(item) <7 && this.getUpgrade2(item) <7) {
+    		int u1 = this.getUpgrade(item);
     		int u2 = this.getUpgrade2(item);
     		item.stackTagCompound.setByte("upgrade2",(byte) u1);
     		item.stackTagCompound.setByte("upgrade",(byte) u2);
