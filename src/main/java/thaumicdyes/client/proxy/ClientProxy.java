@@ -8,6 +8,8 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.util.IIcon;
 import thaumicdyes.client.handlers.ServerTickHandler;
 import thaumicdyes.client.proxy.ServerProxy;
+import thaumicdyes.common.ThaumicDyes;
+import thaumicdyes.common.lib.packet.TXClientPacketHandler;
 
 public class ClientProxy extends ServerProxy {
 	
@@ -21,6 +23,9 @@ public class ClientProxy extends ServerProxy {
 	}
 
 	public void registerRenderers() {
+		
+		ThaumicDyes.channel.register(new TXClientPacketHandler());
+		
 	}
 
 	public void initRenderers() {

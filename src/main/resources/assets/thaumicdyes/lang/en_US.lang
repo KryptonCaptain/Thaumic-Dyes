@@ -63,17 +63,39 @@ item.itemHelmetSunKnight.name=Solaire Helm
 item.itemChestSunKnight.name=Solaire Chestplate
 
 
-
-//item.ItemGoggles.name=Goggles of Revealing
-//item.HelmetFortress.mask.0=Grinning Devil
-//item.HelmetFortress.mask.1=Angry Ghost
-//item.HelmetFortress.mask.2=Sipping Fiend
 item.HelmetIronFortress.mask.0=Crusader
 item.HelmetIronFortress.mask.1=Champion
 item.HelmetIronFortress.mask.2=Husk
+item.HelmetIronFortress.mask.3=Warlord 
 
 item.HelmetCultistRanger.mask.0=Scout
 item.HelmetCultistRanger.mask.1=Guard
+
+
+//Experimental
+item.ItemHelmetRunic.name=Runic Headpiece
+item.ItemChestplateRunic.name=Runic Chestpiece
+item.ItemLeggingsRunic.name=Runic Legpiece
+item.ItemBootsRunic.name=Runic Footpiece
+item.ItemGogglesRunic.name=Runic Goggles of Revealing
+item.ItemBootsTravellerRunic.name=Runic Boots of the Traveller
+
+item.runic.upgrade.0= - No upgrade
+item.runic.upgrade.1= - Berserker
+item.runic.upgrade.2= - Shield Nexus
+item.runic.upgrade.3= - Kinetic Feedback
+item.runic.upgrade.4= - Revitalizing Feedback
+item.runic.upgrade.5= - Hardened
+item.runic.upgrade.6= - Emergency Shielding
+
+//Legacy TX
+item.ItemMaskEvil.name=Mask of Cruelty (WIP)
+death.attack.witherMask=%1$s was withered away by %2$s
+
+item.ItemHelmetRunicEnhanced.name=Enhanced Runic Headpiece
+item.ItemChestplateRunicEnhanced.name=Enhanced Runic Chestpiece
+item.ItemLeggingsRunicEnhanced.name=Enhanced Runic Legpiece
+item.ItemBootsRunicEnhanced.name=Enhanced Runic Footpiece
 
 
 
@@ -123,6 +145,9 @@ tc.research_page.TD.ironHelmFace.1=Since the Iron Fortress Armor lacks the innat
 tc.research_name.TD.IRONHELMHUSK=Husk Faceplate
 tc.research_text.TD.IRONHELMHUSK=Iron Fortress Helm Upgrade
 tc.research_page.TD.ironHelmFace.2=Your studies into the armor the husks in the Outer Lands wear have yielded some clues about the history of the Crimson Cult, but you're here to make history, not read it. <BR>Prying the helmet off a husk, and the crab out of the helmet, you've gained a terrifying trophy that you could craft into your Fortress Helm.<BR>Some ancient energies still leech from underneath it, but you're sure it's nothing to worry about.
+
+tc.research_name.TD.IRONHELMHUSKCLASSIC=Restored Husk Faceplate 
+tc.research_page.TD.ironHelmFaceClassic.2=Your studies into the armor the husks in the Outer Lands wear have yielded some clues about what their armor may have looked like before it was worn away by time and strange magics. Expanding on your existing collection of faceplate designs, the restored helmet's striking gold patterning are a unique addition to your armor. <BR>Some ancient energies still leech from under its new coating, but you're sure it's nothing to worry about.
 
 tc.research_name.TD.DYEDRANGER=Thaumaturge's Ranger Armor
 tc.research_text.TD.DYEDRANGER=Wilderness wanderers
@@ -186,6 +211,38 @@ tc.research_page.TD.sunnyD.1=A scrap of paper, and some rough sketches. That's a
 tc.research_name.TD.CRIMSONBANNER=Crimson Cult Banner
 tc.research_text.TD.CRIMSONBANNER=Flag of the red regiment
 tc.research_page.TD.crimsonBanner.1=While banners are an excellent decorative addition to your home, the Crimson Cult isn't particularly fond of your tendancy to steal their banners from occupied sites. And they're not always easy to find either - there simply isn't enough crimson banners to go around.<BR>The solution of course, is to make your own, by weaving some gold thread through a red banner. Presto change-o. They'd never be able to tell it's a copy.
+
+tc.research_name.TD.RUNICARMOR=Runic Armor
+tc.research_text.TD.RUNICARMOR=Shielded legacy
+tc.research_page.TD.RUNICARMOR.1=Your research into protective magics have led you to discover Runic Armor. The name is misleading though since it is not armor in the traditional sense, but a collection of charms, seals and similar protective devices worn with your everyday clothes.<BR>These devices create a barrier of magical energy that wards out most types of damage. The armor's shielding provides a pool of hit points from which damage is subtracted first, protecting the wearer from all harm. Once this pool is depleted the wearer starts taking damage as normal.
+tc.research_page.TD.RUNICARMOR.2=The pool replenishes over time, requiring §2Terra§0 and §eAer§0 vis to replenish its charge, but even when depleted the armor offers protection roughly equivalent to that of leather armor.<BR>The armor offers no protection from damage suffered due to drowning, starvation or similar environmental hazards.<BR>Due to its nature the armor cannot be enchanted by normal means, but you are sure there are ways to improve its effectiveness - you just need to discover them.
+
+tc.research_name.TD.RUNICARMORUPGRADES=Runic Armor Upgrades
+tc.research_text.TD.RUNICARMORUPGRADES=Shields to maximum!
+tc.research_page.TD.RUNICARMORUPGRADES.1=Improving Runic Armor has turned out to be easier than expected. You have discovered several augmentations that can be applied to it, some of which were learned from your earlier experiments with runic baubles. <BR>However, only a single augmentation can be applied at a time. It seems magic has its own sanity limits sometimes.<BR>It is worth noting that for non-passive upgrades, having the same augment on all pieces may have additional unknown effects. You blame the 'magical resonance' of having such things in close proximity to each other.
+tc.research_page.TD.RUNICARMORUPGRADES.2=§nBerserker§r<BR>When your shielding is breached it will release a burst of magical strength into its wearer that will last for a few seconds. The strength of this effect increases for each upgrade.<BR> This effect has a 20 second cooldown.<BR>§nShield Nexus§r<BR>This upgrade increases the amount of charge a piece of runic armor has by 50%.
+tc.research_page.TD.RUNICARMORUPGRADES.3=§nKinetic Feedback§r<BR>When your shielding is breached this upgrade will release a detonation of kinetic energy. The damage and force of the detonation increases depending on how many upgrades are present. <BR>This ability has a 30 second cooldown.<BR>§nRevitalizing Feedback§r<BR>When your shielding is breached it will release a pulse of regenerative energy into its wearer that will last for a few seconds. The strength of this effect increases for each upgrade. <BR>This effect has a 30 second cooldown.
+tc.research_page.TD.RUNICARMORUPGRADES.4=§nHardened§r<BR>This upgrade doubles the amount of mundane armor protection a piece of runic armor provides once it's shielding has been breached.<BR>§nEmergency Shielding§r<BR>When your shield is breached this upgrade will instantly add 8 (or more) charge. Each runic armor piece with this upgrade adds 8 charge. <BR>This ability has a two minute cooldown.
+tc.research_page.TD.RUNICARMORUPGRADES.5=Enhanced Runic Armor is a masterwork of your magical prowess, and upgrades will only make it stronger, but how strong is it? To make work easier for future thaumaturges, you've included some of your calculations.<LINE>A fully §nHardened§r set will provide the wearer with a full armor bar.<BR>Two §nShield Nexus§r upgrades will double the maximum shielding of a piece.<BR>Slotting seven §nEmergency Shielding§r upgrades provides the capability to fully restore the shielding of a non-Augmented set when breached.
+
+tc.research_name.TD.RUNICGOGGLES=Runic Goggles of Revealing
+tc.research_text.TD.RUNICGOGGLES=The best of both worlds
+tc.research_page.TD.RUNICGOGGLES.1=While being protected by Runic Armor is vital, you also need the utility of Goggles of Revealing to perform your thaumaturgical tasks. Why not have both?<BR>By affixing the charms of the runic headgear to a pair of goggles, you can enjoy the benefits of both.
+
+tc.research_name.TD.RUNICBOOTSTRAVELLER=Runic Boots of the Traveller
+tc.research_text.TD.RUNICBOOTSTRAVELLER=The best of both worlds
+tc.research_page.TD.RUNICBOOTSTRAVELLER.1=While being protected by Runic Armor is vital, you have begun to miss the speed granted by your Boots of Travelling. Why not have both?<BR>By affixing the charms of the runic footgear to a pair of boots of travelling, you can enjoy the benefits of both.<BR>You haven't had any success repeating this procedure on other variants of the Boots of the Traveller, but perhaps you will have better luck in the future.
+
+
+
+--Enhanced Runic Armor
+tc.research_name.TD.ENHANCEDRUNICARMOR=Enhanced Runic Armor
+tc.research_text.TD.ENHANCEDRUNICARMOR=Pushing the limits
+tc.research_page.TD.ENHANCEDRUNICARMOR.1=Your extensive research into augmenting Runic Armor has left you disappointed at the armor's ability to only hold one augment. You also miss the mystical discount granted from wearing your Thaumaturge's Robes. Instead of being discouraged, you have developed a 'suit' of Enhanced Runic Armor that satisfies these grievances.<BR><BR>Each piece of this armor can hold not one, but two augments, allowing for even more protection. This armor also grants a passive vis discount much like your robes. There is but one catch - the cost.
+tc.research_page.TD.ENHANCEDRUNICARMOR.2=Keep in mind that the inital creation of the Enhanced armor will wipe existing augments. <BR><BR>In the case that you want to overwrite an augment placed on the Enhanced armor, you may right click while holding it to swap positions of the augments. The augment displayed first is the one that will be overwritten.<BR>
+//<BR>[Recipes pending... leave feedback]
+
+
 
 
 #Copied research 

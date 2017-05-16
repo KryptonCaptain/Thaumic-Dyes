@@ -19,7 +19,7 @@ import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.common.lib.crafting.ShapelessNBTOreRecipe;
-import thaumicdyes.common.DyeResearch;
+import thaumicdyes.common.ConfigResearch;
 import thaumicdyes.common.recipe.CultistRobeDyes;
 import thaumicdyes.common.recipe.FortressDyes;
 import thaumicdyes.common.recipe.CultistPraetorDyes;
@@ -58,7 +58,7 @@ public class DyesRecipes {
    public static void initInfusionRecipes() {
 	      
      //Add fortress mask recipes
-      DyeResearch.recipes.put("HelmGoggles", 												//?src: new NBTTagByte(1)
+      ConfigResearch.recipes.put("HelmGoggles", 												//?src: new NBTTagByte(1)
     		  ThaumcraftApi.addInfusionCraftingRecipe("HELMGOGGLES", new Object[] { "goggles", new NBTTagByte((byte) 1) }, 5, 
     		  new AspectList().add(Aspect.SENSES, 32).add(Aspect.AURA, 16).add(Aspect.ARMOR, 16), 
     		  new ItemStack(ItemHandler.itemHelmetFortressDyed, 1, 32767), 
@@ -67,7 +67,7 @@ public class DyesRecipes {
 		    	  ItemApi.getItem("itemGoggles", 0) })
 	  );
     
-      DyeResearch.recipes.put("MaskGrinningDevil",
+      ConfigResearch.recipes.put("MaskGrinningDevil",
     		ThaumcraftApi.addInfusionCraftingRecipe("MASKGRINNINGDEVIL", new Object[] { "mask", new NBTTagInt(0) }, 8, 
       		new AspectList().add(Aspect.MIND, 64).add(Aspect.HEAL, 64).add(Aspect.ARMOR, 16), 
       		new ItemStack(ItemHandler.itemHelmetFortressDyed, 1, 32767), 
@@ -80,7 +80,7 @@ public class DyesRecipes {
   				new ItemStack(Items.iron_ingot) })
 	  );
       
-      DyeResearch.recipes.put("MaskAngryGhost",
+      ConfigResearch.recipes.put("MaskAngryGhost",
     		ThaumcraftApi.addInfusionCraftingRecipe("MASKANGRYGHOST", new Object[] { "mask", new NBTTagInt(1) }, 8, 
       		new AspectList().add(Aspect.ENTROPY, 64).add(Aspect.DEATH, 64).add(Aspect.ARMOR, 16), 
       		new ItemStack(ItemHandler.itemHelmetFortressDyed, 1, 32767), 
@@ -93,7 +93,7 @@ public class DyesRecipes {
       			new ItemStack(Items.iron_ingot) })
 	  );
     
-      DyeResearch.recipes.put("MaskSippingFiend",
+      ConfigResearch.recipes.put("MaskSippingFiend",
     		ThaumcraftApi.addInfusionCraftingRecipe("MASKSIPPINGFIEND", new Object[] { "mask", new NBTTagInt(2) }, 8, 
       		new AspectList().add(Aspect.UNDEAD, 64).add(Aspect.LIFE, 64).add(Aspect.ARMOR, 16), 
       		new ItemStack(ItemHandler.itemHelmetFortressDyed, 1, 32767), 

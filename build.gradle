@@ -71,6 +71,15 @@ processResources
     }
 }
 
+task deobfJar(type: Jar) {
+    from(sourceSets.main.output)
+	archiveName = "${baseName} ${version}-deobf.${extension}"
+}
+
+artifacts {
+    //archives deobfJar
+}
+
 
 def parseConfig(File config) {
     config.withReader {
