@@ -19,8 +19,8 @@ import thaumcraft.common.lib.events.EventHandlerRunic;
 import thaumcraft.common.lib.network.PacketHandler;
 import thaumcraft.common.lib.network.fx.PacketFXShield;
 import thaumcraft.common.lib.network.playerdata.PacketRunicCharge;
-import thaumicdyes.common.items.legacy.ItemRunicArmorLegacy;
-import thaumicdyes.common.items.legacy.ItemTXRunicArmorEnhanced;
+import thaumicdyes.common.items.runic.ItemRunicArmor;
+import thaumicdyes.common.items.runic.ItemRunicArmorEnhanced;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.simpleimpl.IMessage;
@@ -103,34 +103,34 @@ public class EventHandlerRunicLegacy {
             int charge = (Thaumcraft.instance.runicEventHandler.runicCharge.get(Integer.valueOf(player.getEntityId()))).intValue();
             
             for (int a = 0; a < 4; ++a) {
-                if (player.inventory.armorItemInSlot(a) != null && (player.inventory.armorItemInSlot(a).getItem() instanceof ItemRunicArmorLegacy) )  { //this should cover the enhanced one too
+                if (player.inventory.armorItemInSlot(a) != null && (player.inventory.armorItemInSlot(a).getItem() instanceof ItemRunicArmor) )  { //this should cover the enhanced one too
                     
-                	if (ItemRunicArmorLegacy.getUpgrade(player.inventory.armorItemInSlot(a)) == 1) {
+                	if (ItemRunicArmor.getUpgrade(player.inventory.armorItemInSlot(a)) == 1) {
                         berserker++;
                     }                	
-                	else if (ItemRunicArmorLegacy.getUpgrade(player.inventory.armorItemInSlot(a)) == 3) {
+                	else if (ItemRunicArmor.getUpgrade(player.inventory.armorItemInSlot(a)) == 3) {
                 		kinetic++;
                     }
-                    else if (ItemRunicArmorLegacy.getUpgrade(player.inventory.armorItemInSlot(a)) == 4) {
+                    else if (ItemRunicArmor.getUpgrade(player.inventory.armorItemInSlot(a)) == 4) {
                     	healing++;
                     }
-                    else if (ItemRunicArmorLegacy.getUpgrade(player.inventory.armorItemInSlot(a)) == 6) {
+                    else if (ItemRunicArmor.getUpgrade(player.inventory.armorItemInSlot(a)) == 6) {
                     	emergency++;
                     }
                 }
                 
-                if ((player.inventory.armorItemInSlot(a) != null) && ((player.inventory.armorItemInSlot(a).getItem() instanceof ItemTXRunicArmorEnhanced))) 
+                if ((player.inventory.armorItemInSlot(a) != null) && ((player.inventory.armorItemInSlot(a).getItem() instanceof ItemRunicArmorEnhanced))) 
     	        { 
-    		        if (ItemTXRunicArmorEnhanced.getUpgrade2(player.inventory.armorItemInSlot(a)) == 1) { 
+    		        if (ItemRunicArmorEnhanced.getUpgrade2(player.inventory.armorItemInSlot(a)) == 1) { 
     		        	berserker++; 
     		        }  
-    		        if (ItemTXRunicArmorEnhanced.getUpgrade2(player.inventory.armorItemInSlot(a)) == 3) { 
+    		        if (ItemRunicArmorEnhanced.getUpgrade2(player.inventory.armorItemInSlot(a)) == 3) { 
     		        	kinetic++; 
     		        } 
-    		        else if (ItemTXRunicArmorEnhanced.getUpgrade2(player.inventory.armorItemInSlot(a)) == 4) { 
+    		        else if (ItemRunicArmorEnhanced.getUpgrade2(player.inventory.armorItemInSlot(a)) == 4) { 
     		        	healing++; 
     		        } 
-    		        else if (ItemTXRunicArmorEnhanced.getUpgrade2(player.inventory.armorItemInSlot(a)) == 6) { 
+    		        else if (ItemRunicArmorEnhanced.getUpgrade2(player.inventory.armorItemInSlot(a)) == 6) { 
     		        	emergency++; 
     		        }  
     	        }

@@ -123,7 +123,7 @@ public class ConfigRecipes {
 	    
 	    ConfigResearch.recipes.put("EnhRunicArmor0", ThaumcraftApi.addInfusionCraftingRecipe("TD.ENHANCEDRUNICARMOR", 
 	    		new ItemStack(ItemHandler.itemHelmetRunicTX), 8, 
-	    		new AspectList().add(Aspect.ARMOR, 40).add(Aspect.MAGIC, 80).add(Aspect.ENERGY, 80).add(Aspect.ELDRITCH, 20).add(Aspect.CLOTH, 24).add(Aspect.CRYSTAL, 16).add(Aspect.EXCHANGE, 20),  
+	    		new AspectList().add(Aspect.ARMOR, 40).add(Aspect.MAGIC, 160).add(Aspect.ENERGY, 80).add(Aspect.ELDRITCH, 20).add(Aspect.CLOTH, 24).add(Aspect.CRYSTAL, 16).add(Aspect.EXCHANGE, 20),  
 	    		new ItemStack(ItemHandler.itemHelmetRunicLegacy), 
 	    		new ItemStack[] { 
 					new ItemStack(Items.nether_star),
@@ -138,7 +138,7 @@ public class ConfigRecipes {
 	    
 	    ConfigResearch.recipes.put("EnhRunicArmor1", ThaumcraftApi.addInfusionCraftingRecipe("TD.ENHANCEDRUNICARMOR", 
 	    		new ItemStack(ItemHandler.itemChestRunicTX), 8, 
-	    		new AspectList().add(Aspect.ARMOR, 40).add(Aspect.MAGIC, 80).add(Aspect.ENERGY, 80).add(Aspect.ELDRITCH, 20).add(Aspect.CLOTH, 24).add(Aspect.CRYSTAL, 16).add(Aspect.EXCHANGE, 20),  
+	    		new AspectList().add(Aspect.ARMOR, 40).add(Aspect.MAGIC, 160).add(Aspect.ENERGY, 80).add(Aspect.ELDRITCH, 20).add(Aspect.CLOTH, 24).add(Aspect.CRYSTAL, 16).add(Aspect.EXCHANGE, 20),  
 	    		new ItemStack(ItemHandler.itemChestRunicLegacy), 
 	    		new ItemStack[] { 
 					new ItemStack(Items.nether_star),
@@ -153,7 +153,7 @@ public class ConfigRecipes {
 	    
 	    ConfigResearch.recipes.put("EnhRunicArmor2", ThaumcraftApi.addInfusionCraftingRecipe("TD.ENHANCEDRUNICARMOR", 
 	    		new ItemStack(ItemHandler.itemLegsRunicTX), 8, 
-	    		new AspectList().add(Aspect.ARMOR, 40).add(Aspect.MAGIC, 80).add(Aspect.ENERGY, 80).add(Aspect.ELDRITCH, 20).add(Aspect.CLOTH, 24).add(Aspect.CRYSTAL, 16).add(Aspect.EXCHANGE, 20),  
+	    		new AspectList().add(Aspect.ARMOR, 40).add(Aspect.MAGIC, 160).add(Aspect.ENERGY, 80).add(Aspect.ELDRITCH, 20).add(Aspect.CLOTH, 24).add(Aspect.CRYSTAL, 16).add(Aspect.EXCHANGE, 20),  
 	    		new ItemStack(ItemHandler.itemLegsRunicLegacy), 
 	    		new ItemStack[] { 
 	    			new ItemStack(Items.nether_star),
@@ -168,7 +168,7 @@ public class ConfigRecipes {
 	    
 	    ConfigResearch.recipes.put("EnhRunicArmor3", ThaumcraftApi.addInfusionCraftingRecipe("TD.ENHANCEDRUNICARMOR", 
 	    		new ItemStack(ItemHandler.itemBootsRunicTX), 8, 
-	    		new AspectList().add(Aspect.ARMOR, 40).add(Aspect.MAGIC, 80).add(Aspect.ENERGY, 80).add(Aspect.ELDRITCH, 20).add(Aspect.CLOTH, 24).add(Aspect.CRYSTAL, 16).add(Aspect.EXCHANGE, 20), 
+	    		new AspectList().add(Aspect.ARMOR, 40).add(Aspect.MAGIC, 160).add(Aspect.ENERGY, 80).add(Aspect.ELDRITCH, 20).add(Aspect.CLOTH, 24).add(Aspect.CRYSTAL, 16).add(Aspect.EXCHANGE, 20), 
 	    		new ItemStack(ItemHandler.itemBootsRunicLegacy), 
 	    		new ItemStack[] { 
 					new ItemStack(Items.nether_star),

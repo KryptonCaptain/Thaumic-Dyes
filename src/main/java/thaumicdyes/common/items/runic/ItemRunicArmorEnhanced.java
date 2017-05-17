@@ -1,4 +1,4 @@
-package thaumicdyes.common.items.legacy;
+package thaumicdyes.common.items.runic;
 
 import java.util.List;
 
@@ -16,16 +16,21 @@ import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ISpecialArmor;
 import net.minecraftforge.common.ISpecialArmor.ArmorProperties;
+import net.minecraftforge.event.entity.living.LivingEvent;
 import thaumcraft.api.IRunicArmor;
 import thaumcraft.api.aspects.Aspect;
+import thaumcraft.common.Thaumcraft;
+import thaumcraft.common.items.armor.Hover;
 import thaumicdyes.common.ThaumicDyes;
+import thaumicdyes.common.items.ItemHandler;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 
-public class ItemTXRunicArmorEnhanced extends ItemRunicArmorLegacy  {
+public class ItemRunicArmorEnhanced extends ItemRunicArmor  {
 
-	public ItemTXRunicArmorEnhanced(ItemArmor.ArmorMaterial enumarmormaterial, int j, int k) {
+	public ItemRunicArmorEnhanced(ItemArmor.ArmorMaterial enumarmormaterial, int j, int k) {
 		super(enumarmormaterial, j, k);
 		this.setCreativeTab(ThaumicDyes.tabTD);
 	}
@@ -155,7 +160,7 @@ public class ItemTXRunicArmorEnhanced extends ItemRunicArmorLegacy  {
 	@Override
 	public EnumRarity getRarity(ItemStack itemstack)
 	{
-		return EnumRarity.epic;
+		return EnumRarity.rare;
 	}
 	
 	@SideOnly(Side.CLIENT)
@@ -184,6 +189,54 @@ public class ItemTXRunicArmorEnhanced extends ItemRunicArmorLegacy  {
     {
         //return this.armorType == 3 ? 1 : 2;
     	return 2;
+    }
+    
+    
+    
+    public void onArmorTick(World world, EntityPlayer player, ItemStack armor)
+    {
+      if ((!player.capabilities.isFlying) && (player.moveForward > 0.0F))
+      {
+        if ((player.worldObj.isRemote) && (!player.isSneaking()))
+        {
+          if (!Thaumcraft.instance.entityEventHandler.prevStep.containsKey(Integer.valueOf(player.getEntityId()))) {
+            Thaumcraft.instance.entityEventHandler.prevStep.put(Integer.valueOf(player.getEntityId()), Float.valueOf(player.stepHeight));
+          }
+          player.stepHeight = 1.0F;
+        }
+        if (player.onGround)
+        {
+          float bonus = 0.1F;
+          if (player.isInWater()) {
+            bonus /= 3.0F;
+          }
+          player.moveFlying(0.0F, 1.0F, bonus);
+        }
+        else if (Hover.getHover(player.getEntityId()))
+        {
+          player.jumpMovementFactor = 0.03F;
+        }
+        else
+        {
+          player.jumpMovementFactor = 0.05F;
+        }
+      }
+      if (player.fallDistance > 0.0F) {
+        player.fallDistance -= 0.5F;
+      }
+      
+      super.onArmorTick(world, player, armor);
+      if ((!world.isRemote) && (armor.getItemDamage() > 0) && (player.ticksExisted % 20 == 0)) {
+        armor.damageItem(-1, player);
+      }
+    }
+    
+    @SubscribeEvent
+    public void playerJumps(LivingEvent.LivingJumpEvent event)
+    {
+      if (((event.entity instanceof EntityPlayer)) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0) != null) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0).getItem() == ItemHandler.itemBootsVoidTraveller)) {
+        event.entityLiving.motionY += 0.35D;
+      }
     }
 
 }
