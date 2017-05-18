@@ -2,8 +2,14 @@ package thaumicdyes.common.lib.event;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.UUID;
+
+import com.google.common.collect.HashMultimap;
+import com.google.common.collect.Multimap;
 
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Items;
@@ -85,7 +91,13 @@ public class EventHandlerRunicLegacy {
         }
     }
     
-    
+    /*
+    public Multimap getItemAttributeModifiers() {
+        final Multimap multimap = (Multimap)HashMultimap.create();
+        final UUID uuid = new UUID(this.getUnlocalizedName().hashCode(), 0L);
+        multimap.put((Object)SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(), (Object)new AttributeModifier(uuid, "Terrasteel modifier " + this.type, this.getArmorDisplay(null, new ItemStack((Item)this), this.type) / 20.0, 0));
+        return multimap;
+    }*/
     
     @SubscribeEvent
     public void entityHurt(final LivingHurtEvent event) {
@@ -105,32 +117,32 @@ public class EventHandlerRunicLegacy {
             for (int a = 0; a < 4; ++a) {
                 if (player.inventory.armorItemInSlot(a) != null && (player.inventory.armorItemInSlot(a).getItem() instanceof ItemRunicArmor) )  { //this should cover the enhanced one too
                     
-                	if (ItemRunicArmor.getUpgrade(player.inventory.armorItemInSlot(a)) == 1) {
+                	if (getUpgrade(player.inventory.armorItemInSlot(a)) == 1) {
                         berserker++;
                     }                	
-                	else if (ItemRunicArmor.getUpgrade(player.inventory.armorItemInSlot(a)) == 3) {
+                	else if (getUpgrade(player.inventory.armorItemInSlot(a)) == 3) {
                 		kinetic++;
                     }
-                    else if (ItemRunicArmor.getUpgrade(player.inventory.armorItemInSlot(a)) == 4) {
+                    else if (getUpgrade(player.inventory.armorItemInSlot(a)) == 4) {
                     	healing++;
                     }
-                    else if (ItemRunicArmor.getUpgrade(player.inventory.armorItemInSlot(a)) == 6) {
+                    else if (getUpgrade(player.inventory.armorItemInSlot(a)) == 6) {
                     	emergency++;
                     }
                 }
                 
-                if ((player.inventory.armorItemInSlot(a) != null) && ((player.inventory.armorItemInSlot(a).getItem() instanceof ItemRunicArmorEnhanced))) 
+                if ((player.inventory.armorItemInSlot(a) != null) && ((player.inventory.armorItemInSlot(a).getItem() instanceof ItemRunicArmor))) 
     	        { 
-    		        if (ItemRunicArmorEnhanced.getUpgrade2(player.inventory.armorItemInSlot(a)) == 1) { 
+    		        if (getUpgrade2(player.inventory.armorItemInSlot(a)) == 1) { 
     		        	berserker++; 
     		        }  
-    		        if (ItemRunicArmorEnhanced.getUpgrade2(player.inventory.armorItemInSlot(a)) == 3) { 
+    		        else if (getUpgrade2(player.inventory.armorItemInSlot(a)) == 3) { 
     		        	kinetic++; 
     		        } 
-    		        else if (ItemRunicArmorEnhanced.getUpgrade2(player.inventory.armorItemInSlot(a)) == 4) { 
+    		        else if (getUpgrade2(player.inventory.armorItemInSlot(a)) == 4) { 
     		        	healing++; 
     		        } 
-    		        else if (ItemRunicArmorEnhanced.getUpgrade2(player.inventory.armorItemInSlot(a)) == 6) { 
+    		        else if (getUpgrade2(player.inventory.armorItemInSlot(a)) == 6) { 
     		        	emergency++; 
     		        }  
     	        }
@@ -200,6 +212,28 @@ public class EventHandlerRunicLegacy {
             
         }
     }
+
+	public static int getUpgrade(ItemStack armor)
+	{
+	    if ((armor.hasTagCompound()) && (armor.stackTagCompound.hasKey("upgrade"))) {
+	    	return armor.stackTagCompound.getByte("upgrade");
+		}
+		return 0;
+	}
+	public static int getUpgrade2(ItemStack armor)
+	{
+	    if ((armor.hasTagCompound()) && (armor.stackTagCompound.hasKey("upgrade2"))) {
+	    	return armor.stackTagCompound.getByte("upgrade2");
+		}
+		return 0;
+	}
+	public static int getUpgrade3(ItemStack armor)
+	{
+	    if ((armor.hasTagCompound()) && (armor.stackTagCompound.hasKey("upgrade3"))) {
+	    	return armor.stackTagCompound.getByte("upgrade3");
+		}
+		return 0;
+	}
     
 }
     

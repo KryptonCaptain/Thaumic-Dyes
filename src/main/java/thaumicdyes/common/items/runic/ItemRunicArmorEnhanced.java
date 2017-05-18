@@ -141,13 +141,7 @@ public class ItemRunicArmorEnhanced extends ItemRunicArmor  {
 //	    }
     }
 	
-	public static int getUpgrade2(ItemStack armor)
-	{
-	    if ((armor.hasTagCompound()) && (armor.stackTagCompound.hasKey("upgrade2"))) {
-	    	return armor.stackTagCompound.getByte("upgrade2");
-		}
-		return 0;
-	}
+	
 	public static int getUpgrade(ItemStack armor)
 	{
 	    if ((armor.hasTagCompound()) && (armor.stackTagCompound.hasKey("upgrade"))) {
@@ -156,6 +150,17 @@ public class ItemRunicArmorEnhanced extends ItemRunicArmor  {
 		return 0;
 	}
 	
+	public static int getUpgrade2(ItemStack armor)
+	{
+	    if ((armor.hasTagCompound()) && (armor.stackTagCompound.hasKey("upgrade2"))) {
+	    	return armor.stackTagCompound.getByte("upgrade2");
+		}
+		return 0;
+	}
+	
+	public static int getUpgrade3(final ItemStack armor) {
+        return 0;
+    }
 	
 	@Override
 	public EnumRarity getRarity(ItemStack itemstack)

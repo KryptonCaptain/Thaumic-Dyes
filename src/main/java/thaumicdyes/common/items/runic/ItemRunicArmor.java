@@ -170,6 +170,14 @@ public class ItemRunicArmor extends ItemArmor implements ISpecialArmor, IRunicAr
         return 0;
     }
     
+    public static int getUpgrade2(final ItemStack armor) {
+        return 0;
+    }
+    
+    public static int getUpgrade3(final ItemStack armor) {
+        return 0;
+    }
+    
     static {
         ItemRunicArmor.nextTick = new HashMap<Integer, Long>();
 
