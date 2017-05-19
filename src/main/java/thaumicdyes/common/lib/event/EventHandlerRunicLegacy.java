@@ -113,7 +113,7 @@ public class EventHandlerRunicLegacy {
             
             final EntityPlayer player = (EntityPlayer)event.entity;
             
-            int runicTotal = (Thaumcraft.instance.runicEventHandler.runicInfo.get(Integer.valueOf(player.getEntityId())))[0].intValue();
+            //int runicTotal = (Thaumcraft.instance.runicEventHandler.runicInfo.get(Integer.valueOf(player.getEntityId())))[0].intValue();
             int runicCharge = (Thaumcraft.instance.runicEventHandler.runicCharge.get(Integer.valueOf(player.getEntityId()))).intValue();
             
             for (int a = 0; a < 4; a++) {

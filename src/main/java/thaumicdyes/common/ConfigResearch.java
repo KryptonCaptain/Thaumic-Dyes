@@ -1154,7 +1154,7 @@ public class ConfigResearch {
       new ResearchItem("TD.RUNICARMOR", "DYES", 
     		  new AspectList().add(Aspect.ARMOR, 8).add(Aspect.AIR, 5).add(Aspect.MAGIC, 5).add(Aspect.ENERGY, 5).add(Aspect.MIND, 3),
     		  8, 3, 3, 
-    		  new ItemStack(ItemHandler.itemChestRunicLegacy))
+    		  new ItemStack(ItemHandler.itemChestRunic))
       		  .setPages(new ResearchPage[] { 
       				  new ResearchPage("tc.research_page.TD.RUNICARMOR.1"), 
       				  new ResearchPage("tc.research_page.TD.RUNICARMOR.2"), 
@@ -1173,7 +1173,7 @@ public class ConfigResearch {
       new ResearchItem("TD.RUNICGOGGLES", "DYES", 
     		  new AspectList().add(Aspect.SENSES, 8).add(Aspect.MAGIC, 5).add(Aspect.ARMOR, 5).add(Aspect.AURA, 3),
     		  7, 1, 2, 
-    		  new ItemStack(ItemHandler.itemGogglesRunicLegacy))
+    		  new ItemStack(ItemHandler.itemGogglesRunic))
       		  .setPages(new ResearchPage[] { 
       				  new ResearchPage("tc.research_page.TD.RUNICGOGGLES.1"), 
       				  new ResearchPage((InfusionRecipe)recipes.get("RunicGoggles")) 
@@ -1186,7 +1186,7 @@ public class ConfigResearch {
       new ResearchItem("TD.RUNICBOOTSTRAVELLER", "DYES",
     		  new AspectList().add(Aspect.TRAVEL, 8).add(Aspect.WATER, 5).add(Aspect.ARMOR, 5).add(Aspect.FLIGHT, 5),
     		  5, 2, 2, 
-    		  new ItemStack(ItemHandler.itemBootsTravellerRunicLegacy))
+    		  new ItemStack(ItemHandler.itemBootsTravellerRunic))
       		  .setPages(new ResearchPage[] { 
       				  new ResearchPage("tc.research_page.TD.RUNICBOOTSTRAVELLER.1"), 
       				  new ResearchPage((InfusionRecipe)recipes.get("RunicBootsTraveller")) 
@@ -1250,7 +1250,7 @@ public class ConfigResearch {
       new ResearchItem("TD.ENHANCEDRUNICARMOR", "DYES", 
     		  new AspectList().add(Aspect.ARMOR, 8).add(Aspect.AIR, 5).add(Aspect.MAGIC, 5).add(Aspect.ENERGY, 5).add(Aspect.MIND, 3),
     		  10, 3, 3, 
-    		  new ItemStack(ItemHandler.itemChestRunicTX))
+    		  new ItemStack(ItemHandler.itemChestRunicEnhanced))
       		  .setPages(new ResearchPage[] { 
       				  new ResearchPage("tc.research_page.TD.ENHANCEDRUNICARMOR.1"), 
       				  new ResearchPage("tc.research_page.TD.ENHANCEDRUNICARMOR.2"), 

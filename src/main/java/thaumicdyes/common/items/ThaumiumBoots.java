@@ -79,7 +79,7 @@ public class ThaumiumBoots extends ItemArmor implements IRepairable, IVisDiscoun
    
    public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4) {
       list.add(EnumChatFormatting.DARK_PURPLE + StatCollector.translateToLocal("tc.visdiscount") + ": " + this.getVisDiscount(stack, player, (Aspect)null) + "%");
-      super.addInformation(stack, player, list, par4);
+      //super.addInformation(stack, player, list, par4);
    }
    
    public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack)
