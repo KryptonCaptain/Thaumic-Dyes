@@ -1,4 +1,4 @@
-package thaumicdyes.common.items.legacy;
+package thaumicdyes.common.items.runic;
 
 import java.util.HashMap;
 import java.util.List;
@@ -24,7 +24,7 @@ import thaumicdyes.common.ThaumicDyes;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemRunicArmorLegacy extends ItemArmor implements ISpecialArmor, IRunicArmor
+public class ItemRunicArmor extends ItemArmor implements ISpecialArmor, IRunicArmor
 {
     public IIcon iconHelm;
     public IIcon iconChest;
@@ -32,7 +32,7 @@ public class ItemRunicArmorLegacy extends ItemArmor implements ISpecialArmor, IR
     public IIcon iconBoots;
     public static HashMap<Integer, Long> nextTick;
     
-    public ItemRunicArmorLegacy(ArmorMaterial enumarmormaterial, int j, int k) {
+    public ItemRunicArmor(ArmorMaterial enumarmormaterial, int j, int k) {
         super(enumarmormaterial, j, k);
         this.setCreativeTab(ThaumicDyes.tabTD);
         MinecraftForge.EVENT_BUS.register(this);
@@ -55,13 +55,6 @@ public class ItemRunicArmorLegacy extends ItemArmor implements ISpecialArmor, IR
         return (this.armorType == 0) ? this.iconHelm : ((this.armorType == 1) ? this.iconChest : ((this.armorType == 2) ? this.iconLegs : this.iconBoots));
     }
     
-    public int getMaxDamage(final ItemStack stack) {
-        int md = ((ItemArmor)stack.getItem()).damageReduceAmount * 8;
-        if (getUpgrade(stack) == 2) {
-            md *= (int)1.5;
-        }
-        return md;
-    }
     
     public int getRunicCharge(ItemStack itemstack) {
     	//return (this.armorType == 0) ? itemstack.getMaxDamage() : ((this.armorType == 1) ? itemstack.getMaxDamage() : ((this.armorType == 2) ? itemstack.getMaxDamage() : itemstack.getMaxDamage()));
@@ -87,7 +80,7 @@ public class ItemRunicArmorLegacy extends ItemArmor implements ISpecialArmor, IR
     }
     
     public EnumRarity getRarity(final ItemStack itemstack) {
-        return EnumRarity.rare;
+        return EnumRarity.uncommon;
     }
     
     public boolean isBookEnchantable(final ItemStack itemstack1, final ItemStack itemstack2) {
@@ -140,23 +133,23 @@ public class ItemRunicArmorLegacy extends ItemArmor implements ISpecialArmor, IR
     public void onArmorTick(final World world, final EntityPlayer player, final ItemStack armor) {
         if (!world.isRemote && armor.getItemDamage() > 0) {
             final long time = System.currentTimeMillis();
-            if (!ItemRunicArmorLegacy.nextTick.containsKey(player.ticksExisted)) {
-                ItemRunicArmorLegacy.nextTick.put(player.ticksExisted, 0L);
+            if (!ItemRunicArmor.nextTick.containsKey(player.ticksExisted)) {
+                ItemRunicArmor.nextTick.put(player.ticksExisted, 0L);
             }
-            if (time < ItemRunicArmorLegacy.nextTick.get(player.ticksExisted)) {
+            if (time < ItemRunicArmor.nextTick.get(player.ticksExisted)) {
                 return;
             }
             if (armor.getItemDamage() > 0) {
                 int rate = 1000;
                 for (int a = 0; a < 4; ++a) {
-                    if (player.inventory.armorItemInSlot(a) != null && player.inventory.armorItemInSlot(a).getItem() instanceof ItemRunicArmorLegacy && getUpgrade(player.inventory.armorItemInSlot(a)) == 1) {
+                    if (player.inventory.armorItemInSlot(a) != null && player.inventory.armorItemInSlot(a).getItem() instanceof ItemRunicArmor && getUpgrade(player.inventory.armorItemInSlot(a)) == 1) {
                         rate -= 150;
                     }
                 }
                 if (rate < 200) {
                     rate = 200;
                 }
-                ItemRunicArmorLegacy.nextTick.put(player.ticksExisted, time + rate);
+                ItemRunicArmor.nextTick.put(player.ticksExisted, time + rate);
                 armor.setItemDamage(armor.getItemDamage() - 1);
                 player.inventoryContainer.detectAndSendChanges();
             }
@@ -170,8 +163,9 @@ public class ItemRunicArmorLegacy extends ItemArmor implements ISpecialArmor, IR
         return 0;
     }
     
+    
     static {
-        ItemRunicArmorLegacy.nextTick = new HashMap<Integer, Long>();
+        ItemRunicArmor.nextTick = new HashMap<Integer, Long>();
 
     }
 

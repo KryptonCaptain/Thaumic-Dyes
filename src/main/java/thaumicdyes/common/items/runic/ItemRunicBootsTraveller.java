@@ -1,4 +1,4 @@
-package thaumicdyes.common.items.legacy;
+package thaumicdyes.common.items.runic;
 
 import net.minecraft.util.StatCollector;
 import net.minecraft.util.EnumChatFormatting;
@@ -22,7 +22,7 @@ import net.minecraft.util.IIcon;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingEvent;
 
-public class ItemRunicBootsTraveller extends ItemRunicArmorLegacy
+public class ItemRunicBootsTraveller extends ItemRunicArmor
 {
     public IIcon icon;
     
@@ -104,7 +104,7 @@ public class ItemRunicBootsTraveller extends ItemRunicArmorLegacy
     @Override
     public void addInformation(final ItemStack stack, final EntityPlayer player, final List list, final boolean par4) {
         //list.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal("item.runic.charge") + ": " + (stack.getMaxDamage() - stack.getItemDamage()) + "/" + stack.getMaxDamage());
-        final int u = ItemRunicArmorLegacy.getUpgrade(stack);
+        final int u = ItemRunicArmor.getUpgrade(stack);
         if (u > 0) {
             list.add(EnumChatFormatting.DARK_AQUA + StatCollector.translateToLocal("item.runic.upgrade." + u));
         }

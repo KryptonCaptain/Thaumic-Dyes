@@ -13,11 +13,11 @@ import thaumicdyes.common.items.ThaumiumFortressDyed;
 import thaumicdyes.common.items.CultistPaladin;
 import thaumicdyes.common.items.CultistPraetorDyed;
 import thaumicdyes.common.items.CultistKnightDyed;
-import thaumicdyes.common.items.legacy.ItemRunicArmorLegacy;
-import thaumicdyes.common.items.legacy.ItemRunicBootsTraveller;
-import thaumicdyes.common.items.legacy.ItemRunicGoggles;
 import thaumicdyes.common.items.legacy.ItemTXAncientMask;
-import thaumicdyes.common.items.legacy.ItemTXRunicArmorEnhanced;
+import thaumicdyes.common.items.runic.ItemRunicArmor;
+import thaumicdyes.common.items.runic.ItemRunicArmorEnhanced;
+import thaumicdyes.common.items.runic.ItemRunicBootsTraveller;
+import thaumicdyes.common.items.runic.ItemRunicGoggles;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
@@ -102,6 +102,10 @@ public class ItemHandler {
    public static Item itemLegsRunicTX;
    public static Item itemBootsRunicTX;
    
+   public static Item itemHelmetRunicPrimal;
+   public static Item itemChestRunicPrimal;
+   public static Item itemLegsRunicPrimal;
+   public static Item itemBootsRunicPrimal;
 
 
    public static void registerItems() {
@@ -177,6 +181,12 @@ public class ItemHandler {
       GameRegistry.registerItem(itemChestRunicTX, "ItemRunicChestEnhanced");
       GameRegistry.registerItem(itemLegsRunicTX, "ItemRunicLegsEnhanced");
       GameRegistry.registerItem(itemBootsRunicTX, "ItemRunicBootsEnhanced");
+      
+      GameRegistry.registerItem(itemHelmetRunicPrimal, "ItemRunicHelmetPrimal");
+      GameRegistry.registerItem(itemChestRunicPrimal, "ItemRunicChestPrimal");
+      GameRegistry.registerItem(itemLegsRunicPrimal, "ItemRunicLegsPrimal");
+      GameRegistry.registerItem(itemBootsRunicPrimal, "ItemRunicBootsPrimal");
+      
    }
 
    public static void defineItems() {
@@ -242,20 +252,21 @@ public class ItemHandler {
 	   itemChestSunKnight = (new SunKnight(ArmorMaterial.IRON, 4, 1)).setUnlocalizedName("itemChestSunKnight").setCreativeTab(ThaumicDyes.tabTD);
 	   
 	   //legacy runic armor
-	   itemHelmetRunicLegacy = (new ItemRunicArmorLegacy(ThaumcraftApi.armorMatSpecial, 4, 0)).setUnlocalizedName("ItemHelmetRunic").setCreativeTab(ThaumicDyes.tabTD);
-	   itemChestRunicLegacy = (new ItemRunicArmorLegacy(ThaumcraftApi.armorMatSpecial, 4, 1)).setUnlocalizedName("ItemChestplateRunic").setCreativeTab(ThaumicDyes.tabTD);
-	   itemLegsRunicLegacy = (new ItemRunicArmorLegacy(ThaumcraftApi.armorMatSpecial, 4, 2)).setUnlocalizedName("ItemLeggingsRunic").setCreativeTab(ThaumicDyes.tabTD);
-	   itemBootsRunicLegacy = (new ItemRunicArmorLegacy(ThaumcraftApi.armorMatSpecial, 4, 3)).setUnlocalizedName("ItemBootsRunic").setCreativeTab(ThaumicDyes.tabTD);;
+	   itemHelmetRunicLegacy = (new ItemRunicArmor(ThaumcraftApi.armorMatSpecial, 4, 0)).setUnlocalizedName("ItemHelmetRunic").setCreativeTab(ThaumicDyes.tabTD);
+	   itemChestRunicLegacy = (new ItemRunicArmor(ThaumcraftApi.armorMatSpecial, 4, 1)).setUnlocalizedName("ItemChestRunic").setCreativeTab(ThaumicDyes.tabTD);
+	   itemLegsRunicLegacy = (new ItemRunicArmor(ThaumcraftApi.armorMatSpecial, 4, 2)).setUnlocalizedName("ItemLegsRunic").setCreativeTab(ThaumicDyes.tabTD);
+	   itemBootsRunicLegacy = (new ItemRunicArmor(ThaumcraftApi.armorMatSpecial, 4, 3)).setUnlocalizedName("ItemBootsRunic").setCreativeTab(ThaumicDyes.tabTD);;
 	   itemGogglesRunicLegacy = (new ItemRunicGoggles(ThaumcraftApi.armorMatSpecial, 4, 0)).setUnlocalizedName("ItemGogglesRunic").setCreativeTab(ThaumicDyes.tabTD);
 	   itemBootsTravellerRunicLegacy = (new ItemRunicBootsTraveller(ThaumcraftApi.armorMatSpecial, 4, 3)).setUnlocalizedName("ItemBootsTravellerRunic").setCreativeTab(ThaumicDyes.tabTD);;
 	   
 	   //legacy TX
 	   itemHelmetMaskTX = (new ItemTXAncientMask(ThaumcraftApi.armorMatSpecial, 2, 0)).setUnlocalizedName("ItemMaskEvil").setCreativeTab(ThaumicDyes.tabTD);
 	   
-	   itemHelmetRunicTX = (new ItemTXRunicArmorEnhanced(ThaumcraftApi.armorMatSpecial, 4, 0)).setUnlocalizedName("ItemHelmetRunicEnhanced").setCreativeTab(ThaumicDyes.tabTD);
-	   itemChestRunicTX = (new ItemTXRunicArmorEnhanced(ThaumcraftApi.armorMatSpecial, 4, 1)).setUnlocalizedName("ItemChestplateRunicEnhanced").setCreativeTab(ThaumicDyes.tabTD);
-	   itemLegsRunicTX = (new ItemTXRunicArmorEnhanced(ThaumcraftApi.armorMatSpecial, 4, 2)).setUnlocalizedName("ItemLeggingsRunicEnhanced").setCreativeTab(ThaumicDyes.tabTD);
-	   itemBootsRunicTX = (new ItemTXRunicArmorEnhanced(ThaumcraftApi.armorMatSpecial, 4, 3)).setUnlocalizedName("ItemBootsRunicEnhanced").setCreativeTab(ThaumicDyes.tabTD);;
+	   itemHelmetRunicTX = (new ItemRunicArmorEnhanced(ThaumcraftApi.armorMatSpecial, 4, 0)).setUnlocalizedName("ItemHelmetRunicEnhanced").setCreativeTab(ThaumicDyes.tabTD);
+	   itemChestRunicTX = (new ItemRunicArmorEnhanced(ThaumcraftApi.armorMatSpecial, 4, 1)).setUnlocalizedName("ItemChestRunicEnhanced").setCreativeTab(ThaumicDyes.tabTD);
+	   itemLegsRunicTX = (new ItemRunicArmorEnhanced(ThaumcraftApi.armorMatSpecial, 4, 2)).setUnlocalizedName("ItemLegsRunicEnhanced").setCreativeTab(ThaumicDyes.tabTD);
+	   itemBootsRunicTX = (new ItemRunicArmorEnhanced(ThaumcraftApi.armorMatSpecial, 4, 3)).setUnlocalizedName("ItemBootsRunicEnhanced").setCreativeTab(ThaumicDyes.tabTD);;
+	   
 	   
 	   
    }

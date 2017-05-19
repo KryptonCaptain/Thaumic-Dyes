@@ -74,8 +74,8 @@ item.HelmetCultistRanger.mask.1=Guard
 
 //Experimental
 item.ItemHelmetRunic.name=Runic Headpiece
-item.ItemChestplateRunic.name=Runic Chestpiece
-item.ItemLeggingsRunic.name=Runic Legpiece
+item.ItemChestRunic.name=Runic Chestpiece
+item.ItemLegsRunic.name=Runic Legpiece
 item.ItemBootsRunic.name=Runic Footpiece
 item.ItemGogglesRunic.name=Runic Goggles of Revealing
 item.ItemBootsTravellerRunic.name=Runic Boots of the Traveller
@@ -93,8 +93,8 @@ item.ItemMaskEvil.name=Mask of Cruelty (WIP)
 death.attack.witherMask=%1$s was withered away by %2$s
 
 item.ItemHelmetRunicEnhanced.name=Enhanced Runic Headpiece
-item.ItemChestplateRunicEnhanced.name=Enhanced Runic Chestpiece
-item.ItemLeggingsRunicEnhanced.name=Enhanced Runic Legpiece
+item.ItemChestRunicEnhanced.name=Enhanced Runic Chestpiece
+item.ItemLegsRunicEnhanced.name=Enhanced Runic Legpiece
 item.ItemBootsRunicEnhanced.name=Enhanced Runic Footpiece
 
 
