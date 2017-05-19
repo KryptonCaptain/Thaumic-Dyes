@@ -109,12 +109,14 @@ public class EventHandlerRunicLegacy {
             //int hardened = 0;
             int emergency = 0;
             
+            final ArrayList<Integer> runic = new ArrayList<Integer>();
+            
             final EntityPlayer player = (EntityPlayer)event.entity;
             
-            int total = (Thaumcraft.instance.runicEventHandler.runicInfo.get(Integer.valueOf(player.getEntityId())))[0].intValue();
-            int charge = (Thaumcraft.instance.runicEventHandler.runicCharge.get(Integer.valueOf(player.getEntityId()))).intValue();
+            int runicTotal = (Thaumcraft.instance.runicEventHandler.runicInfo.get(Integer.valueOf(player.getEntityId())))[0].intValue();
+            int runicCharge = (Thaumcraft.instance.runicEventHandler.runicCharge.get(Integer.valueOf(player.getEntityId()))).intValue();
             
-            for (int a = 0; a < 4; ++a) {
+            for (int a = 0; a < 4; a++) {
                 if (player.inventory.armorItemInSlot(a) != null && (player.inventory.armorItemInSlot(a).getItem() instanceof ItemRunicArmor) )  { //this should cover the enhanced one too
                     
                 	if (getUpgrade(player.inventory.armorItemInSlot(a)) == 1) {
@@ -129,9 +131,15 @@ public class EventHandlerRunicLegacy {
                     else if (getUpgrade(player.inventory.armorItemInSlot(a)) == 6) {
                     	emergency++;
                     }
+                	
+                	final ItemStack is = player.inventory.armorItemInSlot(a);
+                	if (is.getItemDamage() < is.getMaxDamage()) {
+                		runic.add(a);
+            		}
+                	
                 }
                 
-                if ((player.inventory.armorItemInSlot(a) != null) && ((player.inventory.armorItemInSlot(a).getItem() instanceof ItemRunicArmor))) 
+                else if ((player.inventory.armorItemInSlot(a) != null) && ((player.inventory.armorItemInSlot(a).getItem() instanceof ItemRunicArmor))) 
     	        { 
     		        if (getUpgrade2(player.inventory.armorItemInSlot(a)) == 1) { 
     		        	berserker++; 
@@ -145,6 +153,12 @@ public class EventHandlerRunicLegacy {
     		        else if (getUpgrade2(player.inventory.armorItemInSlot(a)) == 6) { 
     		        	emergency++; 
     		        }  
+    		        
+    		        final ItemStack is = player.inventory.armorItemInSlot(a);
+                	if (is.getItemDamage() < is.getMaxDamage()) {
+                		runic.add(a);
+            		}
+                	
     	        }
                 
             }
@@ -160,56 +174,58 @@ public class EventHandlerRunicLegacy {
             
              */
             
-            String key = "0";
+            if (runic.size() > 0) {
             
-            key = player.getEntityId() + ":" + 1;
-            if (charge <= 0 && berserker > 0 && !this.upgradeCooldown.containsKey(key)) {
-                this.upgradeCooldown.put(key, 400);
-                player.addPotionEffect(new PotionEffect(Potion.damageBoost.id, (100*(berserker)), berserker));
-                if (berserker >= 4) {
-                	player.addPotionEffect(new PotionEffect(Potion.resistance.id, 200+(100*(berserker-4)), berserker-4));
-                }
-                player.worldObj.playSoundAtEntity((Entity)player, "thaumcraft:runicShieldEffect", 1.0f, 1.0f);
-            }
-            
-            key = player.getEntityId() + ":" + 3;
-            if (charge <= 0 && kinetic > 0 && !this.upgradeCooldown.containsKey(key)) {
-                this.upgradeCooldown.put(key, 600);
-                player.worldObj.newExplosion((Entity)player, player.posX, player.posY + player.height / 2.0f, player.posZ, 1.5f + kinetic * 0.5f, false, false);
-                //player.worldObj.newExplosion((Entity)player, player.posX, player.posY + player.height / 2.0f, player.posZ, 1.5f + this.runicInfo.get(player.getEntityId())[2] * 0.5f, false, false);
-                if (kinetic >= 4) {
-                	player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 200+(100*(kinetic-4)), kinetic-3));
-                }
-            }
-            
-            key = player.getEntityId() + ":" + 4;
-            if (charge <= 0 && healing > 0 && !this.upgradeCooldown.containsKey(key)) {
-                //healing--;
-                this.upgradeCooldown.put(key, 600);
-                player.addPotionEffect(new PotionEffect(Potion.regeneration.id, 200, healing));
-                if (healing >= 4) {
-                	player.addPotionEffect(new PotionEffect(Potion.field_76444_x.id, 200+(100*(healing-4)), (int)healing/2));
-                }
-                player.worldObj.playSoundAtEntity((Entity)player, "thaumcraft:runicShieldEffect", 1.0f, 1.0f);
-            }
-            
-            key = player.getEntityId() + ":" + 6;
-            if (charge <= 0 && emergency > 0 && !this.upgradeCooldown.containsKey(key)) {
-                this.upgradeCooldown.put(key, 2400);
-                final int t = 8 * emergency;
-                charge = Math.min(Thaumcraft.instance.runicEventHandler.runicInfo.get(player.getEntityId())[0], t);
-                //Thaumcraft.instance.runicEventHandler.isDirty = true;
-                if (emergency >= 4) {
-                	player.addPotionEffect(new PotionEffect(Potion.invisibility.id, 200+(100*(emergency-4)), 0 ));
-                }
-                player.worldObj.playSoundAtEntity((Entity)player, "thaumcraft:runicShieldCharge", 1.0f, 1.0f);
+            	String key = "0";
                 
+                key = player.getEntityId() + ":" + 1;
+                if (runicCharge <= 0 && berserker > 0 && !this.upgradeCooldown.containsKey(key)) {
+                    this.upgradeCooldown.put(key, 400);
+                    player.addPotionEffect(new PotionEffect(Potion.damageBoost.id, (100*(berserker)), berserker));
+                    if (berserker >= 4) {
+                    	player.addPotionEffect(new PotionEffect(Potion.resistance.id, 200+(100*(berserker-4)), berserker-4));
+                    }
+                    player.worldObj.playSoundAtEntity((Entity)player, "thaumcraft:runicShieldEffect", 1.0f, 1.0f);
+                }
+                
+                key = player.getEntityId() + ":" + 3;
+                if (runicCharge <= 0 && kinetic > 0 && !this.upgradeCooldown.containsKey(key)) {
+                    this.upgradeCooldown.put(key, 600);
+                    player.worldObj.newExplosion((Entity)player, player.posX, player.posY + player.height / 2.0f, player.posZ, 1.5f + kinetic * 0.5f, false, false);
+                    //player.worldObj.newExplosion((Entity)player, player.posX, player.posY + player.height / 2.0f, player.posZ, 1.5f + this.runicInfo.get(player.getEntityId())[2] * 0.5f, false, false);
+                    if (kinetic >= 4) {
+                    	player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 200+(100*(kinetic-4)), kinetic-3));
+                    }
+                }
+                
+                key = player.getEntityId() + ":" + 4;
+                if (runicCharge <= 0 && healing > 0 && !this.upgradeCooldown.containsKey(key)) {
+                    //healing--;
+                    this.upgradeCooldown.put(key, 600);
+                    player.addPotionEffect(new PotionEffect(Potion.regeneration.id, 200, healing));
+                    if (healing >= 4) {
+                    	player.addPotionEffect(new PotionEffect(Potion.field_76444_x.id, 200+(100*(healing-4)), (int)healing/2)); //absorption that may or may not be broken
+                    }
+                    player.worldObj.playSoundAtEntity((Entity)player, "thaumcraft:runicShieldEffect", 1.0f, 1.0f);
+                }
+                
+                key = player.getEntityId() + ":" + 6;
+                if (runicCharge <= 0 && emergency > 0 && !this.upgradeCooldown.containsKey(key)) {
+                    this.upgradeCooldown.put(key, 2400);
+                    final int t = 8 * emergency;
+                    runicCharge = Math.min(Thaumcraft.instance.runicEventHandler.runicInfo.get(player.getEntityId())[0], t);
+                    //Thaumcraft.instance.runicEventHandler.isDirty = true;
+                    if (emergency >= 4) {
+                    	player.addPotionEffect(new PotionEffect(Potion.invisibility.id, 200+(100*(emergency-4)), 0 ));
+                    }
+                    player.worldObj.playSoundAtEntity((Entity)player, "thaumcraft:runicShieldCharge", 1.0f, 1.0f);
+                    
+                }
+                
+                Thaumcraft.instance.runicEventHandler.runicCharge.put(player.getEntityId(), runicCharge);
+                PacketHandler.INSTANCE.sendTo((IMessage)new PacketRunicCharge(player, (short)runicCharge, Thaumcraft.instance.runicEventHandler.runicInfo.get(player.getEntityId())[0]), (EntityPlayerMP)player);
+            
             }
-            
-            Thaumcraft.instance.runicEventHandler.runicCharge.put(player.getEntityId(), charge);
-            PacketHandler.INSTANCE.sendTo((IMessage)new PacketRunicCharge(player, (short)charge, Thaumcraft.instance.runicEventHandler.runicInfo.get(player.getEntityId())[0]), (EntityPlayerMP)player);
-        
-            
         }
     }
 

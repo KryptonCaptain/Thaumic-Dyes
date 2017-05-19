@@ -36,22 +36,7 @@ public class ItemRunicArmorEnhanced extends ItemRunicArmor  {
 	}
 		
 	
-	//@Override
-    public int getMaxDamage(ItemStack stack) {
-	    int md = ((ItemArmor)stack.getItem()).damageReduceAmount * 8;
-
-	    if (getUpgrade(stack) == 2 || getUpgrade2(stack) == 2) {
-	    	if (getUpgrade(stack) == 2 && getUpgrade2(stack) == 2) {
-	    		md *= (int)2.0;
-	    	}
-	    	else {
-	    		md *= (int)1.5;
-	    	}
-	    }
-	    return md;
-    }
-	
-	//@Override
+	@Override
     public int getRunicCharge(ItemStack itemstack) {
     	//return (this.armorType == 0) ? itemstack.getMaxDamage() : ((this.armorType == 1) ? itemstack.getMaxDamage() : ((this.armorType == 2) ? itemstack.getMaxDamage() : itemstack.getMaxDamage()));
     	//return 0;
@@ -74,9 +59,7 @@ public class ItemRunicArmorEnhanced extends ItemRunicArmor  {
 	}
 	
 	
-	
-	
-	//@Override
+	@Override
 	public ArmorProperties getProperties(EntityLivingBase player, ItemStack armor, DamageSource source, double damage, int slot)
 	{
 		int priority = 0;
@@ -101,7 +84,7 @@ public class ItemRunicArmorEnhanced extends ItemRunicArmor  {
 	}
 	  
 	
-	//@Override
+	@Override
 	public int getArmorDisplay(EntityPlayer player, ItemStack armor, int slot) {
 	    int dra = ((ItemArmor)armor.getItem()).damageReduceAmount;
 	    if (getUpgrade(armor) == 5 || getUpgrade2(armor) == 5) {
@@ -158,9 +141,6 @@ public class ItemRunicArmorEnhanced extends ItemRunicArmor  {
 		return 0;
 	}
 	
-	public static int getUpgrade3(final ItemStack armor) {
-        return 0;
-    }
 	
 	@Override
 	public EnumRarity getRarity(ItemStack itemstack)

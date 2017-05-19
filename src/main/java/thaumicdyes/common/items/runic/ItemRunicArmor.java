@@ -55,13 +55,6 @@ public class ItemRunicArmor extends ItemArmor implements ISpecialArmor, IRunicAr
         return (this.armorType == 0) ? this.iconHelm : ((this.armorType == 1) ? this.iconChest : ((this.armorType == 2) ? this.iconLegs : this.iconBoots));
     }
     
-    public int getMaxDamage(final ItemStack stack) {
-        int md = ((ItemArmor)stack.getItem()).damageReduceAmount * 8;
-        if (getUpgrade(stack) == 2) {
-            md *= (int)1.5;
-        }
-        return md;
-    }
     
     public int getRunicCharge(ItemStack itemstack) {
     	//return (this.armorType == 0) ? itemstack.getMaxDamage() : ((this.armorType == 1) ? itemstack.getMaxDamage() : ((this.armorType == 2) ? itemstack.getMaxDamage() : itemstack.getMaxDamage()));
@@ -170,13 +163,6 @@ public class ItemRunicArmor extends ItemArmor implements ISpecialArmor, IRunicAr
         return 0;
     }
     
-    public static int getUpgrade2(final ItemStack armor) {
-        return 0;
-    }
-    
-    public static int getUpgrade3(final ItemStack armor) {
-        return 0;
-    }
     
     static {
         ItemRunicArmor.nextTick = new HashMap<Integer, Long>();
