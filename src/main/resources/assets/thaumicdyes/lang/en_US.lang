@@ -97,6 +97,10 @@ item.ItemChestRunicEnhanced.name=Enhanced Runic Chestpiece
 item.ItemLegsRunicEnhanced.name=Enhanced Runic Legpiece
 item.ItemBootsRunicEnhanced.name=Enhanced Runic Footpiece
 
+item.ItemHelmetRunicPrimal.name=§5Abyssal Runic Helm§r
+item.ItemChestRunicPrimal.name=§5Abyssal Runic Chestplate§r
+item.ItemLegsRunicPrimal.name=§5Abyssal Runic Greaves§r
+item.ItemBootsRunicPrimal.name=§5Abyssal Runic Boots§r
 
 
 ///////////

@@ -80,7 +80,7 @@ public class ItemRunicArmor extends ItemArmor implements ISpecialArmor, IRunicAr
     }
     
     public EnumRarity getRarity(final ItemStack itemstack) {
-        return EnumRarity.uncommon;
+        return EnumRarity.rare;
     }
     
     public boolean isBookEnchantable(final ItemStack itemstack1, final ItemStack itemstack2) {

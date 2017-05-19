@@ -184,12 +184,12 @@ public class ItemHandler {
       GameRegistry.registerItem(itemLegsRunicEnhanced, "ItemRunicLegsEnhanced");
       GameRegistry.registerItem(itemBootsRunicEnhanced, "ItemRunicBootsEnhanced");
       
-      /*
+      
       GameRegistry.registerItem(itemHelmetRunicPrimal, "ItemRunicHelmetPrimal");
       GameRegistry.registerItem(itemChestRunicPrimal, "ItemRunicChestPrimal");
       GameRegistry.registerItem(itemLegsRunicPrimal, "ItemRunicLegsPrimal");
       GameRegistry.registerItem(itemBootsRunicPrimal, "ItemRunicBootsPrimal");
-      */
+      
    }
 
    public static void defineItems() {

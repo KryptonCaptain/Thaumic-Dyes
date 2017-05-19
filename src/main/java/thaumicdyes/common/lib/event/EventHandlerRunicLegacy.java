@@ -161,6 +161,28 @@ public class EventHandlerRunicLegacy {
                 	
     	        }
                 
+                else if ((player.inventory.armorItemInSlot(a) != null) && ((player.inventory.armorItemInSlot(a).getItem() instanceof ItemRunicArmor))) 
+    	        { 
+    		        if (getUpgrade3(player.inventory.armorItemInSlot(a)) == 1) { 
+    		        	berserker++; 
+    		        }  
+    		        else if (getUpgrade3(player.inventory.armorItemInSlot(a)) == 3) { 
+    		        	kinetic++; 
+    		        } 
+    		        else if (getUpgrade3(player.inventory.armorItemInSlot(a)) == 4) { 
+    		        	healing++; 
+    		        } 
+    		        else if (getUpgrade3(player.inventory.armorItemInSlot(a)) == 6) { 
+    		        	emergency++; 
+    		        }  
+    		        
+    		        final ItemStack is = player.inventory.armorItemInSlot(a);
+                	if (is.getItemDamage() < is.getMaxDamage()) {
+                		runic.add(a);
+            		}
+                	
+    	        }
+                
             }
             
             //TODO do a thing if effects are on at least 4 slots
