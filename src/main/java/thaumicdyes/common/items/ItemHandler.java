@@ -28,10 +28,11 @@ import thaumcraft.api.aspects.AspectList;
 public class ItemHandler {
    public static ToolMaterial Robes;
    public static ArmorMaterial RobesArmor;
-   public static ArmorMaterial PraetorArmor;
    public static ArmorMaterial FortressArmor;
    public static ArmorMaterial KnightArmor;
    public static ArmorMaterial IronFortressArmor;
+   public static ArmorMaterial RunicArmor;
+   public static ArmorMaterial RunicPrimal;
 
    public static Item itemHelmetCultistRobeDyed;
    public static Item itemChestCultistRobeDyed;
@@ -166,7 +167,7 @@ public class ItemHandler {
       GameRegistry.registerItem(itemChestCultistArcherDyed, "CultistArcherChestDyed");
       GameRegistry.registerItem(itemLegsCultistArcherDyed, "CultistArcherLegsDyed");
       
-      GameRegistry.registerItem(itemFabricResource, "itemFabricResource");
+      GameRegistry.registerItem(itemFabricResource, "ItemResourceFabric");
       
       GameRegistry.registerItem(itemHelmetSunKnight, "SunKnightHelm");
       GameRegistry.registerItem(itemChestSunKnight, "SunKnightChest");
@@ -204,9 +205,9 @@ public class ItemHandler {
 	   itemChestFortressDyed = (new ThaumiumFortressDyed(FortressArmor, 4, 1)).setUnlocalizedName("itemChestFortressDyed").setCreativeTab(ThaumicDyes.tabTD);
 	   itemLegsFortressDyed = (new ThaumiumFortressDyed(FortressArmor, 4, 2)).setUnlocalizedName("itemLegsFortressDyed").setCreativeTab(ThaumicDyes.tabTD);
       
-	   itemHelmetCultistLeaderDyed = (new CultistPraetorDyed(PraetorArmor, 4, 0)).setUnlocalizedName("itemHelmetCultistLeaderDyed").setCreativeTab(ThaumicDyes.tabTD);
-	   itemChestCultistLeaderDyed = (new CultistPraetorDyed(PraetorArmor, 4, 1)).setUnlocalizedName("itemChestCultistLeaderDyed").setCreativeTab(ThaumicDyes.tabTD);
-	   itemLegsCultistLeaderDyed = (new CultistPraetorDyed(PraetorArmor, 4, 2)).setUnlocalizedName("itemLegsCultistLeaderDyed").setCreativeTab(ThaumicDyes.tabTD);
+	   itemHelmetCultistLeaderDyed = (new CultistPraetorDyed(FortressArmor, 4, 0)).setUnlocalizedName("itemHelmetCultistLeaderDyed").setCreativeTab(ThaumicDyes.tabTD);
+	   itemChestCultistLeaderDyed = (new CultistPraetorDyed(FortressArmor, 4, 1)).setUnlocalizedName("itemChestCultistLeaderDyed").setCreativeTab(ThaumicDyes.tabTD);
+	   itemLegsCultistLeaderDyed = (new CultistPraetorDyed(FortressArmor, 4, 2)).setUnlocalizedName("itemLegsCultistLeaderDyed").setCreativeTab(ThaumicDyes.tabTD);
 	   
 	   itemHelmetCultistKnightDyed = (new CultistKnightDyed(KnightArmor, 4, 0)).setUnlocalizedName("itemHelmetCultistKnightDyed").setCreativeTab(ThaumicDyes.tabTD);
 	   itemChestCultistKnightDyed = (new CultistKnightDyed(KnightArmor, 4, 1)).setUnlocalizedName("itemChestCultistKnightDyed").setCreativeTab(ThaumicDyes.tabTD);
@@ -240,7 +241,7 @@ public class ItemHandler {
        //boot
 	   itemBootsThaumiumTraveller = (new ThaumiumBoots(ThaumcraftApi.armorMatThaumium, 4, 3)).setUnlocalizedName("itemBootsThaumiumTraveller").setCreativeTab(ThaumicDyes.tabTD);
 	   
-	   itemHelmetCultistPaladin = (new CultistPaladin(PraetorArmor, 4, 0)).setUnlocalizedName("itemHelmetCultistPaladin").setCreativeTab(ThaumicDyes.tabTD);
+	   itemHelmetCultistPaladin = (new CultistPaladin(FortressArmor, 4, 0)).setUnlocalizedName("itemHelmetCultistPaladin").setCreativeTab(ThaumicDyes.tabTD);
 	   
 	   itemHelmetCultistArcher = (new CultistArcher(ArmorMaterial.IRON, 4, 0)).setUnlocalizedName("itemHelmetCultistArcher").setCreativeTab(ThaumicDyes.tabTD);
 	   itemChestCultistArcher = (new CultistArcher(ArmorMaterial.IRON, 4, 1)).setUnlocalizedName("itemChestCultistArcher").setCreativeTab(ThaumicDyes.tabTD);
@@ -256,26 +257,26 @@ public class ItemHandler {
 	   itemChestSunKnight = (new SunKnight(ArmorMaterial.IRON, 4, 1)).setUnlocalizedName("itemChestSunKnight").setCreativeTab(ThaumicDyes.tabTD);
 	   
 	   //legacy runic armor
-	   itemHelmetRunic= (new ItemRunicArmor(ThaumcraftApi.armorMatSpecial, 4, 0)).setUnlocalizedName("ItemHelmetRunic").setCreativeTab(ThaumicDyes.tabTD);
-	   itemChestRunic= (new ItemRunicArmor(ThaumcraftApi.armorMatSpecial, 4, 1)).setUnlocalizedName("ItemChestRunic").setCreativeTab(ThaumicDyes.tabTD);
-	   itemLegsRunic= (new ItemRunicArmor(ThaumcraftApi.armorMatSpecial, 4, 2)).setUnlocalizedName("ItemLegsRunic").setCreativeTab(ThaumicDyes.tabTD);
-	   itemBootsRunic= (new ItemRunicArmor(ThaumcraftApi.armorMatSpecial, 4, 3)).setUnlocalizedName("ItemBootsRunic").setCreativeTab(ThaumicDyes.tabTD);;
-	   itemGogglesRunic = (new ItemRunicGoggles(ThaumcraftApi.armorMatSpecial, 4, 0)).setUnlocalizedName("ItemGogglesRunic").setCreativeTab(ThaumicDyes.tabTD);
-	   itemBootsTravellerRunic = (new ItemRunicBootsTraveller(ThaumcraftApi.armorMatSpecial, 4, 3)).setUnlocalizedName("ItemBootsTravellerRunic").setCreativeTab(ThaumicDyes.tabTD);;
+	   itemHelmetRunic= (new ItemRunicArmor(RunicArmor, 4, 0)).setUnlocalizedName("ItemHelmetRunic").setCreativeTab(ThaumicDyes.tabTD);
+	   itemChestRunic= (new ItemRunicArmor(RunicArmor, 4, 1)).setUnlocalizedName("ItemChestRunic").setCreativeTab(ThaumicDyes.tabTD);
+	   itemLegsRunic= (new ItemRunicArmor(RunicArmor, 4, 2)).setUnlocalizedName("ItemLegsRunic").setCreativeTab(ThaumicDyes.tabTD);
+	   itemBootsRunic= (new ItemRunicArmor(RunicArmor, 4, 3)).setUnlocalizedName("ItemBootsRunic").setCreativeTab(ThaumicDyes.tabTD);;
+	   itemGogglesRunic = (new ItemRunicGoggles(RunicArmor, 4, 0)).setUnlocalizedName("ItemGogglesRunic").setCreativeTab(ThaumicDyes.tabTD);
+	   itemBootsTravellerRunic = (new ItemRunicBootsTraveller(RunicArmor, 4, 3)).setUnlocalizedName("ItemBootsTravellerRunic").setCreativeTab(ThaumicDyes.tabTD);;
 	   
 	   //legacy TX
 	   itemHelmetMaskTX = (new ItemTXAncientMask(ThaumcraftApi.armorMatSpecial, 2, 0)).setUnlocalizedName("ItemMaskEvil").setCreativeTab(ThaumicDyes.tabTD);
 	   
-	   itemHelmetRunicEnhanced = (new ItemRunicArmorEnhanced(ThaumcraftApi.armorMatSpecial, 4, 0)).setUnlocalizedName("ItemHelmetRunicEnhanced").setCreativeTab(ThaumicDyes.tabTD);
-	   itemChestRunicEnhanced = (new ItemRunicArmorEnhanced(ThaumcraftApi.armorMatSpecial, 4, 1)).setUnlocalizedName("ItemChestRunicEnhanced").setCreativeTab(ThaumicDyes.tabTD);
-	   itemLegsRunicEnhanced = (new ItemRunicArmorEnhanced(ThaumcraftApi.armorMatSpecial, 4, 2)).setUnlocalizedName("ItemLegsRunicEnhanced").setCreativeTab(ThaumicDyes.tabTD);
-	   itemBootsRunicEnhanced = (new ItemRunicArmorEnhanced(ThaumcraftApi.armorMatSpecial, 4, 3)).setUnlocalizedName("ItemBootsRunicEnhanced").setCreativeTab(ThaumicDyes.tabTD);;
+	   itemHelmetRunicEnhanced = (new ItemRunicArmorEnhanced(RunicArmor, 4, 0)).setUnlocalizedName("ItemHelmetRunicEnhanced").setCreativeTab(ThaumicDyes.tabTD);
+	   itemChestRunicEnhanced = (new ItemRunicArmorEnhanced(RunicArmor, 4, 1)).setUnlocalizedName("ItemChestRunicEnhanced").setCreativeTab(ThaumicDyes.tabTD);
+	   itemLegsRunicEnhanced = (new ItemRunicArmorEnhanced(RunicArmor, 4, 2)).setUnlocalizedName("ItemLegsRunicEnhanced").setCreativeTab(ThaumicDyes.tabTD);
+	   itemBootsRunicEnhanced = (new ItemRunicArmorEnhanced(RunicArmor, 4, 3)).setUnlocalizedName("ItemBootsRunicEnhanced").setCreativeTab(ThaumicDyes.tabTD);;
 	   
 	   
-	   itemHelmetRunicPrimal = (new ItemRunicArmorPrimal(ThaumcraftApi.armorMatThaumium, 4, 0)).setUnlocalizedName("ItemHelmetRunicPrimal").setCreativeTab(ThaumicDyes.tabTD);
-	   itemChestRunicPrimal = (new ItemRunicArmorPrimal(ThaumcraftApi.armorMatThaumium, 4, 1)).setUnlocalizedName("ItemChestRunicPrimal").setCreativeTab(ThaumicDyes.tabTD);
-	   itemLegsRunicPrimal = (new ItemRunicArmorPrimal(ThaumcraftApi.armorMatThaumium, 4, 2)).setUnlocalizedName("ItemLegsRunicPrimal").setCreativeTab(ThaumicDyes.tabTD);
-	   itemBootsRunicPrimal = (new ItemRunicArmorPrimalBoots(ThaumcraftApi.armorMatThaumium, 4, 3)).setUnlocalizedName("ItemBootsRunicPrimal").setCreativeTab(ThaumicDyes.tabTD);
+	   itemHelmetRunicPrimal = (new ItemRunicArmorPrimal(RunicPrimal, 4, 0)).setUnlocalizedName("ItemHelmetRunicPrimal").setCreativeTab(ThaumicDyes.tabTD);
+	   itemChestRunicPrimal = (new ItemRunicArmorPrimal(RunicPrimal, 4, 1)).setUnlocalizedName("ItemChestRunicPrimal").setCreativeTab(ThaumicDyes.tabTD);
+	   itemLegsRunicPrimal = (new ItemRunicArmorPrimal(RunicPrimal, 4, 2)).setUnlocalizedName("ItemLegsRunicPrimal").setCreativeTab(ThaumicDyes.tabTD);
+	   itemBootsRunicPrimal = (new ItemRunicArmorPrimalBoots(RunicPrimal, 4, 3)).setUnlocalizedName("ItemBootsRunicPrimal").setCreativeTab(ThaumicDyes.tabTD);
 	   
 	   
    }
@@ -408,11 +409,12 @@ public class ItemHandler {
    }
 
    public static void registerToolMaterial() {
-      RobesArmor = EnumHelper.addArmorMaterial("TD_ROBE", 15, new int[]{2, 6, 5, 1}, 15);
-      KnightArmor = EnumHelper.addArmorMaterial("TD_KNIGHT", 20, new int[]{2, 6, 5, 1}, 12); 
-      PraetorArmor = EnumHelper.addArmorMaterial("TD_PRAE", 45, new int[]{3, 7, 6, 1}, 30);
-      FortressArmor = EnumHelper.addArmorMaterial("TD_FORT", 45, new int[]{3, 7, 6, 1}, 30);
-      IronFortressArmor = EnumHelper.addArmorMaterial("TD_IRONFORT", 25, new int[]{2, 6, 5, 2}, 12);
+      RobesArmor = EnumHelper.addArmorMaterial("TD.ROBE", 15, new int[]{2, 6, 5, 1}, 15);
+      KnightArmor = EnumHelper.addArmorMaterial("TD.KNIGHT", 20, new int[]{2, 6, 5, 1}, 12); 
+      FortressArmor = EnumHelper.addArmorMaterial("TD.FORT", 45, new int[]{3, 7, 6, 1}, 30);
+      IronFortressArmor = EnumHelper.addArmorMaterial("TD.IRONFORT", 25, new int[]{2, 6, 5, 2}, 12);
+      RunicArmor = EnumHelper.addArmorMaterial("TD.RUNIC", 25, new int[] { 1, 3, 2, 1 }, 25);
+      RunicPrimal = EnumHelper.addArmorMaterial("TD.PRIMAL", 25, new int[] { 2, 6, 5, 2 }, 10);
       
    }
 }

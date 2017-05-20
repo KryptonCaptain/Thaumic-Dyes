@@ -15,12 +15,15 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.entity.player.PlayerEvent.NameFormat;
 import thaumcraft.api.IGoggles;
 import thaumcraft.api.IWarpingGear;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.nodes.IRevealer;
 import thaumicdyes.client.models.ModelRobesSpecial;
 import thaumicdyes.common.ThaumicDyes;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -30,6 +33,7 @@ public class ItemRunicArmorPrimal extends ItemRunicArmor implements IRevealer, I
 	public ItemRunicArmorPrimal(ItemArmor.ArmorMaterial enumarmormaterial, int j, int k) {
 		super(enumarmormaterial, j, k);
 		this.setCreativeTab(ThaumicDyes.tabTD);
+		MinecraftForge.EVENT_BUS.register(this);
 	}
 
 	
@@ -76,14 +80,12 @@ public class ItemRunicArmorPrimal extends ItemRunicArmor implements IRevealer, I
 		    	|| (getUpgrade(armor) == 5 && getUpgrade3(armor) == 5) 
 		    	|| (getUpgrade2(armor) == 5 && getUpgrade3(armor) == 5) )
 		    {
-		    	if (getUpgrade(armor) == 5 && getUpgrade2(armor) == 5 && getUpgrade3(armor) == 5) {
-		    		priority = 1;
-			        ratio = this.damageReduceAmount / 6.25D; //more classic manual values, 25/4
-		    	}
-		    	else {
-			    	priority = 1;
-			        ratio = this.damageReduceAmount / 8.3D; //more classic manual values, 25/3
-		    	}
+		    	priority = 1;
+		        ratio = this.damageReduceAmount / 8.3D; //more classic manual values, 25/3
+		        
+		        //I'm limiting this to only a max of 8 upgrades total, because the higher level 25/4 one 
+		        //basically made the player invincible. 
+		        //Primal's higher base armour should discourage people from stacking this one anyway
 		    }
 		    else {
 		    	priority = 1;
@@ -107,12 +109,7 @@ public class ItemRunicArmorPrimal extends ItemRunicArmor implements IRevealer, I
 	    		|| (getUpgrade(armor) == 5 && getUpgrade3(armor) == 5)
 	    		|| (getUpgrade2(armor) == 5 && getUpgrade3(armor) == 5) )
 		    {
-		    	if ( (getUpgrade(armor) == 5 && getUpgrade2(armor) == 5 && getUpgrade3(armor) == 5) ) {
-		    		dra *= 4;
-		    	}
-		    	else {
-		    		dra *= 3;
-		    	}
+		    	dra *= 3;
 		    }
 		    else {
 		    	dra *= 2;
@@ -128,23 +125,25 @@ public class ItemRunicArmorPrimal extends ItemRunicArmor implements IRevealer, I
 	    //list.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal("item.runic.charge") + ": " + (stack.getMaxDamage() - stack.getItemDamage()) + "/" + stack.getMaxDamage());
 	    
 		int u = getUpgrade(stack);
-	    if (u < 7) {
+	    if (u > 0) {
 	      list.add(EnumChatFormatting.DARK_AQUA + StatCollector.translateToLocal(new StringBuilder().append("item.runic.upgrade.").append(u).toString()) );
 	    } else { list.add(EnumChatFormatting.DARK_GRAY + StatCollector.translateToLocal(new StringBuilder().append("item.runic.upgrade.").append(u).toString()) );
 	    }
 	    u = getUpgrade2(stack);
-	    if (u < 7) {
+	    if (u > 0) {
 	      list.add(EnumChatFormatting.DARK_AQUA + StatCollector.translateToLocal(new StringBuilder().append("item.runic.upgrade.").append(u).toString()) );
 	    }else { list.add(EnumChatFormatting.DARK_GRAY + StatCollector.translateToLocal(new StringBuilder().append("item.runic.upgrade.").append(u).toString()) );
 	    }
 	    u = getUpgrade3(stack);
-	    if (u < 7) {
+	    if (u > 0) {
 	      list.add(EnumChatFormatting.DARK_AQUA + StatCollector.translateToLocal(new StringBuilder().append("item.runic.upgrade.").append(u).toString()) );
 	    }else { list.add(EnumChatFormatting.DARK_GRAY + StatCollector.translateToLocal(new StringBuilder().append("item.runic.upgrade.").append(u).toString()) );
 	    }
 	    
-    	if (getVisDiscount(stack, player, null) > 0)
+    	if (getVisDiscount(stack, player, null) > 0) {
     		list.add(EnumChatFormatting.DARK_PURPLE + StatCollector.translateToLocal("tc.visdiscount") + ": " + getVisDiscount(stack, player, null) + "%");
+    	}
+    		
 
 //	    for (Aspect aspect : Aspect.getPrimalAspects()) {
 //	    	String tag = "";
@@ -231,12 +230,54 @@ public class ItemRunicArmorPrimal extends ItemRunicArmor implements IRevealer, I
 		return true;
 	}
 	
+	@SubscribeEvent  
+	public void nameFormatEvent(NameFormat event) {
+		if (event.entity instanceof EntityPlayer) {
+			final EntityPlayer player = (EntityPlayer)event.entity;
+			int set = 0;
+			
+			for (int a = 0; a < 4; a++) {
+			    if (player.inventory.armorItemInSlot(a) != null 
+		    		&& (player.inventory.armorItemInSlot(a).getItem() instanceof ItemRunicArmorPrimal) )  
+			    {
+			    	set++;
+			    }
+			}
+			if(set < 4) {
+				//player.refreshDisplayName(); //errors out
+			} else {
+				//event.displayname = player.getCommandSenderName()+StatCollector.translateToLocal("tdyes.nameAppend");
+				event.displayname = player.getCommandSenderName()+" the Warped";
+			}
+		}
+		/*
+		if(event.entityPlayer != null && event.entityPlayer.getCurrentEquippedItem() != null && event.entityPlayer.getCurrentEquippedItem().getItem() instanceof ItemRunicArmorPrimal)  
+		  event.displayname = event.entityPlayer.getCommandSenderName()+" the Warped";  
+	 	*/
+    }
+	
+	
+	
 	ModelBiped model1 = null;
 	ModelBiped model2 = null;
    	ModelBiped model = null;
    	
    	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
+   		if (entity instanceof EntityPlayer) {
+   			final EntityPlayer player = (EntityPlayer)entity;
+   			if (player.getUniqueID().toString() == "8c3dbe36-8161-4207-a2d6-e303dfe260ba") { //because dev perks. purely asstheticc
+   				return "thaumicdyes:textures/models/guardian_robe_armor_warden1.png";
+   			}
+   		}
         return "thaumicdyes:textures/models/guardian_robe_armor1.png";
+        
+        /*
+         * /guardian_robe_armor - flat
+         * /guardian_robe_armor1 - 60% opacity
+         * /guardian_robe_armor_warden - flat
+         * /guardian_robe_armor_warden1 - 60% opacity
+         * ""1 is the prefered one, flat ones are just for testing
+         */
      }
 	
 	@SideOnly(Side.CLIENT)

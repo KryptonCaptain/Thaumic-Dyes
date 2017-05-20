@@ -101,6 +101,7 @@ item.ItemHelmetRunicPrimal.name=Abyssal Runic Helm
 item.ItemChestRunicPrimal.name=Abyssal Runic Chestplate
 item.ItemLegsRunicPrimal.name=Abyssal Runic Greaves
 item.ItemBootsRunicPrimal.name=Abyssal Runic Boots
+tdyes.nameAppend= the Warped
 
 
 ///////////

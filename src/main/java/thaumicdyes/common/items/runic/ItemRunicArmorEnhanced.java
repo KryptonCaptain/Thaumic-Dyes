@@ -105,18 +105,19 @@ public class ItemRunicArmorEnhanced extends ItemRunicArmor  {
 	    //list.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal("item.runic.charge") + ": " + (stack.getMaxDamage() - stack.getItemDamage()) + "/" + stack.getMaxDamage());
 	    
 		int u = getUpgrade(stack);
-	    if (u < 7) {
+	    if (u > 0) {
 	      list.add(EnumChatFormatting.DARK_AQUA + StatCollector.translateToLocal(new StringBuilder().append("item.runic.upgrade.").append(u).toString()) );
 	    }else { list.add(EnumChatFormatting.DARK_GRAY + StatCollector.translateToLocal(new StringBuilder().append("item.runic.upgrade.").append(u).toString()) );
 	    }
 	    u = getUpgrade2(stack);
-	    if (u < 7) {
+	    if (u > 0) {
 	      list.add(EnumChatFormatting.DARK_AQUA + StatCollector.translateToLocal(new StringBuilder().append("item.runic.upgrade.").append(u).toString()) );
 	    }else { list.add(EnumChatFormatting.DARK_GRAY + StatCollector.translateToLocal(new StringBuilder().append("item.runic.upgrade.").append(u).toString()) );
 	    }
-    	if (getVisDiscount(stack, player, null) > 0)
+	    if (getVisDiscount(stack, player, null) > 0) {
     		list.add(EnumChatFormatting.DARK_PURPLE + StatCollector.translateToLocal("tc.visdiscount") + ": " + getVisDiscount(stack, player, null) + "%");
-
+    	}
+	    
 //	    for (Aspect aspect : Aspect.getPrimalAspects()) {
 //	    	String tag = "";
 //			if (getVisDiscount(stack, player, aspect) > 0) {
