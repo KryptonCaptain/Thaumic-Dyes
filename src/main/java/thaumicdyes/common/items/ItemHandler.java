@@ -18,6 +18,7 @@ import thaumicdyes.common.items.legacy.ItemTXAncientMask;
 import thaumicdyes.common.items.runic.ItemRunicArmor;
 import thaumicdyes.common.items.runic.ItemRunicArmorEnhanced;
 import thaumicdyes.common.items.runic.ItemRunicArmorPrimal;
+import thaumicdyes.common.items.runic.ItemRunicArmorPrimalBoots;
 import thaumicdyes.common.items.runic.ItemRunicBootsTraveller;
 import thaumicdyes.common.items.runic.ItemRunicGoggles;
 import thaumcraft.api.ThaumcraftApi;
@@ -274,7 +275,7 @@ public class ItemHandler {
 	   itemHelmetRunicPrimal = (new ItemRunicArmorPrimal(ThaumcraftApi.armorMatThaumium, 4, 0)).setUnlocalizedName("ItemHelmetRunicPrimal").setCreativeTab(ThaumicDyes.tabTD);
 	   itemChestRunicPrimal = (new ItemRunicArmorPrimal(ThaumcraftApi.armorMatThaumium, 4, 1)).setUnlocalizedName("ItemChestRunicPrimal").setCreativeTab(ThaumicDyes.tabTD);
 	   itemLegsRunicPrimal = (new ItemRunicArmorPrimal(ThaumcraftApi.armorMatThaumium, 4, 2)).setUnlocalizedName("ItemLegsRunicPrimal").setCreativeTab(ThaumicDyes.tabTD);
-	   itemBootsRunicPrimal = (new ItemRunicArmorPrimal(ThaumcraftApi.armorMatThaumium, 4, 3)).setUnlocalizedName("ItemBootsRunicPrimal").setCreativeTab(ThaumicDyes.tabTD);;
+	   itemBootsRunicPrimal = (new ItemRunicArmorPrimalBoots(ThaumcraftApi.armorMatThaumium, 4, 3)).setUnlocalizedName("ItemBootsRunicPrimal").setCreativeTab(ThaumicDyes.tabTD);
 	   
 	   
    }

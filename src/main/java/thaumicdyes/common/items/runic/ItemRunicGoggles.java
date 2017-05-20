@@ -45,10 +45,7 @@ public class ItemRunicGoggles extends ItemRunicArmor implements IVisDiscountGear
     @Override
     public void addInformation(final ItemStack stack, final EntityPlayer player, final List list, final boolean par4) {
         //list.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal("item.runic.charge") + ": " + (stack.getMaxDamage() - stack.getItemDamage()) + "/" + stack.getMaxDamage());
-        final int u = ItemRunicArmor.getUpgrade(stack);
-        if (u > 0) {
-            list.add(EnumChatFormatting.DARK_AQUA + StatCollector.translateToLocal("item.runic.upgrade." + u));
-        }
+        
         list.add(EnumChatFormatting.DARK_PURPLE + StatCollector.translateToLocal("tc.visdiscount") + ": " + this.getVisDiscount(stack, player, null) + "%");
     }
     

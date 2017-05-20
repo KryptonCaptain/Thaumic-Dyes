@@ -107,10 +107,12 @@ public class ItemRunicArmorEnhanced extends ItemRunicArmor  {
 		int u = getUpgrade(stack);
 	    if (u < 7) {
 	      list.add(EnumChatFormatting.DARK_AQUA + StatCollector.translateToLocal(new StringBuilder().append("item.runic.upgrade.").append(u).toString()) );
+	    }else { list.add(EnumChatFormatting.DARK_GRAY + StatCollector.translateToLocal(new StringBuilder().append("item.runic.upgrade.").append(u).toString()) );
 	    }
 	    u = getUpgrade2(stack);
 	    if (u < 7) {
 	      list.add(EnumChatFormatting.DARK_AQUA + StatCollector.translateToLocal(new StringBuilder().append("item.runic.upgrade.").append(u).toString()) );
+	    }else { list.add(EnumChatFormatting.DARK_GRAY + StatCollector.translateToLocal(new StringBuilder().append("item.runic.upgrade.").append(u).toString()) );
 	    }
     	if (getVisDiscount(stack, player, null) > 0)
     		list.add(EnumChatFormatting.DARK_PURPLE + StatCollector.translateToLocal("tc.visdiscount") + ": " + getVisDiscount(stack, player, null) + "%");
@@ -145,7 +147,7 @@ public class ItemRunicArmorEnhanced extends ItemRunicArmor  {
 	@Override
 	public EnumRarity getRarity(ItemStack itemstack)
 	{
-		return EnumRarity.epic;
+		return EnumRarity.rare;
 	}
 	
 	@SideOnly(Side.CLIENT)

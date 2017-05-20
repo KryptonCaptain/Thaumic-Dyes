@@ -1257,13 +1257,30 @@ public class ConfigResearch {
       				  new ResearchPage((InfusionRecipe[])enhR.toArray(new InfusionRecipe[0])) 
       				 
       				  })
-			  //.setParentsHidden("")
 			  .setParents("TD.RUNICARMOR")
 			  //.setParentsHidden("PRIMPEARL")
 			  .setConcealed()
 			  .registerResearchItem();
        
       
+      //primal runic
+      
+      new ResearchItem("TD.PRIMALRUNICARMOR", "DYES", 
+    		  new AspectList().add(Aspect.ARMOR, 8).add(Aspect.AIR, 5).add(Aspect.MAGIC, 5).add(Aspect.ENERGY, 5).add(Aspect.MIND, 3),
+    		  11, 3, 3, 
+    		  new ItemStack(ItemHandler.itemChestRunicPrimal))
+      		  .setPages(new ResearchPage[] { 
+      				  new ResearchPage("tc.research_page.TD.PRIMALRUNICARMOR.1"), 
+      				  new ResearchPage("tc.research_page.TD.PRIMALRUNICARMOR.2"), 
+      				  //new ResearchPage((InfusionRecipe[])enhR.toArray(new InfusionRecipe[0])) 
+      				 
+      				  })
+			  .setParents("TD.ENHANCEDRUNICARMOR")
+			  .setParentsHidden("PRIMPEARL")
+			  .setConcealed()
+			  .registerResearchItem();
+      
+      ThaumcraftApi.addWarpToResearch("TD.PRIMALRUNICARMOR", 4);
 			      
    }
 	      

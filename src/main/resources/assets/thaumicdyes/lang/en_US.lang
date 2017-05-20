@@ -97,10 +97,10 @@ item.ItemChestRunicEnhanced.name=Enhanced Runic Chestpiece
 item.ItemLegsRunicEnhanced.name=Enhanced Runic Legpiece
 item.ItemBootsRunicEnhanced.name=Enhanced Runic Footpiece
 
-item.ItemHelmetRunicPrimal.name=§5Abyssal Runic Helm§r
-item.ItemChestRunicPrimal.name=§5Abyssal Runic Chestplate§r
-item.ItemLegsRunicPrimal.name=§5Abyssal Runic Greaves§r
-item.ItemBootsRunicPrimal.name=§5Abyssal Runic Boots§r
+item.ItemHelmetRunicPrimal.name=Abyssal Runic Helm
+item.ItemChestRunicPrimal.name=Abyssal Runic Chestplate
+item.ItemLegsRunicPrimal.name=Abyssal Runic Greaves
+item.ItemBootsRunicPrimal.name=Abyssal Runic Boots
 
 
 ///////////
@@ -238,7 +238,6 @@ tc.research_text.TD.RUNICBOOTSTRAVELLER=The best of both worlds
 tc.research_page.TD.RUNICBOOTSTRAVELLER.1=While being protected by Runic Armor is vital, you have begun to miss the speed granted by your Boots of Travelling. Why not have both?<BR>By affixing the charms of the runic footgear to a pair of boots of travelling, you can enjoy the benefits of both.<BR>You haven't had any success repeating this procedure on other variants of the Boots of the Traveller, but perhaps you will have better luck in the future.
 
 
-
 --Enhanced Runic Armor
 tc.research_name.TD.ENHANCEDRUNICARMOR=Enhanced Runic Armor
 tc.research_text.TD.ENHANCEDRUNICARMOR=Pushing the limits
@@ -246,8 +245,14 @@ tc.research_page.TD.ENHANCEDRUNICARMOR.1=Your extensive research into augmenting
 tc.research_page.TD.ENHANCEDRUNICARMOR.2=Keep in mind that the inital creation of the Enhanced armor will wipe existing augments. <BR><BR>In the case that you want to overwrite an augment placed on the Enhanced armor, you may right click while holding it to swap positions of the augments. The augment displayed first is the one that will be overwritten.<BR>
 //<BR>[Recipes pending... leave feedback]
 
+--Enhanced Runic Armor
+tc.research_name.TD.PRIMALRUNICARMOR=Abyssal Runic Armor
+tc.research_text.TD.PRIMALRUNICARMOR=Those who stare too long into the abyss...
+tc.research_page.TD.PRIMALRUNICARMOR.1=<IMG>thaumcraft:textures/misc/eldritchajor2.png:0:255:255:255:.5</IMG><BR>This was a mistake.<BR>
+tc.research_page.TD.PRIMALRUNICARMOR.2=You should have stopped when you had the chance.<BR>You should have stopped...<BR><BR>What have you done?
 
 
+§§§
 
 #Copied research 
 tc.research_name.TD.UUUU=

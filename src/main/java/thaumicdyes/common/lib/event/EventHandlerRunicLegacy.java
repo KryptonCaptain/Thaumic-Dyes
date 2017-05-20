@@ -108,6 +108,7 @@ public class EventHandlerRunicLegacy {
             int healing = 0;
             //int hardened = 0;
             int emergency = 0;
+            int resistance = 0;
             
             final ArrayList<Integer> runic = new ArrayList<Integer>();
             
@@ -131,6 +132,9 @@ public class EventHandlerRunicLegacy {
                     else if (getUpgrade(player.inventory.armorItemInSlot(a)) == 6) {
                     	emergency++;
                     }
+                    else if (getUpgrade(player.inventory.armorItemInSlot(a)) == 7) {
+                    	resistance++;
+                    }
                 	
                 	final ItemStack is = player.inventory.armorItemInSlot(a);
                 	if (is.getItemDamage() < is.getMaxDamage()) {
@@ -153,6 +157,9 @@ public class EventHandlerRunicLegacy {
     		        else if (getUpgrade2(player.inventory.armorItemInSlot(a)) == 6) { 
     		        	emergency++; 
     		        }  
+    		        else if (getUpgrade2(player.inventory.armorItemInSlot(a)) == 7) {
+                    	resistance++;
+                    }
     		        
     		        final ItemStack is = player.inventory.armorItemInSlot(a);
                 	if (is.getItemDamage() < is.getMaxDamage()) {
@@ -174,7 +181,10 @@ public class EventHandlerRunicLegacy {
     		        } 
     		        else if (getUpgrade3(player.inventory.armorItemInSlot(a)) == 6) { 
     		        	emergency++; 
-    		        }  
+    		        }
+    		        else if (getUpgrade3(player.inventory.armorItemInSlot(a)) == 7) {
+                    	resistance++;
+                    }
     		        
     		        final ItemStack is = player.inventory.armorItemInSlot(a);
                 	if (is.getItemDamage() < is.getMaxDamage()) {
@@ -218,6 +228,7 @@ public class EventHandlerRunicLegacy {
                     if (kinetic >= 4) {
                     	player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 200+(100*(kinetic-4)), kinetic-3));
                     }
+                    player.worldObj.playSoundAtEntity((Entity)player, "thaumcraft:shock1", 1.0f, 1.0f);
                 }
                 
                 key = player.getEntityId() + ":" + 4;

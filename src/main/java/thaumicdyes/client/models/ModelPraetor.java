@@ -148,6 +148,7 @@ public class ModelPraetor extends ModelBiped {
       this.GauntletL2.addBox(4.0F, 3.5F, -2.0F, 1, 5, 4);
       this.setRotation(this.GauntletL2, 0.0F, 0.0F, 0.1675516F);
       
+      //TODO
       this.ShoulderR = new ModelRenderer(this, 56, 35);
       this.ShoulderR.addBox(-3.5F, -2.5F, -2.5F, 5, 5, 5, 0.0F);
       
@@ -167,6 +168,7 @@ public class ModelPraetor extends ModelBiped {
       this.ShoulderR4.addBox(-2.3F, -1.5F, -4.0F, 1, 6, 1);
       this.setRotation(this.ShoulderR4, 0.0F, 0.0F, 0.7853982F);
 
+      //TODO
       this.ShoulderL = new ModelRenderer(this, 56, 35);
       this.ShoulderL.mirror = true;
       this.ShoulderL.addBox(-1.5F, -2.5F, -2.5F, 5, 5, 5, 0.0F);

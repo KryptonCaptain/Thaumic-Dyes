@@ -2,9 +2,12 @@ package thaumicdyes.common.items.runic;
 
 import java.util.List;
 
+import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumAction;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
@@ -12,16 +15,12 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
-import net.minecraftforge.event.entity.living.LivingEvent;
 import thaumcraft.api.IGoggles;
 import thaumcraft.api.IWarpingGear;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.nodes.IRevealer;
-import thaumcraft.common.Thaumcraft;
-import thaumcraft.common.items.armor.Hover;
+import thaumicdyes.client.models.ModelRobesSpecial;
 import thaumicdyes.common.ThaumicDyes;
-import thaumicdyes.common.items.ItemHandler;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -131,14 +130,17 @@ public class ItemRunicArmorPrimal extends ItemRunicArmor implements IRevealer, I
 		int u = getUpgrade(stack);
 	    if (u < 7) {
 	      list.add(EnumChatFormatting.DARK_AQUA + StatCollector.translateToLocal(new StringBuilder().append("item.runic.upgrade.").append(u).toString()) );
+	    } else { list.add(EnumChatFormatting.DARK_GRAY + StatCollector.translateToLocal(new StringBuilder().append("item.runic.upgrade.").append(u).toString()) );
 	    }
 	    u = getUpgrade2(stack);
 	    if (u < 7) {
 	      list.add(EnumChatFormatting.DARK_AQUA + StatCollector.translateToLocal(new StringBuilder().append("item.runic.upgrade.").append(u).toString()) );
+	    }else { list.add(EnumChatFormatting.DARK_GRAY + StatCollector.translateToLocal(new StringBuilder().append("item.runic.upgrade.").append(u).toString()) );
 	    }
 	    u = getUpgrade3(stack);
 	    if (u < 7) {
 	      list.add(EnumChatFormatting.DARK_AQUA + StatCollector.translateToLocal(new StringBuilder().append("item.runic.upgrade.").append(u).toString()) );
+	    }else { list.add(EnumChatFormatting.DARK_GRAY + StatCollector.translateToLocal(new StringBuilder().append("item.runic.upgrade.").append(u).toString()) );
 	    }
 	    
     	if (getVisDiscount(stack, player, null) > 0)
@@ -187,16 +189,16 @@ public class ItemRunicArmorPrimal extends ItemRunicArmor implements IRevealer, I
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister ir)
 	{
-		this.iconHelm = ir.registerIcon("thaumicdyes:enhancedRunicHelmet");
-	    this.iconChest = ir.registerIcon("thaumicdyes:enhancedRunicChest");
-	    this.iconLegs = ir.registerIcon("thaumicdyes:enhancedRunicLeggings");
-	    this.iconBoots = ir.registerIcon("thaumicdyes:enhancedRunicBoots");
+		this.iconHelm = ir.registerIcon("thaumicdyes:runicHelmPrimal");
+	    this.iconChest = ir.registerIcon("thaumicdyes:runicChestPrimal");
+	    this.iconLegs = ir.registerIcon("thaumicdyes:runicLegsPrimal");
+	    //this.iconBoots = ir.registerIcon("thaumicdyes:runicBootsPrimal");
 	}
 	  
 	
     public boolean onItemUse(ItemStack item, EntityPlayer player, World world, int par4, int par5, int par6, int par7, float par8, float par9, float par10)
     {
-    	if (this.getUpgrade(item) <7 && this.getUpgrade2(item) <7) {
+    	if (this.getUpgrade(item) <20 && this.getUpgrade2(item) <20 &&this.getUpgrade3(item) <20) {
     		int u1 = this.getUpgrade(item);
     		int u2 = this.getUpgrade2(item);
     		int u3 = this.getUpgrade3(item);
@@ -229,50 +231,55 @@ public class ItemRunicArmorPrimal extends ItemRunicArmor implements IRevealer, I
 		return true;
 	}
 	
-	public void onArmorTick(World world, EntityPlayer player, ItemStack armor)
-    {
-      if ((!player.capabilities.isFlying) && (player.moveForward > 0.0F))
-      {
-        if ((player.worldObj.isRemote) && (!player.isSneaking()))
-        {
-          if (!Thaumcraft.instance.entityEventHandler.prevStep.containsKey(Integer.valueOf(player.getEntityId()))) {
-            Thaumcraft.instance.entityEventHandler.prevStep.put(Integer.valueOf(player.getEntityId()), Float.valueOf(player.stepHeight));
-          }
-          player.stepHeight = 1.0F;
-        }
-        if (player.onGround)
-        {
-          float bonus = 0.1F;
-          if (player.isInWater()) {
-            bonus /= 3.0F;
-          }
-          player.moveFlying(0.0F, 1.0F, bonus);
-        }
-        else if (Hover.getHover(player.getEntityId()))
-        {
-          player.jumpMovementFactor = 0.03F;
-        }
-        else
-        {
-          player.jumpMovementFactor = 0.05F;
-        }
-      }
-      if (player.fallDistance > 0.0F) {
-        player.fallDistance -= 0.5F;
-      }
-      
-      super.onArmorTick(world, player, armor);
-      if ((!world.isRemote) && (armor.getItemDamage() > 0) && (player.ticksExisted % 20 == 0)) {
-        armor.damageItem(-1, player);
-      }
-    }
-    
-    @SubscribeEvent
-    public void playerJumps(LivingEvent.LivingJumpEvent event)
-    {
-      if (((event.entity instanceof EntityPlayer)) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0) != null) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0).getItem() == ItemHandler.itemBootsRunicPrimal)) {
-        event.entityLiving.motionY += 0.35D;
-      }
-    }
+	ModelBiped model1 = null;
+	ModelBiped model2 = null;
+   	ModelBiped model = null;
+   	
+   	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
+        return "thaumicdyes:textures/models/guardian_robe_armor1.png";
+     }
+	
+	@SideOnly(Side.CLIENT)
+	   public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, int armorSlot) {
+	      int type = ((ItemArmor)itemStack.getItem()).armorType;
+	      if(this.model1 == null) {
+	         this.model1 = new ModelRobesSpecial(1.0F);
+	      }
+
+	      if(this.model2 == null) {
+	         this.model2 = new ModelRobesSpecial(0.5F);
+	      }
+
+	      if(type != 1 && type != 3) {
+	         this.model = this.model2;
+	      } else {
+	         this.model = this.model1;
+	      }
+
+	      if(this.model != null) {
+	         this.model.bipedHead.showModel = armorSlot == 0;
+	         this.model.bipedHeadwear.showModel = armorSlot == 0;
+	         this.model.bipedBody.showModel = armorSlot == 1 || armorSlot == 2;
+	         this.model.bipedRightArm.showModel = armorSlot == 1;
+	         this.model.bipedLeftArm.showModel = armorSlot == 1;
+	         this.model.bipedRightLeg.showModel = armorSlot == 2;
+	         this.model.bipedLeftLeg.showModel = armorSlot == 2;
+	         this.model.isSneak = entityLiving.isSneaking();
+	         this.model.isRiding = entityLiving.isRiding();
+	         this.model.isChild = entityLiving.isChild();
+	         this.model.aimedBow = false;
+	         this.model.heldItemRight = entityLiving.getHeldItem() != null?1:0;
+	         if(entityLiving instanceof EntityPlayer && ((EntityPlayer)entityLiving).getItemInUseDuration() > 0) {
+	            EnumAction enumaction = ((EntityPlayer)entityLiving).getItemInUse().getItemUseAction();
+	            if(enumaction == EnumAction.block) {
+	               this.model.heldItemRight = 3;
+	            } else if(enumaction == EnumAction.bow) {
+	               this.model.aimedBow = true;
+	            }
+	         }
+	      }
+
+	      return this.model;
+	   }
 
 }
