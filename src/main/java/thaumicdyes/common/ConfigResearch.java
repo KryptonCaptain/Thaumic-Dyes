@@ -97,7 +97,6 @@ public class ConfigResearch {
 			  .setSpecial()
 			  .setRound()
 			  .setItemTriggers(new ItemStack(ConfigItems.itemEldritchObject, 1, 1))
-			  //.setEntityTriggers("Thaumcraft.CultistLeader")
 			  .registerResearchItem();
 	 ThaumcraftApi.addWarpToResearch("TD.CRIMSON", 1);
 	 
@@ -135,7 +134,6 @@ public class ConfigResearch {
 			  .setParents("TD.CRIMSON", "BANNERS")
 			  .setConcealed()
 			  .setSecondary()
-			  //.setEntityTriggers("Thaumcraft.CultistLeader")
 			  .registerResearchItem();
 		
 	 
@@ -337,8 +335,6 @@ public class ConfigResearch {
 	   		  .setSecondary()
 	   		  .setConcealed()
 	   		  .setHidden()
-	   		  //.setLost()
-	   		  //.setEntityTriggers("Thaumcraft.CultistCleric")
 	   		  .registerResearchItem();
 	
 	
@@ -396,8 +392,6 @@ public class ConfigResearch {
   		  .setParentsHidden("TD.CRIMSONCLERIC")
   		  .setSecondary()
   		  .setConcealed()
-  		  //.setLost()
-  		  //.setEntityTriggers("Thaumcraft.CultistCleric")
   		  .registerResearchItem();
 	
 	
@@ -453,8 +447,6 @@ public class ConfigResearch {
   		  .setParentsHidden("TD.CRIMSONKNIGHT")
   		  .setSecondary()
   		  .setConcealed()
-  		  //.setLost()
-  		  //.setEntityTriggers("Thaumcraft.CultistCleric")
   		  .registerResearchItem();
 	   
    }
@@ -504,7 +496,6 @@ public class ConfigResearch {
 						  new ResearchPage(recipeRobeHelm), 
 						  new ResearchPage(recipeRobeChest), 
 						  new ResearchPage(recipeRobeLegs)})
-				  //.setParents("TD.THAUMIUM", "ENCHFABRIC") //WIP
 				  .setParents("TD.CRIMSONCLERIC")
 				  .setConcealed()
 				  .registerResearchItem();
@@ -551,7 +542,6 @@ public class ConfigResearch {
 						  new ResearchPage(recipeKniHelm), 
 						  new ResearchPage(recipeKniChest), 
 						  new ResearchPage(recipeKniLegs)})
-				  //.setParents("TD.THAUMIUM", "ENCHFABRIC") //WIP
 				  .setParents("TD.CRIMSONKNIGHT")
 				  .setConcealed()
 				  .registerResearchItem();
@@ -599,7 +589,7 @@ public class ConfigResearch {
 						  new ResearchPage(recipePraeHelm), 
 						  new ResearchPage(recipePraeChest), 
 						  new ResearchPage(recipePraeLegs)})
-				  .setParents("TD.CRIMSONLEADER") //change to "DYEDKNIGHT" once implemented
+				  .setParents("TD.CRIMSONLEADER") 
 				  .setConcealed()
 				  .registerResearchItem();
 		 
@@ -711,7 +701,7 @@ public class ConfigResearch {
 						  new ResearchPage(recipeArcherChestDyed), 
 						  new ResearchPage(recipeArcherLegsDyed)
 						  })
-				  .setParents("TD.CRIMSONARCHER") //change to "DYEDKNIGHT" once implemented
+				  .setParents("TD.CRIMSONARCHER") 
 				  .setConcealed()
 				  .registerResearchItem();
 		 
@@ -754,7 +744,6 @@ public class ConfigResearch {
 						  new ResearchPage(recipeSunKniHelm), 
 						  new ResearchPage(recipeSunKniChest)
 						  })
-				  //.setParents("TD.THAUMIUM", "ENCHFABRIC") //WIP
 				  .setParentsHidden("TD.DYEDKNIGHT")
 				  .setConcealed()
 				  .setHidden()
@@ -1147,6 +1136,9 @@ public class ConfigResearch {
    }
 	      
    //TODO Runic armour
+   //AHM BACK, AND AHM IN ME PRIME!
+   //But how?
+   //CELTIC RUNES, LADDIE!
    public static void researchRunic() {
 	      
       /////////////
@@ -1258,12 +1250,17 @@ public class ConfigResearch {
       				 
       				  })
 			  .setParents("TD.RUNICARMOR")
-			  //.setParentsHidden("PRIMPEARL")
+			  .setParentsHidden("TD.RUNICARMORUPGRADES")
 			  .setConcealed()
 			  .registerResearchItem();
        
       
-      //primal runic
+      //primal runic aka abyssal runic
+      ArrayList<InfusionRecipe> prmR = new ArrayList();
+      for (int a = 0; a <= 3; a++)
+      {
+        prmR.add((InfusionRecipe)recipes.get("PrmRunicArmor" + a));
+      }
       
       new ResearchItem("TD.PRIMALRUNICARMOR", "DYES", 
     		  new AspectList().add(Aspect.ARMOR, 8).add(Aspect.AIR, 5).add(Aspect.MAGIC, 5).add(Aspect.ENERGY, 5).add(Aspect.MIND, 3),
@@ -1272,7 +1269,7 @@ public class ConfigResearch {
       		  .setPages(new ResearchPage[] { 
       				  new ResearchPage("tc.research_page.TD.PRIMALRUNICARMOR.1"), 
       				  new ResearchPage("tc.research_page.TD.PRIMALRUNICARMOR.2"), 
-      				  //new ResearchPage((InfusionRecipe[])enhR.toArray(new InfusionRecipe[0])) 
+      				  new ResearchPage((InfusionRecipe[])prmR.toArray(new InfusionRecipe[0])) 
       				 
       				  })
 			  .setParents("TD.ENHANCEDRUNICARMOR")

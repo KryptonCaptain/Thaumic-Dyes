@@ -249,8 +249,9 @@ tc.research_page.TD.ENHANCEDRUNICARMOR.2=Keep in mind that the inital creation o
 --Enhanced Runic Armor
 tc.research_name.TD.PRIMALRUNICARMOR=Abyssal Runic Armor
 tc.research_text.TD.PRIMALRUNICARMOR=Those who stare too long into the abyss...
-tc.research_page.TD.PRIMALRUNICARMOR.1=<IMG>thaumcraft:textures/misc/eldritchajor2.png:0:255:255:255:.5</IMG><BR>This was a mistake.<BR>
-tc.research_page.TD.PRIMALRUNICARMOR.2=You should have stopped when you had the chance.<BR>You should have stopped...<BR><BR>What have you done?
+tc.research_page.TD.PRIMALRUNICARMOR.1=<IMG>thaumcraft:textures/misc/eldritchajor2.png:0:255:255:255:.5</IMG><BR>§o        su nIoj .Su emocEb
+//translator note - write "become us,join us", either forward or backward, whatever works best
+tc.research_page.TD.PRIMALRUNICARMOR.2=This was a mistake.<BR>You should have stopped when you had the chance.<BR>You should have stopped...<BR> <BR>What have you done..?
 
 
 §§§

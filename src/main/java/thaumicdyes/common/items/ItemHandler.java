@@ -273,10 +273,10 @@ public class ItemHandler {
 	   itemBootsRunicEnhanced = (new ItemRunicArmorEnhanced(RunicArmor, 4, 3)).setUnlocalizedName("ItemBootsRunicEnhanced").setCreativeTab(ThaumicDyes.tabTD);;
 	   
 	   
-	   itemHelmetRunicPrimal = (new ItemRunicArmorPrimal(RunicPrimal, 4, 0)).setUnlocalizedName("ItemHelmetRunicPrimal").setCreativeTab(ThaumicDyes.tabTD);
-	   itemChestRunicPrimal = (new ItemRunicArmorPrimal(RunicPrimal, 4, 1)).setUnlocalizedName("ItemChestRunicPrimal").setCreativeTab(ThaumicDyes.tabTD);
-	   itemLegsRunicPrimal = (new ItemRunicArmorPrimal(RunicPrimal, 4, 2)).setUnlocalizedName("ItemLegsRunicPrimal").setCreativeTab(ThaumicDyes.tabTD);
-	   itemBootsRunicPrimal = (new ItemRunicArmorPrimalBoots(RunicPrimal, 4, 3)).setUnlocalizedName("ItemBootsRunicPrimal").setCreativeTab(ThaumicDyes.tabTD);
+	   itemHelmetRunicPrimal = (new ItemRunicArmorPrimal(RunicArmor, 4, 0)).setUnlocalizedName("ItemHelmetRunicPrimal").setCreativeTab(ThaumicDyes.tabTD);
+	   itemChestRunicPrimal = (new ItemRunicArmorPrimal(RunicArmor, 4, 1)).setUnlocalizedName("ItemChestRunicPrimal").setCreativeTab(ThaumicDyes.tabTD);
+	   itemLegsRunicPrimal = (new ItemRunicArmorPrimal(RunicArmor, 4, 2)).setUnlocalizedName("ItemLegsRunicPrimal").setCreativeTab(ThaumicDyes.tabTD);
+	   itemBootsRunicPrimal = (new ItemRunicArmorPrimalBoots(RunicArmor, 4, 3)).setUnlocalizedName("ItemBootsRunicPrimal").setCreativeTab(ThaumicDyes.tabTD);
 	   
 	   
    }

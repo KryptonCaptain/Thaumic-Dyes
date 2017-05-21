@@ -20,6 +20,7 @@ import net.minecraftforge.common.ISpecialArmor;
 import net.minecraftforge.common.MinecraftForge;
 import thaumcraft.api.IRunicArmor;
 import thaumcraft.common.Thaumcraft;
+import thaumcraft.common.lib.research.ResearchManager;
 import thaumicdyes.common.ThaumicDyes;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -70,9 +71,16 @@ public class ItemRunicArmor extends ItemArmor implements ISpecialArmor, IRunicAr
     public void addInformation(final ItemStack stack, final EntityPlayer player, final List list, final boolean par4) {
         //list.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal("item.runic.charge") + ": " + (stack.getMaxDamage() - stack.getItemDamage()) + "/" + stack.getMaxDamage());
         final int u = getUpgrade(stack);
-        if (u > 0) {
-            list.add(EnumChatFormatting.DARK_AQUA + StatCollector.translateToLocal("item.runic.upgrade." + u));
-        }
+		if (u > 0) {
+			list.add(EnumChatFormatting.DARK_AQUA + StatCollector.translateToLocal("item.runic.upgrade." + u));
+		}
+		
+    	if (ResearchManager.isResearchComplete(player.getCommandSenderName(), "TD.RUNICARMORUPGRADES")) {
+    		if (u == 0) { list.add(EnumChatFormatting.DARK_GRAY + StatCollector.translateToLocal(new StringBuilder().append("item.runic.upgrade.").append(u).toString()) );
+    		}
+    	}
+    	
+    	
     }
     
     public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {

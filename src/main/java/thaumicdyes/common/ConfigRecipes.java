@@ -181,6 +181,68 @@ public class ConfigRecipes {
 					new ItemStack(ConfigItems.itemResource,1,6),
 					}));
 	    
+	    //Primal
+	    
+	    ConfigResearch.recipes.put("PrmRunicArmor0", ThaumcraftApi.addInfusionCraftingRecipe("TD.PRIMALRUNICARMOR", 
+	    		new ItemStack(ItemHandler.itemHelmetRunicPrimal), 10, 
+	    		new AspectList().add(Aspect.MAGIC, 240).add(Aspect.ELDRITCH, 120).add(Aspect.DARKNESS, 60).add(Aspect.SOUL, 60).add(Aspect.EXCHANGE, 40),  
+	    		new ItemStack(ConfigItems.itemEldritchObject, 1, 3), 
+	    		new ItemStack[] { 
+					new ItemStack(ItemHandler.itemHelmetRunicEnhanced),
+					new ItemStack(ConfigItems.itemEldritchObject, 1, 0), //eye0, pearl3
+					//new ItemStack(ConfigItems.itemResource,1,7),
+					//new ItemStack(ConfigItems.itemResource,1,7),
+					new ItemStack(ConfigItems.itemHelmetVoidRobe),
+					new ItemStack(ConfigItems.itemEldritchObject, 1, 0),
+					//new ItemStack(ConfigItems.itemResource,1,15),
+					//new ItemStack(ConfigItems.itemResource,1,6),
+					}));
+	    
+	    ConfigResearch.recipes.put("PrmRunicArmor1", ThaumcraftApi.addInfusionCraftingRecipe("TD.PRIMALRUNICARMOR", 
+	    		new ItemStack(ItemHandler.itemChestRunicPrimal), 10, 
+	    		new AspectList().add(Aspect.MAGIC, 240).add(Aspect.ELDRITCH, 120).add(Aspect.DARKNESS, 60).add(Aspect.SOUL, 60).add(Aspect.EXCHANGE, 40),  
+	    		new ItemStack(ConfigItems.itemEldritchObject, 1, 3), 
+	    		new ItemStack[] { 
+					new ItemStack(ItemHandler.itemChestRunicEnhanced),
+					new ItemStack(ConfigItems.itemEldritchObject, 1, 0), //eye0, pearl3
+					//new ItemStack(ConfigItems.itemResource,1,7),
+					//new ItemStack(ConfigItems.itemResource,1,7),
+					new ItemStack(ConfigItems.itemChestVoidRobe),
+					new ItemStack(ConfigItems.itemEldritchObject, 1, 0),
+					//new ItemStack(ConfigItems.itemResource,1,15),
+					//new ItemStack(ConfigItems.itemResource,1,6),
+					}));
+	    
+	    ConfigResearch.recipes.put("PrmRunicArmor2", ThaumcraftApi.addInfusionCraftingRecipe("TD.PRIMALRUNICARMOR", 
+	    		new ItemStack(ItemHandler.itemLegsRunicPrimal), 10, 
+	    		new AspectList().add(Aspect.MAGIC, 240).add(Aspect.ELDRITCH, 120).add(Aspect.DARKNESS, 60).add(Aspect.SOUL, 60).add(Aspect.EXCHANGE, 40),  
+	    		new ItemStack(ConfigItems.itemEldritchObject, 1, 3), 
+	    		new ItemStack[] { 
+					new ItemStack(ItemHandler.itemLegsRunicEnhanced),
+					new ItemStack(ConfigItems.itemEldritchObject, 1, 0), //eye0, pearl3
+					//new ItemStack(ConfigItems.itemResource,1,7),
+					//new ItemStack(ConfigItems.itemResource,1,7),
+					new ItemStack(ConfigItems.itemLegsVoidRobe),
+					new ItemStack(ConfigItems.itemEldritchObject, 1, 0),
+					//new ItemStack(ConfigItems.itemResource,1,15),
+					//new ItemStack(ConfigItems.itemResource,1,6),
+					}));
+	    
+	    ConfigResearch.recipes.put("PrmRunicArmor3", ThaumcraftApi.addInfusionCraftingRecipe("TD.PRIMALRUNICARMOR", 
+	    		new ItemStack(ItemHandler.itemBootsRunicPrimal), 10, 
+	    		new AspectList().add(Aspect.MAGIC, 240).add(Aspect.ELDRITCH, 120).add(Aspect.DARKNESS, 60).add(Aspect.SOUL, 60).add(Aspect.EXCHANGE, 40),  
+	    		new ItemStack(ConfigItems.itemEldritchObject, 1, 3), 
+	    		new ItemStack[] { 
+					new ItemStack(ItemHandler.itemBootsRunicEnhanced),
+					new ItemStack(ConfigItems.itemEldritchObject, 1, 0), //eye0, pearl3
+					//new ItemStack(ConfigItems.itemResource,1,7),
+					//new ItemStack(ConfigItems.itemResource,1,7),
+					new ItemStack(ItemHandler.itemBootsVoidTraveller),
+					new ItemStack(ConfigItems.itemEldritchObject, 1, 0),
+					//new ItemStack(ConfigItems.itemResource,1,15),
+					//new ItemStack(ConfigItems.itemResource,1,6),
+					}));
+	    
 		
 	  
 	}

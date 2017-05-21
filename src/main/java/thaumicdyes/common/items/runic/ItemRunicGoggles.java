@@ -15,6 +15,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import thaumcraft.common.Thaumcraft;
+import thaumcraft.common.lib.research.ResearchManager;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.util.IIcon;
 import thaumcraft.api.IGoggles;
@@ -49,6 +50,10 @@ public class ItemRunicGoggles extends ItemRunicArmor implements IVisDiscountGear
         if (u > 0) {
             list.add(EnumChatFormatting.DARK_AQUA + StatCollector.translateToLocal("item.runic.upgrade." + u));
         }
+        if (ResearchManager.isResearchComplete(player.getCommandSenderName(), "TD.RUNICARMORUPGRADES")) {
+    		if (u == 0) { list.add(EnumChatFormatting.DARK_GRAY + StatCollector.translateToLocal(new StringBuilder().append("item.runic.upgrade.").append(u).toString()) );
+    		}
+    	}
         list.add(EnumChatFormatting.DARK_PURPLE + StatCollector.translateToLocal("tc.visdiscount") + ": " + this.getVisDiscount(stack, player, null) + "%");
     }
     
