@@ -83,8 +83,17 @@ public class ModelRobesSpecial extends ModelBiped {
   ModelRenderer Cloak2;
   ModelRenderer Cloak3;
   
+  ModelRenderer BackpanelL1;
+  ModelRenderer BackpanelL2;
+  ModelRenderer BackpanelL3;
+  ModelRenderer BackpanelR1;
+  ModelRenderer BackpanelR2;
+  ModelRenderer BackpanelR3;
+  
+  
   private static HashMap hasSet = new HashMap();
   private float partialTicks;
+
   
   public ModelRobesSpecial(float f)
   {
@@ -489,9 +498,45 @@ public class ModelRobesSpecial extends ModelBiped {
     this.CloakAtR.setTextureSize(128, 64);
     setRotation(this.CloakAtR, 0.1396263F, 0.0F, 0.0F);
     
+    this.BackpanelL1 = new ModelRenderer(this, 0, 18);
+    this.BackpanelL1.mirror = true;
+    this.BackpanelL1.addBox(-2.0F, 0.5F, 2.5F, 5, 3, 1);
+    this.BackpanelL1.setRotationPoint(0.0F, 0.0F, 0.0F);
+    this.BackpanelL1.setTextureSize(128, 64);
+    this.setRotation(this.BackpanelL1, 0.4363323F, 0.0F, 0.0F);
+    this.BackpanelL2 = new ModelRenderer(this, 0, 18);
+    this.BackpanelL2.mirror = true;
+    this.BackpanelL2.addBox(-2.0F, 2.5F, 1.5F, 5, 3, 1);
+    this.BackpanelL2.setRotationPoint(0.0F, 0.0F, 0.0F);
+    this.BackpanelL2.setTextureSize(128, 64);
+    this.setRotation(this.BackpanelL2, 0.4363323F, 0.0F, 0.0F);
+    this.BackpanelL3 = new ModelRenderer(this, 0, 18);
+    this.BackpanelL3.mirror = true;
+    this.BackpanelL3.addBox(-2.0F, 4.5F, 0.5F, 5, 3, 1);
+    this.BackpanelL3.setRotationPoint(0.0F, 0.0F, 0.0F);
+    this.BackpanelL3.setTextureSize(128, 64);
+    this.setRotation(this.BackpanelL3, 0.4363323F, 0.0F, 0.0F);
+    
+    this.BackpanelR1 = new ModelRenderer(this, 0, 18);
+    this.BackpanelR1.addBox(-3.0F, 0.5F, 2.5F, 5, 3, 1);
+    this.BackpanelR1.setRotationPoint(0.0F, 0.0F, 0.0F);
+    this.BackpanelR1.setTextureSize(128, 64);
+    this.setRotation(this.BackpanelR1, 0.4363323F, 0.0F, 0.0F);
+    this.BackpanelR2 = new ModelRenderer(this, 0, 18);
+    this.BackpanelR2.addBox(-3.0F, 2.5F, 1.5F, 5, 3, 1);
+    this.BackpanelR2.setRotationPoint(0.0F, 0.0F, 0.0F);
+    this.BackpanelR2.setTextureSize(128, 64);
+    this.setRotation(this.BackpanelR2, 0.4363323F, 0.0F, 0.0F);
+    this.BackpanelR3 = new ModelRenderer(this, 0, 18);
+    this.BackpanelR3.addBox(-3.0F, 4.5F, 0.5F, 5, 3, 1);
+    this.BackpanelR3.setRotationPoint(0.0F, 0.0F, 0.0F);
+    this.BackpanelR3.setTextureSize(128, 64);
+    this.setRotation(this.BackpanelR3, 0.4363323F, 0.0F, 0.0F);
+    
+    
+    
     this.Cloak1.addChild(this.Cloak2);
     this.Cloak2.addChild(this.Cloak3);
-    
     
     this.bipedHeadwear.cubeList.clear();
     this.bipedHead.cubeList.clear();
@@ -571,6 +616,10 @@ public class ModelRobesSpecial extends ModelBiped {
     this.bipedRightLeg.addChild(this.SideclothR2);
     this.bipedRightLeg.addChild(this.SideclothR3);
     
+    this.bipedRightLeg.addChild(this.BackpanelR1);
+    this.bipedRightLeg.addChild(this.BackpanelR2);
+    this.bipedRightLeg.addChild(this.BackpanelR3);
+    
     this.bipedLeftLeg.addChild(this.LegpanelL4);
     this.bipedLeftLeg.addChild(this.LegpanelL5);
     this.bipedLeftLeg.addChild(this.LegpanelL6);
@@ -579,6 +628,10 @@ public class ModelRobesSpecial extends ModelBiped {
     this.bipedLeftLeg.addChild(this.SideclothL1);
     this.bipedLeftLeg.addChild(this.SideclothL2);
     this.bipedLeftLeg.addChild(this.SideclothL3);
+    
+    this.bipedLeftLeg.addChild(this.BackpanelL1);
+    this.bipedLeftLeg.addChild(this.BackpanelL2);
+    this.bipedLeftLeg.addChild(this.BackpanelL3);
     
     
   }
@@ -685,6 +738,9 @@ public class ModelRobesSpecial extends ModelBiped {
 	this.ClothBackR1.isHidden = true;
 	this.ClothBackR2.isHidden = true;
 	this.ClothBackR3.isHidden = true;
+	
+	this.BackpanelR3.isHidden = true;
+	this.BackpanelL3.isHidden = true;
 	
 	this.Scroll.isHidden = true;
 	this.Book.isHidden = true;

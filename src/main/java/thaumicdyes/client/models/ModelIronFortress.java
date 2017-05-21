@@ -309,6 +309,7 @@ public class ModelIronFortress extends ModelBiped {
       this.ShoulderplateL3.setRotationPoint(0.0F, 0.0F, 0.0F);
       this.ShoulderplateL3.setTextureSize(128, 64);
       this.setRotation(this.ShoulderplateL3, 0.0F, 0.0F, -0.4363323F);
+      
       this.LegpanelR1 = new ModelRenderer(this, 0, 51);
       this.LegpanelR1.addBox(-1.0F, 0.5F, -3.5F, 3, 4, 1);
       this.LegpanelR1.setRotationPoint(0.0F, 0.0F, 0.0F);
@@ -354,6 +355,7 @@ public class ModelIronFortress extends ModelBiped {
       this.SidepanelR3.setRotationPoint(0.0F, 0.0F, 0.0F);
       this.SidepanelR3.setTextureSize(128, 64);
       this.setRotation(this.SidepanelR3, 0.0F, 0.0F, 0.4363323F);
+      
       this.BackpanelR1 = new ModelRenderer(this, 0, 18);
       this.BackpanelR1.addBox(-3.0F, 0.5F, 2.5F, 5, 3, 1);
       this.BackpanelR1.setRotationPoint(0.0F, 0.0F, 0.0F);
@@ -369,12 +371,7 @@ public class ModelIronFortress extends ModelBiped {
       this.BackpanelR3.setRotationPoint(0.0F, 0.0F, 0.0F);
       this.BackpanelR3.setTextureSize(128, 64);
       this.setRotation(this.BackpanelR3, 0.4363323F, 0.0F, 0.0F);
-      this.BackpanelL3 = new ModelRenderer(this, 0, 18);
-      this.BackpanelL3.mirror = true;
-      this.BackpanelL3.addBox(-2.0F, 4.5F, 0.5F, 5, 3, 1);
-      this.BackpanelL3.setRotationPoint(0.0F, 0.0F, 0.0F);
-      this.BackpanelL3.setTextureSize(128, 64);
-      this.setRotation(this.BackpanelL3, 0.4363323F, 0.0F, 0.0F);
+      
       this.LegpanelL1 = new ModelRenderer(this, 0, 51);
       this.LegpanelL1.mirror = true;
       this.LegpanelL1.addBox(-2.0F, 0.5F, -3.5F, 3, 4, 1);
@@ -429,6 +426,7 @@ public class ModelIronFortress extends ModelBiped {
       this.SidepanelL3.setRotationPoint(0.0F, 0.0F, 0.0F);
       this.SidepanelL3.setTextureSize(128, 64);
       this.setRotation(this.SidepanelL3, 0.0F, 0.0F, -0.4363323F);
+      
       this.BackpanelL1 = new ModelRenderer(this, 0, 18);
       this.BackpanelL1.mirror = true;
       this.BackpanelL1.addBox(-2.0F, 0.5F, 2.5F, 5, 3, 1);
@@ -441,6 +439,14 @@ public class ModelIronFortress extends ModelBiped {
       this.BackpanelL2.setRotationPoint(0.0F, 0.0F, 0.0F);
       this.BackpanelL2.setTextureSize(128, 64);
       this.setRotation(this.BackpanelL2, 0.4363323F, 0.0F, 0.0F);
+      this.BackpanelL3 = new ModelRenderer(this, 0, 18);
+      this.BackpanelL3.mirror = true;
+      this.BackpanelL3.addBox(-2.0F, 4.5F, 0.5F, 5, 3, 1);
+      this.BackpanelL3.setRotationPoint(0.0F, 0.0F, 0.0F);
+      this.BackpanelL3.setTextureSize(128, 64);
+      this.setRotation(this.BackpanelL3, 0.4363323F, 0.0F, 0.0F);
+      
+      
       super.bipedHeadwear.cubeList.clear();
       super.bipedHead.cubeList.clear();
       super.bipedHead.addChild(this.OrnamentL);
