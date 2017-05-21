@@ -2,15 +2,17 @@ package thaumicdyes.common.items.runic;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.UUID;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.IIcon;
@@ -19,9 +21,12 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ISpecialArmor;
 import net.minecraftforge.common.MinecraftForge;
 import thaumcraft.api.IRunicArmor;
-import thaumcraft.common.Thaumcraft;
 import thaumcraft.common.lib.research.ResearchManager;
 import thaumicdyes.common.ThaumicDyes;
+
+import com.google.common.collect.HashMultimap;
+import com.google.common.collect.Multimap;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -32,11 +37,14 @@ public class ItemRunicArmor extends ItemArmor implements ISpecialArmor, IRunicAr
     public IIcon iconLegs;
     public IIcon iconBoots;
     public static HashMap<Integer, Long> nextTick;
+    public int aType;
+    public EntityPlayer rPlayer;
     
     public ItemRunicArmor(ArmorMaterial enumarmormaterial, int j, int k) {
         super(enumarmormaterial, j, k);
         this.setCreativeTab(ThaumicDyes.tabTD);
         MinecraftForge.EVENT_BUS.register(this);
+        this.aType = k;
     }
     
     public boolean isDamageable() {
@@ -74,7 +82,6 @@ public class ItemRunicArmor extends ItemArmor implements ISpecialArmor, IRunicAr
 		if (u > 0) {
 			list.add(EnumChatFormatting.DARK_AQUA + StatCollector.translateToLocal("item.runic.upgrade." + u));
 		}
-		
     	if (ResearchManager.isResearchComplete(player.getCommandSenderName(), "TD.RUNICARMORUPGRADES")) {
     		if (u == 0) { list.add(EnumChatFormatting.DARK_GRAY + StatCollector.translateToLocal(new StringBuilder().append("item.runic.upgrade.").append(u).toString()) );
     		}
@@ -126,7 +133,6 @@ public class ItemRunicArmor extends ItemArmor implements ISpecialArmor, IRunicAr
     }
     
     
-    
     public int getArmorDisplay(final EntityPlayer player, final ItemStack armor, final int slot) {
         int dra = ((ItemArmor)armor.getItem()).damageReduceAmount;
         if (getUpgrade(armor) == 5) {
@@ -134,6 +140,66 @@ public class ItemRunicArmor extends ItemArmor implements ISpecialArmor, IRunicAr
         }
         return dra;
     }
+    
+    
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	public Multimap getAttributeModifiers(ItemStack armor)
+    {
+    	HashMultimap map = HashMultimap.create();
+    	final UUID uuid = new UUID(this.getUnlocalizedName().hashCode(), 0L);
+    	
+    	switch(aType)
+    	{
+	    	case 0:
+	    	{
+	    		if (getUpgrade(armor) == 7 ) {
+	    			map.put(SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(), 
+	    					new AttributeModifier(uuid, "Runic knockback " + aType, 0.2, 0)); 
+	    		}
+	    		if (getUpgrade(armor) == 8 ) {
+	    			map.put(SharedMonsterAttributes.maxHealth.getAttributeUnlocalizedName(), 
+	    					new AttributeModifier(uuid, "Runic vitality", 10, 0));;
+	    		}
+	    	}
+	    	case 1:
+	    	{
+	    		if (getUpgrade(armor) == 7 ) {
+	    			map.put(SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(), 
+	    					new AttributeModifier(uuid, "Runic knockback " + aType, 0.2, 0));
+	    		}
+	    		if (getUpgrade(armor) == 8 ) {
+	    			map.put(SharedMonsterAttributes.maxHealth.getAttributeUnlocalizedName(), 
+	    					new AttributeModifier(uuid, "Runic vitality", 10, 0));;
+	    		}
+	    	}
+	    	case 2:
+	    	{
+	    		if (getUpgrade(armor) == 7 ) {
+	    			map.put(SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(), 
+	    					new AttributeModifier(uuid, "Runic knockback " + aType, 0.2, 0));
+	    		}
+	    		if (getUpgrade(armor) == 8 ) {
+	    			map.put(SharedMonsterAttributes.maxHealth.getAttributeUnlocalizedName(), 
+	    					new AttributeModifier(uuid, "Runic vitality", 10, 0));;
+	    		}
+	    	}
+	    	case 3:
+	    	{
+	    		if (getUpgrade(armor) == 7 ) {
+	    			map.put(SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(), 
+	    					new AttributeModifier(uuid, "Runic knockback " + aType, 0.2, 0));
+	    		}
+	    		if (getUpgrade(armor) == 8 ) {
+	    			map.put(SharedMonsterAttributes.maxHealth.getAttributeUnlocalizedName(), 
+	    					new AttributeModifier(uuid, "Runic vitality", 10, 0));;
+	    		}
+	    	}
+	    	//map.put(SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(),new AttributeModifier(uuid, "Abyssal modifier " + aType, this.getArmorDisplay(null, armor, aType) / 20.0, 1)); 
+			//this one scales with Hardened effect, but starts lower. Keeping it for reference
+    	}
+    	return map;
+    }
+    
     
     public void damageArmor(final EntityLivingBase entity, final ItemStack stack, final DamageSource source, final int damage, final int slot) {
     }

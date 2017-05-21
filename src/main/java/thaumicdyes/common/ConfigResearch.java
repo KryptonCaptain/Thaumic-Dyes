@@ -1269,6 +1269,7 @@ public class ConfigResearch {
       		  .setPages(new ResearchPage[] { 
       				  new ResearchPage("tc.research_page.TD.PRIMALRUNICARMOR.1"), 
       				  new ResearchPage("tc.research_page.TD.PRIMALRUNICARMOR.2"), 
+      				  new ResearchPage("tc.research_page.TD.PRIMALRUNICARMOR.3"), 
       				  new ResearchPage((InfusionRecipe[])prmR.toArray(new InfusionRecipe[0])) 
       				 
       				  })

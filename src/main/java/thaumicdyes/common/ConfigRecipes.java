@@ -435,7 +435,7 @@ public class ConfigRecipes {
 	    		new ItemStack(ItemHandler.itemBootsRunic), 
 	    		new ItemStack[] { new ItemStack(ConfigItems.itemShard, 1, 6), new ItemStack(ConfigItems.itemShard, 1, 3), new ItemStack(ConfigItems.itemShard, 1, 3), new ItemStack(Items.potionitem, 1, 8233), new ItemStack(ConfigItems.itemShard, 1, 3), new ItemStack(ConfigItems.itemShard, 1, 3) }));
 		
-	    
+	    //TODO goggles+boots
 	    //goggles
 	    
 	    ConfigResearch.recipes.put("RGU1", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
@@ -515,7 +515,7 @@ public class ConfigRecipes {
 		
 	    
 	    
-	    //Enhanced
+	    //TODO Enhanced
 	    
 	    //upgrade 1
   	    ConfigResearch.recipes.put("ERAU1_0", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
@@ -669,6 +669,8 @@ public class ConfigRecipes {
 	    		new ItemStack(ItemHandler.itemBootsRunicEnhanced), 
 	    		new ItemStack[] { new ItemStack(ConfigItems.itemShard, 1, 6), new ItemStack(ConfigItems.itemShard, 1, 3), new ItemStack(ConfigItems.itemShard, 1, 3), new ItemStack(Items.potionitem, 1, 8233), new ItemStack(ConfigItems.itemShard, 1, 3), new ItemStack(ConfigItems.itemShard, 1, 3) }));
 	    
+	    
+	    //TODO primal
 	    
 	    
 	}

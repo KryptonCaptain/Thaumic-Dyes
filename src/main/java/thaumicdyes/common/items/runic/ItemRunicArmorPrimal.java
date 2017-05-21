@@ -1,11 +1,14 @@
 package thaumicdyes.common.items.runic;
 
 import java.util.List;
+import java.util.UUID;
 
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.EnumRarity;
@@ -21,8 +24,13 @@ import thaumcraft.api.IGoggles;
 import thaumcraft.api.IWarpingGear;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.nodes.IRevealer;
+import thaumcraft.common.config.ConfigItems;
 import thaumicdyes.client.models.ModelRobesSpecial;
 import thaumicdyes.common.ThaumicDyes;
+
+import com.google.common.collect.HashMultimap;
+import com.google.common.collect.Multimap;
+
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -104,7 +112,7 @@ public class ItemRunicArmorPrimal extends ItemRunicArmor implements IRevealer, I
 	@Override
 	public int getArmorDisplay(EntityPlayer player, ItemStack armor, int slot) {
 	    int dra = ((ItemArmor)armor.getItem()).damageReduceAmount;
-	    if (getUpgrade(armor) == 5 || getUpgrade2(armor) == 5) {
+	    if (getUpgrade(armor) == 5 || getUpgrade2(armor) == 5 || getUpgrade3(armor) == 5) {
 		    if ( (getUpgrade(armor) == 5 && getUpgrade2(armor) == 5)
 	    		|| (getUpgrade(armor) == 5 && getUpgrade3(armor) == 5)
 	    		|| (getUpgrade2(armor) == 5 && getUpgrade3(armor) == 5) )
@@ -143,15 +151,7 @@ public class ItemRunicArmorPrimal extends ItemRunicArmor implements IRevealer, I
     	if (getVisDiscount(stack, player, null) > 0) {
     		list.add(EnumChatFormatting.DARK_PURPLE + StatCollector.translateToLocal("tc.visdiscount") + ": " + getVisDiscount(stack, player, null) + "%");
     	}
-    		
 
-//	    for (Aspect aspect : Aspect.getPrimalAspects()) {
-//	    	String tag = "";
-//			if (getVisDiscount(stack, player, aspect) > 0) {
-//	    		tag = aspect.getTag().substring(0, 1).toUpperCase() + aspect.getTag().substring(1);
-//	    	    list.add(EnumChatFormatting.DARK_PURPLE + StatCollector.translateToLocal("tc.visdiscount") + " ("+tag+"): " + getVisDiscount(stack, player, aspect) + "%");
-//			}
-//	    }
     }
 	
 	
@@ -197,7 +197,7 @@ public class ItemRunicArmorPrimal extends ItemRunicArmor implements IRevealer, I
 	
     public boolean onItemUse(ItemStack item, EntityPlayer player, World world, int par4, int par5, int par6, int par7, float par8, float par9, float par10)
     {
-    	if (this.getUpgrade(item) <20 && this.getUpgrade2(item) <20 &&this.getUpgrade3(item) <20) {
+    	if (this.getUpgrade(item) > -1 && this.getUpgrade2(item) > -1 &&this.getUpgrade3(item) > -1) {
     		int u1 = this.getUpgrade(item);
     		int u2 = this.getUpgrade2(item);
     		int u3 = this.getUpgrade3(item);
@@ -250,12 +250,67 @@ public class ItemRunicArmorPrimal extends ItemRunicArmor implements IRevealer, I
 				event.displayname = player.getCommandSenderName()+" the Warped";
 			}
 		}
-		/*
-		if(event.entityPlayer != null && event.entityPlayer.getCurrentEquippedItem() != null && event.entityPlayer.getCurrentEquippedItem().getItem() instanceof ItemRunicArmorPrimal)  
-		  event.displayname = event.entityPlayer.getCommandSenderName()+" the Warped";  
-	 	*/
     }
 	
+	//trying to get a knockback resistance mod to work
+	//thanks TBases for that, botania one was shit for that, but odin code for health boost is good
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public Multimap getAttributeModifiers(ItemStack armor)
+    {
+    	HashMultimap map = HashMultimap.create();
+    	final UUID uuid = new UUID(this.getUnlocalizedName().hashCode(), 0L);
+    	
+    	switch(aType)
+    	{
+	    	case 0:
+	    	{
+	    		if (getUpgrade(armor) == 7 || getUpgrade2(armor) == 7 || getUpgrade3(armor) == 7) {
+	    			map.put(SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(), 
+	    					new AttributeModifier(uuid, "Runic knockback " + aType, 0.2, 0)); //last value modifier, 0 is flat addition, 1 is % addition
+	    		}
+	    		if (getUpgrade(armor) == 8 || getUpgrade2(armor) == 8 || getUpgrade3(armor) == 8) {
+	    			map.put(SharedMonsterAttributes.maxHealth.getAttributeUnlocalizedName(), 
+	    					new AttributeModifier(uuid, "Runic vitality", 10, 0));;
+	    		}
+	    	}
+	    	case 1:
+	    	{
+	    		if (getUpgrade(armor) == 7 || getUpgrade2(armor) == 7 || getUpgrade3(armor) == 7) {
+	    			map.put(SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(), 
+	    					new AttributeModifier(uuid, "Runic knockback " + aType, 0.2, 0));
+	    		}
+	    		if (getUpgrade(armor) == 8 || getUpgrade2(armor) == 8 || getUpgrade3(armor) == 8) {
+	    			map.put(SharedMonsterAttributes.maxHealth.getAttributeUnlocalizedName(), 
+	    					new AttributeModifier(uuid, "Runic vitality", 10, 0));;
+	    		}
+	    	}
+	    	case 2:
+	    	{
+	    		if (getUpgrade(armor) == 7 || getUpgrade2(armor) == 7 || getUpgrade3(armor) == 7) {
+	    			map.put(SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(), 
+	    					new AttributeModifier(uuid, "Runic knockback " + aType, 0.2, 0));
+	    		}
+	    		if (getUpgrade(armor) == 8 || getUpgrade2(armor) == 8 || getUpgrade3(armor) == 8) {
+	    			map.put(SharedMonsterAttributes.maxHealth.getAttributeUnlocalizedName(), 
+	    					new AttributeModifier(uuid, "Runic vitality", 10, 0));;
+	    		}
+	    	}
+	    	case 3:
+	    	{
+	    		if (getUpgrade(armor) == 7 || getUpgrade2(armor) == 7 || getUpgrade3(armor) == 7) {
+	    			map.put(SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(), 
+	    					new AttributeModifier(uuid, "Runic knockback " + aType, 0.2, 0));
+	    		}
+	    		if (getUpgrade(armor) == 8 || getUpgrade2(armor) == 8 || getUpgrade3(armor) == 8) {
+	    			map.put(SharedMonsterAttributes.maxHealth.getAttributeUnlocalizedName(), 
+	    					new AttributeModifier(uuid, "Runic vitality", 10, 0));;
+	    		}
+	    	}
+	    	//map.put(SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(),new AttributeModifier(uuid, "Runic knockback", this.getArmorDisplay(null, armor, aType) / 20.0, 0)); 
+			//this one scales with Hardened effect, but starts lower. Keeping it for reference
+    	}
+    	return map;
+    }
 	
 	
 	ModelBiped model1 = null;
@@ -268,15 +323,21 @@ public class ItemRunicArmorPrimal extends ItemRunicArmor implements IRevealer, I
    			if (player.getUniqueID().toString() == "8c3dbe36-8161-4207-a2d6-e303dfe260ba") { //because dev perks. purely asstheticc
    				return "thaumicdyes:textures/models/guardian_robe_armor_warden1.png";
    			}
+   			if (player.inventory.hasItemStack(new ItemStack(ConfigItems.itemEldritchObject, 1, 3))) {
+   				return "thaumicdyes:textures/models/guardian_robe_armor2.png";
+   			}
    		}
+   		
         return "thaumicdyes:textures/models/guardian_robe_armor1.png";
         
         /*
          * /guardian_robe_armor - flat
          * /guardian_robe_armor1 - 60% opacity
+         * /guardian_robe_armor2 - 60%, warden cloth and metal changes only, no eyes
          * /guardian_robe_armor_warden - flat
          * /guardian_robe_armor_warden1 - 60% opacity
-         * ""1 is the prefered one, flat ones are just for testing
+         * 
+         * armor1 is the prefered one, flat ones are just for testing
          */
      }
 	

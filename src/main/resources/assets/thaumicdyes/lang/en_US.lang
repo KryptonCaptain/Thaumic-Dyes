@@ -87,6 +87,9 @@ item.runic.upgrade.3= - Kinetic Feedback
 item.runic.upgrade.4= - Revitalizing Feedback
 item.runic.upgrade.5= - Hardened
 item.runic.upgrade.6= - Emergency Shielding
+item.runic.upgrade.7= - Steadfast
+item.runic.upgrade.8= - Vitality
+item.runic.upgrade.9= - 
 
 //Legacy TX
 item.ItemMaskEvil.name=Mask of Cruelty (WIP)
@@ -101,6 +104,8 @@ item.ItemHelmetRunicPrimal.name=Abyssal Runic Helm
 item.ItemChestRunicPrimal.name=Abyssal Runic Chestplate
 item.ItemLegsRunicPrimal.name=Abyssal Runic Greaves
 item.ItemBootsRunicPrimal.name=Abyssal Runic Boots
+
+//unused
 tdyes.nameAppend= the Warped
 
 
@@ -251,7 +256,8 @@ tc.research_name.TD.PRIMALRUNICARMOR=Abyssal Runic Armor
 tc.research_text.TD.PRIMALRUNICARMOR=Those who stare too long into the abyss...
 tc.research_page.TD.PRIMALRUNICARMOR.1=<IMG>thaumcraft:textures/misc/eldritchajor2.png:0:255:255:255:.5</IMG><BR>§o        su nIoj .Su emocEb
 //translator note - write "become us,join us", either forward or backward, whatever works best
-tc.research_page.TD.PRIMALRUNICARMOR.2=This was a mistake.<BR>You should have stopped when you had the chance.<BR>You should have stopped...<BR> <BR>What have you done..?
+tc.research_page.TD.PRIMALRUNICARMOR.2=This was a mistake.<BR>You should have stopped when you had the chance.<BR>You should have stopped...<BR> <BR>§o§mProtEct tHe peaRl prOtect thE peArl proTeCt the pEarl<BR> §r§0<BR>What have you done..?
+tc.research_page.TD.PRIMALRUNICARMOR.3=Bonding your Enhanced Runic Armor and a set of Void Robes around a primordial pearl has created something dark and powerful. It certainly overcomes some of the flaws of the enhanced set, with greater discount and capacity for another augment. <BR>However, there's just something off... about it. The faint whispering you can hear nearby, shadows moving at the corner of your vision, cold air around it, and how it seems to move towards certain artifacts when you're not looking...<BR>It might be best to only wear a single piece at a time, and not for extended periods. Anything more than that might have untold effects on the wearer.
 
 
 §§§
