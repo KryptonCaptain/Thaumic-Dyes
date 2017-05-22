@@ -5,12 +5,12 @@ itemGroup.thaumicdyes=神秘染料
 # Items 
 ///////////
 item.itemHelmetCultistRobeDyed.name=教徒兜帽 
-item.itemChestCultistRobeDyed.name=教徒法袍
+item.itemChestCultistRobeDyed.name=教徒兜帽 
 item.itemLegsCultistRobeDyed.name=教徒护腿
 # 
 item.itemHelmetFortressDyed.name=强化要塞兜鍪
-item.itemChestFortressDyed.name=强化要塞胸铠
-item.itemLegsFortressDyed.name=强化要塞护胫
+item.itemChestFortressDyed.name=强化要塞胸铠 
+item.itemLegsFortressDyed.name=强化要塞护胫 
 # 
 item.itemHelmetCultistLeaderDyed.name=强化血腥主教头盔
 item.itemChestCultistLeaderDyed.name=强化血腥主教胸甲
@@ -66,7 +66,7 @@ item.itemChestSunKnight.name=黄昏胸甲
 item.HelmetIronFortress.mask.0=十字军
 item.HelmetIronFortress.mask.1=领主
 item.HelmetIronFortress.mask.2=行尸走肉
-item.HelmetIronFortress.mask.3=军阀 
+item.HelmetIronFortress.mask.3=军阀
 
 item.HelmetCultistRanger.mask.0=侦察兵
 item.HelmetCultistRanger.mask.1=守卫
@@ -74,10 +74,10 @@ item.HelmetCultistRanger.mask.1=守卫
 
 //Experimental
 item.ItemHelmetRunic.name=符文头盔
-item.ItemChestplateRunic.name=符文胸甲
-item.ItemLeggingsRunic.name=符文护腿
+item.ItemChestRunic.name=符文头盔
+item.ItemLegsRunic.name=符文护腿
 item.ItemBootsRunic.name=符文靴子
-item.ItemGogglesRunic.name=符文揭示之护目镜
+item.ItemGogglesRunic.name=符文靴子
 item.ItemBootsTravellerRunic.name=符文旅行者之靴
 
 item.runic.upgrade.0= - 没有升级
@@ -87,15 +87,23 @@ item.runic.upgrade.3= - 动力调节
 item.runic.upgrade.4= - 自我恢复
 item.runic.upgrade.5= - 坚毅
 item.runic.upgrade.6= - 紧急救护
+item.runic.upgrade.7= - //坚定（消除蓄积的效果+被动防止击退？）
+item.runic.upgrade.8= - //维护者(召唤自定义守护者?)
+item.runic.upgrade.9= - 纳米机械,孩子
+
 //Legacy TX
 item.ItemMaskEvil.name=残酷面具(未完成)
 death.attack.witherMask=%1$s 凋谢的远去 %2$s
 
 item.ItemHelmetRunicEnhanced.name=强化符文头盔
-item.ItemChestplateRunicEnhanced.name=强化符文胸甲
-item.ItemLeggingsRunicEnhanced.name=强化符文护腿
+item.ItemChestRunicEnhanced.name=强化符文胸甲
+item.ItemLegsRunicEnhanced.name=强化符文护腿
 item.ItemBootsRunicEnhanced.name=强化符文靴子
 
+item.ItemHelmetRunicPrimal.name=§5Abyssal 符文头盔§r
+item.ItemChestRunicPrimal.name=§5Abyssal 符文胸甲§r
+item.ItemLegsRunicPrimal.name=§5Abyssal 符文护腿§r
+item.ItemBootsRunicPrimal.name=§5Abyssal 符文靴子§r
 
 
 ///////////
@@ -106,8 +114,8 @@ item.ItemBootsRunicEnhanced.name=强化符文靴子
 tc.research_category.DYES=神秘染料
  
 # Research 
-tc.research_name.TD.DYEDROBE=血腥教徒长袍 
-tc.research_text.TD.DYEDROBE=染色线索! 
+tc.research_name.TD.DYEDROBE=血腥教徒长袍
+tc.research_text.TD.DYEDROBE=染色线索!
 tc.research_page.TD.robe.1=当你遇到血腥教徒时即使对他们有敌视感，然而，你发现自己却迷恋起他们穿戴的长袍.<BR>可悲的是，血腥长袍却不符合你的需要，所以经过一些修修补补，你发现了一个可能达到自己目的的修改方法.加入少许的世界盐和一些备用的魔力布匹有助于提高其魔法的亲和.
 tc.research_page.TD.robe.2=你觉得这一个发现将延伸到更多未来的事情中，虽然你不知道会发生什么.<BR>这种护甲可以染色.
 
@@ -116,7 +124,7 @@ tc.research_text.TD.DYEDKNIGHT=保护国王
 tc.research_page.TD.knight.1=血腥骑士不是你的朋友-但你已经获得了他们的护甲.以前，在众多与他们战斗的情况下，你可能把他们的护甲当做奖杯或者告诫，但现在你觉得是时候制作一套你可以进行触及的护甲. <BR>加入神秘锭后，在加入一些迷人的魔力布匹，你现在拥有一个质朴的护甲伴随着你未来的战斗.<BR>这种护甲可以染色.
  
 tc.research_name.TD.DYEDPRAETOR=强化血腥主教护甲
-tc.research_text.TD.DYEDPRAETOR=圣骑士时装
+tc.research_text.TD.DYEDPRAETOR=圣骑士时装 
 tc.research_page.TD.praetor.1=在于一个阶级比较高的血腥教徒发生一次命中注定的相遇后，你成功地获得了一套强大的护甲.由于护甲暴露出来的陌生奥术能量，它似乎更加容易被地位较低下的教徒接受.<BR>注入一些要素到护甲，使用神秘锭作为电镀，使它比从前更为耐用，以及使它更加复有魅力.你将不得不调查这个护甲是如何在某一个时间点被创造出来的，因为它似乎超出了你所认为的血腥教徒护甲的能力.<BR>这种护甲可以染色.
  
 tc.research_name.TD.DYEDFORTRESS=强化要塞护甲
@@ -135,7 +143,7 @@ tc.research_page.TD.ironFortress.2=它比一套标准的铁护甲更加耐用，
 
 tc.research_name.TD.IRONHELMGOGGLES=揭示之盔
 tc.research_text.TD.IRONHELMGOGGLES=要塞铁头盔升级
-tc.research_page.TD.ironHelmGoggles.1=就像与神秘要塞护甲一样，你已经找到一种方法来使揭示之护目镜的功能毫无保留的融合到你的头盔中.<BR>头盔功能会随着使用面板升级而保留.
+tc.research_page.TD.ironHelmGoggles.1=就像与神秘要塞护甲一样，你已经找到一种方法来使揭示之护目镜的功能毫无保留的融合到你的头盔中.<BR>头盔功能会随着使用面具升级而保留.
 
 tc.research_name.TD.IRONHELMAESTHETICS=平滑面具
 tc.research_text.TD.IRONHELMAESTHETICS=要塞铁头盔升级
@@ -158,7 +166,7 @@ tc.research_text.TD.VOIDROBE=减少50的黑暗色
 tc.research_page.TD.voidrobe.1=当你在坩埚中尝试你的研究时，一些不必要的溢出摧毁了你一套刚要制做而成的完美的长袍杰作，它从中提取了所有颜色.然而，这可能会是混合使用的新尝试<BR>虚空长袍, 虽然可以进行染色但却十分黑暗显得十分沉闷，无论你使用了多少的染料.也许他们需要在坩埚中进行沐浴洗净.
 
 tc.research_name.TD.THAUMIUMROBE=神秘使长袍
-tc.research_text.TD.THAUMIUMROBE=神秘使的教徒线索
+tc.research_text.TD.THAUMIUMROBE=教徒的线索
 tc.research_page.TD.thaumrobe.1=一段时间，你一直在挣扎在你的长袍与其他护甲中进行选择，选择着防御或者效果.从现在开始再也不用！最近血腥教徒长袍的设计试验中揭示了这个谜题，它将同时拥有两种效果<BR>以某些神秘护甲与神秘使长袍进行了重塑，创建了一套轻盈的护甲长袍，它提供了对物理与魔法伤害的保护<BR>在这期间兜帽将获得好处，即拥有制造它的护目镜的效果<BR>这种护甲可以进行染色.
 #
 tc.research_name.TD.THAUMIUMBOOTS=神秘探险者之靴
@@ -175,16 +183,18 @@ tc.research_page.TD.crimson.1=通过对血腥教徒与血腥骑士提供的血�
 tc.research_page.TD.crimson.2=虽然靴子很容易改造，不过你‘放心’你的大多数教徒护甲不会在这个过程中受到持续过多的伤害.<BR>你可能需要仔细看看他们在外域之前的事情以便你破译其他内容.建议谨慎.<BR>然而，也有其他设置在书页中，你可能以前没有见过，以及损坏和丢失的书页.也许还有其他线索来解码-它可能是努力的通过教徒凑齐一些碎片.
 tc.research_page.TD.crimson.3=血腥护甲似乎是用类似附魔的布匹材料编织而成的.在这个基础上它应该是比较容易复杂的.<BR>然而，在这个过程中似乎损害了它的能力有效的Vis减免.
 
+
 tc.research_name.TD.CRIMSONCLERIC=血腥邪徒长袍
 tc.research_text.TD.CRIMSONCLERIC=异教者
 tc.research_page.TD.crimsonCleric.1=唱着奇怪的诗句，藏在长袍中，血腥教徒们采取了主动的方式解开了远古者的秘密.目前还不清楚他们最初是如何展开仪式的，但你的观察表明，他们正在尝试用自己的生命力量，为这最危险的做法加油吧.谢天谢地，他们似乎错过了完成仪式的一步关键，至少现在如此...
+
 
 tc.research_name.TD.CRIMSONKNIGHT=血腥邪徒护甲
 tc.research_text.TD.CRIMSONKNIGHT=血腥十字军
 tc.research_page.TD.crimsonKnight.1=护甲与剑现在已经准备好了，血腥骑士们将准备保护和捍卫他们口中所声称的组织.他们伴随着大量异教徒经常看到，拥有这丰富的战斗经验，异教徒们用他们的数量和强度对他们带来优势和对敌人带来的威胁.<BR>然而，最好让他们与你保持一段距离，在可能的情况下，他们作为骑士缺乏远程能力.
 
 tc.research_name.TD.CRIMSONLEADER=血腥主教护甲
-tc.research_text.TD.CRIMSONLEADER=高尚的捍卫者
+tc.research_text.TD.CRIMSONLEADER=血腥主教护甲
 tc.research_page.TD.crimsonLeader.1=偶遇血腥主教是非常罕见的一种情景，在战斗中需要多把握时机.作为战斗中部署的指挥官与捍卫者，这是他们的职责，以保护珍贵的文物与遗址.他们是任何一个强大的魔法师的对手，但他们守护的宝藏往往值得一试.
 
 tc.research_name.TD.CRIMSONRANGER=血腥游侠长袍
@@ -222,7 +232,7 @@ tc.research_page.TD.RUNICARMORUPGRADES.1=提高符文护甲已经被证明比预
 tc.research_page.TD.RUNICARMORUPGRADES.2=§n狂战士§r<BR>当你的符文防护层被打破时，它会释放一个魔法力量进入它的佩戴者，将持续数秒.这种效果的强度随着升级而变化.<BR> 这个效果有20秒的冷却时间.<BR>§n护盾联结§r<BR>这个升级增加了50%护盾强度.
 tc.research_page.TD.RUNICARMORUPGRADES.3=§n动力调节§r<BR>当你的符文防护层被打破时，这个能力会被释放产生爆炸.爆炸的伤害取决于你有多少升级.<BR>这个效果有30秒冷却时间.<BR>§n自我恢复§r<BR>当你的符文防护层被打破时，将释放一个再生的能量脉冲到它的佩戴者身上，将持续数秒.这种效果的强度取决于升级. <BR>这个效果有30秒的冷却时间.
 tc.research_page.TD.RUNICARMORUPGRADES.4=§n坚毅§r<BR>这个效果会使你的护甲的防护层进行防护，这种效果的强度随着升级而变化.<BR>§n紧急救护§r<BR>当你的符文防护层被打破时，这个升级将立刻给予你8点（或更多）防护层..每一个带有符文护盾的护甲也会增加8点防护层. <BR>这个效果有一二分钟的冷却时间.
-tc.research_page.TD.RUNICARMORUPGRADES.5=增强符文护甲是一个杰作，随着你的魔法能力升级会使它变得更强，但是究竟有多强呢？为了使未来的操作更利于神秘使，你已经有了一些初步的计算.<LINE>A fully §n坚毅§r 设计一套完整的护甲提供给佩戴者.<BR>Two §n护盾联结§r 升级将增加最大防护层强度.<BR>Slotting seven §n紧急救护§r 升级提供了恢复防护层的能力-破坏其时进行增强.
+tc.research_page.TD.RUNICARMORUPGRADES.5=Enhanced Runic Armor is a masterwork of your magical prowess, and upgrades will only make it stronger, but how strong is it? To make work easier for future thaumaturges, you've included some of your calculations.<LINE>A fully §nHardened§r set will provide the wearer with a full armor bar.<BR>Two §nShield Nexus§r upgrades will double the maximum shielding of a piece.<BR>Slotting seven §nEmergency Shielding§r 增强符文护甲是一个杰作，随着你的魔法能力升级会使它变得更强，但是究竟有多强呢？为了使未来的操作更利于神秘使，你已经有了一些初步的计算.<LINE>A fully §n坚毅§r 设计一套完整的护甲提供给佩戴者.<BR>Two §n护盾联结§r 升级将增加最大防护层强度.<BR>Slotting seven §n紧急救护§r 升级提供了恢复防护层的能力-破坏其时进行增强.
 
 tc.research_name.TD.RUNICGOGGLES=符文揭示之护目镜
 tc.research_text.TD.RUNICGOGGLES=两全其美
@@ -233,13 +243,13 @@ tc.research_text.TD.RUNICBOOTSTRAVELLER=两全其美
 tc.research_page.TD.RUNICBOOTSTRAVELLER.1=对你而言，受符文护甲保护是至关重要的，你开始想念穿戴你的旅行者之靴获得的速度提升.为什么不两者同时拥有呢？<BR>通过将符文靴子的能力注入旅行者之靴中，使你可以享尽他们所带来的好处.<BR>你还没有成功的重复这个过程使其他通过注入增强的靴子也复有同样的功能，但也许你会有更好的运气在未来.
 
 
+
 --Enhanced Runic Armor
 tc.research_name.TD.ENHANCEDRUNICARMOR=强化符文护甲
 tc.research_text.TD.ENHANCEDRUNICARMOR=挑战极限
 tc.research_page.TD.ENHANCEDRUNICARMOR.1=通过你的广泛研究，强化符文护甲已经离开了你对装备的了解范围，你何曾不想穿戴你的虚空长袍作为代替.不要气馁，你已经有一个‘合适’的构想能使强化符文护甲解决这么问题.<BR><BR>每个护甲每一个只能容纳一个强化，但允许使用两个升级进行增强获得更多的保护这种护甲也会像你的长袍一样被给予被动的削弱.只有一个隐情-成本.
 tc.research_page.TD.ENHANCEDRUNICARMOR.2=记住，强化符文护甲创造初衷是为了让护甲能得到增强.<BR><BR>如果你想要覆盖一个强化符文护甲的能力，你可以手持其右键单击并且互换位置进行增强.其次第一个将会显示在上面.<BR>
 //<BR>[配方待定...留下反馈]
-
 
 
 
