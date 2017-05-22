@@ -1196,14 +1196,20 @@ public class ConfigResearch {
       ArrayList<InfusionRecipe> rc4 = new ArrayList();
       ArrayList<InfusionRecipe> rc5 = new ArrayList();
       ArrayList<InfusionRecipe> rc6 = new ArrayList();
+      ArrayList<InfusionRecipe> rc7 = new ArrayList();
+      ArrayList<InfusionRecipe> rc8 = new ArrayList();
+      ArrayList<InfusionRecipe> rc9 = new ArrayList();
       for (int a = 0; a <= 3; a++)
       {
-        rc1.add((InfusionRecipe)recipes.get("RAU1_" + a));
-        rc2.add((InfusionRecipe)recipes.get("RAU2_" + a));
-        rc3.add((InfusionRecipe)recipes.get("RAU3_" + a));
-        rc4.add((InfusionRecipe)recipes.get("RAU4_" + a));
-        rc5.add((InfusionRecipe)recipes.get("RAU5_" + a));
-        rc6.add((InfusionRecipe)recipes.get("RAU6_" + a));
+        rc1.add((InfusionRecipe)recipes.get("RAU1_" + a)); //berserker
+        rc2.add((InfusionRecipe)recipes.get("RAU2_" + a)); //nexus
+        rc3.add((InfusionRecipe)recipes.get("RAU3_" + a)); //kinetic
+        rc4.add((InfusionRecipe)recipes.get("RAU4_" + a)); //regen
+        rc5.add((InfusionRecipe)recipes.get("RAU5_" + a)); //hardened
+        rc6.add((InfusionRecipe)recipes.get("RAU6_" + a)); //emerg
+        //rc7.add((InfusionRecipe)recipes.get("RAU7_" + a)); //knockback
+        //rc8.add((InfusionRecipe)recipes.get("RAU8_" + a)); //vital
+        //rc9.add((InfusionRecipe)recipes.get("RAU8_" + a)); //haste
       }
       
       new ResearchItem("TD.RUNICARMORUPGRADES", "DYES", 
@@ -1213,15 +1219,26 @@ public class ConfigResearch {
 		      .setPages(new ResearchPage[] { 
 		    		  new ResearchPage("tc.research_page.TD.RUNICARMORUPGRADES.1"), 
 		    		  new ResearchPage("tc.research_page.TD.RUNICARMORUPGRADES.2"), 
-		    		  new ResearchPage("tc.research_page.TD.RUNICARMORUPGRADES.3"),
-		    		  new ResearchPage("tc.research_page.TD.RUNICARMORUPGRADES.4"),
-		    		  new ResearchPage("TD.ENHANCEDRUNICARMOR", "tc.research_page.TD.RUNICARMORUPGRADES.5"),
+		    		  new ResearchPage("tc.research_page.TD.RUNICARMORUPGRADES.a1"), 
 		    		  new ResearchPage((InfusionRecipe[])rc1.toArray(new InfusionRecipe[0])), 
-		    		  new ResearchPage((InfusionRecipe[])rc2.toArray(new InfusionRecipe[0])), 
-		    		  new ResearchPage((InfusionRecipe[])rc3.toArray(new InfusionRecipe[0])), 
+		    		  new ResearchPage("tc.research_page.TD.RUNICARMORUPGRADES.a2"),
+		    		  new ResearchPage((InfusionRecipe[])rc2.toArray(new InfusionRecipe[0])),
+		    		  new ResearchPage("tc.research_page.TD.RUNICARMORUPGRADES.a3"),
+		    		  new ResearchPage((InfusionRecipe[])rc3.toArray(new InfusionRecipe[0])),
+		    		  new ResearchPage("tc.research_page.TD.RUNICARMORUPGRADES.a4"),
 		    		  new ResearchPage((InfusionRecipe[])rc4.toArray(new InfusionRecipe[0])), 
+		    		  new ResearchPage("tc.research_page.TD.RUNICARMORUPGRADES.a5"),
 		    		  new ResearchPage((InfusionRecipe[])rc5.toArray(new InfusionRecipe[0])), 
-		    		  new ResearchPage((InfusionRecipe[])rc6.toArray(new InfusionRecipe[0]))
+		    		  new ResearchPage("tc.research_page.TD.RUNICARMORUPGRADES.a6"),
+		    		  new ResearchPage((InfusionRecipe[])rc6.toArray(new InfusionRecipe[0])),
+		    		  new ResearchPage("tc.research_page.TD.RUNICARMORUPGRADES.a7"),
+		    		  //new ResearchPage((InfusionRecipe[])rc7.toArray(new InfusionRecipe[0])),
+		    		  new ResearchPage("tc.research_page.TD.RUNICARMORUPGRADES.a8"),
+		    		  //new ResearchPage((InfusionRecipe[])rc8.toArray(new InfusionRecipe[0])),
+		    		  new ResearchPage("tc.research_page.TD.RUNICARMORUPGRADES.a9"),
+		    		  //new ResearchPage((InfusionRecipe[])rc9.toArray(new InfusionRecipe[0])),		    		  
+		    		  
+		    		  new ResearchPage("TD.ENHANCEDRUNICARMOR", "tc.research_page.TD.RUNICARMORUPGRADES.E")
 		      })
 		      .setParents("TD.RUNICARMOR")
 		      .setParentsHidden("RUNICHEALING", "RUNICKINETIC", "RUNICEMERGENCY")
@@ -1263,8 +1280,8 @@ public class ConfigResearch {
       }
       
       new ResearchItem("TD.PRIMALRUNICARMOR", "DYES", 
-    		  new AspectList().add(Aspect.ARMOR, 8).add(Aspect.AIR, 5).add(Aspect.MAGIC, 5).add(Aspect.ENERGY, 5).add(Aspect.MIND, 3),
-    		  11, 3, 3, 
+    		  new AspectList().add(Aspect.ARMOR, 8).add(Aspect.ELDRITCH, 12).add(Aspect.MAGIC, 12).add(Aspect.DARKNESS, 10).add(Aspect.SOUL, 8),
+    		  13, 3, 3, 
     		  new ItemStack(ItemHandler.itemChestRunicPrimal))
       		  .setPages(new ResearchPage[] { 
       				  new ResearchPage("tc.research_page.TD.PRIMALRUNICARMOR.1"), 

@@ -35,6 +35,9 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
+//YOU'RE NOT SUPPOSED TO BE IN HERE
+//YOU'LL RUIN THE SURPRISE
+
 
 public class ItemRunicArmorPrimal extends ItemRunicArmor implements IRevealer, IGoggles, IWarpingGear  {
 
@@ -260,55 +263,21 @@ public class ItemRunicArmorPrimal extends ItemRunicArmor implements IRevealer, I
     	HashMultimap map = HashMultimap.create();
     	final UUID uuid = new UUID(this.getUnlocalizedName().hashCode(), 0L);
     	
-    	switch(aType)
-    	{
-	    	case 0:
-	    	{
-	    		if (getUpgrade(armor) == 7 || getUpgrade2(armor) == 7 || getUpgrade3(armor) == 7) {
-	    			map.put(SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(), 
-	    					new AttributeModifier(uuid, "Runic knockback " + aType, 0.2, 0)); //last value modifier, 0 is flat addition, 1 is % addition
-	    		}
-	    		if (getUpgrade(armor) == 8 || getUpgrade2(armor) == 8 || getUpgrade3(armor) == 8) {
-	    			map.put(SharedMonsterAttributes.maxHealth.getAttributeUnlocalizedName(), 
-	    					new AttributeModifier(uuid, "Runic vitality", 10, 0));;
-	    		}
-	    	}
-	    	case 1:
-	    	{
-	    		if (getUpgrade(armor) == 7 || getUpgrade2(armor) == 7 || getUpgrade3(armor) == 7) {
-	    			map.put(SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(), 
-	    					new AttributeModifier(uuid, "Runic knockback " + aType, 0.2, 0));
-	    		}
-	    		if (getUpgrade(armor) == 8 || getUpgrade2(armor) == 8 || getUpgrade3(armor) == 8) {
-	    			map.put(SharedMonsterAttributes.maxHealth.getAttributeUnlocalizedName(), 
-	    					new AttributeModifier(uuid, "Runic vitality", 10, 0));;
-	    		}
-	    	}
-	    	case 2:
-	    	{
-	    		if (getUpgrade(armor) == 7 || getUpgrade2(armor) == 7 || getUpgrade3(armor) == 7) {
-	    			map.put(SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(), 
-	    					new AttributeModifier(uuid, "Runic knockback " + aType, 0.2, 0));
-	    		}
-	    		if (getUpgrade(armor) == 8 || getUpgrade2(armor) == 8 || getUpgrade3(armor) == 8) {
-	    			map.put(SharedMonsterAttributes.maxHealth.getAttributeUnlocalizedName(), 
-	    					new AttributeModifier(uuid, "Runic vitality", 10, 0));;
-	    		}
-	    	}
-	    	case 3:
-	    	{
-	    		if (getUpgrade(armor) == 7 || getUpgrade2(armor) == 7 || getUpgrade3(armor) == 7) {
-	    			map.put(SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(), 
-	    					new AttributeModifier(uuid, "Runic knockback " + aType, 0.2, 0));
-	    		}
-	    		if (getUpgrade(armor) == 8 || getUpgrade2(armor) == 8 || getUpgrade3(armor) == 8) {
-	    			map.put(SharedMonsterAttributes.maxHealth.getAttributeUnlocalizedName(), 
-	    					new AttributeModifier(uuid, "Runic vitality", 10, 0));;
-	    		}
-	    	}
-	    	//map.put(SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(),new AttributeModifier(uuid, "Runic knockback", this.getArmorDisplay(null, armor, aType) / 20.0, 0)); 
-			//this one scales with Hardened effect, but starts lower. Keeping it for reference
-    	}
+    	if (getUpgrade(armor) == 7 || getUpgrade2(armor) == 7 || getUpgrade3(armor) == 7) {
+			map.put(SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(), 
+					new AttributeModifier(uuid, "Runic knockback " + aType, 0.2, 0));
+		}
+		if (getUpgrade(armor) == 8 || getUpgrade2(armor) == 8 || getUpgrade3(armor) == 8) {
+			map.put(SharedMonsterAttributes.maxHealth.getAttributeUnlocalizedName(), 
+					new AttributeModifier(uuid, "Runic vitality", 10, 0));;
+		}
+		if (getUpgrade(armor) == 9 || getUpgrade2(armor) == 9  || getUpgrade3(armor) == 9 ) {
+			map.put(SharedMonsterAttributes.movementSpeed.getAttributeUnlocalizedName(), 
+					new AttributeModifier(uuid, "Runic speed", 0.03, 0)); //haste1/2/3 is 0.015/0.03/0.045
+		}
+    	//map.put(SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(),new AttributeModifier(uuid, "Runic knockback", this.getArmorDisplay(null, armor, aType) / 20.0, 0)); 
+		//this one scales with Hardened effect, but starts lower. Keeping it for reference
+		
     	return map;
     }
 	

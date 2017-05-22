@@ -98,7 +98,7 @@ public class ItemRunicArmor extends ItemArmor implements ISpecialArmor, IRunicAr
         return EnumRarity.rare;
     }
     
-    public boolean isBookEnchantable(final ItemStack itemstack1, final ItemStack itemstack2) {
+    public boolean isBookEnchantable(final ItemStack armor, final ItemStack book) {
         return false;
     }
     
@@ -148,56 +148,21 @@ public class ItemRunicArmor extends ItemArmor implements ISpecialArmor, IRunicAr
     	HashMultimap map = HashMultimap.create();
     	final UUID uuid = new UUID(this.getUnlocalizedName().hashCode(), 0L);
     	
-    	switch(aType)
-    	{
-	    	case 0:
-	    	{
-	    		if (getUpgrade(armor) == 7 ) {
-	    			map.put(SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(), 
-	    					new AttributeModifier(uuid, "Runic knockback " + aType, 0.2, 0)); 
-	    		}
-	    		if (getUpgrade(armor) == 8 ) {
-	    			map.put(SharedMonsterAttributes.maxHealth.getAttributeUnlocalizedName(), 
-	    					new AttributeModifier(uuid, "Runic vitality", 10, 0));;
-	    		}
-	    	}
-	    	case 1:
-	    	{
-	    		if (getUpgrade(armor) == 7 ) {
-	    			map.put(SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(), 
-	    					new AttributeModifier(uuid, "Runic knockback " + aType, 0.2, 0));
-	    		}
-	    		if (getUpgrade(armor) == 8 ) {
-	    			map.put(SharedMonsterAttributes.maxHealth.getAttributeUnlocalizedName(), 
-	    					new AttributeModifier(uuid, "Runic vitality", 10, 0));;
-	    		}
-	    	}
-	    	case 2:
-	    	{
-	    		if (getUpgrade(armor) == 7 ) {
-	    			map.put(SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(), 
-	    					new AttributeModifier(uuid, "Runic knockback " + aType, 0.2, 0));
-	    		}
-	    		if (getUpgrade(armor) == 8 ) {
-	    			map.put(SharedMonsterAttributes.maxHealth.getAttributeUnlocalizedName(), 
-	    					new AttributeModifier(uuid, "Runic vitality", 10, 0));;
-	    		}
-	    	}
-	    	case 3:
-	    	{
-	    		if (getUpgrade(armor) == 7 ) {
-	    			map.put(SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(), 
-	    					new AttributeModifier(uuid, "Runic knockback " + aType, 0.2, 0));
-	    		}
-	    		if (getUpgrade(armor) == 8 ) {
-	    			map.put(SharedMonsterAttributes.maxHealth.getAttributeUnlocalizedName(), 
-	    					new AttributeModifier(uuid, "Runic vitality", 10, 0));;
-	    		}
-	    	}
-	    	//map.put(SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(),new AttributeModifier(uuid, "Abyssal modifier " + aType, this.getArmorDisplay(null, armor, aType) / 20.0, 1)); 
-			//this one scales with Hardened effect, but starts lower. Keeping it for reference
-    	}
-    	return map;
+    	if (getUpgrade(armor) == 7 ) {
+			map.put(SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(), 
+					new AttributeModifier(uuid, "Runic knockback " + aType, 0.2, 0));
+		}
+		if (getUpgrade(armor) == 8 ) {
+			map.put(SharedMonsterAttributes.maxHealth.getAttributeUnlocalizedName(), 
+					new AttributeModifier(uuid, "Runic vitality", 10, 0));;
+		}
+		if (getUpgrade(armor) == 9 ) {
+			map.put(SharedMonsterAttributes.movementSpeed.getAttributeUnlocalizedName(), 
+					new AttributeModifier(uuid, "Runic speed", 0.03, 0)); //haste1/2/3 is 0.015/0.03/0.045
+		}
+    	//map.put(SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(),new AttributeModifier(uuid, "Abyssal modifier " + aType, this.getArmorDisplay(null, armor, aType) / 20.0, 1)); 
+		//this one scales with Hardened effect, but starts lower. Keeping it for reference
+		return map;
     }
     
     

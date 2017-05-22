@@ -89,7 +89,7 @@ item.runic.upgrade.5= - Hardened
 item.runic.upgrade.6= - Emergency Shielding
 item.runic.upgrade.7= - Steadfast
 item.runic.upgrade.8= - Vitality
-item.runic.upgrade.9= - 
+item.runic.upgrade.9= - Haste
 
 //Legacy TX
 item.ItemMaskEvil.name=Mask of Cruelty (WIP)
@@ -227,14 +227,6 @@ tc.research_text.TD.RUNICARMOR=Shielded legacy
 tc.research_page.TD.RUNICARMOR.1=Your research into protective magics have led you to discover Runic Armor. The name is misleading though since it is not armor in the traditional sense, but a collection of charms, seals and similar protective devices worn with your everyday clothes.<BR>These devices create a barrier of magical energy that wards out most types of damage. The armor's shielding provides a pool of hit points from which damage is subtracted first, protecting the wearer from all harm. Once this pool is depleted the wearer starts taking damage as normal.
 tc.research_page.TD.RUNICARMOR.2=The pool replenishes over time, requiring §2Terra§0 and §eAer§0 vis to replenish its charge, but even when depleted the armor offers protection roughly equivalent to that of leather armor.<BR>The armor offers no protection from damage suffered due to drowning, starvation or similar environmental hazards.<BR>Due to its nature the armor cannot be enchanted by normal means, but you are sure there are ways to improve its effectiveness - you just need to discover them.
 
-tc.research_name.TD.RUNICARMORUPGRADES=Runic Armor Upgrades
-tc.research_text.TD.RUNICARMORUPGRADES=Shields to maximum!
-tc.research_page.TD.RUNICARMORUPGRADES.1=Improving Runic Armor has turned out to be easier than expected. You have discovered several augmentations that can be applied to it, some of which were learned from your earlier experiments with runic baubles. <BR>However, only a single augmentation can be applied at a time. It seems magic has its own sanity limits sometimes.<BR>It is worth noting that for non-passive upgrades, having the same augment on all pieces may have additional unknown effects. You blame the 'magical resonance' of having such things in close proximity to each other.
-tc.research_page.TD.RUNICARMORUPGRADES.2=§nBerserker§r<BR>When your shielding is breached it will release a burst of magical strength into its wearer that will last for a few seconds. The strength of this effect increases for each upgrade.<BR> This effect has a 20 second cooldown.<BR>§nShield Nexus§r<BR>This upgrade increases the amount of charge a piece of runic armor has by 50%.
-tc.research_page.TD.RUNICARMORUPGRADES.3=§nKinetic Feedback§r<BR>When your shielding is breached this upgrade will release a detonation of kinetic energy. The damage and force of the detonation increases depending on how many upgrades are present. <BR>This ability has a 30 second cooldown.<BR>§nRevitalizing Feedback§r<BR>When your shielding is breached it will release a pulse of regenerative energy into its wearer that will last for a few seconds. The strength of this effect increases for each upgrade. <BR>This effect has a 30 second cooldown.
-tc.research_page.TD.RUNICARMORUPGRADES.4=§nHardened§r<BR>This upgrade doubles the amount of mundane armor protection a piece of runic armor provides once it's shielding has been breached.<BR>§nEmergency Shielding§r<BR>When your shield is breached this upgrade will instantly add 8 (or more) charge. Each runic armor piece with this upgrade adds 8 charge. <BR>This ability has a two minute cooldown.
-tc.research_page.TD.RUNICARMORUPGRADES.5=Enhanced Runic Armor is a masterwork of your magical prowess, and upgrades will only make it stronger, but how strong is it? To make work easier for future thaumaturges, you've included some of your calculations.<LINE>A fully §nHardened§r set will provide the wearer with a full armor bar.<BR>Two §nShield Nexus§r upgrades will double the maximum shielding of a piece.<BR>Slotting seven §nEmergency Shielding§r upgrades provides the capability to fully restore the shielding of a non-Augmented set when breached.
-
 tc.research_name.TD.RUNICGOGGLES=Runic Goggles of Revealing
 tc.research_text.TD.RUNICGOGGLES=The best of both worlds
 tc.research_page.TD.RUNICGOGGLES.1=While being protected by Runic Armor is vital, you also need the utility of Goggles of Revealing to perform your thaumaturgical tasks. Why not have both?<BR>By affixing the charms of the runic headgear to a pair of goggles, you can enjoy the benefits of both.
@@ -244,19 +236,41 @@ tc.research_text.TD.RUNICBOOTSTRAVELLER=The best of both worlds
 tc.research_page.TD.RUNICBOOTSTRAVELLER.1=While being protected by Runic Armor is vital, you have begun to miss the speed granted by your Boots of Travelling. Why not have both?<BR>By affixing the charms of the runic footgear to a pair of boots of travelling, you can enjoy the benefits of both.<BR>You haven't had any success repeating this procedure on other variants of the Boots of the Traveller, but perhaps you will have better luck in the future.
 
 
+
+
+
+
+tc.research_name.TD.RUNICARMORUPGRADES=Runic Armor Upgrades
+tc.research_text.TD.RUNICARMORUPGRADES=Shields to maximum!
+tc.research_page.TD.RUNICARMORUPGRADES.1=Improving Runic Armor has turned out to be easier than expected. You have discovered several augmentations that can be applied to it, some of which were learned from your earlier experiments with runic baubles. <BR>However, for now, only a single level of augmentation can be applied at a time. It seems magic has its own sanity limits sometimes.
+tc.research_page.TD.RUNICARMORUPGRADES.2=Should you wish to change the augment on a piece, simply infuse a new one. Doing so will overwrite whatever is in the first slot.<BR>It is worth noting that for some shield-breach upgrades, going beyond one of the same augment on all pieces may have additional unknown effects. You blame the 'magical resonance' of having such things in close proximity to each other.
+tc.research_page.TD.RUNICARMORUPGRADES.a1=§nBerserker§r<BR>Type: Shield breach<BR>When your shielding is breached it will release a burst of magical strength into its wearer that will last for a few seconds. The strength of this effect increases for each upgrade.<BR> This effect has a 20 second cooldown.<BR>This augment can be applied to a multiple slots on runic armor, where available, for additional bonus.
+tc.research_page.TD.RUNICARMORUPGRADES.a2=§nShield Nexus§r<BR>Type: Passive<BR>This upgrade increases the amount of charge a piece of runic armor has by 50% of its base amount.<BR>This augment can be applied to a multiple slots on runic armor, where available, for additional bonus.
+tc.research_page.TD.RUNICARMORUPGRADES.a3=§nKinetic Feedback§r<BR>Type: Shield breach<BR>When your shielding is breached this upgrade will release a detonation of kinetic energy. The damage and force of the detonation increases depending on how many upgrades are present. <BR>This ability has a 30 second cooldown.<BR>This augment can be applied to a multiple slots on runic armor, where available, for additional bonus.
+tc.research_page.TD.RUNICARMORUPGRADES.a4=§nRevitalizing Feedback§r<BR>Type: Shield breach<BR>When your shielding is breached it will release a pulse of regenerative energy into its wearer that will last for a few seconds. The strength of this effect increases for each upgrade. <BR>This effect has a 30 second cooldown.<BR>This augment can be applied to a multiple slots on runic armor, where available, for additional bonus.
+tc.research_page.TD.RUNICARMORUPGRADES.a5=§nHardened§r<BR>Type: Passive<BR>This upgrade doubles the amount of mundane armor protection a piece of runic armor provides once it's shielding has been breached.<BR>This augment can be applied to a multiple slots on runic armor, where available, for additional bonus.
+tc.research_page.TD.RUNICARMORUPGRADES.a6=§nEmergency Shielding§r<BR>Type: Shield breach<BR>When your shield is breached this upgrade will instantly add 8 (or more) charge. Each runic armor piece with this upgrade adds 8 charge. <BR>This ability has a two minute cooldown.<BR>This augment can be applied to a multiple slots on runic armor, where available, for additional bonus.
+tc.research_page.TD.RUNICARMORUPGRADES.a7=§nSteadfast§r<BR>Type: Passive<BR>This upgrade grants you a 20% knockback resistance. <BR>This augment will only apply to a piece of runic armor once, additional slots with this upgrade will have no effect.
+tc.research_page.TD.RUNICARMORUPGRADES.a8=§nVitality§r<BR>Type: Passive<BR>This upgrade increases your maximum health by 5 hearts (10 health).<BR>This augment will only apply to a piece of runic armor once, additional slots with this upgrade will have no effect.
+tc.research_page.TD.RUNICARMORUPGRADES.a9=§nHaste§r<BR>Type: Passive<BR>This upgrade will provide a movement speed bonus, much like the enchant of the same name. Its bonus is equivalent to Haste II.<BR>This augment can only be applied to boots, and will only apply to a piece of runic armor once, additional slots with this upgrade will have no effect.
+tc.research_page.TD.RUNICARMORUPGRADES.E=Enhanced Runic Armor is a masterwork of your magical prowess, and upgrades will only make it stronger, but how strong is it? To make work easier for future thaumaturges, you've included some of your calculations.<LINE>A fully §nHardened§r set will provide the wearer with a full armor bar.<BR>Two §nShield Nexus§r upgrades will double the maximum shielding of a piece.<BR>Slotting seven §nEmergency Shielding§r upgrades provides the capability to fully restore the shielding of a non-Nexus set when breached.
+
+
+
+
 --Enhanced Runic Armor
 tc.research_name.TD.ENHANCEDRUNICARMOR=Enhanced Runic Armor
 tc.research_text.TD.ENHANCEDRUNICARMOR=Pushing the limits
-tc.research_page.TD.ENHANCEDRUNICARMOR.1=Your extensive research into augmenting Runic Armor has left you disappointed at the armor's ability to only hold one augment. You also miss the mystical discount granted from wearing your Thaumaturge's Robes. Instead of being discouraged, you have developed a 'suit' of Enhanced Runic Armor that satisfies these grievances.<BR><BR>Each piece of this armor can hold not one, but two augments, allowing for even more protection. This armor also grants a passive vis discount much like your robes. There is but one catch - the cost.
-tc.research_page.TD.ENHANCEDRUNICARMOR.2=Keep in mind that the inital creation of the Enhanced armor will wipe existing augments. <BR><BR>In the case that you want to overwrite an augment placed on the Enhanced armor, you may right click while holding it to swap positions of the augments. The augment displayed first is the one that will be overwritten.<BR>
+tc.research_page.TD.ENHANCEDRUNICARMOR.1=Your extensive research into augmenting Runic Armor has left you disappointed at the armor's ability to only hold one augment. You also miss the mystical discount granted from wearing your Thaumaturge's Robes. Instead of being discouraged, you have developed a 'suit' of Enhanced Runic Armor that satisfies these grievances.<BR><BR>Each piece of this armor can hold not one, but two augments, allowing for even more customisation. This armor also grants a passive vis discount much like your robes. There is but one catch - the cost.
+tc.research_page.TD.ENHANCEDRUNICARMOR.2=Keep in mind that the inital creation of the Enhanced armor will wipe existing augments. <BR><BR>In the case that you want to overwrite an augment placed on the Enhanced armor, simply right click it against something solid to swap positions of the augments. 
 //<BR>[Recipes pending... leave feedback]
 
---Enhanced Runic Armor
+--Primal Runic Armor
 tc.research_name.TD.PRIMALRUNICARMOR=Abyssal Runic Armor
 tc.research_text.TD.PRIMALRUNICARMOR=Those who stare too long into the abyss...
-tc.research_page.TD.PRIMALRUNICARMOR.1=<IMG>thaumcraft:textures/misc/eldritchajor2.png:0:255:255:255:.5</IMG><BR>§o        su nIoj .Su emocEb
+tc.research_page.TD.PRIMALRUNICARMOR.1=<IMG>thaumcraft:textures/misc/eldritchajor2.png:0:255:255:255:.5</IMG><BR>§o        §msu nioj su emoceb
 //translator note - write "become us,join us", either forward or backward, whatever works best
-tc.research_page.TD.PRIMALRUNICARMOR.2=This was a mistake.<BR>You should have stopped when you had the chance.<BR>You should have stopped...<BR> <BR>§o§mProtEct tHe peaRl prOtect thE peArl proTeCt the pEarl<BR> §r§0<BR>What have you done..?
+tc.research_page.TD.PRIMALRUNICARMOR.2=This was a mistake.<BR>You should have stopped when you had the chance.<BR>You should have stopped...<BR> <BR>§o§mProtect the pearl protect the pearl protect the pearl<BR> §r§0<BR>What have you done..?
 tc.research_page.TD.PRIMALRUNICARMOR.3=Bonding your Enhanced Runic Armor and a set of Void Robes around a primordial pearl has created something dark and powerful. It certainly overcomes some of the flaws of the enhanced set, with greater discount and capacity for another augment. <BR>However, there's just something off... about it. The faint whispering you can hear nearby, shadows moving at the corner of your vision, cold air around it, and how it seems to move towards certain artifacts when you're not looking...<BR>It might be best to only wear a single piece at a time, and not for extended periods. Anything more than that might have untold effects on the wearer.
 
 
