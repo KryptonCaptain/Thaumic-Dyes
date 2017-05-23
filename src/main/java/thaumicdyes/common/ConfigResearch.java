@@ -1209,7 +1209,7 @@ public class ConfigResearch {
         rc6.add((InfusionRecipe)recipes.get("RAU6_" + a)); //emerg
         rc7.add((InfusionRecipe)recipes.get("RAU7_" + a)); //knockback
         rc8.add((InfusionRecipe)recipes.get("RAU8_" + a)); //vital
-        //rc9.add((InfusionRecipe)recipes.get("RAU8_" + a)); //haste
+        rc9.add((InfusionRecipe)recipes.get("RAU9_3")); //haste
       }
       
       new ResearchItem("TD.RUNICARMORUPGRADES", "DYES", 
@@ -1236,7 +1236,7 @@ public class ConfigResearch {
 		    		  new ResearchPage("tc.research_page.TD.RUNICARMORUPGRADES.a8"),
 		    		  new ResearchPage((InfusionRecipe[])rc8.toArray(new InfusionRecipe[0])),
 		    		  new ResearchPage("tc.research_page.TD.RUNICARMORUPGRADES.a9"),
-		    		  //new ResearchPage((InfusionRecipe[])rc9.toArray(new InfusionRecipe[0])),		    		  
+		    		  new ResearchPage((InfusionRecipe[])rc9.toArray(new InfusionRecipe[0])),		    		  
 		    		  
 		    		  new ResearchPage("TD.ENHANCEDRUNICARMOR", "tc.research_page.TD.RUNICARMORUPGRADES.E")
 		      })
@@ -1281,7 +1281,7 @@ public class ConfigResearch {
       
       new ResearchItem("TD.PRIMALRUNICARMOR", "DYES", 
     		  new AspectList().add(Aspect.ARMOR, 8).add(Aspect.ELDRITCH, 12).add(Aspect.MAGIC, 12).add(Aspect.DARKNESS, 10).add(Aspect.SOUL, 8),
-    		  13, 3, 3, 
+    		  11, 6, 3, 
     		  new ItemStack(ItemHandler.itemRunicChestPrimal))
       		  .setPages(new ResearchPage[] { 
       				  new ResearchPage("tc.research_page.TD.PRIMALRUNICARMOR.1"), 

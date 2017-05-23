@@ -63,11 +63,11 @@ public class ItemRunicArmorPrimal extends ItemRunicArmor implements IRevealer, I
 	    	{
     			if ( (getUpgrade(itemstack) == 2) && (getUpgrade2(itemstack) == 2) && (getUpgrade3(itemstack) == 2) ) 
     			{
-    				return (this.armorType == 0) ?  20 : ((this.armorType == 1) ? 60 : ((this.armorType == 2) ? 40 : 20 )); //TODO 140 total
+    				return (this.armorType == 0) ?  20 : ((this.armorType == 1) ? 60 : ((this.armorType == 2) ? 40 : 20 )); //140 total. what madman would actually do this?
     			}
     			
     			else {
-    				return (this.armorType == 0) ?  16 : ((this.armorType == 1) ? 48 : ((this.armorType == 2) ? 32 : 16 )); //TODO 112 total
+    				return (this.armorType == 0) ?  16 : ((this.armorType == 1) ? 48 : ((this.armorType == 2) ? 32 : 16 )); //112 total
     			}
 	    	}
     		else {
@@ -96,7 +96,7 @@ public class ItemRunicArmorPrimal extends ItemRunicArmor implements IRevealer, I
 		        
 		        //I'm limiting this to only a max of 8 upgrades total, because the higher level 25/4 one 
 		        //basically made the player invincible. 
-		        //Primal's higher base armour should discourage people from stacking this one anyway
+		        //Primal's higher base armour (if I keep it, keep changing my mind) should discourage people from stacking this one anyway
 		    }
 		    else {
 		    	priority = 1;
@@ -246,12 +246,11 @@ public class ItemRunicArmorPrimal extends ItemRunicArmor implements IRevealer, I
 			    	set++;
 			    }
 			}
-			if(set < 4) {
-				//player.refreshDisplayName(); //errors out
-			} else {
+			if(set == 4 && player.inventory.hasItemStack(new ItemStack(ConfigItems.itemEldritchObject, 1, 3))) {
 				//event.displayname = player.getCommandSenderName()+StatCollector.translateToLocal("tdyes.nameAppend");
 				event.displayname = player.getCommandSenderName()+" the Warped";
-			}
+				//player.refreshDisplayName(); //errors out
+			} 
 		}
     }
 	
