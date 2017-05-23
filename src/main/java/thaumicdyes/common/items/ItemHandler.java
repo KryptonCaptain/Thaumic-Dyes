@@ -34,249 +34,249 @@ public class ItemHandler {
    public static ArmorMaterial RunicArmor;
    public static ArmorMaterial RunicPrimal;
 
-   public static Item itemHelmetCultistRobeDyed;
-   public static Item itemChestCultistRobeDyed;
-   public static Item itemLegsCultistRobeDyed;
+   public static Item itemCultistRobeHelmetDyed;
+   public static Item itemCultistRobeChestDyed;
+   public static Item itemCultistRobeLegsDyed;
    
-   public static Item itemHelmetFortressDyed;
-   public static Item itemChestFortressDyed;
-   public static Item itemLegsFortressDyed;
+   public static Item itemFortressHelmetDyed;
+   public static Item itemFortressChestDyed;
+   public static Item itemFortressLegsDyed;
    
-   public static Item itemHelmetCultistLeaderDyed;
-   public static Item itemChestCultistLeaderDyed;
-   public static Item itemLegsCultistLeaderDyed;
+   public static Item itemCultistLeaderHelmetDyed;
+   public static Item itemCultistLeaderChestDyed;
+   public static Item itemCultistLeaderLegsDyed;
    
-   public static Item itemHelmetCultistKnightDyed;
-   public static Item itemChestCultistKnightDyed;
-   public static Item itemLegsCultistKnightDyed;
+   public static Item itemCultistKnightHelmetDyed;
+   public static Item itemCultistKnightChestDyed;
+   public static Item itemCultistKnightLegsDyed;
    
-   public static Item itemHelmetInhabitedPlate;
-   public static Item itemChestInhabitedPlate;
-   public static Item itemLegsInhabitedPlate;
+   public static Item itemInhabitedPlateHelmet;
+   public static Item itemInhabitedPlateChest;
+   public static Item itemInhabitedPlateLegs;
    
-   public static Item itemHelmetIronFortress;
-   public static Item itemChestIronFortress;
-   public static Item itemLegsIronFortress;
+   public static Item itemIronFortressHelmet;
+   public static Item itemIronFortressChest;
+   public static Item itemIronFortressLegs;
    
-   public static Item itemHelmetCultistRanger;
-   public static Item itemChestCultistRanger;
-   public static Item itemLegsCultistRanger;
+   public static Item itemCultistRangerHelmet;
+   public static Item itemCultistRangerChest;
+   public static Item itemCultistRangerLegs;
    
-   public static Item itemHelmetCultistRangerDyed;
-   public static Item itemChestCultistRangerDyed;
-   public static Item itemLegsCultistRangerDyed;
+   public static Item itemCultistRangerHelmetDyed;
+   public static Item itemCultistRangerChestDyed;
+   public static Item itemCultistRangerLegsDyed;
    
-   public static Item itemHelmetVoidRobeDyed;
-   public static Item itemChestVoidRobeDyed;
-   public static Item itemLegsVoidRobeDyed;
+   public static Item itemVoidRobeHelmetDyed;
+   public static Item itemVoidRobeChestDyed;
+   public static Item itemVoidRobeLegsDyed;
    
-   public static Item itemHelmetThaumiumRobeDyed;
-   public static Item itemChestThaumiumRobeDyed;
-   public static Item itemLegsThaumiumRobeDyed;
+   public static Item itemThaumiumRobeHelmetDyed;
+   public static Item itemThaumiumRobeChestDyed;
+   public static Item itemThaumiumRobeLegsDyed;
    
-   public static Item itemBootsThaumiumTraveller;
-   public static Item itemBootsVoidTraveller;
+   public static Item itemThaumiumBootsTraveller;
+   public static Item itemVoidBootsTraveller;
    
-   public static Item itemHelmetCultistPaladin;
+   public static Item itemCultistPaladinHelmet;
    
-   public static Item itemHelmetCultistArcher;
-   public static Item itemChestCultistArcher;
-   public static Item itemLegsCultistArcher;
+   public static Item itemCultistArcherHelmet;
+   public static Item itemCultistArcherChest;
+   public static Item itemCultistArcherLegs;
    
-   public static Item itemHelmetCultistArcherDyed;
-   public static Item itemChestCultistArcherDyed;
-   public static Item itemLegsCultistArcherDyed;
+   public static Item itemCultistArcherHelmetDyed;
+   public static Item itemCultistArcherChestDyed;
+   public static Item itemCultistArcherLegsDyed;
    
-   public static Item itemFabricResource;
+   public static Item itemResourceFabric;
    
-   public static Item itemHelmetSunKnight;
-   public static Item itemChestSunKnight;
+   public static Item itemSunKnightHelmet;
+   public static Item itemSunKnightChest;
    
-   public static Item itemHelmetRunic;
-   public static Item itemChestRunic;
-   public static Item itemLegsRunic;
-   public static Item itemBootsRunic;
-   public static Item itemGogglesRunic;
-   public static Item itemBootsTravellerRunic;
+   public static Item itemRunicHelmet;
+   public static Item itemRunicChest;
+   public static Item itemRunicLegs;
+   public static Item itemRunicBoots;
+   public static Item itemRunicGoggles;
+   public static Item itemRunicBootsTraveller;
    
    public static Item itemHelmetMaskTX;
    
-   public static Item itemHelmetRunicEnhanced;
-   public static Item itemChestRunicEnhanced;
-   public static Item itemLegsRunicEnhanced;
-   public static Item itemBootsRunicEnhanced;
+   public static Item itemRunicHelmetEnhanced;
+   public static Item itemRunicChestEnhanced;
+   public static Item itemRunicLegsEnhanced;
+   public static Item itemRunicBootsEnhanced;
    
-   public static Item itemHelmetRunicPrimal;
-   public static Item itemChestRunicPrimal;
-   public static Item itemLegsRunicPrimal;
-   public static Item itemBootsRunicPrimal;
+   public static Item itemRunicHelmetPrimal;
+   public static Item itemRunicChestPrimal;
+   public static Item itemRunicLegsPrimal;
+   public static Item itemRunicBootsPrimal;
 
 
    public static void registerItems() {
 	   
-      GameRegistry.registerItem(itemHelmetCultistRobeDyed, "CultistRobeHelm");
-      GameRegistry.registerItem(itemChestCultistRobeDyed, "CultistRobeChest");
-      GameRegistry.registerItem(itemLegsCultistRobeDyed, "CultistRobeLegs");
+      GameRegistry.registerItem(itemCultistRobeHelmetDyed, "CultistRobeHelm");
+      GameRegistry.registerItem(itemCultistRobeChestDyed, "CultistRobeChest");
+      GameRegistry.registerItem(itemCultistRobeLegsDyed, "CultistRobeLegs");
       
-      GameRegistry.registerItem(itemHelmetFortressDyed, "FortressHelm");
-      GameRegistry.registerItem(itemChestFortressDyed, "FortressChest");
-      GameRegistry.registerItem(itemLegsFortressDyed, "FortressLegs");
+      GameRegistry.registerItem(itemFortressHelmetDyed, "FortressHelm");
+      GameRegistry.registerItem(itemFortressChestDyed, "FortressChest");
+      GameRegistry.registerItem(itemFortressLegsDyed, "FortressLegs");
       
-      GameRegistry.registerItem(itemHelmetCultistLeaderDyed, "CultistLeaderHelm");
-      GameRegistry.registerItem(itemChestCultistLeaderDyed, "CultistLeaderChest");
-      GameRegistry.registerItem(itemLegsCultistLeaderDyed, "CultistLeaderLegs");
+      GameRegistry.registerItem(itemCultistLeaderHelmetDyed, "CultistLeaderHelm");
+      GameRegistry.registerItem(itemCultistLeaderChestDyed, "CultistLeaderChest");
+      GameRegistry.registerItem(itemCultistLeaderLegsDyed, "CultistLeaderLegs");
       
-      GameRegistry.registerItem(itemHelmetCultistKnightDyed, "CultistPlateHelm");
-      GameRegistry.registerItem(itemChestCultistKnightDyed, "CultistPlateChest");
-      GameRegistry.registerItem(itemLegsCultistKnightDyed, "CultistPlateLegs");
+      GameRegistry.registerItem(itemCultistKnightHelmetDyed, "CultistPlateHelm");
+      GameRegistry.registerItem(itemCultistKnightChestDyed, "CultistPlateChest");
+      GameRegistry.registerItem(itemCultistKnightLegsDyed, "CultistPlateLegs");
       
-      GameRegistry.registerItem(itemHelmetInhabitedPlate, "InhabitedPlateHelm");
-      GameRegistry.registerItem(itemChestInhabitedPlate, "InhabitedPlateChest");
-      GameRegistry.registerItem(itemLegsInhabitedPlate, "InhabitedPlateLegs");
+      GameRegistry.registerItem(itemInhabitedPlateHelmet, "InhabitedPlateHelm");
+      GameRegistry.registerItem(itemInhabitedPlateChest, "InhabitedPlateChest");
+      GameRegistry.registerItem(itemInhabitedPlateLegs, "InhabitedPlateLegs");
       
-      GameRegistry.registerItem(itemHelmetIronFortress, "IronFortressHelm");
-      GameRegistry.registerItem(itemChestIronFortress, "IronFortressChest");
-      GameRegistry.registerItem(itemLegsIronFortress, "IronFortressLegs");
+      GameRegistry.registerItem(itemIronFortressHelmet, "IronFortressHelm");
+      GameRegistry.registerItem(itemIronFortressChest, "IronFortressChest");
+      GameRegistry.registerItem(itemIronFortressLegs, "IronFortressLegs");
       
-      GameRegistry.registerItem(itemHelmetCultistRanger, "CultistRangerHelm");
-      GameRegistry.registerItem(itemChestCultistRanger, "CultistRangerChest");
-      GameRegistry.registerItem(itemLegsCultistRanger, "CultistRangerLegs");
+      GameRegistry.registerItem(itemCultistRangerHelmet, "CultistRangerHelm");
+      GameRegistry.registerItem(itemCultistRangerChest, "CultistRangerChest");
+      GameRegistry.registerItem(itemCultistRangerLegs, "CultistRangerLegs");
       
-      GameRegistry.registerItem(itemHelmetCultistRangerDyed, "CultistRangerHelmDyed");
-      GameRegistry.registerItem(itemChestCultistRangerDyed, "CultistRangerChestDyed");
-      GameRegistry.registerItem(itemLegsCultistRangerDyed, "CultistRangerLegsDyed");
+      GameRegistry.registerItem(itemCultistRangerHelmetDyed, "CultistRangerHelmDyed");
+      GameRegistry.registerItem(itemCultistRangerChestDyed, "CultistRangerChestDyed");
+      GameRegistry.registerItem(itemCultistRangerLegsDyed, "CultistRangerLegsDyed");
       
-      GameRegistry.registerItem(itemHelmetVoidRobeDyed, "VoidRobeHelm");
-      GameRegistry.registerItem(itemChestVoidRobeDyed, "VoidRobeChest");
-      GameRegistry.registerItem(itemLegsVoidRobeDyed, "VoidRobeLegs");
+      GameRegistry.registerItem(itemVoidRobeHelmetDyed, "VoidRobeHelm");
+      GameRegistry.registerItem(itemVoidRobeChestDyed, "VoidRobeChest");
+      GameRegistry.registerItem(itemVoidRobeLegsDyed, "VoidRobeLegs");
       
-      GameRegistry.registerItem(itemHelmetThaumiumRobeDyed, "ThaumiumRobeHelm");
-      GameRegistry.registerItem(itemChestThaumiumRobeDyed, "ThaumiumRobeChest");
-      GameRegistry.registerItem(itemLegsThaumiumRobeDyed, "ThaumiumRobeLegs");
+      GameRegistry.registerItem(itemThaumiumRobeHelmetDyed, "ThaumiumRobeHelm");
+      GameRegistry.registerItem(itemThaumiumRobeChestDyed, "ThaumiumRobeChest");
+      GameRegistry.registerItem(itemThaumiumRobeLegsDyed, "ThaumiumRobeLegs");
       
-      GameRegistry.registerItem(itemBootsThaumiumTraveller, "BootsThaumiumTraveller");
-      GameRegistry.registerItem(itemBootsVoidTraveller, "BootsVoidTraveller");
+      GameRegistry.registerItem(itemThaumiumBootsTraveller, "BootsThaumiumTraveller");
+      GameRegistry.registerItem(itemVoidBootsTraveller, "BootsVoidTraveller");
       
-      GameRegistry.registerItem(itemHelmetCultistArcher, "CultistArcherHelm");
-      GameRegistry.registerItem(itemChestCultistArcher, "CultistArcherChest");
-      GameRegistry.registerItem(itemLegsCultistArcher, "CultistArcherLegs");
+      GameRegistry.registerItem(itemCultistArcherHelmet, "CultistArcherHelm");
+      GameRegistry.registerItem(itemCultistArcherChest, "CultistArcherChest");
+      GameRegistry.registerItem(itemCultistArcherLegs, "CultistArcherLegs");
       
-      GameRegistry.registerItem(itemHelmetCultistPaladin, "CultistPaladinHelm");
+      GameRegistry.registerItem(itemCultistPaladinHelmet, "CultistPaladinHelm");
       
-      GameRegistry.registerItem(itemHelmetCultistArcherDyed, "CultistArcherHelmDyed");
-      GameRegistry.registerItem(itemChestCultistArcherDyed, "CultistArcherChestDyed");
-      GameRegistry.registerItem(itemLegsCultistArcherDyed, "CultistArcherLegsDyed");
+      GameRegistry.registerItem(itemCultistArcherHelmetDyed, "CultistArcherHelmDyed");
+      GameRegistry.registerItem(itemCultistArcherChestDyed, "CultistArcherChestDyed");
+      GameRegistry.registerItem(itemCultistArcherLegsDyed, "CultistArcherLegsDyed");
       
-      GameRegistry.registerItem(itemFabricResource, "ItemResourceFabric");
+      GameRegistry.registerItem(itemResourceFabric, "ItemResourceFabric");
       
-      GameRegistry.registerItem(itemHelmetSunKnight, "SunKnightHelm");
-      GameRegistry.registerItem(itemChestSunKnight, "SunKnightChest");
+      GameRegistry.registerItem(itemSunKnightHelmet, "SunKnightHelm");
+      GameRegistry.registerItem(itemSunKnightChest, "SunKnightChest");
       
-      GameRegistry.registerItem(itemHelmetRunic, "ItemRunicHelmet");
-      GameRegistry.registerItem(itemChestRunic, "ItemRunicChest");
-      GameRegistry.registerItem(itemLegsRunic, "ItemRunicLegs");
-      GameRegistry.registerItem(itemBootsRunic, "ItemRunicBoots");
-      GameRegistry.registerItem(itemGogglesRunic, "ItemRunicGoggles");
-      GameRegistry.registerItem(itemBootsTravellerRunic, "ItemRunicBootsTraveller");
+      GameRegistry.registerItem(itemRunicHelmet, "ItemRunicHelmet");
+      GameRegistry.registerItem(itemRunicChest, "ItemRunicChest");
+      GameRegistry.registerItem(itemRunicLegs, "ItemRunicLegs");
+      GameRegistry.registerItem(itemRunicBoots, "ItemRunicBoots");
+      GameRegistry.registerItem(itemRunicGoggles, "ItemRunicGoggles");
+      GameRegistry.registerItem(itemRunicBootsTraveller, "ItemRunicBootsTraveller");
       
       //GameRegistry.registerItem(itemHelmetMaskTX, "ItemMaskEvil");
       
-      GameRegistry.registerItem(itemHelmetRunicEnhanced, "ItemRunicHelmetEnhanced");
-      GameRegistry.registerItem(itemChestRunicEnhanced, "ItemRunicChestEnhanced");
-      GameRegistry.registerItem(itemLegsRunicEnhanced, "ItemRunicLegsEnhanced");
-      GameRegistry.registerItem(itemBootsRunicEnhanced, "ItemRunicBootsEnhanced");
+      GameRegistry.registerItem(itemRunicHelmetEnhanced, "ItemRunicHelmetEnhanced");
+      GameRegistry.registerItem(itemRunicChestEnhanced, "ItemRunicChestEnhanced");
+      GameRegistry.registerItem(itemRunicLegsEnhanced, "ItemRunicLegsEnhanced");
+      GameRegistry.registerItem(itemRunicBootsEnhanced, "ItemRunicBootsEnhanced");
       
       
-      GameRegistry.registerItem(itemHelmetRunicPrimal, "ItemRunicHelmetPrimal");
-      GameRegistry.registerItem(itemChestRunicPrimal, "ItemRunicChestPrimal");
-      GameRegistry.registerItem(itemLegsRunicPrimal, "ItemRunicLegsPrimal");
-      GameRegistry.registerItem(itemBootsRunicPrimal, "ItemRunicBootsPrimal");
+      GameRegistry.registerItem(itemRunicHelmetPrimal, "ItemRunicHelmetPrimal");
+      GameRegistry.registerItem(itemRunicChestPrimal, "ItemRunicChestPrimal");
+      GameRegistry.registerItem(itemRunicLegsPrimal, "ItemRunicLegsPrimal");
+      GameRegistry.registerItem(itemRunicBootsPrimal, "ItemRunicBootsPrimal");
       
    }
 
    public static void defineItems() {
 	   
-	   itemHelmetCultistRobeDyed = (new CultistRobesDyed(RobesArmor, 4, 0)).setUnlocalizedName("itemHelmetCultistRobeDyed").setCreativeTab(ThaumicDyes.tabTD);
-	   itemChestCultistRobeDyed = (new CultistRobesDyed(RobesArmor, 4, 1)).setUnlocalizedName("itemChestCultistRobeDyed").setCreativeTab(ThaumicDyes.tabTD);
-	   itemLegsCultistRobeDyed = (new CultistRobesDyed(RobesArmor, 4, 2)).setUnlocalizedName("itemLegsCultistRobeDyed").setCreativeTab(ThaumicDyes.tabTD);
+	   itemCultistRobeHelmetDyed = (new CultistRobesDyed(RobesArmor, 4, 0)).setUnlocalizedName("itemHelmetCultistRobeDyed").setCreativeTab(ThaumicDyes.tabTD);
+	   itemCultistRobeChestDyed = (new CultistRobesDyed(RobesArmor, 4, 1)).setUnlocalizedName("itemChestCultistRobeDyed").setCreativeTab(ThaumicDyes.tabTD);
+	   itemCultistRobeLegsDyed = (new CultistRobesDyed(RobesArmor, 4, 2)).setUnlocalizedName("itemLegsCultistRobeDyed").setCreativeTab(ThaumicDyes.tabTD);
        //itemBootsCultist = (new CultistRobes(RobesArmor, CultistBootsID, 3)).setUnlocalizedName("CultistBoots").setCreativeTab(ThaumicDyes.tabTD);
 	   
-	   itemHelmetFortressDyed = (new ThaumiumFortressDyed(FortressArmor, 4, 0)).setUnlocalizedName("itemHelmetFortressDyed").setCreativeTab(ThaumicDyes.tabTD);
-	   itemChestFortressDyed = (new ThaumiumFortressDyed(FortressArmor, 4, 1)).setUnlocalizedName("itemChestFortressDyed").setCreativeTab(ThaumicDyes.tabTD);
-	   itemLegsFortressDyed = (new ThaumiumFortressDyed(FortressArmor, 4, 2)).setUnlocalizedName("itemLegsFortressDyed").setCreativeTab(ThaumicDyes.tabTD);
+	   itemFortressHelmetDyed = (new ThaumiumFortressDyed(FortressArmor, 4, 0)).setUnlocalizedName("itemHelmetFortressDyed").setCreativeTab(ThaumicDyes.tabTD);
+	   itemFortressChestDyed = (new ThaumiumFortressDyed(FortressArmor, 4, 1)).setUnlocalizedName("itemChestFortressDyed").setCreativeTab(ThaumicDyes.tabTD);
+	   itemFortressLegsDyed = (new ThaumiumFortressDyed(FortressArmor, 4, 2)).setUnlocalizedName("itemLegsFortressDyed").setCreativeTab(ThaumicDyes.tabTD);
       
-	   itemHelmetCultistLeaderDyed = (new CultistPraetorDyed(FortressArmor, 4, 0)).setUnlocalizedName("itemHelmetCultistLeaderDyed").setCreativeTab(ThaumicDyes.tabTD);
-	   itemChestCultistLeaderDyed = (new CultistPraetorDyed(FortressArmor, 4, 1)).setUnlocalizedName("itemChestCultistLeaderDyed").setCreativeTab(ThaumicDyes.tabTD);
-	   itemLegsCultistLeaderDyed = (new CultistPraetorDyed(FortressArmor, 4, 2)).setUnlocalizedName("itemLegsCultistLeaderDyed").setCreativeTab(ThaumicDyes.tabTD);
+	   itemCultistLeaderHelmetDyed = (new CultistPraetorDyed(FortressArmor, 4, 0)).setUnlocalizedName("itemHelmetCultistLeaderDyed").setCreativeTab(ThaumicDyes.tabTD);
+	   itemCultistLeaderChestDyed = (new CultistPraetorDyed(FortressArmor, 4, 1)).setUnlocalizedName("itemChestCultistLeaderDyed").setCreativeTab(ThaumicDyes.tabTD);
+	   itemCultistLeaderLegsDyed = (new CultistPraetorDyed(FortressArmor, 4, 2)).setUnlocalizedName("itemLegsCultistLeaderDyed").setCreativeTab(ThaumicDyes.tabTD);
 	   
-	   itemHelmetCultistKnightDyed = (new CultistKnightDyed(KnightArmor, 4, 0)).setUnlocalizedName("itemHelmetCultistKnightDyed").setCreativeTab(ThaumicDyes.tabTD);
-	   itemChestCultistKnightDyed = (new CultistKnightDyed(KnightArmor, 4, 1)).setUnlocalizedName("itemChestCultistKnightDyed").setCreativeTab(ThaumicDyes.tabTD);
-	   itemLegsCultistKnightDyed = (new CultistKnightDyed(KnightArmor, 4, 2)).setUnlocalizedName("itemLegsCultistKnightDyed").setCreativeTab(ThaumicDyes.tabTD);
+	   itemCultistKnightHelmetDyed = (new CultistKnightDyed(KnightArmor, 4, 0)).setUnlocalizedName("itemHelmetCultistKnightDyed").setCreativeTab(ThaumicDyes.tabTD);
+	   itemCultistKnightChestDyed = (new CultistKnightDyed(KnightArmor, 4, 1)).setUnlocalizedName("itemChestCultistKnightDyed").setCreativeTab(ThaumicDyes.tabTD);
+	   itemCultistKnightLegsDyed = (new CultistKnightDyed(KnightArmor, 4, 2)).setUnlocalizedName("itemLegsCultistKnightDyed").setCreativeTab(ThaumicDyes.tabTD);
 	   
-	   itemHelmetInhabitedPlate = (new InhabitedKnightArmor(ArmorMaterial.IRON, 4, 0)).setUnlocalizedName("itemHelmetInhabitedPlate").setCreativeTab(ThaumicDyes.tabTD);
-	   itemChestInhabitedPlate = (new InhabitedKnightArmor(ArmorMaterial.IRON, 4, 1)).setUnlocalizedName("itemChestInhabitedPlate").setCreativeTab(ThaumicDyes.tabTD);
-	   itemLegsInhabitedPlate = (new InhabitedKnightArmor(ArmorMaterial.IRON, 4, 2)).setUnlocalizedName("itemLegsInhabitedPlate").setCreativeTab(ThaumicDyes.tabTD);
+	   itemInhabitedPlateHelmet = (new InhabitedKnightArmor(ArmorMaterial.IRON, 4, 0)).setUnlocalizedName("itemHelmetInhabitedPlate").setCreativeTab(ThaumicDyes.tabTD);
+	   itemInhabitedPlateChest = (new InhabitedKnightArmor(ArmorMaterial.IRON, 4, 1)).setUnlocalizedName("itemChestInhabitedPlate").setCreativeTab(ThaumicDyes.tabTD);
+	   itemInhabitedPlateLegs = (new InhabitedKnightArmor(ArmorMaterial.IRON, 4, 2)).setUnlocalizedName("itemLegsInhabitedPlate").setCreativeTab(ThaumicDyes.tabTD);
 	   
-	   itemHelmetIronFortress = (new IronFortressArmor(IronFortressArmor, 4, 0)).setUnlocalizedName("itemHelmetIronFortress").setCreativeTab(ThaumicDyes.tabTD);
-	   itemChestIronFortress = (new IronFortressArmor(IronFortressArmor, 4, 1)).setUnlocalizedName("itemChestIronFortress").setCreativeTab(ThaumicDyes.tabTD);
-	   itemLegsIronFortress = (new IronFortressArmor(IronFortressArmor, 4, 2)).setUnlocalizedName("itemLegsIronFortress").setCreativeTab(ThaumicDyes.tabTD);
+	   itemIronFortressHelmet = (new IronFortressArmor(IronFortressArmor, 4, 0)).setUnlocalizedName("itemHelmetIronFortress").setCreativeTab(ThaumicDyes.tabTD);
+	   itemIronFortressChest = (new IronFortressArmor(IronFortressArmor, 4, 1)).setUnlocalizedName("itemChestIronFortress").setCreativeTab(ThaumicDyes.tabTD);
+	   itemIronFortressLegs = (new IronFortressArmor(IronFortressArmor, 4, 2)).setUnlocalizedName("itemLegsIronFortress").setCreativeTab(ThaumicDyes.tabTD);
       
-	   itemHelmetCultistRanger = (new CultistRanger(ArmorMaterial.IRON, 4, 0)).setUnlocalizedName("itemHelmetCultistRanger").setCreativeTab(ThaumicDyes.tabTD);
-	   itemChestCultistRanger = (new CultistRanger(ArmorMaterial.IRON, 4, 1)).setUnlocalizedName("itemChestCultistRanger").setCreativeTab(ThaumicDyes.tabTD);
-	   itemLegsCultistRanger = (new CultistRanger(ArmorMaterial.IRON, 4, 2)).setUnlocalizedName("itemLegsCultistRanger").setCreativeTab(ThaumicDyes.tabTD);
+	   itemCultistRangerHelmet = (new CultistRanger(ArmorMaterial.IRON, 4, 0)).setUnlocalizedName("itemHelmetCultistRanger").setCreativeTab(ThaumicDyes.tabTD);
+	   itemCultistRangerChest = (new CultistRanger(ArmorMaterial.IRON, 4, 1)).setUnlocalizedName("itemChestCultistRanger").setCreativeTab(ThaumicDyes.tabTD);
+	   itemCultistRangerLegs = (new CultistRanger(ArmorMaterial.IRON, 4, 2)).setUnlocalizedName("itemLegsCultistRanger").setCreativeTab(ThaumicDyes.tabTD);
       
-	   itemHelmetCultistRangerDyed = (new CultistRangerDyed(RobesArmor, 4, 0)).setUnlocalizedName("itemHelmetCultistRangerDyed").setCreativeTab(ThaumicDyes.tabTD);
-	   itemChestCultistRangerDyed = (new CultistRangerDyed(RobesArmor, 4, 1)).setUnlocalizedName("itemChestCultistRangerDyed").setCreativeTab(ThaumicDyes.tabTD);
-	   itemLegsCultistRangerDyed = (new CultistRangerDyed(RobesArmor, 4, 2)).setUnlocalizedName("itemLegsCultistRangerDyed").setCreativeTab(ThaumicDyes.tabTD);
+	   itemCultistRangerHelmetDyed = (new CultistRangerDyed(RobesArmor, 4, 0)).setUnlocalizedName("itemHelmetCultistRangerDyed").setCreativeTab(ThaumicDyes.tabTD);
+	   itemCultistRangerChestDyed = (new CultistRangerDyed(RobesArmor, 4, 1)).setUnlocalizedName("itemChestCultistRangerDyed").setCreativeTab(ThaumicDyes.tabTD);
+	   itemCultistRangerLegsDyed = (new CultistRangerDyed(RobesArmor, 4, 2)).setUnlocalizedName("itemLegsCultistRangerDyed").setCreativeTab(ThaumicDyes.tabTD);
       
-	   itemHelmetVoidRobeDyed = (new VoidRobeDyed(ThaumcraftApi.armorMatVoid, 4, 0)).setUnlocalizedName("itemHelmetVoidRobeDyed").setCreativeTab(ThaumicDyes.tabTD);
-	   itemChestVoidRobeDyed = (new VoidRobeDyed(ThaumcraftApi.armorMatVoid, 4, 1)).setUnlocalizedName("itemChestVoidRobeDyed").setCreativeTab(ThaumicDyes.tabTD);
-	   itemLegsVoidRobeDyed = (new VoidRobeDyed(ThaumcraftApi.armorMatVoid, 4, 2)).setUnlocalizedName("itemLegsVoidRobeDyed").setCreativeTab(ThaumicDyes.tabTD);
+	   itemVoidRobeHelmetDyed = (new VoidRobeDyed(ThaumcraftApi.armorMatVoid, 4, 0)).setUnlocalizedName("itemHelmetVoidRobeDyed").setCreativeTab(ThaumicDyes.tabTD);
+	   itemVoidRobeChestDyed = (new VoidRobeDyed(ThaumcraftApi.armorMatVoid, 4, 1)).setUnlocalizedName("itemChestVoidRobeDyed").setCreativeTab(ThaumicDyes.tabTD);
+	   itemVoidRobeLegsDyed = (new VoidRobeDyed(ThaumcraftApi.armorMatVoid, 4, 2)).setUnlocalizedName("itemLegsVoidRobeDyed").setCreativeTab(ThaumicDyes.tabTD);
        //boot
-	   itemBootsVoidTraveller = (new VoidBoots(ThaumcraftApi.armorMatVoid, 4, 3)).setUnlocalizedName("itemBootsVoidTraveller").setCreativeTab(ThaumicDyes.tabTD);
+	   itemVoidBootsTraveller = (new VoidBoots(ThaumcraftApi.armorMatVoid, 4, 3)).setUnlocalizedName("itemBootsVoidTraveller").setCreativeTab(ThaumicDyes.tabTD);
 	   
-	   itemHelmetThaumiumRobeDyed = (new ThaumiumRobeDyed(ThaumcraftApi.armorMatThaumium, 4, 0)).setUnlocalizedName("itemHelmetThaumiumRobeDyed").setCreativeTab(ThaumicDyes.tabTD);
-	   itemChestThaumiumRobeDyed = (new ThaumiumRobeDyed(ThaumcraftApi.armorMatThaumium, 4, 1)).setUnlocalizedName("itemChestThaumiumRobeDyed").setCreativeTab(ThaumicDyes.tabTD);
-	   itemLegsThaumiumRobeDyed = (new ThaumiumRobeDyed(ThaumcraftApi.armorMatThaumium, 4, 2)).setUnlocalizedName("itemLegsThaumiumRobeDyed").setCreativeTab(ThaumicDyes.tabTD);
+	   itemThaumiumRobeHelmetDyed = (new ThaumiumRobeDyed(ThaumcraftApi.armorMatThaumium, 4, 0)).setUnlocalizedName("itemHelmetThaumiumRobeDyed").setCreativeTab(ThaumicDyes.tabTD);
+	   itemThaumiumRobeChestDyed = (new ThaumiumRobeDyed(ThaumcraftApi.armorMatThaumium, 4, 1)).setUnlocalizedName("itemChestThaumiumRobeDyed").setCreativeTab(ThaumicDyes.tabTD);
+	   itemThaumiumRobeLegsDyed = (new ThaumiumRobeDyed(ThaumcraftApi.armorMatThaumium, 4, 2)).setUnlocalizedName("itemLegsThaumiumRobeDyed").setCreativeTab(ThaumicDyes.tabTD);
        //boot
-	   itemBootsThaumiumTraveller = (new ThaumiumBoots(ThaumcraftApi.armorMatThaumium, 4, 3)).setUnlocalizedName("itemBootsThaumiumTraveller").setCreativeTab(ThaumicDyes.tabTD);
+	   itemThaumiumBootsTraveller = (new ThaumiumBoots(ThaumcraftApi.armorMatThaumium, 4, 3)).setUnlocalizedName("itemBootsThaumiumTraveller").setCreativeTab(ThaumicDyes.tabTD);
 	   
-	   itemHelmetCultistPaladin = (new CultistPaladin(FortressArmor, 4, 0)).setUnlocalizedName("itemHelmetCultistPaladin").setCreativeTab(ThaumicDyes.tabTD);
+	   itemCultistPaladinHelmet = (new CultistPaladin(FortressArmor, 4, 0)).setUnlocalizedName("itemHelmetCultistPaladin").setCreativeTab(ThaumicDyes.tabTD);
 	   
-	   itemHelmetCultistArcher = (new CultistArcher(ArmorMaterial.IRON, 4, 0)).setUnlocalizedName("itemHelmetCultistArcher").setCreativeTab(ThaumicDyes.tabTD);
-	   itemChestCultistArcher = (new CultistArcher(ArmorMaterial.IRON, 4, 1)).setUnlocalizedName("itemChestCultistArcher").setCreativeTab(ThaumicDyes.tabTD);
-	   itemLegsCultistArcher = (new CultistArcher(ArmorMaterial.IRON, 4, 2)).setUnlocalizedName("itemLegsCultistArcher").setCreativeTab(ThaumicDyes.tabTD);
+	   itemCultistArcherHelmet = (new CultistArcher(ArmorMaterial.IRON, 4, 0)).setUnlocalizedName("itemHelmetCultistArcher").setCreativeTab(ThaumicDyes.tabTD);
+	   itemCultistArcherChest = (new CultistArcher(ArmorMaterial.IRON, 4, 1)).setUnlocalizedName("itemChestCultistArcher").setCreativeTab(ThaumicDyes.tabTD);
+	   itemCultistArcherLegs = (new CultistArcher(ArmorMaterial.IRON, 4, 2)).setUnlocalizedName("itemLegsCultistArcher").setCreativeTab(ThaumicDyes.tabTD);
 	   
-	   itemHelmetCultistArcherDyed = (new CultistArcherDyed(KnightArmor, 4, 0)).setUnlocalizedName("itemHelmetCultistArcherDyed").setCreativeTab(ThaumicDyes.tabTD);
-	   itemChestCultistArcherDyed = (new CultistArcherDyed(KnightArmor, 4, 1)).setUnlocalizedName("itemChestCultistArcherDyed").setCreativeTab(ThaumicDyes.tabTD);
-	   itemLegsCultistArcherDyed = (new CultistArcherDyed(KnightArmor, 4, 2)).setUnlocalizedName("itemLegsCultistArcherDyed").setCreativeTab(ThaumicDyes.tabTD);
+	   itemCultistArcherHelmetDyed = (new CultistArcherDyed(KnightArmor, 4, 0)).setUnlocalizedName("itemHelmetCultistArcherDyed").setCreativeTab(ThaumicDyes.tabTD);
+	   itemCultistArcherChestDyed = (new CultistArcherDyed(KnightArmor, 4, 1)).setUnlocalizedName("itemChestCultistArcherDyed").setCreativeTab(ThaumicDyes.tabTD);
+	   itemCultistArcherLegsDyed = (new CultistArcherDyed(KnightArmor, 4, 2)).setUnlocalizedName("itemLegsCultistArcherDyed").setCreativeTab(ThaumicDyes.tabTD);
 	   	   
-	   itemFabricResource = (new ItemFabricResource()).setUnlocalizedName("itemFabricResource").setCreativeTab(ThaumicDyes.tabTD);
+	   itemResourceFabric = (new ItemFabricResource()).setUnlocalizedName("itemFabricResource").setCreativeTab(ThaumicDyes.tabTD);
 	   
-	   itemHelmetSunKnight = (new SunKnight(ArmorMaterial.IRON, 4, 0)).setUnlocalizedName("itemHelmetSunKnight").setCreativeTab(ThaumicDyes.tabTD);
-	   itemChestSunKnight = (new SunKnight(ArmorMaterial.IRON, 4, 1)).setUnlocalizedName("itemChestSunKnight").setCreativeTab(ThaumicDyes.tabTD);
+	   itemSunKnightHelmet = (new SunKnight(ArmorMaterial.IRON, 4, 0)).setUnlocalizedName("itemHelmetSunKnight").setCreativeTab(ThaumicDyes.tabTD);
+	   itemSunKnightChest = (new SunKnight(ArmorMaterial.IRON, 4, 1)).setUnlocalizedName("itemChestSunKnight").setCreativeTab(ThaumicDyes.tabTD);
 	   
 	   //legacy runic armor
-	   itemHelmetRunic= (new ItemRunicArmor(RunicArmor, 4, 0)).setUnlocalizedName("ItemHelmetRunic").setCreativeTab(ThaumicDyes.tabTD);
-	   itemChestRunic= (new ItemRunicArmor(RunicArmor, 4, 1)).setUnlocalizedName("ItemChestRunic").setCreativeTab(ThaumicDyes.tabTD);
-	   itemLegsRunic= (new ItemRunicArmor(RunicArmor, 4, 2)).setUnlocalizedName("ItemLegsRunic").setCreativeTab(ThaumicDyes.tabTD);
-	   itemBootsRunic= (new ItemRunicArmor(RunicArmor, 4, 3)).setUnlocalizedName("ItemBootsRunic").setCreativeTab(ThaumicDyes.tabTD);;
-	   itemGogglesRunic = (new ItemRunicGoggles(RunicArmor, 4, 0)).setUnlocalizedName("ItemGogglesRunic").setCreativeTab(ThaumicDyes.tabTD);
-	   itemBootsTravellerRunic = (new ItemRunicBootsTraveller(RunicArmor, 4, 3)).setUnlocalizedName("ItemBootsTravellerRunic").setCreativeTab(ThaumicDyes.tabTD);;
+	   itemRunicHelmet = (new ItemRunicArmor(RunicArmor, 4, 0)).setUnlocalizedName("ItemHelmetRunic").setCreativeTab(ThaumicDyes.tabTD);
+	   itemRunicChest = (new ItemRunicArmor(RunicArmor, 4, 1)).setUnlocalizedName("ItemChestRunic").setCreativeTab(ThaumicDyes.tabTD);
+	   itemRunicLegs = (new ItemRunicArmor(RunicArmor, 4, 2)).setUnlocalizedName("ItemLegsRunic").setCreativeTab(ThaumicDyes.tabTD);
+	   itemRunicBoots = (new ItemRunicArmor(RunicArmor, 4, 3)).setUnlocalizedName("ItemBootsRunic").setCreativeTab(ThaumicDyes.tabTD);;
+	   itemRunicGoggles = (new ItemRunicGoggles(RunicArmor, 4, 0)).setUnlocalizedName("ItemGogglesRunic").setCreativeTab(ThaumicDyes.tabTD);
+	   itemRunicBootsTraveller = (new ItemRunicBootsTraveller(RunicArmor, 4, 3)).setUnlocalizedName("ItemBootsTravellerRunic").setCreativeTab(ThaumicDyes.tabTD);;
 	   
 	   //legacy TX
 	   itemHelmetMaskTX = (new ItemTXAncientMask(ThaumcraftApi.armorMatSpecial, 2, 0)).setUnlocalizedName("ItemMaskEvil").setCreativeTab(ThaumicDyes.tabTD);
 	   
-	   itemHelmetRunicEnhanced = (new ItemRunicArmorEnhanced(RunicArmor, 4, 0)).setUnlocalizedName("ItemHelmetRunicEnhanced").setCreativeTab(ThaumicDyes.tabTD);
-	   itemChestRunicEnhanced = (new ItemRunicArmorEnhanced(RunicArmor, 4, 1)).setUnlocalizedName("ItemChestRunicEnhanced").setCreativeTab(ThaumicDyes.tabTD);
-	   itemLegsRunicEnhanced = (new ItemRunicArmorEnhanced(RunicArmor, 4, 2)).setUnlocalizedName("ItemLegsRunicEnhanced").setCreativeTab(ThaumicDyes.tabTD);
-	   itemBootsRunicEnhanced = (new ItemRunicArmorEnhanced(RunicArmor, 4, 3)).setUnlocalizedName("ItemBootsRunicEnhanced").setCreativeTab(ThaumicDyes.tabTD);;
+	   itemRunicHelmetEnhanced = (new ItemRunicArmorEnhanced(RunicArmor, 4, 0)).setUnlocalizedName("ItemHelmetRunicEnhanced").setCreativeTab(ThaumicDyes.tabTD);
+	   itemRunicChestEnhanced = (new ItemRunicArmorEnhanced(RunicArmor, 4, 1)).setUnlocalizedName("ItemChestRunicEnhanced").setCreativeTab(ThaumicDyes.tabTD);
+	   itemRunicLegsEnhanced = (new ItemRunicArmorEnhanced(RunicArmor, 4, 2)).setUnlocalizedName("ItemLegsRunicEnhanced").setCreativeTab(ThaumicDyes.tabTD);
+	   itemRunicBootsEnhanced = (new ItemRunicArmorEnhanced(RunicArmor, 4, 3)).setUnlocalizedName("ItemBootsRunicEnhanced").setCreativeTab(ThaumicDyes.tabTD);;
 	   
 	   
-	   itemHelmetRunicPrimal = (new ItemRunicArmorPrimal(RunicPrimal, 4, 0)).setUnlocalizedName("ItemHelmetRunicPrimal").setCreativeTab(ThaumicDyes.tabTD);
-	   itemChestRunicPrimal = (new ItemRunicArmorPrimal(RunicPrimal, 4, 1)).setUnlocalizedName("ItemChestRunicPrimal").setCreativeTab(ThaumicDyes.tabTD);
-	   itemLegsRunicPrimal = (new ItemRunicArmorPrimal(RunicPrimal, 4, 2)).setUnlocalizedName("ItemLegsRunicPrimal").setCreativeTab(ThaumicDyes.tabTD);
-	   itemBootsRunicPrimal = (new ItemRunicArmorPrimalBoots(RunicPrimal, 4, 3)).setUnlocalizedName("ItemBootsRunicPrimal").setCreativeTab(ThaumicDyes.tabTD);
+	   itemRunicHelmetPrimal = (new ItemRunicArmorPrimal(RunicArmor, 4, 0)).setUnlocalizedName("ItemHelmetRunicPrimal").setCreativeTab(ThaumicDyes.tabTD);
+	   itemRunicChestPrimal = (new ItemRunicArmorPrimal(RunicArmor, 4, 1)).setUnlocalizedName("ItemChestRunicPrimal").setCreativeTab(ThaumicDyes.tabTD);
+	   itemRunicLegsPrimal = (new ItemRunicArmorPrimal(RunicArmor, 4, 2)).setUnlocalizedName("ItemLegsRunicPrimal").setCreativeTab(ThaumicDyes.tabTD);
+	   itemRunicBootsPrimal = (new ItemRunicArmorPrimalBoots(RunicArmor, 4, 3)).setUnlocalizedName("ItemBootsRunicPrimal").setCreativeTab(ThaumicDyes.tabTD);
 	   
 	   
    }
@@ -284,65 +284,65 @@ public class ItemHandler {
    public static void addAspects() { //TODO aspects
 	   
 	   //crimson
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemHelmetCultistPaladin), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemCultistPaladinHelmet), 
 			   new AspectList().add(Aspect.METAL, 6).add(Aspect.GREED, 3).add(Aspect.ELDRITCH, 2));
 	   
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemHelmetCultistRanger), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemCultistRangerHelmet), 
 			   new AspectList().add(Aspect.METAL, 3).add(Aspect.CLOTH, 2).add(Aspect.ELDRITCH, 1).add(Aspect.TRAVEL, 1));
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemChestCultistRanger), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemCultistRangerChest), 
 			   new AspectList().add(Aspect.METAL, 3).add(Aspect.CLOTH, 2).add(Aspect.ELDRITCH, 1).add(Aspect.TRAVEL, 1));
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemLegsCultistRanger), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemCultistRangerLegs), 
 			   new AspectList().add(Aspect.METAL, 3).add(Aspect.CLOTH, 2).add(Aspect.ELDRITCH, 1).add(Aspect.TRAVEL, 1));
 	   
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemHelmetCultistArcher), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemCultistArcherHelmet), 
 			   new AspectList().add(Aspect.METAL, 5).add(Aspect.ELDRITCH, 1).add(Aspect.WEAPON, 1));
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemChestCultistArcher), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemCultistArcherChest), 
 			   new AspectList().add(Aspect.METAL, 5).add(Aspect.ELDRITCH, 1).add(Aspect.WEAPON, 1));
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemLegsCultistArcher), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemCultistArcherLegs), 
 			   new AspectList().add(Aspect.METAL, 5).add(Aspect.ELDRITCH, 1).add(Aspect.WEAPON, 1));
 	   
 	   //dyed
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemHelmetCultistRobeDyed), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemCultistRobeHelmetDyed), 
 			   new AspectList().add(Aspect.METAL, 4).add(Aspect.CLOTH, 3).add(Aspect.ELDRITCH, 1).add(Aspect.SENSES, 1).add(Aspect.MAGIC, 2));
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemChestCultistRobeDyed), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemCultistRobeChestDyed), 
 			   new AspectList().add(Aspect.METAL, 4).add(Aspect.CLOTH, 3).add(Aspect.ELDRITCH, 1).add(Aspect.SENSES, 1).add(Aspect.MAGIC, 2));
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemLegsCultistRobeDyed), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemCultistRobeLegsDyed), 
 			   new AspectList().add(Aspect.METAL, 4).add(Aspect.CLOTH, 3).add(Aspect.ELDRITCH, 1).add(Aspect.SENSES, 1).add(Aspect.MAGIC, 2));
 	   
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemHelmetCultistKnightDyed), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemCultistKnightHelmetDyed), 
 			   new AspectList().add(Aspect.METAL, 6).add(Aspect.CLOTH, 1).add(Aspect.ELDRITCH, 1).add(Aspect.SENSES, 1));
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemChestCultistKnightDyed), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemCultistKnightChestDyed), 
 			   new AspectList().add(Aspect.METAL, 6).add(Aspect.CLOTH, 1).add(Aspect.ELDRITCH, 1).add(Aspect.SENSES, 1));
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemLegsCultistKnightDyed), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemCultistKnightLegsDyed), 
 			   new AspectList().add(Aspect.METAL, 6).add(Aspect.CLOTH, 1).add(Aspect.ELDRITCH, 1).add(Aspect.SENSES, 1));
 	   
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemHelmetCultistLeaderDyed), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemCultistLeaderHelmetDyed), 
 			   new AspectList().add(Aspect.METAL, 6).add(Aspect.CLOTH, 1).add(Aspect.ELDRITCH, 2).add(Aspect.SENSES, 1));
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemChestCultistLeaderDyed), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemCultistLeaderChestDyed), 
 			   new AspectList().add(Aspect.METAL, 6).add(Aspect.CLOTH, 1).add(Aspect.ELDRITCH, 2).add(Aspect.SENSES, 1));
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemLegsCultistLeaderDyed), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemCultistLeaderLegsDyed), 
 			   new AspectList().add(Aspect.METAL, 6).add(Aspect.CLOTH, 1).add(Aspect.ELDRITCH, 2).add(Aspect.SENSES, 1));
 	   
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemHelmetCultistRangerDyed), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemCultistRangerHelmetDyed), 
 			   new AspectList().add(Aspect.METAL, 4).add(Aspect.CLOTH, 3).add(Aspect.ELDRITCH, 1).add(Aspect.SENSES, 1).add(Aspect.TRAVEL, 1));
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemChestCultistRangerDyed), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemCultistRangerChestDyed), 
 			   new AspectList().add(Aspect.METAL, 4).add(Aspect.CLOTH, 3).add(Aspect.ELDRITCH, 1).add(Aspect.SENSES, 1).add(Aspect.TRAVEL, 1));
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemLegsCultistRangerDyed), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemCultistRangerLegsDyed), 
 			   new AspectList().add(Aspect.METAL, 4).add(Aspect.CLOTH, 3).add(Aspect.ELDRITCH, 1).add(Aspect.SENSES, 1).add(Aspect.TRAVEL, 1));
 	   
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemHelmetCultistArcherDyed), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemCultistArcherHelmetDyed), 
 			   new AspectList().add(Aspect.METAL, 6).add(Aspect.CLOTH, 1).add(Aspect.ELDRITCH, 1).add(Aspect.SENSES, 1).add(Aspect.WEAPON, 1));
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemChestCultistArcherDyed), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemCultistArcherChestDyed), 
 			   new AspectList().add(Aspect.METAL, 6).add(Aspect.CLOTH, 1).add(Aspect.ELDRITCH, 1).add(Aspect.SENSES, 1).add(Aspect.WEAPON, 1));
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemLegsCultistArcherDyed), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemCultistArcherLegsDyed), 
 			   new AspectList().add(Aspect.METAL, 6).add(Aspect.CLOTH, 1).add(Aspect.ELDRITCH, 1).add(Aspect.SENSES, 1).add(Aspect.WEAPON, 1));
 	   
 	   //eldritch
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemHelmetInhabitedPlate), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemInhabitedPlateHelmet), 
 			   new AspectList().add(Aspect.METAL, 5).add(Aspect.UNDEAD, 1).add(Aspect.ELDRITCH, 4).add(Aspect.ENTROPY, 2));
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemChestInhabitedPlate), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemInhabitedPlateChest), 
 			   new AspectList().add(Aspect.METAL, 5).add(Aspect.UNDEAD, 1).add(Aspect.ELDRITCH, 4).add(Aspect.ENTROPY, 2));
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemLegsInhabitedPlate), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemInhabitedPlateLegs), 
 			   new AspectList().add(Aspect.METAL, 5).add(Aspect.UNDEAD, 1).add(Aspect.ELDRITCH, 4).add(Aspect.ENTROPY, 2));
 	   //iron tier
 	   
@@ -351,28 +351,28 @@ public class ItemHandler {
 	   // void tier
 	   
 	   //runic
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemHelmetRunic), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemRunicHelmet), 
 			   new AspectList().add(Aspect.ARMOR, 4).add(Aspect.ENERGY, 12).add(Aspect.MAGIC, 8).add(Aspect.GREED, 5).add(Aspect.VOID, 4) );
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemChestRunic), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemRunicChest), 
 			   new AspectList().add(Aspect.ARMOR, 12).add(Aspect.ENERGY, 36).add(Aspect.MAGIC, 24).add(Aspect.GREED, 5).add(Aspect.VOID, 4) );
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemLegsRunic), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemRunicLegs), 
 			   new AspectList().add(Aspect.ARMOR, 8).add(Aspect.ENERGY, 24).add(Aspect.MAGIC, 16).add(Aspect.GREED, 5).add(Aspect.VOID, 4) );
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemBootsRunic), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemRunicBoots), 
 			   new AspectList().add(Aspect.ARMOR, 4).add(Aspect.ENERGY, 12).add(Aspect.MAGIC, 8).add(Aspect.GREED, 5).add(Aspect.VOID, 4) );
 	   
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemHelmetRunicEnhanced), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemRunicHelmetEnhanced), 
 			   new AspectList().add(Aspect.ARMOR, 4).add(Aspect.ENERGY, 12).add(Aspect.MAGIC, 8).add(Aspect.GREED, 10).add(Aspect.VOID, 4).add(Aspect.ORDER, 6) );
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemChestRunicEnhanced), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemRunicChestEnhanced), 
 			   new AspectList().add(Aspect.ARMOR, 12).add(Aspect.ENERGY, 36).add(Aspect.MAGIC, 24).add(Aspect.GREED, 10).add(Aspect.VOID, 4).add(Aspect.ORDER, 6) );
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemLegsRunicEnhanced), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemRunicLegsEnhanced), 
 			   new AspectList().add(Aspect.ARMOR, 8).add(Aspect.ENERGY, 24).add(Aspect.MAGIC, 16).add(Aspect.GREED, 10).add(Aspect.VOID, 4).add(Aspect.ORDER, 6) );
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemBootsRunicEnhanced), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemRunicBootsEnhanced), 
 			   new AspectList().add(Aspect.ARMOR, 4).add(Aspect.ENERGY, 12).add(Aspect.MAGIC, 8).add(Aspect.GREED, 10).add(Aspect.VOID, 4).add(Aspect.ORDER, 6) );
 	   
 	   
 	   
 	   //other
-	   ThaumcraftApi.registerObjectTag(new ItemStack(itemFabricResource), 
+	   ThaumcraftApi.registerObjectTag(new ItemStack(itemResourceFabric), 
 			   new AspectList().add(Aspect.CLOTH, 4).add(Aspect.ELDRITCH, 1).add(Aspect.MAGIC, 2));
    
 	   /*

@@ -80,7 +80,7 @@ public class ItemRunicArmorPrimalBoots extends ItemRunicArmorPrimal   {
     @SubscribeEvent
     public void playerJumps(LivingEvent.LivingJumpEvent event)
     {
-      if (((event.entity instanceof EntityPlayer)) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0) != null) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0).getItem() == ItemHandler.itemBootsRunicPrimal)) {
+      if (((event.entity instanceof EntityPlayer)) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0) != null) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0).getItem() == ItemHandler.itemRunicBootsPrimal)) {
     	  //System.out.println("event.entityLiving.motionY "+event.entityLiving.motionY);
     	  event.entityLiving.motionY += 0.35D;
       }

@@ -15,6 +15,6 @@ public final class TabTD extends CreativeTabs {
 	@SideOnly(Side.CLIENT)
 	public Item getTabIconItem()
 	{
-	  return ItemHandler.itemChestCultistRobeDyed;
+	  return ItemHandler.itemCultistRobeChestDyed;
 	}
 }
