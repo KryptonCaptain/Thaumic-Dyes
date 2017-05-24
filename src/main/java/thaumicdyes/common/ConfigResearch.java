@@ -39,7 +39,6 @@ public class ConfigResearch {
       );
       
       //Copy research nodes
-      copy(ResearchCategories.getResearchList("ARTIFICE").research.get("ARMORFORTRESS"),"TD.ARMORFORTRESS","DYES",7,-2	).setConcealed().setHidden().registerResearchItem();
       //copy(ResearchCategories.getResearchList("ELDRITCH").research.get("VOIDMETAL"),"TD.VOIDMETAL","DYES",0,-1).setConcealed().setHidden().registerResearchItem();
       
       researchCrimson();
@@ -125,7 +124,7 @@ public class ConfigResearch {
 	
 	 new ResearchItem("TD.CRIMSONBANNER", "DYES", 
 			  (new AspectList()).add(Aspect.CLOTH, 2).add(Aspect.SENSES, 1),
-			  -1, -1, 2, 
+			  -1, -1, 1, 
 			  new ItemStack(ConfigBlocks.blockWoodenDevice, 1, 8))
 			  .setPages(new ResearchPage[]{
 					  new ResearchPage("tc.research_page.TD.crimsonBanner.1"),
@@ -293,7 +292,7 @@ public class ConfigResearch {
 	
 	new ResearchItem("TD.CRIMSONLEADER", "DYES", 
 	   		  (new AspectList()).add(Aspect.ELDRITCH, 4).add(Aspect.ARMOR, 4).add(Aspect.METAL, 4).add(Aspect.MAGIC, 4),
-	   		  -3, 2, 1, 
+	   		  -3, 2, 2, 
 	   		  new ItemStack(ConfigItems.itemHelmetCultistLeaderPlate))
 	   		  .setPages(new ResearchPage[]{
 	   				  new ResearchPage("tc.research_page.TD.crimsonLeader.1"),
@@ -789,7 +788,7 @@ public class ConfigResearch {
           
           new ResearchItem("TD.INHABITEDPLATE", "DYES", 
     		  (new AspectList()).add(Aspect.ENTROPY, 4).add(Aspect.EXCHANGE, 4).add(Aspect.ELDRITCH, 4),
-              -4, 6, 1, 
+              -4, 6, 2, 
     		  new ItemStack(ItemHandler.itemInhabitedPlateHelmet, 0))
     		  .setPages(new ResearchPage[]{
     				  new ResearchPage("tc.research_page.TD.husk.1"), 
@@ -847,7 +846,7 @@ public class ConfigResearch {
 	          
 	    new ResearchItem("TD.IRONFORTRESS", "DYES", 
 	  		  (new AspectList()).add(Aspect.ARMOR, 5).add(Aspect.METAL, 5).add(Aspect.CRAFT, 5),
-	  		  9, -1, 1, 
+	  		  9, -1, 2, 
 	  		  new ItemStack(ItemHandler.itemIronFortressHelmet, 0))
 	    		  .setPages(new ResearchPage[]{
 	  				  new ResearchPage("tc.research_page.TD.ironFortress.1"),
@@ -887,7 +886,7 @@ public class ConfigResearch {
 			
 		new ResearchItem("TD.IRONHELMGOGGLES", "DYES", 
 				new AspectList().add(Aspect.SENSES, 5).add(Aspect.AURA, 3).add(Aspect.ARMOR, 3), 
-				11, -1, 2, 
+				11, -1, 1, 
 				new ItemStack(ConfigItems.itemGoggles))
 	    		  .setPages(new ResearchPage[]{
 	  				  new ResearchPage("tc.research_page.TD.ironHelmGoggles.1"),
@@ -899,7 +898,7 @@ public class ConfigResearch {
 		
 		new ResearchItem("TD.IRONHELMAESTHETICS", "DYES", 
 				new AspectList().add(Aspect.CRAFT, 5).add(Aspect.ARMOR, 3), 
-				11, 0, 2, 
+				11, 0, 1, 
 				new ItemStack(ConfigItems.itemHelmetCultistPlate))
 	    		  .setPages(new ResearchPage[]{
 	  				  new ResearchPage("tc.research_page.TD.ironHelmFace.1"),
@@ -922,7 +921,7 @@ public class ConfigResearch {
 		
 		new ResearchItem("TD.IRONHELMHUSK", "DYES", 
 				new AspectList().add(Aspect.CRAFT, 5).add(Aspect.ARMOR, 3).add(Aspect.ELDRITCH, 2), 
-				10, 1, 2, 
+				10, 1, 1, 
 				new ItemStack(ItemHandler.itemInhabitedPlateHelmet))
 	    		  .setPages(new ResearchPage[]{
 	  				  new ResearchPage("tc.research_page.TD.ironHelmFace.2"),
@@ -939,7 +938,8 @@ public class ConfigResearch {
    public static void researchThaumium() {
 	   
 		copy(ResearchCategories.getResearchList("ALCHEMY").research.get("THAUMIUM"),"TD.THAUMIUM","DYES",2,-1).setConcealed().setHidden().registerResearchItem();
-	      
+		copy(ResearchCategories.getResearchList("ARTIFICE").research.get("ARMORFORTRESS"),"TD.ARMORFORTRESS","DYES",7,-2	).setConcealed().setHidden().registerResearchItem();
+		
 		/////////////
 		//Thaumium Fortress
      InfusionRecipe recipeFortHelm = ThaumcraftApi.addInfusionCraftingRecipe("TD.DYEDFORTRESS", 
@@ -975,7 +975,7 @@ public class ConfigResearch {
      
      new ResearchItem("TD.DYEDFORTRESS", "DYES", 
    		  (new AspectList()).add(Aspect.CLOTH, 5).add(Aspect.ARMOR, 5).add(Aspect.MAGIC, 5),
-   		  5, -2, 5, 
+   		  5, -2, 2, 
    		  new ItemStack(ItemHandler.itemFortressHelmetDyed, 0))
    		  .setPages(new ResearchPage[]{
    				  new ResearchPage("tc.research_page.TD.fortress.1"), 
@@ -1247,9 +1247,7 @@ public class ConfigResearch {
 		      .registerResearchItem();
       
       
-      //TODO Enhanced runic
-      
-      //base
+      //enhanced
       ArrayList<InfusionRecipe> enhR = new ArrayList();
       for (int a = 0; a <= 3; a++)
       {

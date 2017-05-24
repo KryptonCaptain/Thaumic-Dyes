@@ -190,9 +190,11 @@ public class ItemRunicArmorEnhanced extends ItemRunicArmor  {
 			map.put(SharedMonsterAttributes.maxHealth.getAttributeUnlocalizedName(), 
 					new AttributeModifier(uuid, "Runic vitality", 10, 0));;
 		}
-		if (getUpgrade(armor) == 9 || getUpgrade2(armor) == 9 ) {
-			map.put(SharedMonsterAttributes.movementSpeed.getAttributeUnlocalizedName(), 
-					new AttributeModifier(uuid, "Runic speed", 0.03, 0)); //haste1/2/3 is 0.015/0.03/0.045
+		if (this.armorType == 3) {
+			if (getUpgrade(armor) == 9 || getUpgrade2(armor) == 9 ) {
+				map.put(SharedMonsterAttributes.movementSpeed.getAttributeUnlocalizedName(), 
+						new AttributeModifier(uuid, "Runic speed", 0.03, 0)); //haste1/2/3 is 0.015/0.03/0.045
+			}
 		}
     	
     	//map.put(SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(),new AttributeModifier(uuid, "Abyssal modifier " + aType, this.getArmorDisplay(null, armor, aType) / 20.0, 1)); 

@@ -91,7 +91,7 @@ public class ItemRunicBootsTraveller extends ItemRunicArmor
     @SubscribeEvent
     public void playerJumps(LivingEvent.LivingJumpEvent event)
     {
-      if (((event.entity instanceof EntityPlayer)) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0) != null) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0).getItem() == ItemHandler.itemBootsTravellerRunic)) {
+      if (((event.entity instanceof EntityPlayer)) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0) != null) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0).getItem() == ItemHandler.itemRunicBootsTraveller)) {
         event.entityLiving.motionY += 0.2750000059604645D;
       }
     }

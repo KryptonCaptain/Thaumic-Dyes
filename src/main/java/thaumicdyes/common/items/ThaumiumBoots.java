@@ -118,7 +118,7 @@ public class ThaumiumBoots extends ItemArmor implements IRepairable, IVisDiscoun
    @SubscribeEvent
    public void playerJumps(LivingEvent.LivingJumpEvent event)
    {
-     if (((event.entity instanceof EntityPlayer)) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0) != null) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0).getItem() == ItemHandler.itemBootsThaumiumTraveller)) {
+     if (((event.entity instanceof EntityPlayer)) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0) != null) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0).getItem() == ItemHandler.itemThaumiumBootsTraveller)) {
        event.entityLiving.motionY += 0.2750000059604645D;
      }
    }
