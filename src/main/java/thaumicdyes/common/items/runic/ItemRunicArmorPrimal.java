@@ -21,6 +21,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.PlayerEvent.NameFormat;
 import thaumcraft.api.IGoggles;
+import thaumcraft.api.IVisDiscountGear;
 import thaumcraft.api.IWarpingGear;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.nodes.IRevealer;
@@ -39,7 +40,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 //YOU'LL RUIN THE SURPRISE
 
 
-public class ItemRunicArmorPrimal extends ItemRunicArmor implements IRevealer, IGoggles, IWarpingGear  {
+public class ItemRunicArmorPrimal extends ItemRunicArmor implements IRevealer, IGoggles, IWarpingGear, IVisDiscountGear  {
 
 	public ItemRunicArmorPrimal(ItemArmor.ArmorMaterial enumarmormaterial, int j, int k) {
 		super(enumarmormaterial, j, k);
@@ -293,7 +294,10 @@ public class ItemRunicArmorPrimal extends ItemRunicArmor implements IRevealer, I
    			if (player.getUniqueID().toString() == "8c3dbe36-8161-4207-a2d6-e303dfe260ba") { //because dev perks. purely asstheticc
    				return "thaumicdyes:textures/models/guardian_robe_armor_warden1.png";
    			}
-   			if (player.inventory.hasItemStack(new ItemStack(ConfigItems.itemEldritchObject, 1, 3))) {
+   			if (player.inventory.hasItemStack(new ItemStack(ConfigItems.itemEldritchObject, 1, 0))) {
+   				if (player.inventory.hasItemStack(new ItemStack(ConfigItems.itemEldritchObject, 1, 3))) {
+   	   				return "thaumicdyes:textures/models/guardian_robe_armor_warden1.png";
+   	   			}	
    				return "thaumicdyes:textures/models/guardian_robe_armor2.png";
    			}
    		}

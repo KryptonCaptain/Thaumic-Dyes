@@ -24,6 +24,8 @@ import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
 import cpw.mods.fml.common.network.internal.FMLProxyPacket;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import thaumcraft.client.fx.bolt.FXLightningBolt;
 import thaumcraft.client.fx.particles.FXBoreParticles;
 import thaumcraft.client.fx.particles.FXBoreSparkle;
@@ -41,6 +43,7 @@ public class EventHandlerTXMask{
 	public static int ticks = 0;
 
 	@SubscribeEvent
+	@SideOnly(Side.CLIENT)
 	public void tickStart(final LivingEvent.LivingUpdateEvent event) {
 		ticks++;
 		if (event.entity instanceof EntityPlayer) {

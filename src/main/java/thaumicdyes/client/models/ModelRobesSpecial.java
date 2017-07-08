@@ -678,31 +678,38 @@ public class ModelRobesSpecial extends ModelBiped {
 	this.Hood2.isHidden = set < 4;
 	this.Hood3.isHidden = set < 4;
 	this.Hood4.isHidden = set < 4;
+	
 	this.Chestthing.isHidden = set < 4;
 	this.Mbelt.isHidden = set < 4;
 	this.MbeltB.isHidden = set < 4;
 	this.ClothchestL.isHidden = set < 4;
 	this.ClothchestR.isHidden = set < 4;
+	
 	this.BeltR.isHidden = set < 4;
 	this.Backplate.isHidden = set < 4;
 	this.MbeltL.isHidden = set < 4;
 	this.MbeltR.isHidden = set < 4;
 	this.BeltL.isHidden = set < 4;
 	this.Chestplate.isHidden = set < 4;
+	
 	this.ShoulderplateR1.isHidden = set < 4;
 	this.ShoulderplateR2.isHidden = set < 4;
 	this.ShoulderplateR3.isHidden = set < 4;
 	this.ShoulderplateTopR.isHidden = set < 4;
+	
 	this.RArm1.isHidden = set < 4;
 	this.RArm2.isHidden = set < 4;
 	this.RArm3.isHidden = set < 4;
+	
 	this.LArm1.isHidden = set < 4;
 	this.LArm2.isHidden = set < 4;
 	this.LArm3.isHidden = set < 4;
+	
 	this.ShoulderplateL1.isHidden = set < 4;
 	this.ShoulderplateL2.isHidden = set < 4;
 	this.ShoulderplateL3.isHidden = set < 4;
 	this.ShoulderplateTopL.isHidden = set < 4;
+	
 	this.ShoulderL.isHidden = set < 4;
 	this.ShoulderR.isHidden = set < 4;
 	this.FrontclothR2.isHidden = set < 4;
@@ -730,7 +737,10 @@ public class ModelRobesSpecial extends ModelBiped {
 	this.Cloak2.isHidden = set < 4;
 	this.Cloak3.isHidden = set < 4;
 	
-	
+	this.BackpanelL1.isHidden = set < 4;
+	this.BackpanelL2.isHidden = set < 4;
+	this.BackpanelR1.isHidden = set < 4;
+	this.BackpanelR2.isHidden = set < 4;
 	
 	this.ClothBackL1.isHidden = true;
 	this.ClothBackL2.isHidden = true;

@@ -22,17 +22,19 @@ import net.minecraft.util.IIcon;
 import thaumcraft.api.IGoggles;
 import thaumcraft.api.IRepairable;
 import thaumcraft.api.IRunicArmor;
+import thaumcraft.api.IWarpingGear;
 import thaumcraft.api.ItemApi;
 import thaumcraft.api.nodes.IRevealer;
 import thaumcraft.api.IVisDiscountGear;
+import thaumicdyes.common.ThaumicDyes;
 
-public class ItemTXAncientMask extends ItemArmor implements IVisDiscountGear, IRepairable, IRunicArmor
+public class ItemTXAncientMask extends ItemArmor implements IRepairable, IVisDiscountGear, IRunicArmor, IWarpingGear 
 {
     public IIcon iconHelm;
     
     public ItemTXAncientMask(ArmorMaterial enumarmormaterial, int j, int k) {
         super(enumarmormaterial, j, k);
-        this.setCreativeTab(Thaumcraft.tabTC);
+        this.setCreativeTab(ThaumicDyes.tabTD);
     }
     
     @SideOnly(Side.CLIENT)
@@ -58,9 +60,8 @@ public class ItemTXAncientMask extends ItemArmor implements IVisDiscountGear, IR
     }
     
     public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack) {
-        return par2ItemStack.isItemEqual(ItemApi.getItem("itemResource", 2))?true:super.getIsRepairable(par1ItemStack, par2ItemStack);
-     }
-    
+      return par2ItemStack.isItemEqual(new ItemStack(ConfigItems.itemResource, 1, 16)) ? true : super.getIsRepairable(par1ItemStack, par2ItemStack);
+    }
     
     @Override
     public int getVisDiscount(final ItemStack stack, final EntityPlayer player, final Aspect aspect) {
@@ -76,6 +77,11 @@ public class ItemTXAncientMask extends ItemArmor implements IVisDiscountGear, IR
 	@Override
 	public int getRunicCharge(ItemStack itemstack) {
 		return 0;
+	}
+
+	@Override
+	public int getWarp(ItemStack itemstack, EntityPlayer player) {
+		return 1;
 	}
 }
 

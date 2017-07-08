@@ -179,7 +179,7 @@ public class ItemHandler {
       GameRegistry.registerItem(itemRunicGoggles, "ItemRunicGoggles");
       GameRegistry.registerItem(itemRunicBootsTraveller, "ItemRunicBootsTraveller");
       
-      //GameRegistry.registerItem(itemHelmetMaskTX, "ItemMaskEvil");
+      GameRegistry.registerItem(itemHelmetMaskTX, "ItemMaskEvil");
       
       GameRegistry.registerItem(itemRunicHelmetEnhanced, "ItemRunicHelmetEnhanced");
       GameRegistry.registerItem(itemRunicChestEnhanced, "ItemRunicChestEnhanced");

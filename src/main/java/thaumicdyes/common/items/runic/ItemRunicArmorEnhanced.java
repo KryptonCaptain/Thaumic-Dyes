@@ -15,6 +15,7 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
+import thaumcraft.api.IVisDiscountGear;
 import thaumcraft.api.aspects.Aspect;
 import thaumicdyes.common.ThaumicDyes;
 
@@ -25,7 +26,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 
-public class ItemRunicArmorEnhanced extends ItemRunicArmor  {
+public class ItemRunicArmorEnhanced extends ItemRunicArmor implements IVisDiscountGear {
 
 	public ItemRunicArmorEnhanced(ItemArmor.ArmorMaterial enumarmormaterial, int j, int k) {
 		super(enumarmormaterial, j, k);

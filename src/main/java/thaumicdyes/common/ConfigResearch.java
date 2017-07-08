@@ -800,6 +800,36 @@ public class ConfigResearch {
     		  //.setConcealed()
     		  .registerResearchItem();
           ThaumcraftApi.addWarpToResearch("TD.INHABITEDPLATE", 2);
+          
+          
+          
+          //Mask of Cruelty
+          ShapedArcaneRecipe recipeMaskEvil = ThaumcraftApi.addArcaneCraftingRecipe("TD.MASKEVIL",
+				   new ItemStack(ItemHandler.itemHelmetMaskTX), 
+				   (new AspectList()).add(Aspect.ENTROPY, 60).add(Aspect.FIRE, 40).add(Aspect.AIR, 40),
+				   new Object[]{
+						"LVL",
+						"L L",
+						"EVE",
+						'E',new ItemStack(ConfigItems.itemEldritchObject,1,0),
+						'V',new ItemStack(ConfigItems.itemResource,1,16),
+						'L',new ItemStack(Items.leather)
+						});
+         
+         new ResearchItem("TD.MASKEVIL", "DYES", 
+   		  (new AspectList()).add(Aspect.ENTROPY, 4).add(Aspect.WEAPON, 4).add(Aspect.ELDRITCH, 4),
+             0, 7, 2, 
+   		  new ItemStack(ItemHandler.itemHelmetMaskTX, 0))
+   		  .setPages(new ResearchPage[]{
+   				  new ResearchPage("tc.research_page.TD.maskEvil.1"), 
+   				  new ResearchPage(recipeMaskEvil)})
+   		  .setParents( "VOIDMETAL")
+   		  //.setConcealed()
+   		  .registerResearchItem();
+         ThaumcraftApi.addWarpToResearch("TD.MASKEVIL", 2);
+         
+          
+          
       }
       
    //TODO IRON TIER

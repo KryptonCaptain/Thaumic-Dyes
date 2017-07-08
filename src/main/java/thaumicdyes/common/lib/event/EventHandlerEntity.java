@@ -27,7 +27,7 @@ public class EventHandlerEntity {
 	      EntityPlayer player = (EntityPlayer)event.entity;
 	
 	      if (!event.entity.worldObj.isRemote) {
-	        if (player.ticksExisted % 10 == 0) {
+	        if (player.ticksExisted % 20 == 0) {
         		if ((player.inventory.armorItemInSlot(3) != null) && (player.inventory.armorItemInSlot(3).getItem() instanceof ItemTXAncientMask )) {
 		        	//System.out.println("check Death");
 		        	checkDeathGaze(player);
@@ -57,15 +57,31 @@ public class EventHandlerEntity {
 	            if ((entity instanceof EntityCreature)) {
 	              ((EntityCreature)entity).setTarget(player);
 	            }
-	            //((EntityLivingBase)entity).addPotionEffect(new PotionEffect(Potion.wither.getId(), 80));
-	            ((EntityLivingBase)entity).attackEntityFrom(DamageSourceTX.witherPlayerDamage(player), 1);
+	            //((EntityLivingBase)entity).addPotionEffect(new PotionEffect(Potion.wither.getId(), 100, 1));
+	            //((EntityLivingBase)entity).attackEntityFrom(DamageSourceTX.witherPlayerDamage(player), 1);
 	            
 	            if (player.inventory.armorItemInSlot(3) != null) {
             		player.inventory.armorItemInSlot(3).damageItem(1, player);
             		if (player.inventory.armorItemInSlot(3).getItemDamage() == player.inventory.armorItemInSlot(3).getMaxDamage()) {
             			player.inventory.armorInventory[3] = null;
+            			player.worldObj.playSoundAtEntity(player, "random.break", 0.5F, 1.0F);
             		}
 	            }
+	            
+	            
+	            switch (player.worldObj.rand.nextInt(3))
+	            {
+	            case 0: 
+		            ((EntityLivingBase)entity).addPotionEffect(new PotionEffect(Potion.weakness.getId(), 100, 6)); break;
+	            case 1: 
+		            ((EntityLivingBase)entity).addPotionEffect(new PotionEffect(Potion.wither.getId(), 100, 1)); break;
+	            case 2: 
+	            	((EntityLivingBase)entity).addPotionEffect(new PotionEffect(Potion.moveSlowdown.getId(), 100, 3)); break;
+	            case 3: 
+	            	//do a thing. not sure what the tc2 code did here
+	            	((EntityLivingBase)entity).addPotionEffect(new PotionEffect(Potion.blindness.getId(), 100, 6));
+	            }
+	            
             		
 	          }
 	        }

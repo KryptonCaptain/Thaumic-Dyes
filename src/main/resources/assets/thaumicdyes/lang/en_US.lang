@@ -92,7 +92,7 @@ item.runic.upgrade.8= - Vitality
 item.runic.upgrade.9= - Haste
 
 //Legacy TX
-item.ItemMaskEvil.name=Mask of Cruelty (WIP)
+item.ItemMaskEvil.name=Mask of Cruelty 
 death.attack.witherMask=%1$s was withered away by %2$s
 
 item.ItemHelmetRunicEnhanced.name=Enhanced Runic Headpiece
@@ -226,7 +226,7 @@ tc.research_page.TD.crimsonBanner.1=While banners are an excellent decorative ad
 tc.research_name.TD.RUNICARMOR=Runic Armor
 tc.research_text.TD.RUNICARMOR=Shielded legacy
 tc.research_page.TD.RUNICARMOR.1=Your research into protective magics have led you to discover Runic Armor. The name is misleading though since it is not armor in the traditional sense, but a collection of charms, seals and similar protective devices worn with your everyday clothes.<BR>These devices create a barrier of magical energy that wards out most types of damage. The armor's shielding provides a pool of hit points from which damage is subtracted first, protecting the wearer from all harm. Once this pool is depleted the wearer starts taking damage as normal.
-tc.research_page.TD.RUNICARMOR.2=The pool replenishes over time, requiring §2Terra§0 and §eAer§0 vis to replenish its charge, but even when depleted the armor offers protection roughly equivalent to that of leather armor.<BR>The armor offers no protection from damage suffered due to drowning, starvation or similar environmental hazards.<BR>Due to its nature the armor cannot be enchanted by normal means, but you are sure there are ways to improve its effectiveness - you just need to discover them.
+tc.research_page.TD.RUNICARMOR.2=The pool replenishes over time, requiring §2Terra§0 and §6Aer§0 vis to replenish its charge, but even when depleted the armor offers protection roughly equivalent to that of leather armor.<BR>The armor offers no protection from damage suffered due to drowning, starvation or similar environmental hazards.<BR>Due to its nature the armor cannot be enchanted by normal means, but you are sure there are ways to improve its effectiveness - you just need to discover them.
 
 tc.research_name.TD.RUNICGOGGLES=Runic Goggles of Revealing
 tc.research_text.TD.RUNICGOGGLES=The best of both worlds
@@ -253,8 +253,6 @@ tc.research_page.TD.RUNICARMORUPGRADES.a9=§nHaste§r<BR>Type: Passive<BR>This u
 tc.research_page.TD.RUNICARMORUPGRADES.E=Enhanced Runic Armor is a masterwork of your magical prowess, and upgrades will only make it stronger, but how strong is it? To make work easier for future thaumaturges, you've included some of your calculations.<LINE>A fully §nHardened§r set will provide the wearer with a full armor bar.<BR>Two §nShield Nexus§r upgrades will double the maximum shielding of a piece.<BR>Slotting seven §nEmergency Shielding§r upgrades provides the capability to fully restore the shielding of a non-Nexus set when breached.
 
 
-
-
 --Enhanced Runic Armor
 tc.research_name.TD.ENHANCEDRUNICARMOR=Enhanced Runic Armor
 tc.research_text.TD.ENHANCEDRUNICARMOR=Pushing the limits
@@ -270,6 +268,13 @@ tc.research_page.TD.PRIMALRUNICARMOR.1=<IMG>thaumcraft:textures/misc/eldritchajo
 //translator note - write "become us join us" after the §m, either forward or backward, whatever works best
 tc.research_page.TD.PRIMALRUNICARMOR.2=This was a mistake.<BR>You should have stopped when you had the chance.<BR>You should have stopped...<BR> <BR>§o§mProtect the pearl protect the pearl protect the pearl protect the pearl<BR> §r§0<BR>What have you done..?
 tc.research_page.TD.PRIMALRUNICARMOR.3=Bonding your Enhanced Runic Armor and a set of Void Robes around a primordial pearl has created something dark and powerful. It certainly overcomes some of the flaws of the enhanced set, with greater discount and capacity for another augment. <BR>However, there's just something off... about it. The faint whispering you can hear nearby, shadows moving at the corner of your vision, cold air around it, and how it seems to move towards certain artifacts when you're not looking...<BR>It might be best to only wear a single piece at a time, and not for extended periods. Anything more than that might have untold effects on the wearer.
+
+
+
+tc.research_name.TD.MASKEVIL=Mask of Cruelty
+tc.research_text.TD.MASKEVIL=If looks could kill
+tc.research_page.TD.maskEvil.1=A relic thought lost to time, this sinister mask hexes any living creature you look at directly. The exact effects vary, but it can cause pain, debilitating weakness or even death if you focus your gaze long enough.<BR>The warped lenses over your eyes reveal a dark lightning stretching out to your target, but your fellow thaumaturges claim you must be hallucinating.
+
 
 
 §§§
