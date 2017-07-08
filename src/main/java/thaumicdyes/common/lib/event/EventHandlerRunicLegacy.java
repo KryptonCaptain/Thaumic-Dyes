@@ -91,13 +91,8 @@ public class EventHandlerRunicLegacy {
         }
     }
     
-    /*
-    public Multimap getItemAttributeModifiers() {
-        final Multimap multimap = (Multimap)HashMultimap.create();
-        final UUID uuid = new UUID(this.getUnlocalizedName().hashCode(), 0L);
-        multimap.put((Object)SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(), (Object)new AttributeModifier(uuid, "Terrasteel modifier " + this.type, this.getArmorDisplay(null, new ItemStack((Item)this), this.type) / 20.0, 0));
-        return multimap;
-    }*/
+    
+    
     
     @SubscribeEvent
     public void entityHurt(final LivingHurtEvent event) {
@@ -108,12 +103,13 @@ public class EventHandlerRunicLegacy {
             int healing = 0;
             //int hardened = 0;
             int emergency = 0;
+            int resistance = 0;
             
             final ArrayList<Integer> runic = new ArrayList<Integer>();
             
             final EntityPlayer player = (EntityPlayer)event.entity;
             
-            int runicTotal = (Thaumcraft.instance.runicEventHandler.runicInfo.get(Integer.valueOf(player.getEntityId())))[0].intValue();
+            //int runicTotal = (Thaumcraft.instance.runicEventHandler.runicInfo.get(Integer.valueOf(player.getEntityId())))[0].intValue();
             int runicCharge = (Thaumcraft.instance.runicEventHandler.runicCharge.get(Integer.valueOf(player.getEntityId()))).intValue();
             
             for (int a = 0; a < 4; a++) {
@@ -131,12 +127,14 @@ public class EventHandlerRunicLegacy {
                     else if (getUpgrade(player.inventory.armorItemInSlot(a)) == 6) {
                     	emergency++;
                     }
+                    else if (getUpgrade(player.inventory.armorItemInSlot(a)) == 7) {
+                    	resistance++;
+                    }
                 	
                 	final ItemStack is = player.inventory.armorItemInSlot(a);
                 	if (is.getItemDamage() < is.getMaxDamage()) {
                 		runic.add(a);
             		}
-                	
                 }
                 
                 else if ((player.inventory.armorItemInSlot(a) != null) && ((player.inventory.armorItemInSlot(a).getItem() instanceof ItemRunicArmor))) 
@@ -153,12 +151,38 @@ public class EventHandlerRunicLegacy {
     		        else if (getUpgrade2(player.inventory.armorItemInSlot(a)) == 6) { 
     		        	emergency++; 
     		        }  
+    		        else if (getUpgrade2(player.inventory.armorItemInSlot(a)) == 7) {
+                    	resistance++;
+                    }
     		        
     		        final ItemStack is = player.inventory.armorItemInSlot(a);
                 	if (is.getItemDamage() < is.getMaxDamage()) {
                 		runic.add(a);
             		}
-                	
+    	        }
+                
+                else if ((player.inventory.armorItemInSlot(a) != null) && ((player.inventory.armorItemInSlot(a).getItem() instanceof ItemRunicArmor))) 
+    	        { 
+    		        if (getUpgrade3(player.inventory.armorItemInSlot(a)) == 1) { 
+    		        	berserker++; 
+    		        }  
+    		        else if (getUpgrade3(player.inventory.armorItemInSlot(a)) == 3) { 
+    		        	kinetic++; 
+    		        } 
+    		        else if (getUpgrade3(player.inventory.armorItemInSlot(a)) == 4) { 
+    		        	healing++; 
+    		        } 
+    		        else if (getUpgrade3(player.inventory.armorItemInSlot(a)) == 6) { 
+    		        	emergency++; 
+    		        }
+    		        else if (getUpgrade3(player.inventory.armorItemInSlot(a)) == 7) {
+                    	resistance++;
+                    }
+    		        
+    		        final ItemStack is = player.inventory.armorItemInSlot(a);
+                	if (is.getItemDamage() < is.getMaxDamage()) {
+                		runic.add(a);
+            		}
     	        }
                 
             }
@@ -196,6 +220,7 @@ public class EventHandlerRunicLegacy {
                     if (kinetic >= 4) {
                     	player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 200+(100*(kinetic-4)), kinetic-3));
                     }
+                    player.worldObj.playSoundAtEntity((Entity)player, "thaumcraft:shock1", 1.0f, 1.0f);
                 }
                 
                 key = player.getEntityId() + ":" + 4;

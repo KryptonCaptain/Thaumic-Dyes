@@ -136,7 +136,7 @@ public class VoidBoots extends ItemArmor implements IRepairable, IVisDiscountGea
    @SubscribeEvent
    public void playerJumps(LivingEvent.LivingJumpEvent event)
    {
-     if (((event.entity instanceof EntityPlayer)) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0) != null) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0).getItem() == ItemHandler.itemBootsVoidTraveller)) {
+     if (((event.entity instanceof EntityPlayer)) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0) != null) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0).getItem() == ItemHandler.itemVoidBootsTraveller)) {
        event.entityLiving.motionY += 0.35D;
      }
    }

@@ -50,11 +50,6 @@ public class ItemRunicBootsTraveller extends ItemRunicArmor
     }
     
     @Override
-    public boolean isBookEnchantable(final ItemStack itemstack1, final ItemStack itemstack2) {
-        return false;
-    }
-    
-    @Override
     public EnumRarity getRarity(final ItemStack itemstack) {
         return EnumRarity.rare;
     }
@@ -96,18 +91,10 @@ public class ItemRunicBootsTraveller extends ItemRunicArmor
     @SubscribeEvent
     public void playerJumps(LivingEvent.LivingJumpEvent event)
     {
-      if (((event.entity instanceof EntityPlayer)) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0) != null) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0).getItem() == ItemHandler.itemBootsTravellerRunicLegacy)) {
+      if (((event.entity instanceof EntityPlayer)) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0) != null) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0).getItem() == ItemHandler.itemRunicBootsTraveller)) {
         event.entityLiving.motionY += 0.2750000059604645D;
       }
     }
     
-    @Override
-    public void addInformation(final ItemStack stack, final EntityPlayer player, final List list, final boolean par4) {
-        //list.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal("item.runic.charge") + ": " + (stack.getMaxDamage() - stack.getItemDamage()) + "/" + stack.getMaxDamage());
-        final int u = ItemRunicArmor.getUpgrade(stack);
-        if (u > 0) {
-            list.add(EnumChatFormatting.DARK_AQUA + StatCollector.translateToLocal("item.runic.upgrade." + u));
-        }
-    }
 }
 

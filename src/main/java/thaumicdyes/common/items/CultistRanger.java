@@ -148,14 +148,16 @@ public class CultistRanger extends ItemArmor implements IRepairable, IRunicArmor
    
    public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4)
    {
-     if ((stack.hasTagCompound()) && (stack.stackTagCompound.hasKey("mask")) && (stack.stackTagCompound.getInteger("mask") == 0)) {
-       list.add(EnumChatFormatting.DARK_PURPLE + StatCollector.translateToLocal("item.ItemGoggles.name"));
-     }
-     if ((stack.hasTagCompound()) && (stack.stackTagCompound.hasKey("mask"))) {
-         list.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal(new StringBuilder().append("item.HelmetCultistRanger.mask.").append(stack.stackTagCompound.getInteger("mask")).toString()));
+	   if ((stack.hasTagCompound()) && (stack.stackTagCompound.hasKey("mask")) && (stack.stackTagCompound.getInteger("mask") == 0)) {
+		   list.add(EnumChatFormatting.DARK_PURPLE + StatCollector.translateToLocal("item.ItemGoggles.name"));
+	   }
+	   if ((stack.hasTagCompound()) && (stack.stackTagCompound.hasKey("mask"))) {
+		   list.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal(new StringBuilder().append("item.HelmetCultistRanger.mask.").append(stack.stackTagCompound.getInteger("mask")).toString()));
        }
-     list.add(EnumChatFormatting.DARK_PURPLE + StatCollector.translateToLocal("tc.visdiscount") + ": " + this.getVisDiscount(stack, player, (Aspect)null) + "%");
-     super.addInformation(stack, player, list, par4);
+	   if (getVisDiscount(stack, player, null) > 0) {
+		   list.add(EnumChatFormatting.DARK_PURPLE + StatCollector.translateToLocal("tc.visdiscount") + ": " + getVisDiscount(stack, player, null) + "%");
+	   }
+	   super.addInformation(stack, player, list, par4);
    }
    
    public boolean showNodes(ItemStack itemstack, EntityLivingBase player)

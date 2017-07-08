@@ -79,7 +79,7 @@ public class ThaumiumBoots extends ItemArmor implements IRepairable, IVisDiscoun
    
    public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4) {
       list.add(EnumChatFormatting.DARK_PURPLE + StatCollector.translateToLocal("tc.visdiscount") + ": " + this.getVisDiscount(stack, player, (Aspect)null) + "%");
-      super.addInformation(stack, player, list, par4);
+      //super.addInformation(stack, player, list, par4);
    }
    
    public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack)
@@ -118,7 +118,7 @@ public class ThaumiumBoots extends ItemArmor implements IRepairable, IVisDiscoun
    @SubscribeEvent
    public void playerJumps(LivingEvent.LivingJumpEvent event)
    {
-     if (((event.entity instanceof EntityPlayer)) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0) != null) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0).getItem() == ItemHandler.itemBootsThaumiumTraveller)) {
+     if (((event.entity instanceof EntityPlayer)) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0) != null) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0).getItem() == ItemHandler.itemThaumiumBootsTraveller)) {
        event.entityLiving.motionY += 0.2750000059604645D;
      }
    }

@@ -15,6 +15,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import thaumcraft.common.Thaumcraft;
+import thaumcraft.common.lib.research.ResearchManager;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.util.IIcon;
 import thaumcraft.api.IGoggles;
@@ -45,20 +46,19 @@ public class ItemRunicGoggles extends ItemRunicArmor implements IVisDiscountGear
     @Override
     public void addInformation(final ItemStack stack, final EntityPlayer player, final List list, final boolean par4) {
         //list.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal("item.runic.charge") + ": " + (stack.getMaxDamage() - stack.getItemDamage()) + "/" + stack.getMaxDamage());
-        final int u = ItemRunicArmor.getUpgrade(stack);
+    	final int u = getUpgrade(stack);
         if (u > 0) {
             list.add(EnumChatFormatting.DARK_AQUA + StatCollector.translateToLocal("item.runic.upgrade." + u));
         }
+        if (ResearchManager.isResearchComplete(player.getCommandSenderName(), "TD.RUNICARMORUPGRADES")) {
+    		if (u == 0) { list.add(EnumChatFormatting.DARK_GRAY + StatCollector.translateToLocal(new StringBuilder().append("item.runic.upgrade.").append(u).toString()) );
+    		}
+    	}
         list.add(EnumChatFormatting.DARK_PURPLE + StatCollector.translateToLocal("tc.visdiscount") + ": " + this.getVisDiscount(stack, player, null) + "%");
     }
     
     public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
         return "thaumicdyes:textures/models/runic_goggles.png";
-    }
-    
-    @Override
-    public boolean isBookEnchantable(final ItemStack itemstack1, final ItemStack itemstack2) {
-        return false;
     }
     
     @Override

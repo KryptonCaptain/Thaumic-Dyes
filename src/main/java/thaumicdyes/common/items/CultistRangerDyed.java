@@ -235,8 +235,10 @@ public class CultistRangerDyed extends ItemArmor implements IRepairable, IRunicA
      }
      if ((stack.hasTagCompound()) && (stack.stackTagCompound.hasKey("mask"))) {
          list.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal(new StringBuilder().append("item.HelmetCultistRanger.mask.").append(stack.stackTagCompound.getInteger("mask")).toString()));
-       }
-     list.add(EnumChatFormatting.DARK_PURPLE + StatCollector.translateToLocal("tc.visdiscount") + ": " + this.getVisDiscount(stack, player, (Aspect)null) + "%");
+     }
+     if (getVisDiscount(stack, player, null) > 0) {
+ 		list.add(EnumChatFormatting.DARK_PURPLE + StatCollector.translateToLocal("tc.visdiscount") + ": " + getVisDiscount(stack, player, null) + "%");
+     }
      super.addInformation(stack, player, list, par4);
    }
    

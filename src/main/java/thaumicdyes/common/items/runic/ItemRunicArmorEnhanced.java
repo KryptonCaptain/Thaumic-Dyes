@@ -1,34 +1,32 @@
 package thaumicdyes.common.items.runic;
 
 import java.util.List;
+import java.util.UUID;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumChatFormatting;
-import net.minecraft.util.IIcon;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
-import net.minecraftforge.common.ISpecialArmor;
-import net.minecraftforge.common.ISpecialArmor.ArmorProperties;
-import net.minecraftforge.event.entity.living.LivingEvent;
-import thaumcraft.api.IRunicArmor;
+import thaumcraft.api.IVisDiscountGear;
 import thaumcraft.api.aspects.Aspect;
-import thaumcraft.common.Thaumcraft;
-import thaumcraft.common.items.armor.Hover;
 import thaumicdyes.common.ThaumicDyes;
-import thaumicdyes.common.items.ItemHandler;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+
+import com.google.common.collect.HashMultimap;
+import com.google.common.collect.Multimap;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 
-public class ItemRunicArmorEnhanced extends ItemRunicArmor  {
+public class ItemRunicArmorEnhanced extends ItemRunicArmor implements IVisDiscountGear {
 
 	public ItemRunicArmorEnhanced(ItemArmor.ArmorMaterial enumarmormaterial, int j, int k) {
 		super(enumarmormaterial, j, k);
@@ -105,16 +103,19 @@ public class ItemRunicArmorEnhanced extends ItemRunicArmor  {
 	    //list.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal("item.runic.charge") + ": " + (stack.getMaxDamage() - stack.getItemDamage()) + "/" + stack.getMaxDamage());
 	    
 		int u = getUpgrade(stack);
-	    if (u < 7) {
+	    if (u > 0) {
 	      list.add(EnumChatFormatting.DARK_AQUA + StatCollector.translateToLocal(new StringBuilder().append("item.runic.upgrade.").append(u).toString()) );
+	    }else { list.add(EnumChatFormatting.DARK_GRAY + StatCollector.translateToLocal(new StringBuilder().append("item.runic.upgrade.").append(u).toString()) );
 	    }
 	    u = getUpgrade2(stack);
-	    if (u < 7) {
+	    if (u > 0) {
 	      list.add(EnumChatFormatting.DARK_AQUA + StatCollector.translateToLocal(new StringBuilder().append("item.runic.upgrade.").append(u).toString()) );
+	    }else { list.add(EnumChatFormatting.DARK_GRAY + StatCollector.translateToLocal(new StringBuilder().append("item.runic.upgrade.").append(u).toString()) );
 	    }
-    	if (getVisDiscount(stack, player, null) > 0)
+	    if (getVisDiscount(stack, player, null) > 0) {
     		list.add(EnumChatFormatting.DARK_PURPLE + StatCollector.translateToLocal("tc.visdiscount") + ": " + getVisDiscount(stack, player, null) + "%");
-
+    	}
+	    
 //	    for (Aspect aspect : Aspect.getPrimalAspects()) {
 //	    	String tag = "";
 //			if (getVisDiscount(stack, player, aspect) > 0) {
@@ -160,7 +161,7 @@ public class ItemRunicArmorEnhanced extends ItemRunicArmor  {
 	
     public boolean onItemUse(ItemStack item, EntityPlayer player, World world, int par4, int par5, int par6, int par7, float par8, float par9, float par10)
     {
-    	if (this.getUpgrade(item) <7 && this.getUpgrade2(item) <7) {
+    	if (this.getUpgrade(item) > -1 && this.getUpgrade2(item) > -1) {
     		int u1 = this.getUpgrade(item);
     		int u2 = this.getUpgrade2(item);
     		item.stackTagCompound.setByte("upgrade2",(byte) u1);
@@ -176,52 +177,30 @@ public class ItemRunicArmorEnhanced extends ItemRunicArmor  {
     	return 2;
     }
     
-    
-    
-    public void onArmorTick(World world, EntityPlayer player, ItemStack armor)
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	public Multimap getAttributeModifiers(ItemStack armor)
     {
-      if ((!player.capabilities.isFlying) && (player.moveForward > 0.0F))
-      {
-        if ((player.worldObj.isRemote) && (!player.isSneaking()))
-        {
-          if (!Thaumcraft.instance.entityEventHandler.prevStep.containsKey(Integer.valueOf(player.getEntityId()))) {
-            Thaumcraft.instance.entityEventHandler.prevStep.put(Integer.valueOf(player.getEntityId()), Float.valueOf(player.stepHeight));
-          }
-          player.stepHeight = 1.0F;
-        }
-        if (player.onGround)
-        {
-          float bonus = 0.1F;
-          if (player.isInWater()) {
-            bonus /= 3.0F;
-          }
-          player.moveFlying(0.0F, 1.0F, bonus);
-        }
-        else if (Hover.getHover(player.getEntityId()))
-        {
-          player.jumpMovementFactor = 0.03F;
-        }
-        else
-        {
-          player.jumpMovementFactor = 0.05F;
-        }
-      }
-      if (player.fallDistance > 0.0F) {
-        player.fallDistance -= 0.5F;
-      }
-      
-      super.onArmorTick(world, player, armor);
-      if ((!world.isRemote) && (armor.getItemDamage() > 0) && (player.ticksExisted % 20 == 0)) {
-        armor.damageItem(-1, player);
-      }
-    }
-    
-    @SubscribeEvent
-    public void playerJumps(LivingEvent.LivingJumpEvent event)
-    {
-      if (((event.entity instanceof EntityPlayer)) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0) != null) && (((EntityPlayer)event.entity).inventory.armorItemInSlot(0).getItem() == ItemHandler.itemBootsVoidTraveller)) {
-        event.entityLiving.motionY += 0.35D;
-      }
+    	HashMultimap map = HashMultimap.create();
+    	final UUID uuid = new UUID(this.getUnlocalizedName().hashCode(), 0L);
+    	
+    	if (getUpgrade(armor) == 7 || getUpgrade2(armor) == 7 ) {
+			map.put(SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(), 
+					new AttributeModifier(uuid, "Runic knockback " + aType, 0.2, 0));
+		}
+		if (getUpgrade(armor) == 8 || getUpgrade2(armor) == 8 ) {
+			map.put(SharedMonsterAttributes.maxHealth.getAttributeUnlocalizedName(), 
+					new AttributeModifier(uuid, "Runic vitality", 10, 0));;
+		}
+		if (this.armorType == 3) {
+			if (getUpgrade(armor) == 9 || getUpgrade2(armor) == 9 ) {
+				map.put(SharedMonsterAttributes.movementSpeed.getAttributeUnlocalizedName(), 
+						new AttributeModifier(uuid, "Runic speed", 0.03, 0)); //haste1/2/3 is 0.015/0.03/0.045
+			}
+		}
+    	
+    	//map.put(SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(),new AttributeModifier(uuid, "Abyssal modifier " + aType, this.getArmorDisplay(null, armor, aType) / 20.0, 1)); 
+		//this one scales with Hardened effect, but starts lower. Keeping it for reference
+    	return map;
     }
 
 }
