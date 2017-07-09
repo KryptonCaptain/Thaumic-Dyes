@@ -92,7 +92,7 @@ item.runic.upgrade.8= - //维护者(召唤自定义守护者?)
 item.runic.upgrade.9= - 纳米机械,孩子
 
 //Legacy TX
-item.ItemMaskEvil.name=残酷面具(未完成)
+item.ItemMaskEvil.name=残酷面具
 death.attack.witherMask=%1$s 凋谢的远去 %2$s
 
 item.ItemHelmetRunicEnhanced.name=强化符文头盔
@@ -100,11 +100,13 @@ item.ItemChestRunicEnhanced.name=强化符文胸甲
 item.ItemLegsRunicEnhanced.name=强化符文护腿
 item.ItemBootsRunicEnhanced.name=强化符文靴子
 
-item.ItemHelmetRunicPrimal.name=§5Abyssal 符文头盔§r
-item.ItemChestRunicPrimal.name=§5Abyssal 符文胸甲§r
-item.ItemLegsRunicPrimal.name=§5Abyssal 符文护腿§r
-item.ItemBootsRunicPrimal.name=§5Abyssal 符文靴子§r
+item.ItemHelmetRunicPrimal.name=§5深渊符文头盔§r
+item.ItemChestRunicPrimal.name=§5深渊符文胸甲§r
+item.ItemLegsRunicPrimal.name=§5深渊符文护腿§r
+item.ItemBootsRunicPrimal.name=§5深渊符文靴子§r
 
+//unused
+tdyes.nameAppend=扭曲
 
 ///////////
 # Research
@@ -251,6 +253,19 @@ tc.research_page.TD.ENHANCEDRUNICARMOR.1=通过你的广泛研究，强化符文
 tc.research_page.TD.ENHANCEDRUNICARMOR.2=记住，强化符文护甲创造初衷是为了让护甲能得到增强.<BR><BR>如果你想要覆盖一个强化符文护甲的能力，你可以手持其右键单击并且互换位置进行增强.其次第一个将会显示在上面.<BR>
 //<BR>[配方待定...留下反馈]
 
+--Primal Runic Armor
+tc.research_name.TD.PRIMALRUNICARMOR=深渊符文护甲
+tc.research_text.TD.PRIMALRUNICARMOR=盯着深渊看得太久...
+tc.research_page.TD.PRIMALRUNICARMOR.1=<IMG>thaumcraft:textures/misc/eldritchajor2.png:0:255:255:255:.5</IMG><BR>§o        §msu nioj su emoceb
+//translator note - write "become us join us" after the §m, either forward or backward, whatever works best
+tc.research_page.TD.PRIMALRUNICARMOR.2=这是一个错误的决定.<BR>当你有机会的时候你真的应该停下来.<BR>你应该停下来...<BR> <BR>§o§m保护珍珠保护珍珠保护珍珠<BR> §r§0<BR>你干了些什么...？
+tc.research_page.TD.PRIMALRUNICARMOR.3=你将强化符文护甲与虚空神秘使套通过原始珍珠作为媒介创造了一套黑暗而又强大的护甲。它能克服一些增强时的缺陷，具有更大的能量。<BR>不过，只是有些故事...关于它的.你能听到附加微弱的话语声，在你的视线及空气中的角落里移动的影子，你无法看清它们是如何进行移动的...<BR>最好一次只穿戴其中的一件，而不是为了增加生存时间.除此以外，任何东西都有可能对穿戴者带来难以计数的影响。
+
+
+
+tc.research_name.TD.MASKEVIL=残酷面具
+tc.research_text.TD.MASKEVIL=我看到了你的终结
+tc.research_page.TD.maskEvil.1=这种邪恶的面具可以产生魔法杀死你看到的任何生物。确切的效果各不相同，但如果你有足够长的时间去凝视生物，就会使其产生痛苦，虚弱直至死亡.<BR>你的眼睛会释放一道黑色的闪电延伸到你的目标，但你的神秘使同伴们声称你一定是产生了幻觉.
 
 
 #Copied research 
