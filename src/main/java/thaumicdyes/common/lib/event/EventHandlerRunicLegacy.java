@@ -103,7 +103,6 @@ public class EventHandlerRunicLegacy {
             int healing = 0;
             //int hardened = 0;
             int emergency = 0;
-            int resistance = 0;
             
             final ArrayList<Integer> runic = new ArrayList<Integer>();
             
@@ -127,9 +126,7 @@ public class EventHandlerRunicLegacy {
                     else if (getUpgrade(player.inventory.armorItemInSlot(a)) == 6) {
                     	emergency++;
                     }
-                    else if (getUpgrade(player.inventory.armorItemInSlot(a)) == 7) {
-                    	resistance++;
-                    }
+                    
                 	
                 	final ItemStack is = player.inventory.armorItemInSlot(a);
                 	if (is.getItemDamage() < is.getMaxDamage()) {
@@ -151,9 +148,7 @@ public class EventHandlerRunicLegacy {
     		        else if (getUpgrade2(player.inventory.armorItemInSlot(a)) == 6) { 
     		        	emergency++; 
     		        }  
-    		        else if (getUpgrade2(player.inventory.armorItemInSlot(a)) == 7) {
-                    	resistance++;
-                    }
+    		        
     		        
     		        final ItemStack is = player.inventory.armorItemInSlot(a);
                 	if (is.getItemDamage() < is.getMaxDamage()) {
@@ -175,9 +170,7 @@ public class EventHandlerRunicLegacy {
     		        else if (getUpgrade3(player.inventory.armorItemInSlot(a)) == 6) { 
     		        	emergency++; 
     		        }
-    		        else if (getUpgrade3(player.inventory.armorItemInSlot(a)) == 7) {
-                    	resistance++;
-                    }
+    		        
     		        
     		        final ItemStack is = player.inventory.armorItemInSlot(a);
                 	if (is.getItemDamage() < is.getMaxDamage()) {
@@ -217,9 +210,7 @@ public class EventHandlerRunicLegacy {
                     this.upgradeCooldown.put(key, 600);
                     player.worldObj.newExplosion((Entity)player, player.posX, player.posY + player.height / 2.0f, player.posZ, 1.5f + kinetic * 0.5f, false, false);
                     //player.worldObj.newExplosion((Entity)player, player.posX, player.posY + player.height / 2.0f, player.posZ, 1.5f + this.runicInfo.get(player.getEntityId())[2] * 0.5f, false, false);
-                    if (kinetic >= 4) {
-                    	player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 200+(100*(kinetic-4)), kinetic-3));
-                    }
+
                     player.worldObj.playSoundAtEntity((Entity)player, "thaumcraft:shock1", 1.0f, 1.0f);
                 }
                 
@@ -228,9 +219,7 @@ public class EventHandlerRunicLegacy {
                     //healing--;
                     this.upgradeCooldown.put(key, 600);
                     player.addPotionEffect(new PotionEffect(Potion.regeneration.id, 200, healing));
-                    if (healing >= 4) {
-                    	player.addPotionEffect(new PotionEffect(Potion.field_76444_x.id, 200+(100*(healing-4)), (int)healing/2)); //absorption that may or may not be broken
-                    }
+
                     player.worldObj.playSoundAtEntity((Entity)player, "thaumcraft:runicShieldEffect", 1.0f, 1.0f);
                 }
                 
@@ -240,9 +229,7 @@ public class EventHandlerRunicLegacy {
                     final int t = 8 * emergency;
                     runicCharge = Math.min(Thaumcraft.instance.runicEventHandler.runicInfo.get(player.getEntityId())[0], t);
                     //Thaumcraft.instance.runicEventHandler.isDirty = true;
-                    if (emergency >= 4) {
-                    	player.addPotionEffect(new PotionEffect(Potion.invisibility.id, 200+(100*(emergency-4)), 0 ));
-                    }
+
                     player.worldObj.playSoundAtEntity((Entity)player, "thaumcraft:runicShieldCharge", 1.0f, 1.0f);
                     
                 }

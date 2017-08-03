@@ -80,21 +80,6 @@ item.ItemBootsRunic.name=Runic Footpiece
 item.ItemGogglesRunic.name=Runic Goggles of Revealing
 item.ItemBootsTravellerRunic.name=Runic Boots of the Traveller
 
-item.runic.upgrade.0= - No upgrade
-item.runic.upgrade.1= - Berserker
-item.runic.upgrade.2= - Shield Nexus
-item.runic.upgrade.3= - Kinetic Feedback
-item.runic.upgrade.4= - Revitalizing Feedback
-item.runic.upgrade.5= - Hardened
-item.runic.upgrade.6= - Emergency Shielding
-item.runic.upgrade.7= - Steadfast
-item.runic.upgrade.8= - Vitality
-item.runic.upgrade.9= - Haste
-
-//Legacy TX
-item.ItemMaskEvil.name=Mask of Cruelty 
-death.attack.witherMask=%1$s was withered away by %2$s
-
 item.ItemHelmetRunicEnhanced.name=Enhanced Runic Headpiece
 item.ItemChestRunicEnhanced.name=Enhanced Runic Chestpiece
 item.ItemLegsRunicEnhanced.name=Enhanced Runic Legpiece
@@ -105,8 +90,27 @@ item.ItemChestRunicPrimal.name=Abyssal Runic Chestplate
 item.ItemLegsRunicPrimal.name=Abyssal Runic Greaves
 item.ItemBootsRunicPrimal.name=Abyssal Runic Boots
 
+item.runic.upgrade.0= - No upgrade
+item.runic.upgrade.1= - Berserker
+item.runic.upgrade.2= - Shield Nexus
+item.runic.upgrade.3= - Kinetic Feedback
+item.runic.upgrade.4= - Revitalizing Feedback
+item.runic.upgrade.5= - Hardened
+item.runic.upgrade.6= - Emergency Shielding
+item.runic.upgrade.7= - Steadfast
+item.runic.upgrade.8= - Vitality
+item.runic.upgrade.9= - Haste
+item.runic.upgrade.10= - Warlord
+
+
 //unused
 tdyes.nameAppend= the Warped
+//Legacy TX
+item.ItemMaskEvil.name=Mask of Cruelty 
+death.attack.witherMask=%1$s was withered away by %2$s
+
+//other
+td.primalrunic.trigger=Unnerving whispers suddenly show you something new...
 
 
 ///////////
@@ -223,6 +227,8 @@ tc.research_name.TD.CRIMSONBANNER=Crimson Cult Banner
 tc.research_text.TD.CRIMSONBANNER=Flag of the red regiment
 tc.research_page.TD.crimsonBanner.1=While banners are an excellent decorative addition to your home, the Crimson Cult isn't particularly fond of your tendancy to steal their banners from occupied sites. And they're not always easy to find either - there simply isn't enough crimson banners to go around.<BR>The solution of course, is to make your own, by weaving some gold thread through a red banner. Presto change-o. They'd never be able to tell it's a copy.
 
+
+
 tc.research_name.TD.RUNICARMOR=Runic Armor
 tc.research_text.TD.RUNICARMOR=Shielded legacy
 tc.research_page.TD.RUNICARMOR.1=Your research into protective magics have led you to discover Runic Armor. The name is misleading though since it is not armor in the traditional sense, but a collection of charms, seals and similar protective devices worn with your everyday clothes.<BR>These devices create a barrier of magical energy that wards out most types of damage. The armor's shielding provides a pool of hit points from which damage is subtracted first, protecting the wearer from all harm. Once this pool is depleted the wearer starts taking damage as normal.
@@ -245,11 +251,13 @@ tc.research_page.TD.RUNICARMORUPGRADES.a1=§nBerserker§r<BR>Type: Shield breach
 tc.research_page.TD.RUNICARMORUPGRADES.a2=§nShield Nexus§r<BR>Type: Passive<BR>This upgrade increases the amount of charge a piece of runic armor has by 50% of its base amount.<BR>This augment can be applied to a multiple slots on runic armor, where available, for additional bonus.
 tc.research_page.TD.RUNICARMORUPGRADES.a3=§nKinetic Feedback§r<BR>Type: Shield breach<BR>When your shielding is breached this upgrade will release a detonation of kinetic energy. The damage and force of the detonation increases depending on how many upgrades are present. <BR>This ability has a 30 second cooldown.<BR>This augment can be applied to a multiple slots on runic armor, where available, for additional bonus.
 tc.research_page.TD.RUNICARMORUPGRADES.a4=§nRevitalizing Feedback§r<BR>Type: Shield breach<BR>When your shielding is breached it will release a pulse of regenerative energy into its wearer that will last for a few seconds. The strength of this effect increases for each upgrade. <BR>This effect has a 30 second cooldown.<BR>This augment can be applied to a multiple slots on runic armor, where available, for additional bonus.
-tc.research_page.TD.RUNICARMORUPGRADES.a5=§nHardened§r<BR>Type: Passive<BR>This upgrade doubles the amount of mundane armor protection a piece of runic armor provides once it's shielding has been breached.<BR>This augment can be applied to a multiple slots on runic armor, where available, for additional bonus.
+tc.research_page.TD.RUNICARMORUPGRADES.a5=§nHardened§r<BR>Type: Passive<BR>This upgrade adds a bonus to the amount of mundane armor protection a piece of runic armor provides once it's shielding has been breached.<BR>On basic Runic Armor, it will double the value, while on Enhanced Armor, it will only add one extra armor point.<BR>This augment will only apply to a piece of runic armor once, additional slots with this upgrade will have no effect.
 tc.research_page.TD.RUNICARMORUPGRADES.a6=§nEmergency Shielding§r<BR>Type: Shield breach<BR>When your shield is breached this upgrade will instantly add 8 (or more) charge. Each runic armor piece with this upgrade adds 8 charge. <BR>This ability has a two minute cooldown.<BR>This augment can be applied to a multiple slots on runic armor, where available, for additional bonus.
 tc.research_page.TD.RUNICARMORUPGRADES.a7=§nSteadfast§r<BR>Type: Passive<BR>This upgrade grants you a 20% knockback resistance. <BR>This augment will only apply to a piece of runic armor once, additional slots with this upgrade will have no effect.
 tc.research_page.TD.RUNICARMORUPGRADES.a8=§nVitality§r<BR>Type: Passive<BR>This upgrade increases your maximum health by 5 hearts (10 health).<BR>This augment will only apply to a piece of runic armor once, additional slots with this upgrade will have no effect.
 tc.research_page.TD.RUNICARMORUPGRADES.a9=§nHaste§r<BR>Type: Passive<BR>This upgrade will provide a movement speed bonus, much like the enchant of the same name. Its bonus is equivalent to Haste II.<BR>This augment can only be applied to boots, and will only apply to a piece of runic armor once, additional slots with this upgrade will have no effect.
+tc.research_page.TD.RUNICARMORUPGRADES.a10=§nWarlord§r<BR>Type: Passive<BR>Berserker was a good start, giving you an edge if your shields drop - but sometimes you can't stand around waiting to take an opportunity in combat. <BR>Runic enchantment focuses to your hands, giving any weapon you hold that little bit of extra force. But it'll also go to your fists too, if you'd rather punch your way out.<BR>This augment will only apply to a piece of runic armor once, additional slots with this upgrade will have no effect.
+
 tc.research_page.TD.RUNICARMORUPGRADES.E=Enhanced Runic Armor is a masterwork of your magical prowess, and upgrades will only make it stronger, but how strong is it? To make work easier for future thaumaturges, you've included some of your calculations.<LINE>A fully §nHardened§r set will provide the wearer with a full armor bar.<BR>Two §nShield Nexus§r upgrades will double the maximum shielding of a piece.<BR>Slotting seven §nEmergency Shielding§r upgrades provides the capability to fully restore the shielding of a non-Nexus set when breached.
 
 
@@ -268,6 +276,14 @@ tc.research_page.TD.PRIMALRUNICARMOR.1=<IMG>thaumcraft:textures/misc/eldritchajo
 //translator note - write "become us join us" after the §m, either forward or backward, whatever works best
 tc.research_page.TD.PRIMALRUNICARMOR.2=This was a mistake.<BR>You should have stopped when you had the chance.<BR>You should have stopped...<BR> <BR>§o§mProtect the pearl protect the pearl protect the pearl protect the pearl<BR> §r§0<BR>What have you done..?
 tc.research_page.TD.PRIMALRUNICARMOR.3=Bonding your Enhanced Runic Armor and a set of Void Robes around a primordial pearl has created something dark and powerful. It certainly overcomes some of the flaws of the enhanced set, with greater discount and capacity for another augment. <BR>However, there's just something off... about it. The faint whispering you can hear nearby, shadows moving at the corner of your vision, cold air around it, and how it seems to move towards certain artifacts when you're not looking...<BR>It might be best to only wear a single piece at a time, and not for extended periods. Anything more than that might have untold effects on the wearer.
+
+tc.research_name.TD.PRIMALRUNIC=Abyssal secrets
+tc.research_text.TD.PRIMALRUNIC=What remains
+tc.research_page.TD.PRIMALRUNIC.1=That this 'armor' seems to bear an uncanny resemlance to the form of the Eldritch Guardians when the set is combined cannot be coincidence. <BR>Could it be that this was something that existed before, and you've merely rediscovered it? Or were you guided to it, by some dark entity beyond the void?<BR>All this maddening research, starting to blur together. You're starting to find gaps in your memory more often these days...
+tc.research_page.TD.PRIMALRUNIC.2=§nEldritch nature§r<BR>One of the strangest properties of the armor, is how it seems to respond differently to things when part of a complete set. Yet, there seems to be a reaction you hadn't seen previously - when it's in close proximity to certain eldritch objects, the appearance shifts slightly.<BR>It's almost as if it knows it is supposed to do something with them, but lacks enough form or some other, darker magic imbued into it.
+tc.research_page.TD.PRIMALRUNIC.3=§nHardened nature§r<BR>The original text which you discovered runic armor in describes many improvements to them, but the 'Hardened' one has been particularly perplexing. While it works as described on the basic Runic Armor, it seems to have a substantially reduced effect on the Enhanced Armor you developed.<BR>You thought it had no effect at all on the Abyssal set, until it collided with your workbench - rather than just floating in the aether around you. <BR>
+tc.research_page.TD.PRIMALRUNIC.4=It seems that the iron blocks used tipped it over the critical mass threshold needed to interact with the material realm. There's now solid form under all the runic enchantments. <BR>The nature of runic layers, and the chaotic behaviour of the pearl had previously rendered it impossible to enchant via normal means - but if you work it carefully, you might be able to enchant it using your discovered means.<BR>However, should the augment be removed or replaced, the enchantments will simply dissipate, as they won't have enough substance to bind to.
+
 
 
 

@@ -261,6 +261,7 @@ public class ConfigRecipes {
 		item.runic.upgrade.7= - Steadfast
 		item.runic.upgrade.8= - Vitality
 		item.runic.upgrade.9= - Haste
+		item.runic.upgrade.10= - 
 		 */
 		
 		//TODO upgrade 1 (berserker)
@@ -1058,7 +1059,100 @@ public class ConfigRecipes {
 	    		new ItemStack(ItemHandler.itemRunicBootsPrimal), 
 	    		new ItemStack[] { new ItemStack(ConfigItems.itemResource, 1, 14), new ItemStack(ConfigItems.itemShard, 1, 0), new ItemStack(ConfigItems.itemResource,1,1), new ItemStack(ConfigItems.itemResource, 1, 14), new ItemStack(ConfigItems.itemResource,1,1), new ItemStack(ConfigItems.itemShard, 1, 4) }));
 		
+	    //TODO upgrade 10 (ravager)
+  		/*
+  		new Object[] { "upgrade", new NBTTagByte((byte) 10) }, 6, 
+  		new AspectList().add(Aspect.WEAPON, 200).add(Aspect.MAGIC, 64).add(Aspect.ENERGY, 96),
+  		new ItemStack[] { new ItemStack(ConfigItems.itemShard, 1, 6), new ItemStack(ConfigItems.itemResource, 1, 0), new ItemStack(ConfigItems.itemShard, 1, 1), new ItemStack(ConfigItems.itemSwordThaumium), new ItemStack(ConfigItems.itemShard, 1, 4), new ItemStack(ConfigItems.itemResource, 1, 0) }));
+  		*/
+  	    ConfigResearch.recipes.put("RAU10_0", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
+  	    		new Object[] { "upgrade", new NBTTagByte((byte) 10) }, 6, 
+  	    		new AspectList().add(Aspect.WEAPON, 200).add(Aspect.MAGIC, 64).add(Aspect.ENERGY, 96),
+  	    		new ItemStack(ItemHandler.itemRunicHelmet), 
+  	    		new ItemStack[] { new ItemStack(ConfigItems.itemShard, 1, 6), new ItemStack(ConfigItems.itemResource, 1, 0), new ItemStack(ConfigItems.itemShard, 1, 1), new ItemStack(ConfigItems.itemSwordThaumium), new ItemStack(ConfigItems.itemShard, 1, 4), new ItemStack(ConfigItems.itemResource, 1, 0) }));
 	    
+	    ConfigResearch.recipes.put("RAU10_1", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
+	    		new Object[] { "upgrade", new NBTTagByte((byte) 10) }, 6, 
+	      		new AspectList().add(Aspect.WEAPON, 200).add(Aspect.MAGIC, 64).add(Aspect.ENERGY, 96),
+	      		new ItemStack(ItemHandler.itemRunicChest), 
+	      		new ItemStack[] { new ItemStack(ConfigItems.itemShard, 1, 6), new ItemStack(ConfigItems.itemResource, 1, 0), new ItemStack(ConfigItems.itemShard, 1, 1), new ItemStack(ConfigItems.itemSwordThaumium), new ItemStack(ConfigItems.itemShard, 1, 4), new ItemStack(ConfigItems.itemResource, 1, 0) }));
+	    
+	    ConfigResearch.recipes.put("RAU10_2", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
+	    		new Object[] { "upgrade", new NBTTagByte((byte) 10) }, 6, 
+	      		new AspectList().add(Aspect.WEAPON, 200).add(Aspect.MAGIC, 64).add(Aspect.ENERGY, 96),
+	      		new ItemStack(ItemHandler.itemRunicLegs), 
+	      		new ItemStack[] { new ItemStack(ConfigItems.itemShard, 1, 6), new ItemStack(ConfigItems.itemResource, 1, 0), new ItemStack(ConfigItems.itemShard, 1, 1), new ItemStack(ConfigItems.itemSwordThaumium), new ItemStack(ConfigItems.itemShard, 1, 4), new ItemStack(ConfigItems.itemResource, 1, 0) }));
+	    
+	    ConfigResearch.recipes.put("RAU10_3", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
+	    		new Object[] { "upgrade", new NBTTagByte((byte) 10) }, 6, 
+	      		new AspectList().add(Aspect.WEAPON, 200).add(Aspect.MAGIC, 64).add(Aspect.ENERGY, 96),
+	      		new ItemStack(ItemHandler.itemRunicBoots), 
+	      		new ItemStack[] { new ItemStack(ConfigItems.itemShard, 1, 6), new ItemStack(ConfigItems.itemResource, 1, 0), new ItemStack(ConfigItems.itemShard, 1, 1), new ItemStack(ConfigItems.itemSwordThaumium), new ItemStack(ConfigItems.itemShard, 1, 4), new ItemStack(ConfigItems.itemResource, 1, 0) }));
+		
+	    
+	    
+	    ConfigResearch.recipes.put("RGU10", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
+	    		new Object[] { "upgrade", new NBTTagByte((byte) 10) }, 6, 
+	      		new AspectList().add(Aspect.WEAPON, 200).add(Aspect.MAGIC, 64).add(Aspect.ENERGY, 96),
+	      		new ItemStack(ItemHandler.itemRunicGoggles), 
+	      		new ItemStack[] { new ItemStack(ConfigItems.itemShard, 1, 6), new ItemStack(ConfigItems.itemResource, 1, 0), new ItemStack(ConfigItems.itemShard, 1, 1), new ItemStack(ConfigItems.itemSwordThaumium), new ItemStack(ConfigItems.itemShard, 1, 4), new ItemStack(ConfigItems.itemResource, 1, 0) }));
+		
+	    ConfigResearch.recipes.put("RBTU10", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
+	    		new Object[] { "upgrade", new NBTTagByte((byte) 10) }, 6, 
+	      		new AspectList().add(Aspect.WEAPON, 200).add(Aspect.MAGIC, 64).add(Aspect.ENERGY, 96),
+	      		new ItemStack(ItemHandler.itemRunicBootsTraveller), 
+	      		new ItemStack[] { new ItemStack(ConfigItems.itemShard, 1, 6), new ItemStack(ConfigItems.itemResource, 1, 0), new ItemStack(ConfigItems.itemShard, 1, 1), new ItemStack(ConfigItems.itemSwordThaumium), new ItemStack(ConfigItems.itemShard, 1, 4), new ItemStack(ConfigItems.itemResource, 1, 0) }));
+		
+	    //------------
+	    ConfigResearch.recipes.put("ERAU10_0", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
+	    		new Object[] { "upgrade", new NBTTagByte((byte) 10) }, 6, 
+	      		new AspectList().add(Aspect.WEAPON, 200).add(Aspect.MAGIC, 64).add(Aspect.ENERGY, 96),
+	      		new ItemStack(ItemHandler.itemRunicHelmetEnhanced), 
+	      		new ItemStack[] { new ItemStack(ConfigItems.itemShard, 1, 6), new ItemStack(ConfigItems.itemResource, 1, 0), new ItemStack(ConfigItems.itemShard, 1, 1), new ItemStack(ConfigItems.itemSwordThaumium), new ItemStack(ConfigItems.itemShard, 1, 4), new ItemStack(ConfigItems.itemResource, 1, 0) }));
+	    
+	    ConfigResearch.recipes.put("ERAU10_1", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
+	    		new Object[] { "upgrade", new NBTTagByte((byte) 10) }, 6, 
+	      		new AspectList().add(Aspect.WEAPON, 200).add(Aspect.MAGIC, 64).add(Aspect.ENERGY, 96),
+	      		new ItemStack(ItemHandler.itemRunicChestEnhanced), 
+	      		new ItemStack[] { new ItemStack(ConfigItems.itemShard, 1, 6), new ItemStack(ConfigItems.itemResource, 1, 0), new ItemStack(ConfigItems.itemShard, 1, 1), new ItemStack(ConfigItems.itemSwordThaumium), new ItemStack(ConfigItems.itemShard, 1, 4), new ItemStack(ConfigItems.itemResource, 1, 0) }));
+	    
+	    ConfigResearch.recipes.put("ERAU10_2", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
+	    		new Object[] { "upgrade", new NBTTagByte((byte) 10) }, 6, 
+	      		new AspectList().add(Aspect.WEAPON, 200).add(Aspect.MAGIC, 64).add(Aspect.ENERGY, 96),
+	      		new ItemStack(ItemHandler.itemRunicLegsEnhanced), 
+	      		new ItemStack[] { new ItemStack(ConfigItems.itemShard, 1, 6), new ItemStack(ConfigItems.itemResource, 1, 0), new ItemStack(ConfigItems.itemShard, 1, 1), new ItemStack(ConfigItems.itemSwordThaumium), new ItemStack(ConfigItems.itemShard, 1, 4), new ItemStack(ConfigItems.itemResource, 1, 0) }));
+	    
+	    ConfigResearch.recipes.put("ERAU10_3", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
+	    		new Object[] { "upgrade", new NBTTagByte((byte) 10) }, 6, 
+	      		new AspectList().add(Aspect.WEAPON, 200).add(Aspect.MAGIC, 64).add(Aspect.ENERGY, 96),
+	      		new ItemStack(ItemHandler.itemRunicBootsEnhanced), 
+	      		new ItemStack[] { new ItemStack(ConfigItems.itemShard, 1, 6), new ItemStack(ConfigItems.itemResource, 1, 0), new ItemStack(ConfigItems.itemShard, 1, 1), new ItemStack(ConfigItems.itemSwordThaumium), new ItemStack(ConfigItems.itemShard, 1, 4), new ItemStack(ConfigItems.itemResource, 1, 0) }));
+		
+	    //------------
+	    ConfigResearch.recipes.put("PRAU10_0", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
+	    		new Object[] { "upgrade", new NBTTagByte((byte) 10) }, 6, 
+	      		new AspectList().add(Aspect.WEAPON, 200).add(Aspect.MAGIC, 64).add(Aspect.ENERGY, 96),
+	      		new ItemStack(ItemHandler.itemRunicHelmetPrimal), 
+	      		new ItemStack[] { new ItemStack(ConfigItems.itemShard, 1, 6), new ItemStack(ConfigItems.itemResource, 1, 0), new ItemStack(ConfigItems.itemShard, 1, 1), new ItemStack(ConfigItems.itemSwordThaumium), new ItemStack(ConfigItems.itemShard, 1, 4), new ItemStack(ConfigItems.itemResource, 1, 0) }));
+	    
+	    ConfigResearch.recipes.put("PRAU10_1", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
+	    		new Object[] { "upgrade", new NBTTagByte((byte) 10) }, 6, 
+	      		new AspectList().add(Aspect.WEAPON, 200).add(Aspect.MAGIC, 64).add(Aspect.ENERGY, 96),
+	      		new ItemStack(ItemHandler.itemRunicChestPrimal), 
+	      		new ItemStack[] { new ItemStack(ConfigItems.itemShard, 1, 6), new ItemStack(ConfigItems.itemResource, 1, 0), new ItemStack(ConfigItems.itemShard, 1, 1), new ItemStack(ConfigItems.itemSwordThaumium), new ItemStack(ConfigItems.itemShard, 1, 4), new ItemStack(ConfigItems.itemResource, 1, 0) }));
+	    
+	    ConfigResearch.recipes.put("PRAU10_2", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
+	    		new Object[] { "upgrade", new NBTTagByte((byte) 10) }, 6, 
+	      		new AspectList().add(Aspect.WEAPON, 200).add(Aspect.MAGIC, 64).add(Aspect.ENERGY, 96),
+	      		new ItemStack(ItemHandler.itemRunicLegsPrimal), 
+	      		new ItemStack[] { new ItemStack(ConfigItems.itemShard, 1, 6), new ItemStack(ConfigItems.itemResource, 1, 0), new ItemStack(ConfigItems.itemShard, 1, 1), new ItemStack(ConfigItems.itemSwordThaumium), new ItemStack(ConfigItems.itemShard, 1, 4), new ItemStack(ConfigItems.itemResource, 1, 0) }));
+	    
+	    ConfigResearch.recipes.put("PRAU10_3", ThaumcraftApi.addInfusionCraftingRecipe("TD.RUNICARMORUPGRADES",
+	    		new Object[] { "upgrade", new NBTTagByte((byte) 10) }, 6, 
+	      		new AspectList().add(Aspect.WEAPON, 200).add(Aspect.MAGIC, 64).add(Aspect.ENERGY, 96),
+	      		new ItemStack(ItemHandler.itemRunicBootsPrimal), 
+	      		new ItemStack[] { new ItemStack(ConfigItems.itemShard, 1, 6), new ItemStack(ConfigItems.itemResource, 1, 0), new ItemStack(ConfigItems.itemShard, 1, 1), new ItemStack(ConfigItems.itemSwordThaumium), new ItemStack(ConfigItems.itemShard, 1, 4), new ItemStack(ConfigItems.itemResource, 1, 0) }));
+		
 	    
 	}
 	

@@ -185,7 +185,7 @@ public class ConfigResearch {
 					  new ResearchPage(recipeClericLegs)
 					  })
 			  .setParents("TD.CRIMSON")
-			  .setSecondary()
+			  //.setSecondary()
 			  .setConcealed()
 			  .setLost()
 			  .setEntityTriggers("Thaumcraft.CultistCleric")
@@ -241,7 +241,7 @@ public class ConfigResearch {
 				  new ResearchPage(recipeKnightLegs)
 				  })
 		  .setParents("TD.CRIMSON")
-		  .setSecondary()
+		  //.setSecondary()
 		  .setConcealed()
 		  .setLost()
 		  .setEntityTriggers("Thaumcraft.CultistKnight")
@@ -331,9 +331,10 @@ public class ConfigResearch {
 	   				  new ResearchPage(recipePaladinHelm)
 	   				  })
 	   		  .setParents("TD.CRIMSONLEADER")
-	   		  .setSecondary()
+	   		  .setParentsHidden("TD.DYEDPRAETOR")
+	   		  //.setSecondary()
 	   		  .setConcealed()
-	   		  .setHidden()
+	   		  //.setHidden()
 	   		  .registerResearchItem();
 	
 	
@@ -389,7 +390,7 @@ public class ConfigResearch {
   				  })
   		  .setParents("TD.CRIMSON")
   		  .setParentsHidden("TD.CRIMSONCLERIC")
-  		  .setSecondary()
+  		  //.setSecondary()
   		  .setConcealed()
   		  .registerResearchItem();
 	
@@ -444,7 +445,7 @@ public class ConfigResearch {
   				  })
   		  .setParents("TD.CRIMSON")
   		  .setParentsHidden("TD.CRIMSONKNIGHT")
-  		  .setSecondary()
+  		  //.setSecondary()
   		  .setConcealed()
   		  .registerResearchItem();
 	   
@@ -497,6 +498,7 @@ public class ConfigResearch {
 						  new ResearchPage(recipeRobeLegs)})
 				  .setParents("TD.CRIMSONCLERIC")
 				  .setConcealed()
+				  .setSecondary()
 				  .registerResearchItem();
 		 
 		 
@@ -543,6 +545,7 @@ public class ConfigResearch {
 						  new ResearchPage(recipeKniLegs)})
 				  .setParents("TD.CRIMSONKNIGHT")
 				  .setConcealed()
+				  .setSecondary()
 				  .registerResearchItem();
 		 
 		 
@@ -590,6 +593,7 @@ public class ConfigResearch {
 						  new ResearchPage(recipePraeLegs)})
 				  .setParents("TD.CRIMSONLEADER") 
 				  .setConcealed()
+				  .setSecondary()
 				  .registerResearchItem();
 		 
 		 
@@ -654,6 +658,7 @@ public class ConfigResearch {
 				  			})
 				  .setParents("TD.CRIMSONRANGER")
 				  .setConcealed()
+				  .setSecondary()
 				  .registerResearchItem();
 		 
 		 
@@ -702,6 +707,7 @@ public class ConfigResearch {
 						  })
 				  .setParents("TD.CRIMSONARCHER") 
 				  .setConcealed()
+				  .setSecondary()
 				  .registerResearchItem();
 		 
 		 
@@ -1229,6 +1235,7 @@ public class ConfigResearch {
       ArrayList<InfusionRecipe> rc7 = new ArrayList();
       ArrayList<InfusionRecipe> rc8 = new ArrayList();
       ArrayList<InfusionRecipe> rc9 = new ArrayList();
+      ArrayList<InfusionRecipe> rc10 = new ArrayList();
       for (int a = 0; a <= 3; a++)
       {
         rc1.add((InfusionRecipe)recipes.get("RAU1_" + a)); //berserker
@@ -1240,6 +1247,8 @@ public class ConfigResearch {
         rc7.add((InfusionRecipe)recipes.get("RAU7_" + a)); //knockback
         rc8.add((InfusionRecipe)recipes.get("RAU8_" + a)); //vital
         rc9.add((InfusionRecipe)recipes.get("RAU9_3")); //haste
+        rc10.add((InfusionRecipe)recipes.get("RAU10_" + a)); //ravager
+        
       }
       
       new ResearchItem("TD.RUNICARMORUPGRADES", "DYES", 
@@ -1267,8 +1276,11 @@ public class ConfigResearch {
 		    		  new ResearchPage((InfusionRecipe[])rc8.toArray(new InfusionRecipe[0])),
 		    		  new ResearchPage("tc.research_page.TD.RUNICARMORUPGRADES.a9"),
 		    		  new ResearchPage((InfusionRecipe[])rc9.toArray(new InfusionRecipe[0])),		    		  
+		    		  new ResearchPage("tc.research_page.TD.RUNICARMORUPGRADES.a10"),
+		    		  new ResearchPage((InfusionRecipe[])rc10.toArray(new InfusionRecipe[0])),	
 		    		  
-		    		  new ResearchPage("TD.ENHANCEDRUNICARMOR", "tc.research_page.TD.RUNICARMORUPGRADES.E")
+		    		  
+		    		  //new ResearchPage("TD.ENHANCEDRUNICARMOR", "tc.research_page.TD.RUNICARMORUPGRADES.E")
 		      })
 		      .setParents("TD.RUNICARMOR")
 		      .setParentsHidden("RUNICHEALING", "RUNICKINETIC", "RUNICEMERGENCY")
@@ -1324,6 +1336,23 @@ public class ConfigResearch {
 			  .registerResearchItem();
       
       ThaumcraftApi.addWarpToResearch("TD.PRIMALRUNICARMOR", 4);
+      
+      
+      new ResearchItem("TD.PRIMALRUNIC", "DYES", 
+    		  new AspectList().add(Aspect.ARMOR, 8).add(Aspect.ELDRITCH, 12).add(Aspect.MAGIC, 12).add(Aspect.DARKNESS, 10).add(Aspect.SOUL, 8),
+    		  12, 6, 1, 
+    		  new ItemStack(ConfigItems.itemEldritchObject,1,0))
+      		  .setPages(new ResearchPage[] { 
+      				  new ResearchPage("tc.research_page.TD.PRIMALRUNIC.1"),
+      				  new ResearchPage("tc.research_page.TD.PRIMALRUNIC.2"),
+      				  new ResearchPage("tc.research_page.TD.PRIMALRUNIC.3"),
+      				  new ResearchPage("tc.research_page.TD.PRIMALRUNIC.4"),
+      				        				 
+      				  })
+			  .setParents("TD.PRIMALRUNICARMOR")
+			  .setLost()
+			  .registerResearchItem();
+      
 			      
    }
 	      
