@@ -1,0 +1,296 @@
+# Creative Tab 
+itemGroup.thaumicdyes=神秘染料
+
+///////////
+# Items 
+///////////
+item.itemHelmetCultistRobeDyed.name=教徒兜帽 
+item.itemChestCultistRobeDyed.name=教徒兜帽 
+item.itemLegsCultistRobeDyed.name=教徒护腿
+# 
+item.itemHelmetFortressDyed.name=强化要塞兜鍪
+item.itemChestFortressDyed.name=强化要塞胸铠 
+item.itemLegsFortressDyed.name=强化要塞护胫 
+# 
+item.itemHelmetCultistLeaderDyed.name=强化血腥主教头盔
+item.itemChestCultistLeaderDyed.name=强化血腥主教胸甲
+item.itemLegsCultistLeaderDyed.name=强化血腥主教护胫
+# 
+item.itemHelmetCultistKnightDyed.name=血腥教徒头盔
+item.itemChestCultistKnightDyed.name=血腥教徒胸甲
+item.itemLegsCultistKnightDyed.name=血腥教徒护胫
+#
+item.itemHelmetInhabitedPlate.name=奥术头盔
+item.itemChestInhabitedPlate.name=奥术胸甲
+item.itemLegsInhabitedPlate.name=奥术护胫
+#
+item.itemHelmetIronFortress.name=要塞铁头盔
+item.itemChestIronFortress.name=要塞铁胸甲
+item.itemLegsIronFortress.name=要塞铁护胫
+#
+item.itemHelmetCultistRangerDyed.name=游侠头盔
+item.itemChestCultistRangerDyed.name=游侠胸甲
+item.itemLegsCultistRangerDyed.name=游侠护腿
+#
+item.itemHelmetVoidRobeDyed.name=漂白虚空神秘使兜帽
+item.itemChestVoidRobeDyed.name=漂白虚空神秘使法袍
+item.itemLegsVoidRobeDyed.name=漂白虚空神秘使护腿
+#
+item.itemHelmetThaumiumRobeDyed.name=神秘使兜帽
+item.itemChestThaumiumRobeDyed.name=神秘使法袍
+item.itemLegsThaumiumRobeDyed.name=神秘使护腿
+#
+item.itemBootsThaumiumTraveller.name=神秘探险者之靴
+item.itemBootsVoidTraveller.name=虚空漫游者之靴
+#
+item.itemHelmetCultistPaladin.name=血腥君王头盔
+#
+item.itemHelmetCultistArcher.name=血腥射手头盔
+item.itemChestCultistArcher.name=血腥射手胸甲
+item.itemLegsCultistArcher.name=血腥射手护胫
+
+item.itemHelmetCultistArcherDyed.name=射手头盔
+item.itemChestCultistArcherDyed.name=射手胸甲
+item.itemLegsCultistArcherDyed.name=射手护胫
+
+item.itemHelmetCultistRanger.name=血腥游侠头盔
+item.itemChestCultistRanger.name=血腥游侠胸甲
+item.itemLegsCultistRanger.name=血腥游侠护腿
+#
+item.itemFabricResource.name=血腥布匹
+#
+item.itemHelmetSunKnight.name=黄昏头盔
+item.itemChestSunKnight.name=黄昏胸甲
+
+
+item.HelmetIronFortress.mask.0=十字军
+item.HelmetIronFortress.mask.1=领主
+item.HelmetIronFortress.mask.2=行尸走肉
+item.HelmetIronFortress.mask.3=军阀
+
+item.HelmetCultistRanger.mask.0=侦察兵
+item.HelmetCultistRanger.mask.1=守卫
+
+
+//Experimental
+item.ItemHelmetRunic.name=符文头盔
+item.ItemChestRunic.name=符文胸甲
+item.ItemLegsRunic.name=符文护腿
+item.ItemBootsRunic.name=符文靴子
+item.ItemGogglesRunic.name=符文揭示之护目镜
+item.ItemBootsTravellerRunic.name=符文旅行者之靴
+
+item.runic.upgrade.0= - 没有升级
+item.runic.upgrade.1= - 狂战士
+item.runic.upgrade.2= - 护盾联结
+item.runic.upgrade.3= - 动力调节
+item.runic.upgrade.4= - 自我恢复
+item.runic.upgrade.5= - 意志坚定
+item.runic.upgrade.6= - 紧急救护
+item.runic.upgrade.7= - 屹立不倒
+item.runic.upgrade.8= - 活力四射
+item.runic.upgrade.9= - 碌碌无为
+
+//Legacy TX
+item.ItemMaskEvil.name=残酷面具
+death.attack.witherMask=%1$s 凋谢的离去 %2$s
+
+item.ItemHelmetRunicEnhanced.name=强化符文头盔
+item.ItemChestRunicEnhanced.name=强化符文胸甲
+item.ItemLegsRunicEnhanced.name=强化符文护腿
+item.ItemBootsRunicEnhanced.name=强化符文靴子
+
+item.ItemHelmetRunicPrimal.name=深渊符文头盔
+item.ItemChestRunicPrimal.name=深渊符文胸甲
+item.ItemLegsRunicPrimal.name=深渊符文护腿
+item.ItemBootsRunicPrimal.name=深渊符文靴子
+
+//unused
+tdyes.nameAppend=扭曲
+
+
+///////////
+# Research
+///////////
+
+# Categories 
+tc.research_category.DYES=神秘染料 
+ 
+# Research 
+tc.research_name.TD.DYEDROBE=血腥教徒长袍
+tc.research_text.TD.DYEDROBE=染色线索!
+tc.research_page.TD.robe.1=当你遇到血腥教徒时即使对他们有敌视感，然而，你发现自己却迷恋起他们穿戴的长袍.<BR>可悲的是，血腥长袍却不符合你的需要，所以经过一些修修补补，你发现了一个可能达到自己目的的修改方法.加入少许的世界盐和一些备用的魔力布匹有助于提高其魔法的亲和.
+tc.research_page.TD.robe.2=你觉得这一个发现将延伸到更多未来的事情中，虽然你不知道会发生什么.<BR>这种护甲可以染色.
+
+tc.research_name.TD.DYEDKNIGHT=神秘骑士护甲
+tc.research_text.TD.DYEDKNIGHT=保护国王
+tc.research_page.TD.knight.1=血腥骑士不是你的朋友-但你已经获得了他们的护甲.以前，在众多与他们战斗的情况下，你可能把他们的护甲当做奖杯或者告诫，但现在你觉得是时候制作一套你可以进行触及的护甲. <BR>加入神秘锭后，在加入一些迷人的魔力布匹，你现在拥有一个质朴的护甲伴随着你未来的战斗.<BR>这种护甲可以染色.
+ 
+tc.research_name.TD.DYEDPRAETOR=强化血腥主教护甲
+tc.research_text.TD.DYEDPRAETOR=圣骑士时装 
+tc.research_page.TD.praetor.1=在于一个阶级比较高的血腥教徒发生一次命中注定的相遇后，你成功地获得了一套强大的护甲.由于护甲暴露出来的陌生奥术能量，它似乎更加容易被地位较低下的教徒接受.<BR>注入一些要素到护甲，使用神秘锭作为电镀，使它比从前更为耐用，以及使它更加复有魅力.你将不得不调查这个护甲是如何在某一个时间点被创造出来的，因为它似乎超出了你所认为的血腥教徒护甲的能力.<BR>这种护甲可以染色.
+ 
+tc.research_name.TD.DYEDFORTRESS=强化要塞护甲
+tc.research_text.TD.DYEDFORTRESS=堡垒的设计
+tc.research_page.TD.fortress.1=神秘要塞护甲是你用神秘锭加工而成的复有最高成就的护甲，但你仍然觉得它有改进的余地.具体来说，在神秘中如果没有更多的空间就意味着你不能有太多好的东西，除非使它变得沉重以至于无法穿戴.<BR>正如预期那样，拥有更多的空间添加更多的面板，你已经加强了一些拥有附魔的布匹.它们持续的时间应该比以前更长，你认为添加的面板可能会使它更为迷人.<BR>该护甲接受面板升级，并且支持染色.
+
+tc.research_name.TD.INHABITEDPLATE=奥术护甲
+tc.research_text.TD.INHABITEDPLATE=可怕的安全系统
+tc.research_page.TD.husk.1=有许多奇怪的人漫游在外域的土地上，且和蹒跚的尸体没有区别.他们的身体似乎只是一个空壳，由于某种节肢生物的引导，你开始感觉到不安.这或许是命运注定，你祈祷可能会逃离这个迷宫.<BR>经过多次失败的尝试，你终于设计出捕捉与制服一个没有寄生虫控制的宿主的身体-允许你移除它的护甲进行仔细检查.令你惊讶的是，护甲惊人的与血腥护甲相似，你遇到他们或许可能存在于迭代之前.
+tc.research_page.TD.husk.2=你也许想知道他们是否是成功打开外域之门并传送于此的教派，或许就像自己一样是一位魔法师，或许是一个战士被一些异世界的怪物带来到此境界.你可能永远不知道.
+
+tc.research_name.TD.IRONFORTRESS=要塞铁护甲
+tc.research_text.TD.IRONFORTRESS=一个平凡的选择
+tc.research_page.TD.ironFortress.1=你对神秘要塞护甲的研究中取得了巨大的成功，但有些你想来建造的材有些过于昂贵难以大量进行生产.但是，在冶金中将那些昂贵的材料退一步到铁似乎有一些可喜的进展，由于铁的性质它更耐于魔法增强.<BR>它就像神秘的版本一样，被设计成一套需要通过其他附加东西进行增强.它还而外提供了对火的免疫与对爆炸的抗性，但缺少神秘中对魔法防护能力.
+tc.research_page.TD.ironFortress.2=它比一套标准的铁护甲更加耐用，由于所涉及的工艺你会发现它更容易附魔-但也许这只是一个副作用，它虽然如此接近奥数设备的设计.然而，由于材料的基本性质， 你似乎无法通过添加面板对它进行增强.
+
+tc.research_name.TD.IRONHELMGOGGLES=揭示之盔
+tc.research_text.TD.IRONHELMGOGGLES=要塞铁头盔升级
+tc.research_page.TD.ironHelmGoggles.1=就像与神秘要塞护甲一样，你已经找到一种方法来使揭示之护目镜的功能毫无保留的融合到你的头盔中.<BR>头盔功能会随着使用面具升级而保留.
+
+tc.research_name.TD.IRONHELMAESTHETICS=平滑面具
+tc.research_text.TD.IRONHELMAESTHETICS=要塞铁头盔升级
+tc.research_page.TD.ironHelmFace.1=由于要塞铁护甲缺少了神秘时代中提供天生的魔法属性，它是不可能将你现有的面具设计扩展到其身上.但这并不意味着它不能有与面具设计一样神奇的功能.<BR>采取备用的血腥骑士头盔，你分开了前部分并与要塞铁头盔在铁砧上一点，然后把它的功能纳入你的要塞头盔中.你希望类似的事情可以制作出一个新的主教兜帽.
+
+tc.research_name.TD.IRONHELMHUSK=奥术面具
+tc.research_text.TD.IRONHELMHUSK=要塞铁头盔升级
+tc.research_page.TD.ironHelmFace.2=你对从外域所获取的血腥教徒护甲的一些历史已经在一些研究中取得了初步线索，但是你到这里是为了创造历史，而不是研究它.<BR>你通过破坏的方式将头盔敲以碎片的形式取了下来.你已经取得一个可怕的奖品，使他可以融入你的要塞头盔中.<BR>一些古老的能量仍然无法知道它们的下落，但你觉得没有什么是可以担心的.
+
+tc.research_name.TD.IRONHELMHUSKCLASSIC=修复面具外壳
+tc.research_page.TD.ironHelmFaceClassic.2=你的研究为护甲面具外壳的磨损产生了一些线索，它们的护甲看起来像是被施展了一些奇怪的时间魔法.使你现有收集的面具设计恢复成与原本头盔一样有着一个醒目而特别的黄金图案，除了你的护甲.<BR>一些古老的能量仍然来自它新的覆盖面中正不断被吸取，但你相信这肯定是没有什么可担心的.
+
+tc.research_name.TD.DYEDRANGER=神秘使游侠护甲
+tc.research_text.TD.DYEDRANGER=荒野流浪者
+tc.research_page.TD.ranger.1=神秘使加上游侠护甲简直是完美的集合. 当太阳落下你带着一顶轻盈的头盔出航远行，背包的空间意味着你可以更加容易的适应野外的生存.但仅仅是你可以，并不意味着和你一起探险的每一个人都需要此.虽然明智的神秘使知道他们可以在野外发现更多信息，而不是在研究台前面刻苦不停的进行研究.
+tc.research_page.TD.ranger.2=类似要塞头盔这一设计，游侠头盔只会接受一小部分的修改.然而，作为护甲的设计只是为了减少多余的重量.<BR>所以你并不能很好的在这有限的空间中使用护目镜与面具的功能.
+
+tc.research_name.TD.VOIDROBE=漂白虚空长袍
+tc.research_text.TD.VOIDROBE=减少50的黑暗色
+tc.research_page.TD.voidrobe.1=当你在坩埚中尝试你的研究时，一些不必要的溢出摧毁了你一套刚要制做而成的完美的长袍杰作，它从中提取了所有颜色.然而，这可能会是混合使用的新尝试<BR>虚空长袍, 虽然可以进行染色但却十分黑暗显得十分沉闷，无论你使用了多少的染料.也许他们需要在坩埚中进行沐浴洗净.
+
+tc.research_name.TD.THAUMIUMROBE=神秘使长袍
+tc.research_text.TD.THAUMIUMROBE=教徒的线索
+tc.research_page.TD.thaumrobe.1=一段时间，你一直在挣扎在你的长袍与其他护甲中进行选择，选择着防御或者效果.从现在开始再也不用！最近血腥教徒长袍的设计试验中揭示了这个谜题，它将同时拥有两种效果<BR>以某些神秘护甲与神秘使长袍进行了重塑，创建了一套轻盈的护甲长袍，它提供了对物理与魔法伤害的保护<BR>在这期间兜帽将获得好处，即拥有制造它的护目镜的效果<BR>这种护甲可以进行染色.
+#
+tc.research_name.TD.THAUMIUMBOOTS=神秘探险者之靴
+tc.research_text.TD.THAUMIUMBOOTS=朝着正确方向迈进一步
+tc.research_page.TD.thaumboots.1=旅行者之靴已经带给你很好的服务，但它保护的形式仍有许多不足之处.你的进步与对神秘注魔的坚持有着密不可分的关系.<BR>这双杰出的靴子为你提供了轻盈的速度减少了对旅行者之靴历史遗留下来的问题.
+
+tc.research_name.TD.VOIDBOOTS=虚空漫游者之靴
+tc.research_text.TD.VOIDBOOTS=完成设置
+tc.research_page.TD.voidboots.1=虚空神秘使长袍可能有你想要的一切-令人舒适而显不安的布料，拥有好的Vis减免，看似无底的扭曲与其坚固的防护能力.但它却没有一双可以搭配的靴子，你认为具备这样能力的靴子应该是会随时间推移进行自动修复的.<BR>运用你对神秘探险者之靴使用相同的方法使它达到与虚空长袍一样的水平复有平滑的光泽.随着速度大幅度的增加与掉落伤害的减少，它将使你飞跃原本无法飞跃的高楼大厦，但要确保你能更得上它的节奏.
+#
+tc.research_name.TD.CRIMSON=血腥护甲锻造
+tc.research_text.TD.CRIMSON=教派的保护
+tc.research_page.TD.crimson.1=通过对血腥教徒与血腥骑士提供的血腥仪式这本书籍仔细的研究你发现了破译其他章节的关键，揭示更多的知识.<BR>这一发现已经由崇拜教徒的铁匠们制造出来的护甲作为了技术参考.也许你低估了他们在神秘中知识和技能.<BR>对于如此复杂的护甲，你希望能像制造血腥护甲一样简单手册会告诉你料想.也许你将能够利用你对魔法精通的技术来改善他们.
+tc.research_page.TD.crimson.2=虽然靴子很容易改造，不过你‘放心’你的大多数教徒护甲不会在这个过程中受到持续过多的伤害.<BR>你可能需要仔细看看他们在外域之前的事情以便你破译其他内容.建议谨慎.<BR>然而，也有其他设置在书页中，你可能以前没有见过，以及损坏和丢失的书页.也许还有其他线索来解码-它可能是努力的通过教徒凑齐一些碎片.
+tc.research_page.TD.crimson.3=血腥护甲似乎是用类似附魔的布匹材料编织而成的.在这个基础上它应该是比较容易复杂的.<BR>然而，在这个过程中似乎损害了它的能力有效的Vis减免.
+
+tc.research_name.TD.CRIMSONCLERIC=血腥邪徒长袍
+tc.research_text.TD.CRIMSONCLERIC=异教者
+tc.research_page.TD.crimsonCleric.1=唱着奇怪的诗句，藏在长袍中，血腥教徒们采取了主动的方式解开了远古者的秘密.目前还不清楚他们最初是如何展开仪式的，但你的观察表明，他们正在尝试用自己的生命力量，为这最危险的做法加油吧.谢天谢地，他们似乎错过了完成仪式的一步关键，至少现在如此...
+
+tc.research_name.TD.CRIMSONKNIGHT=血腥邪徒护甲
+tc.research_text.TD.CRIMSONKNIGHT=血腥十字军
+tc.research_page.TD.crimsonKnight.1=护甲与剑现在已经准备好了，血腥骑士们将准备保护和捍卫他们口中所声称的组织.他们伴随着大量异教徒经常看到，拥有这丰富的战斗经验，异教徒们用他们的数量和强度对他们带来优势和对敌人带来的威胁.<BR>然而，最好让他们与你保持一段距离，在可能的情况下，他们作为骑士缺乏远程能力.
+
+tc.research_name.TD.CRIMSONLEADER=血腥主教护甲
+tc.research_text.TD.CRIMSONLEADER=血腥主教护甲
+tc.research_page.TD.crimsonLeader.1=偶遇血腥主教是非常罕见的一种情景，在战斗中需要多把握时机.作为战斗中部署的指挥官与捍卫者，这是他们的职责，以保护珍贵的文物与遗址.他们是任何一个强大的魔法师的对手，但他们守护的宝藏往往值得一试.
+
+tc.research_name.TD.CRIMSONRANGER=血腥游侠长袍
+tc.research_text.TD.CRIMSONRANGER=漫游的烟火
+tc.research_page.TD.crimsonRanger.1=那是多么可怕遭遇到血腥游侠不仅仅是巧合，曾经也有人发现他们.这些游侠的目的似乎是抢先在探险家到达之前寻找遗物与碑文，他们可能是唯一对它们感兴趣的血腥教徒.<BR>然而，你还没有遇到他们当中任何一个人，但他们可能会潜在某些地方观看你的进展...
+
+tc.research_name.TD.CRIMSONARCHER=血腥射手护甲
+tc.research_text.TD.CRIMSONARCHER=处于防御
+tc.research_page.TD.crimsonArcher.1=血腥射手们貌似没有被部署到经常驻守的荒野，而在血腥城堡与某些前哨区域.他们是对付敌人最初的防线，从城墙顶进行射击，或从瞭望塔到实质的范围.除非你有一个坚固的路障遮挡，否则最好避免与他们直接接触.
+
+tc.research_name.TD.PALADIN=血腥君王
+tc.research_text.TD.PALADIN=皇家骑士
+tc.research_page.TD.paladin.1=每个血腥教徒都有自己的一个真正威胁，血腥教徒们多次提到用仪式提升战斗力的只有少数.这些选择仪式的人都会穿戴一个特殊的头盔来表示他们的地位，这些是基于血腥仪式的书中，然而魔导手册中也有着类似的设计，它在外域的某些部分被发现.真是奇妙.<BR>然而现在，血腥圣骑士的确依旧被笼罩在神秘中.
+
+tc.research_name.TD.DYEDARCHER=射手服饰
+tc.research_text.TD.DYEDARCHER=自由绘制的箭
+tc.research_page.TD.archer.1=虽然法杖被作为一种基础的远程战斗工具，但有时候一些操作，一个良好的老弓箭手可能会做得更好.喜欢对着苹果进行射击练习.<BR>虽然血腥射手的护甲可能很好，但是它可能需要一点点额外的接触，可能会变得更好.使他身上的血腥洗去.
+
+tc.research_name.TD.SUNNYD=太阳的礼物
+tc.research_text.TD.SUNNYD=贪婪的上帝
+tc.research_page.TD.sunnyD.1=一张纸和一些粗略的草图.这使你可以对其进行恢复.书中只有字迹清晰与被血弄脏的书页.消息很短.<BR>§o无用的东西,对他用力擦洗.赞美他!§r<BR>你不知道这意味着什么，但这护甲看起来不错.<BR>愉快的远征. <BR>你也许有一个奇怪的愿望，提高你手臂在某种时候的敬礼在那个时候佩戴它，真是奇怪.
+
+tc.research_name.TD.CRIMSONBANNER=血腥教徒旗帜
+tc.research_text.TD.CRIMSONBANNER=血腥军团
+tc.research_page.TD.crimsonBanner.1=虽然旗帜只是你家中一个优秀的装饰之外，血腥教徒们不是很喜欢你的倾向，从他们手中盗取旗帜.他们并不是很容易找到-只是没有足够血腥教徒旗帜盗取.<BR>当然，解决的方式就是让自己，通过编织一些金线使它们与旗帜合二为一.很快你将改变，脱离那个无法进行复制的时代.
+
+tc.research_name.TD.RUNICARMOR=符文护甲
+tc.research_text.TD.RUNICARMOR=防护遗产
+tc.research_page.TD.RUNICARMOR.1=你从研究中发现了符文护甲.这个名字可能是一个误导，因为它不是传统意义上的护甲，而是一系列的特征，当你穿戴它时将拥有者类似封条似的防护层功能.<BR>这些设计创造出了一个神奇的魔力能量屏障，可以防止大多数类型的伤害.护甲的防护层提供了一个打击点，首先伤害从防护层中减去，保护穿戴者免受伤害.一旦其耗尽，穿戴着将开始正常受到伤害.
+tc.research_page.TD.RUNICARMOR.2=防护层需要随着时间推移而恢复,要求§2Terra§0和§eAer§0vis来恢复其能力，但即使其防护层的能力耗尽护甲依旧会提供大致与皮革套相同的护甲值.<BR>该护甲不能保护溺水、饥饿或类似的环境伤害.<BR>由于它的性质，护甲不可像正常一样令人陶醉，但你肯定有办法提高它的有效性-你只需要发现它们.
+
+tc.research_name.TD.RUNICGOGGLES=符文揭示之护目镜
+tc.research_text.TD.RUNICGOGGLES=两全其美
+tc.research_page.TD.RUNICGOGGLES.1=当被符文护甲保护是至关重要的，但是你还需要使用揭示之护目镜来揭示魔法的奥秘.为什么不两者同时具备呢？<BR>通过将符文头盔套在护目镜上，你将享尽好处.
+
+tc.research_name.TD.RUNICBOOTSTRAVELLER=符文旅行者之靴
+tc.research_text.TD.RUNICBOOTSTRAVELLER=两全其美
+tc.research_page.TD.RUNICBOOTSTRAVELLER.1=对你而言，受符文护甲保护是至关重要的，你开始想念穿戴你的旅行者之靴获得的速度提升.为什么不两者同时拥有呢？<BR>通过将符文靴子的能力注入旅行者之靴中，使你可以享尽他们所带来的好处.<BR>你还没有成功的重复这个过程使其他通过注入增强的靴子也复有同样的功能，但也许你会有更好的运气在未来.
+
+
+tc.research_name.TD.RUNICARMORUPGRADES=符文护甲升级
+tc.research_text.TD.RUNICARMORUPGRADES=绝对防御！
+tc.research_page.TD.RUNICARMORUPGRADES.1=增加符文护甲的应用已经被证明比预期中的容易，你已经发现了护甲中的一些插槽，可以通过它作为桥梁，其中有一些则是你早期符文实验的小玩意。然而，就目前而言，只有一个等级的增强仅能使用一次。看来魔法有时候也还有自己的理智而言。 
+tc.research_page.TD.RUNICARMORUPGRADES.2=然而，只有一个单一的增强却只能进行一次应用.看来神秘使们有些时候已经超出了自身的境界.<BR>值得注意的是对于非被动升级，放置相同的所有碎片可以增加额外的未知效果.因此，你指责有如此接近的‘魔力共鸣’.
+tc.research_page.TD.RUNICARMORUPGRADES.a1=§n狂战士§r<BR>Type: Shield breach<BR>当你的符文防护层被打破时，它会释放一个魔法力量进入它的佩戴者，将持续数秒.这种效果的强度随着升级而变化。<BR> 这个效果有20秒的冷却时间。<BR>这个升级增加了符文护甲的应用，如果可能的话，能获得额外的叠加效果。
+tc.research_page.TD.RUNICARMORUPGRADES.a2=§n护盾联结§r<BR>类型：主动<BR>这个升级增加了50%护盾强度。<BR>这个升级增加了符文护甲的应用，如果可能的话，能获得额外的叠加效果。
+tc.research_page.TD.RUNICARMORUPGRADES.a3=§n动力调节§r<BR>类型：主动<BR>当你的符文防护层被打破时，这个能力会被释放产生爆炸.爆炸的伤害取决于你有多少升级。 <BR>这个效果有30秒冷却时间。<BR>这个升级增加了符文护甲的应用，如果可能的话，能获得额外的福利。
+tc.research_page.TD.RUNICARMORUPGRADES.a4=§n自我恢复§r<BR>类型：被动<BR>当你的符文防护层被打破时，将释放一个再生的能量脉冲到它的佩戴者身上，将持续数秒.这种效果的强度取决于升级。<BR>这个效果有30秒的冷却时间。<BR>这个升级增加了符文护甲的应用，如果可能的话，能获得额外的叠加效果。
+tc.research_page.TD.RUNICARMORUPGRADES.a5=§n坚毅§r<BR>T类型:主动<BR>这个升级每提升一级，符文护甲将增加最大符文护盾强度。<BR>这个升级增加了符文护甲的应用，如果可能的话，能获得额外的叠加效果。
+tc.research_page.TD.RUNICARMORUPGRADES.a6=§n意志坚定§r<BR>类型：被动 <BR>当你的符文护盾被攻破时，这个升级将立刻为你增加8点（或者更多）护盾。每升级一次增加获取的数量8点。<BR>这个能力有两分钟的冷却时间。<BR>这个升级增加了额外获取升级槽的能力。<BR>这个升级增加了符文护甲的应用，如果可能的话，能获得额外的叠加效果。
+tc.research_page.TD.RUNICARMORUPGRADES.a7=§n屹立不倒§r<BR>类型:主动<BR>这个升级赋予你20%击退抗性。 <BR>这个升级增加了符文护甲的应用，但仅能提升一次，所以不能获得额外的叠加效果。
+tc.research_page.TD.RUNICARMORUPGRADES.a8=§n活力四射§r<BR>类型：被动<BR>这个升级将增加最大生命值5格（10点）。<BR>这个升级增加了符文护甲的应用，但仅能提升一次，所以不能获得额外的叠加效果。
+tc.research_page.TD.RUNICARMORUPGRADES.a9=§n碌碌无为§r<BR>类型：主动<BR>这个升级为穿戴者提供一个速度效果，类似同名的附魔-急迫。它将给予穿戴者急迫II效果。<BR>这个升级增加了符文护甲的应用，但仅能提升一次，所以不能获得额外的叠加效果。
+tc.research_page.TD.RUNICARMORUPGRADES.E=增强符文护甲是一个杰作，随着你的魔法能力升级会使它变得更强，但是究竟有多强呢？为了使未来的操作更利于神秘使，你已经有了一些初步的计算。<LINE><LINE>A fully §n坚毅§r 设计一套完整的护甲提供给佩戴者.<BR>Two §n护盾联结§r 升级将增加最大防护层强度.<BR>Slotting seven §n紧急救护§r 升级提供了恢复防护层的能力-破坏其时进行增强.
+
+
+--Enhanced Runic Armor
+tc.research_name.TD.ENHANCEDRUNICARMOR=强化符文护甲
+tc.research_text.TD.ENHANCEDRUNICARMOR=挑战极限
+tc.research_page.TD.ENHANCEDRUNICARMOR.1=通过你的广泛研究，强化符文护甲已经离开了你对装备的了解范围，你何曾不想穿戴你的虚空长袍作为代替.不要气馁，你已经有一个‘合适’的构想能使强化符文护甲解决这么问题.<BR><BR>每个护甲每一个只能容纳一个强化，但允许使用两个升级进行增强获得更多的保护这种护甲也会像你的长袍一样被给予被动的削弱.只有一个隐情-成本.
+tc.research_page.TD.ENHANCEDRUNICARMOR.2记住，强化符文护甲创造初衷是为了让护甲能得到增强.<BR><BR>如果你想要覆盖一个强化符文护甲的能力，你可以手持其右键单击并且互换位置进行增强.其次第一个将会显示在上面.<BR>
+//<BR>[配方待定...留下反馈]
+
+
+--Primal Runic Armor
+tc.research_name.TD.PRIMALRUNICARMOR=深渊符文护甲
+tc.research_text.TD.PRIMALRUNICARMOR=盯着深渊看得太久...
+tc.research_page.TD.PRIMALRUNICARMOR.1=<IMG>thaumcraft:textures/misc/eldritchajor2.png:0:255:255:255:.5</IMG><BR>§o        §msu nioj su emoceb
+//translator note - write "become us join us" after the §m, either forward or backward, whatever works best
+tc.research_page.TD.PRIMALRUNICARMOR.2=这是一个错误的决定。<BR>当你有机会的时候你真的应该停下来.<BR>你应该停下来...<BR> <BR>§o§m保护珍珠保护珍珠保护珍珠<BR> §r§0<BR>你干了些什么...？
+tc.research_page.TD.PRIMALRUNICARMOR.3=你将强化符文护甲与虚空神秘使套通过原始珍珠作为媒介创造了一套黑暗而又强大的护甲。它能克服一些增强时的缺陷，具有更大的能量。<BR>不过，只是有些故事...关于它的.你能听到附加微弱的话语声，在你的视线及空气中的角落里移动的影子，你无法看清它们是如何进行移动的...<BR>最好一次只穿戴其中的一件，而不是为了增加生存时间.除此以外，任何东西都有可能对穿戴者带来难以计数的影响。
+
+
+
+tc.research_name.TD.MASKEVIL=残酷面具
+tc.research_text.TD.MASKEVIL=我看到了你的终结
+tc.research_page.TD.maskEvil.1=这种邪恶的面具可以产生魔法杀死你看到的任何生物。确切的效果各不相同，但如果你有足够长的时间去凝视生物，就会使其产生痛苦，虚弱直至死亡.<BR>你的眼睛会释放一道黑色的闪电延伸到你的目标，但你的神秘使同伴们声称你一定是产生了幻觉.
+
+
+
+§§§
+
+#Copied research 
+tc.research_name.TD.UUUU=
+tc.research_text.TD.UUUU=
+tc.research_page.TD.UUUU=
+tc.research_name.TD.ARMORFORTRESS=神秘要塞甲胄 
+tc.research_text.TD.ARMORFORTRESS=百害莫侵
+tc.research_name.TD.VOIDMETAL=虚空金属
+tc.research_text.TD.VOIDMETAL=奇怪，它摸起来应该是凉的...
+tc.research_name.TD.THAUMIUM=神秘锭
+tc.research_text.TD.THAUMIUM=魔导金属
+tc.research_name.TD.OUTERARRIVAL=外域
+tc.research_text.TD.OUTERARRIVAL=这里已不是我们的天下
+tc.research_name.TD.VOIDFORTRESS=虚空神秘使法袍
+tc.research_text.TD.VOIDFORTRESS=外域风情
+tc.research_name.TD.BOOTSTRAVELLER=旅行者之靴
+tc.research_text.TD.BOOTSTRAVELLER=专业行走设备
