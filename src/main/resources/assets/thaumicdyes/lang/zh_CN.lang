@@ -36,16 +36,16 @@ item.itemHelmetVoidRobeDyed.name=漂白虚空神秘使兜帽
 item.itemChestVoidRobeDyed.name=漂白虚空神秘使法袍
 item.itemLegsVoidRobeDyed.name=漂白虚空神秘使护腿
 #
-item.itemHelmetThaumiumRobeDyed.name=神秘使兜帽
-item.itemChestThaumiumRobeDyed.name=神秘使法袍
-item.itemLegsThaumiumRobeDyed.name=神秘使护腿
+item.itemHelmetThaumiumRobeDyed.name=秘術使兜帽
+item.itemChestThaumiumRobeDyed.name=秘術使法袍
+item.itemLegsThaumiumRobeDyed.name=秘術使護腿
 #
-item.itemBootsThaumiumTraveller.name=神秘探险者之靴
+item.itemBootsThaumiumTraveller.name=秘術探险者之靴
 item.itemBootsVoidTraveller.name=虚空漫游者之靴
 #
 item.itemHelmetCultistPaladin.name=血腥君王头盔
 #
-item.itemHelmetCultistArcher.name=血腥射手头盔
+item.itemHelmetCultistArcher.name=血腥信徒头盔
 item.itemChestCultistArcher.name=血腥射手胸甲
 item.itemLegsCultistArcher.name=血腥射手护胫
 
@@ -78,7 +78,7 @@ item.ItemChestRunic.name=符文头盔
 item.ItemLegsRunic.name=符文护腿
 item.ItemBootsRunic.name=符文靴子
 item.ItemGogglesRunic.name=符文靴子
-item.ItemBootsTravellerRunic.name=符文旅行者之靴
+item.ItemBootsTravellerRunic.name=符文旅人之靴
 
 item.runic.upgrade.0= - 没有升级
 item.runic.upgrade.1= - 狂战士
@@ -117,72 +117,72 @@ tc.research_category.DYES=神秘染料
  
 # Research 
 tc.research_name.TD.DYEDROBE=血腥教徒长袍
-tc.research_text.TD.DYEDROBE=染色线索!
-tc.research_page.TD.robe.1=当你遇到血腥教徒时即使对他们有敌视感，然而，你发现自己却迷恋起他们穿戴的长袍.<BR>可悲的是，血腥长袍却不符合你的需要，所以经过一些修修补补，你发现了一个可能达到自己目的的修改方法.加入少许的世界盐和一些备用的魔力布匹有助于提高其魔法的亲和.
-tc.research_page.TD.robe.2=你觉得这一个发现将延伸到更多未来的事情中，虽然你不知道会发生什么.<BR>这种护甲可以染色.
+tc.research_text.TD.DYEDROBE=線程染色！
+tc.research_page.TD.robe.1=當你遇到血腥教徒時即使對他們有敵視感，然而，你發現自己卻迷戀起他們穿戴的長袍.<BR>可悲的是，血腥長袍卻不符合你的需要，所以經過一些修修補補，你發現了一個可能達到自己目的的修改方法.加入少許的世界鹽和一些備用的魔力布匹有助於提高其魔法的親和.
+tc.research_page.TD.robe.2=你覺得這一個發現將延伸到更多未來的事情中，雖然你不知道會發生什麼.<BR>這種護甲可以染色.
 
-tc.research_name.TD.DYEDKNIGHT=神秘骑士护甲
-tc.research_text.TD.DYEDKNIGHT=保护国王
-tc.research_page.TD.knight.1=血腥骑士不是你的朋友-但你已经获得了他们的护甲.以前，在众多与他们战斗的情况下，你可能把他们的护甲当做奖杯或者告诫，但现在你觉得是时候制作一套你可以进行触及的护甲. <BR>加入神秘锭后，在加入一些迷人的魔力布匹，你现在拥有一个质朴的护甲伴随着你未来的战斗.<BR>这种护甲可以染色.
+tc.research_name.TD.DYEDKNIGHT=秘術騎士護甲
+tc.research_text.TD.DYEDKNIGHT=保護者的境界
+tc.research_page.TD.knight.1=血腥騎士不是你的朋友 - 但你已經獲得了他們的護甲以前，在眾多與他們戰鬥的情況下，你可能把他們的護甲當做獎杯或者告誡，但現在你覺得是時候製作一套你可以進行觸及的護甲。<BR>加入秘術錠後，在加入一些迷人的魔力布匹，你現在擁有一個質樸的護甲伴隨著你未來的戰鬥。<BR>這種護甲可以染色。
  
-tc.research_name.TD.DYEDPRAETOR=强化血腥主教护甲
-tc.research_text.TD.DYEDPRAETOR=圣骑士时装 
-tc.research_page.TD.praetor.1=在于一个阶级比较高的血腥教徒发生一次命中注定的相遇后，你成功地获得了一套强大的护甲.由于护甲暴露出来的陌生奥术能量，它似乎更加容易被地位较低下的教徒接受.<BR>注入一些要素到护甲，使用神秘锭作为电镀，使它比从前更为耐用，以及使它更加复有魅力.你将不得不调查这个护甲是如何在某一个时间点被创造出来的，因为它似乎超出了你所认为的血腥教徒护甲的能力.<BR>这种护甲可以染色.
+tc.research_name.TD.DYEDPRAETOR=強化血腥主教護甲
+tc.research_text.TD.DYEDPRAETOR=時尚的聖騎士
+tc.research_page.TD.praetor.1=在於一個階級比較高的血腥教徒發生一次命中註定的相遇後，你成功地獲得了一套強大的護甲.由於護甲暴露出來的陌生奧術能量，它似乎更加容易被地位較低下的教徒接受.<BR>注入一些要素到護甲，使用神秘錠作為電鍍，使它比從前更為耐用，以及使它更加複有魅力.你將不得不調查這個護甲是如何在某一個時間點被創造出來的，因為它似乎超出了你所認為的血腥教徒護甲的能力.<BR>這種護甲可以染色.
  
-tc.research_name.TD.DYEDFORTRESS=强化要塞护甲
-tc.research_text.TD.DYEDFORTRESS=堡垒的设计
-tc.research_page.TD.fortress.1=神秘要塞护甲是你用神秘锭加工而成的复有最高成就的护甲，但你仍然觉得它有改进的余地.具体来说，在神秘中如果没有更多的空间就意味着你不能有太多好的东西，除非使它变得沉重以至于无法穿戴.<BR>正如预期那样，拥有更多的空间添加更多的面板，你已经加强了一些拥有附魔的布匹.它们持续的时间应该比以前更长，你认为添加的面板可能会使它更为迷人.<BR>该护甲接受面板升级，并且支持染色.
+tc.research_name.TD.DYEDFORTRESS=增強堡壘裝甲
+tc.research_text.TD.DYEDFORTRESS=堡壘的風格
+tc.research_page.TD.fortress.1=秘術要塞護甲是你用秘術錠加工而成的复有最高成就的護甲，但你仍然覺得它有改進的餘地。具體來說，在神秘中如果沒有更多的空間就意味著你不能有太多好的東西，除非使它變得沉重以至於無法穿戴。<BR>正如預期那樣，擁有更多的空間添加更多的面板，你已經加強了一些擁有附魔的布匹。它們持續的時間應該比以前更長，你認為添加的面板可能會使它更為迷人。<BR>該護甲接受面板升級，並且支持染色。
 
-tc.research_name.TD.INHABITEDPLATE=奥术护甲
-tc.research_text.TD.INHABITEDPLATE=可怕的安全系统
-tc.research_page.TD.husk.1=有许多奇怪的人漫游在外域的土地上，且和蹒跚的尸体没有区别.他们的身体似乎只是一个空壳，由于某种节肢生物的引导，你开始感觉到不安.这或许是命运注定，你祈祷可能会逃离这个迷宫.<BR>经过多次失败的尝试，你终于设计出捕捉与制服一个没有寄生虫控制的宿主的身体-允许你移除它的护甲进行仔细检查.令你惊讶的是，护甲惊人的与血腥护甲相似，你遇到他们或许可能存在于迭代之前.
-tc.research_page.TD.husk.2=你也许想知道他们是否是成功打开外域之门并传送于此的教派，或许就像自己一样是一位魔法师，或许是一个战士被一些异世界的怪物带来到此境界.你可能永远不知道.
+tc.research_name.TD.INHABITEDPLATE=奧術護甲
+tc.research_text.TD.INHABITEDPLATE=怪異的安全系統
+tc.research_page.TD.husk.1=有許多奇怪的人漫遊在外域的土地上，且和蹣跚的屍體沒有區別.他們的身體似乎只是一個空殼，由於某種節肢生物的引導，你開始感覺到不安.這或許是命運注定，你祈禱可能會逃離這個迷宮.<BR>經過多次失敗的嘗試，你終於設計出捕捉與製服一個沒有寄生蟲控制的宿主的身體-允許你移除它的護甲進行仔細檢查.令你驚訝的是，護甲驚人的與血腥護甲相似，你遇到他們或許可能存在於迭代之前.
+tc.research_page.TD.husk.2=你也許想知道他們是否是成功打開外域之門並傳送於此的教派，或許就像自己一樣是一位秘術師，或許是一個戰士被一些異世界的怪物帶來到此境界.你可能永遠不知道.
 
-tc.research_name.TD.IRONFORTRESS=要塞铁护甲
-tc.research_text.TD.IRONFORTRESS=一个平凡的选择
-tc.research_page.TD.ironFortress.1=你对神秘要塞护甲的研究中取得了巨大的成功，但有些你想来建造的材有些过于昂贵难以大量进行生产.但是，在冶金中将那些昂贵的材料退一步到铁似乎有一些可喜的进展，由于铁的性质它更耐于魔法增强.<BR>它就像神秘的版本一样，被设计成一套需要通过其他附加东西进行增强.它还而外提供了对火的免疫与对爆炸的抗性，但缺少神秘中对魔法防护能力.
-tc.research_page.TD.ironFortress.2=它比一套标准的铁护甲更加耐用，由于所涉及的工艺你会发现它更容易附魔-但也许这只是一个副作用，它虽然如此接近奥数设备的设计.然而，由于材料的基本性质， 你似乎无法通过添加面板对它进行增强.
+tc.research_name.TD.IRONFORTRESS=要塞鐵護甲
+tc.research_text.TD.IRONFORTRESS=一個平凡的選擇
+tc.research_page.TD.ironFortress.1=你對秘術要塞護甲的研究中取得了巨大的成功，但有些你想來建造的材有些過於昂貴難以大量進行生產。但是，在冶金中將那些昂貴的材料退一步到鐵似乎有一些可喜的進展，由於鐵的性質它更耐於魔法增強。<BR>它就像神秘的版本一樣，被設計成一套需要通過其他附加東西進行增強。它還而外提供了對火的免疫與對爆炸的抗性，但缺少神秘中對魔法防護能力。
+tc.research_page.TD.ironFortress.2=它比一套標準的鐵護甲更加耐用，由於所涉及的工藝你會發現它更容易附魔 - 。但也許這只是一個副作用，它雖然如此接近奧術設備的設計然而，由於材料的基本性質，你似乎無法通過添加面板對它進行增強。
 
 tc.research_name.TD.IRONHELMGOGGLES=揭示之盔
-tc.research_text.TD.IRONHELMGOGGLES=要塞铁头盔升级
-tc.research_page.TD.ironHelmGoggles.1=就像与神秘要塞护甲一样，你已经找到一种方法来使揭示之护目镜的功能毫无保留的融合到你的头盔中.<BR>头盔功能会随着使用面具升级而保留.
+tc.research_text.TD.IRONHELMGOGGLES=要塞鐵頭盔升級
+tc.research_page.TD.ironHelmGoggles.1=就像與秘術要塞護甲一樣，你已經找到一種方法來使揭示之護目鏡的功能毫無保留的融合到你的頭盔中。<BR>頭盔功能會隨著使用面具升級而保留。
 
 tc.research_name.TD.IRONHELMAESTHETICS=平滑面具
-tc.research_text.TD.IRONHELMAESTHETICS=要塞铁头盔升级
-tc.research_page.TD.ironHelmFace.1=由于要塞铁护甲缺少了神秘时代中提供天生的魔法属性，它是不可能将你现有的面具设计扩展到其身上.但这并不意味着它不能有与面具设计一样神奇的功能.<BR>采取备用的血腥骑士头盔，你分开了前部分并与要塞铁头盔在铁砧上一点，然后把它的功能纳入你的要塞头盔中.你希望类似的事情可以制作出一个新的主教兜帽.
+tc.research_text.TD.IRONHELMAESTHETICS=要塞鐵頭盔升級
+tc.research_page.TD.ironHelmFace.1=由於要塞鐵護甲缺少了神秘時代中提供天生的魔法屬性，它是不可能將你現有的面具設計擴展到其身上。但這並不意味著它不能有與面具設計一樣神奇的功能。<BR>採取備用的血腥騎士頭盔，你分開了前部分並與要塞鐵頭盔在鐵砧上一點，然後把它的功能納入你的要塞頭盔中。你希望類似的事情可以製作出一個新的主教兜帽。
 
-tc.research_name.TD.IRONHELMHUSK=奥术面具
-tc.research_text.TD.IRONHELMHUSK=要塞铁头盔升级
-tc.research_page.TD.ironHelmFace.2=你对从外域所获取的血腥教徒护甲的一些历史已经在一些研究中取得了初步线索，但是你到这里是为了创造历史，而不是研究它.<BR>你通过破坏的方式将头盔敲以碎片的形式取了下来.你已经取得一个可怕的奖品，使他可以融入你的要塞头盔中.<BR>一些古老的能量仍然无法知道它们的下落，但你觉得没有什么是可以担心的.
+tc.research_name.TD.IRONHELMHUSK=奧術面具
+tc.research_text.TD.IRONHELMHUSK=要塞鐵頭盔升級
+tc.research_page.TD.ironHelmFace.2=你對從外域所獲取的血腥教徒護甲的一些歷史已經在一些研究中取得了初步線索，但是你到這裡是為了創造歷史，而不是研究它。<BR>你通過破壞的方式將頭盔敲以碎片的形式取了下來。你已經取得一個可怕的獎品，使他可以融入你的要塞頭盔中。<BR>一些古老的能量仍然無法知道它們的下落，但你覺得沒有什麼是可以擔心的。
 
-tc.research_name.TD.IRONHELMHUSKCLASSIC=修复面具外壳
-tc.research_page.TD.ironHelmFaceClassic.2=你的研究为护甲面具外壳的磨损产生了一些线索，它们的护甲看起来像是被施展了一些奇怪的时间魔法.使你现有收集的面具设计恢复成与原本头盔一样有着一个醒目而特别的黄金图案，除了你的护甲.<BR>一些古老的能量仍然来自它新的覆盖面中正不断被吸取，但你相信这肯定是没有什么可担心的.
+tc.research_name.TD.IRONHELMHUSKCLASSIC=修復面具外殼
+tc.research_page.TD.ironHelmFaceClassic.2=你的研究為護甲面具外殼的磨損產生了一些線索，它們的護甲看起來像是被施展了一些奇怪的時間魔法。使你現有收集的面具設計恢復成與原本頭盔一樣有著一個醒目而特別的黃金圖案，除了你的護甲。<BR>一些古老的能量仍然來自它新的覆蓋面中正不斷被吸取，但你相信這肯定是沒有什麼可擔心的。
 
-tc.research_name.TD.DYEDRANGER=神秘使游侠护甲
-tc.research_text.TD.DYEDRANGER=荒野流浪者
-tc.research_page.TD.ranger.1=神秘使加上游侠护甲简直是完美的集合. 当太阳落下你带着一顶轻盈的头盔出航远行，背包的空间意味着你可以更加容易的适应野外的生存.但仅仅是你可以，并不意味着和你一起探险的每一个人都需要此.虽然明智的神秘使知道他们可以在野外发现更多信息，而不是在研究台前面刻苦不停的进行研究.
-tc.research_page.TD.ranger.2=类似要塞头盔这一设计，游侠头盔只会接受一小部分的修改.然而，作为护甲的设计只是为了减少多余的重量.<BR>所以你并不能很好的在这有限的空间中使用护目镜与面具的功能.
+tc.research_name.TD.DYEDRANGER=秘術使遊俠護甲
+tc.research_text.TD.DYEDRANGER=荒野流浪漢
+tc.research_page.TD.ranger.1=秘術使加上遊俠護甲簡直是完美的集合。當太陽落下你帶著一頂輕盈的頭盔出航遠行，背包的空間意味著你可以更加容易的適應野外的生存。但僅僅是你可以，並不意味著和你一起探險的每一個人都需要此，雖然明智的秘術使知道他們可以在野外發現更多信息，而不是在研究台前面刻苦不停的進行研究。
+tc.research_page.TD.ranger.2=類似要塞頭盔這一設計，遊俠頭盔只會接受一小部分的修改。然而，作為護甲的設計只是為了減少多餘的重量。<BR>所以你並不能很好的在這有限的空間中使用護目鏡與面具的功能。
 
-tc.research_name.TD.VOIDROBE=漂白虚空长袍
-tc.research_text.TD.VOIDROBE=减少50的黑暗色
-tc.research_page.TD.voidrobe.1=当你在坩埚中尝试你的研究时，一些不必要的溢出摧毁了你一套刚要制做而成的完美的长袍杰作，它从中提取了所有颜色.然而，这可能会是混合使用的新尝试<BR>虚空长袍, 虽然可以进行染色但却十分黑暗显得十分沉闷，无论你使用了多少的染料.也许他们需要在坩埚中进行沐浴洗净.
+tc.research_name.TD.VOIDROBE=漂白虛空長袍
+tc.research_text.TD.VOIDROBE=減少50的黑暗色
+tc.research_page.TD.voidrobe.1=當你在坩堝中嘗試你的研究時，一些不必要的溢出摧毀了你一套剛要制做而成的完美的長袍傑作，它從中提取了所有顏色。然而，這可能會是混合使用的新 嘗試<BR>虛空長袍，雖然可以進行染色但卻十分黑暗顯得十分沉悶，無論你使用了多少的染料。也許他們需要在坩堝中進行沐浴洗淨。
 
-tc.research_name.TD.THAUMIUMROBE=神秘使长袍
-tc.research_text.TD.THAUMIUMROBE=教徒的线索
-tc.research_page.TD.thaumrobe.1=一段时间，你一直在挣扎在你的长袍与其他护甲中进行选择，选择着防御或者效果.从现在开始再也不用！最近血腥教徒长袍的设计试验中揭示了这个谜题，它将同时拥有两种效果<BR>以某些神秘护甲与神秘使长袍进行了重塑，创建了一套轻盈的护甲长袍，它提供了对物理与魔法伤害的保护<BR>在这期间兜帽将获得好处，即拥有制造它的护目镜的效果<BR>这种护甲可以进行染色.
+tc.research_name.TD.THAUMIUMROBE=秘術使長袍
+tc.research_text.TD.THAUMIUMROBE=秘術使的線材
+tc.research_page.TD.thaumrobe.1=一段時間，你一直在掙扎在你的長袍與其他護甲中進行選擇，選擇著防禦或者效果。從現在開始再也不用！最近血腥教徒長袍的設計試驗中揭示了這個謎題，它將同時擁有兩種效果<BR>以某些神秘護甲與神秘使長袍進行了重塑，創建了一套輕盈的護甲長袍，它提供了對物理與魔法傷害的保護<BR>在這期間兜帽將獲得好處，即擁有製造它的護目鏡的效果<BR>這種護甲可以進行染色。
 #
-tc.research_name.TD.THAUMIUMBOOTS=神秘探险者之靴
-tc.research_text.TD.THAUMIUMBOOTS=朝着正确方向迈进一步
-tc.research_page.TD.thaumboots.1=旅行者之靴已经带给你很好的服务，但它保护的形式仍有许多不足之处.你的进步与对神秘注魔的坚持有着密不可分的关系.<BR>这双杰出的靴子为你提供了轻盈的速度减少了对旅行者之靴历史遗留下来的问题.
+tc.research_name.TD.THAUMIUMBOOTS=秘術探險者之靴
+tc.research_text.TD.THAUMIUMBOOTS=向正確方向邁出一步
+tc.research_page.TD.thaumboots.1=旅人之靴已經帶給你很好的服務，但它保護的形式仍有許多不足之處。你的進步與對秘術注魔的堅持有著密不可分的關係。<BR>這雙傑出的靴子為你提供了輕盈的速度減少了對旅人之靴歷史遺留下來的問題。
 
-tc.research_name.TD.VOIDBOOTS=虚空漫游者之靴
-tc.research_text.TD.VOIDBOOTS=完成设置
-tc.research_page.TD.voidboots.1=虚空神秘使长袍可能有你想要的一切-令人舒适而显不安的布料，拥有好的Vis减免，看似无底的扭曲与其坚固的防护能力.但它却没有一双可以搭配的靴子，你认为具备这样能力的靴子应该是会随时间推移进行自动修复的.<BR>运用你对神秘探险者之靴使用相同的方法使它达到与虚空长袍一样的水平复有平滑的光泽.随着速度大幅度的增加与掉落伤害的减少，它将使你飞跃原本无法飞跃的高楼大厦，但要确保你能更得上它的节奏.
+tc.research_name.TD.VOIDBOOTS=虛空漫遊者之靴
+tc.research_text.TD.VOIDBOOTS=完成設置
+tc.research_page.TD.voidboots.1=虛空秘術使長袍可能有你想要的一切 - 令人舒適而顯不安的布料，擁有好的可見減免，看似無底的扭曲與其堅固的防護能力但它卻沒有一雙可以搭配的靴子，你認為具備這樣能力的靴子應該是會隨時間推移進行自動修復的。<BR>運用你對秘術探險者之靴使用相同的方法使它達到與虛空長袍一樣的水平复有平滑的光澤。隨著速度大幅度的增加與掉落傷害的減少，它將使你飛躍原本無法飛躍的高樓大廈，但要確保你能更得上它的節奏。
 #
-tc.research_name.TD.CRIMSON=血腥护甲锻造
-tc.research_text.TD.CRIMSON=教派的保护
-tc.research_page.TD.crimson.1=通过对血腥教徒与血腥骑士提供的血腥仪式这本书籍仔细的研究你发现了破译其他章节的关键，揭示更多的知识.<BR>这一发现已经由崇拜教徒的铁匠们制造出来的护甲作为了技术参考.也许你低估了他们在神秘中知识和技能.<BR>对于如此复杂的护甲，你希望能像制造血腥护甲一样简单手册会告诉你料想.也许你将能够利用你对魔法精通的技术来改善他们.
-tc.research_page.TD.crimson.2=虽然靴子很容易改造，不过你‘放心’你的大多数教徒护甲不会在这个过程中受到持续过多的伤害.<BR>你可能需要仔细看看他们在外域之前的事情以便你破译其他内容.建议谨慎.<BR>然而，也有其他设置在书页中，你可能以前没有见过，以及损坏和丢失的书页.也许还有其他线索来解码-它可能是努力的通过教徒凑齐一些碎片.
+tc.research_name.TD.CRIMSON=血腥護甲鍛造
+tc.research_text.TD.CRIMSON=教派的保護
+tc.research_page.TD.crimson.1=通過對血腥教徒與血腥騎士提供的血腥儀式這本書籍仔細的研究你發現了破譯其他章節的關鍵，揭示更多的知識。<BR>這一發現已經由崇拜教徒的鐵匠們製造出來的護甲作為了技術參考。也許你低估了他們在神秘中知識和技能。<BR>對於如此複雜的護甲，你希望能像製造血腥護甲一樣簡單手冊會告訴你料想。也許你將能夠利用你對魔法精通的技術來改善他們。
+tc.research_page.TD.crimson.2=雖然靴子很容易改造，不過你'放心'你的大多數教徒護甲不會在這個過程中受到持續過多的傷害。<BR>你可能需要仔細看看他們在外域之前的事情以便你破譯其他內容建議謹慎<BR>然而，也有其他設置在書頁中，你可能以前沒有見過，以及損壞和丟失的書頁也許還有其他線索來解碼 - 它可能是努力的通過教徒湊齊一些碎片。
 tc.research_page.TD.crimson.3=血腥护甲似乎是用类似附魔的布匹材料编织而成的.在这个基础上它应该是比较容易复杂的.<BR>然而，在这个过程中似乎损害了它的能力有效的Vis减免.
 
 
@@ -284,4 +284,3 @@ tc.research_name.TD.VOIDFORTRESS=虚空神秘使法袍
 tc.research_text.TD.VOIDFORTRESS=外域风情
 tc.research_name.TD.BOOTSTRAVELLER=旅行者之靴
 tc.research_text.TD.BOOTSTRAVELLER=专业行走设备
-
