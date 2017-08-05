@@ -87,6 +87,7 @@ public class ItemRunicArmorPrimal extends ItemRunicArmor implements IRevealer, I
 		int priority = 0;
 		double ratio = this.damageReduceAmount / 25.0D;
 	      
+		/*
 	    if (getUpgrade(armor) == 5 || getUpgrade2(armor) == 5 || getUpgrade3(armor) == 5) {
 		    if ( (getUpgrade(armor) == 5 && getUpgrade2(armor) == 5) 
 		    	|| (getUpgrade(armor) == 5 && getUpgrade3(armor) == 5) 
@@ -103,8 +104,9 @@ public class ItemRunicArmorPrimal extends ItemRunicArmor implements IRevealer, I
 		    	priority = 1;
 		        ratio = this.damageReduceAmount / 12.5D;
 		    }
-	    }
-	    else if (source.isUnblockable())
+	    }*/
+	    
+	    if (source.isUnblockable())
 	      {
 	        priority = 0;
 	        ratio = 0.0D;
@@ -116,6 +118,7 @@ public class ItemRunicArmorPrimal extends ItemRunicArmor implements IRevealer, I
 	@Override
 	public int getArmorDisplay(EntityPlayer player, ItemStack armor, int slot) {
 	    int dra = ((ItemArmor)armor.getItem()).damageReduceAmount;
+	    /*
 	    if (getUpgrade(armor) == 5 || getUpgrade2(armor) == 5 || getUpgrade3(armor) == 5) {
 		    if ( (getUpgrade(armor) == 5 && getUpgrade2(armor) == 5)
 	    		|| (getUpgrade(armor) == 5 && getUpgrade3(armor) == 5)
@@ -126,7 +129,7 @@ public class ItemRunicArmorPrimal extends ItemRunicArmor implements IRevealer, I
 		    else {
 		    	dra *= 2;
 		    }
-	    }
+	    }*/
 		return dra;
 	}
 	
@@ -201,7 +204,7 @@ public class ItemRunicArmorPrimal extends ItemRunicArmor implements IRevealer, I
 	
     public boolean onItemUse(ItemStack item, EntityPlayer player, World world, int par4, int par5, int par6, int par7, float par8, float par9, float par10)
     {
-    	if (this.getUpgrade(item) > -1 && this.getUpgrade2(item) > -1 &&this.getUpgrade3(item) > -1) {
+    	if (this.getUpgrade(item) > -1 && this.getUpgrade2(item) > -1 && this.getUpgrade3(item) > -1) {
     		int u1 = this.getUpgrade(item);
     		int u2 = this.getUpgrade2(item);
     		int u3 = this.getUpgrade3(item);
@@ -277,6 +280,12 @@ public class ItemRunicArmorPrimal extends ItemRunicArmor implements IRevealer, I
 						new AttributeModifier(uuid, "Runic speed", 0.03, 0)); //haste1/2/3 is 0.015/0.03/0.045
 			}
 		}
+		if (getUpgrade(armor) == 10 || getUpgrade2(armor) == 10 || getUpgrade3(armor) == 10) {
+			map.put(SharedMonsterAttributes.attackDamage.getAttributeUnlocalizedName(), 
+					new AttributeModifier(uuid, "Runic ravager", 2, 0));;
+		}
+		
+		
     	//map.put(SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(),new AttributeModifier(uuid, "Runic knockback", this.getArmorDisplay(null, armor, aType) / 20.0, 0)); 
 		//this one scales with Hardened effect, but starts lower. Keeping it for reference
 		
@@ -296,13 +305,21 @@ public class ItemRunicArmorPrimal extends ItemRunicArmor implements IRevealer, I
    			}
    			if (player.inventory.hasItemStack(new ItemStack(ConfigItems.itemEldritchObject, 1, 0))) {
    				if (player.inventory.hasItemStack(new ItemStack(ConfigItems.itemEldritchObject, 1, 3))) {
-   	   				return "thaumicdyes:textures/models/guardian_robe_armor_warden1.png";
-   	   			}	
-   				return "thaumicdyes:textures/models/guardian_robe_armor2.png";
+   					if (checkHardened(stack)) {
+   						return "thaumicdyes:textures/models/guardian_robe_armor_warden.png";
+   					}
+   	   				return "thaumicdyes:textures/models/guardian_robe_armor_warden_t.png";
+   	   			}
+   				if (checkHardened(stack)) {
+   					return "thaumicdyes:textures/models/guardian_robe_armor1.png";
+				}
+   				return "thaumicdyes:textures/models/guardian_robe_armor1_t.png";
    			}
    		}
-   		
-        return "thaumicdyes:textures/models/guardian_robe_armor1.png";
+   		if (checkHardened(stack)) {
+   			return "thaumicdyes:textures/models/guardian_robe_armor.png";
+		}
+        return "thaumicdyes:textures/models/guardian_robe_armor_t.png";
         
         /*
          * /guardian_robe_armor - flat
@@ -357,5 +374,38 @@ public class ItemRunicArmorPrimal extends ItemRunicArmor implements IRevealer, I
 
 	      return this.model;
 	   }
+	
+	public static boolean checkHardened(ItemStack armor) {
+		
+		if (getUpgrade(armor) == 5 || getUpgrade2(armor) == 5 || getUpgrade3(armor) == 5) {
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean isBookEnchantable(final ItemStack armor, final ItemStack book) {
+		if (checkHardened(armor)) {
+			return true;
+		}
+        return false;
+    }
+	
+	public boolean isItemTool(ItemStack armor) {
+		if (checkHardened(armor)) {
+			return true;
+		}
+        return false;
+    }
+	
+	
+	//put a check in - if armour has enchants but not hardened, wipe enchants
+	public void onUpdate(ItemStack stack, World world, Entity entity, int par4, boolean par5) {
+		//stack.hasTagCompound();
+		//stack.isItemEnchanted();
+		if ( !checkHardened(stack) && stack.isItemEnchanted() ) {
+			stack.stackTagCompound.removeTag("ench");
+		}
+		
+	}
 
 }

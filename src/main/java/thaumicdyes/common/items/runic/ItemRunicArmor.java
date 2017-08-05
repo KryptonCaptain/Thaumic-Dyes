@@ -46,10 +46,10 @@ public class ItemRunicArmor extends ItemArmor implements ISpecialArmor, IRunicAr
         MinecraftForge.EVENT_BUS.register(this);
         this.aType = k;
     }
-    
+    /*
     public boolean isDamageable() {
         return false;
-    }
+    }*/
     
     @SideOnly(Side.CLIENT)
     public void registerIcons(final IIconRegister ir) {
@@ -102,6 +102,10 @@ public class ItemRunicArmor extends ItemArmor implements ISpecialArmor, IRunicAr
         return false;
     }
     
+    public boolean isItemTool(ItemStack par1ItemStack) {
+        return false;
+    }
+    
     /*
     public ArmorProperties getProperties(final EntityLivingBase player, final ItemStack armor, final DamageSource source, final double damage, final int slot) {
         int dra = ((ItemArmor)armor.getItem()).damageReduceAmount;
@@ -121,7 +125,7 @@ public class ItemRunicArmor extends ItemArmor implements ISpecialArmor, IRunicAr
       if (getUpgrade(armor) == 5)
       {
         priority = 1;
-        ratio = this.damageReduceAmount / 12.5D; //more classic manual values
+        ratio = this.damageReduceAmount*2 / 25.0D; //more classic manual values
       }
       else if (source.isUnblockable())
       {
@@ -162,6 +166,10 @@ public class ItemRunicArmor extends ItemArmor implements ISpecialArmor, IRunicAr
 						new AttributeModifier(uuid, "Runic speed", 0.03, 0)); //haste1/2/3 is 0.015/0.03/0.045
 			}
 		}
+		if (getUpgrade(armor) == 10 ) {
+			map.put(SharedMonsterAttributes.attackDamage.getAttributeUnlocalizedName(), 
+					new AttributeModifier(uuid, "Runic ravager", 2, 0));;
+		}
     	//map.put(SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(),new AttributeModifier(uuid, "Abyssal modifier " + aType, this.getArmorDisplay(null, armor, aType) / 20.0, 1)); 
 		//this one scales with Hardened effect, but starts lower. Keeping it for reference
 		return map;
@@ -196,6 +204,13 @@ public class ItemRunicArmor extends ItemArmor implements ISpecialArmor, IRunicAr
             }
         }
     }
+    
+    /*
+    @SideOnly(Side.CLIENT)
+    public boolean hasEffect(ItemStack stack)
+    {
+        return false;
+    }*/
     
     public static int getUpgrade(final ItemStack armor) {
         if (armor.hasTagCompound() && armor.stackTagCompound.hasKey("upgrade")) {

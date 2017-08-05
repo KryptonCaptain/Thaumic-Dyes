@@ -74,10 +74,10 @@ item.HelmetCultistRanger.mask.1=守卫
 
 //Experimental
 item.ItemHelmetRunic.name=符文头盔
-item.ItemChestRunic.name=符文头盔
+item.ItemChestRunic.name=符文胸甲
 item.ItemLegsRunic.name=符文护腿
 item.ItemBootsRunic.name=符文靴子
-item.ItemGogglesRunic.name=符文靴子
+item.ItemGogglesRunic.name=符文揭示之护目镜
 item.ItemBootsTravellerRunic.name=符文旅行者之靴
 
 item.runic.upgrade.0= - 没有升级
@@ -85,25 +85,28 @@ item.runic.upgrade.1= - 狂战士
 item.runic.upgrade.2= - 护盾联结
 item.runic.upgrade.3= - 动力调节
 item.runic.upgrade.4= - 自我恢复
-item.runic.upgrade.5= - 坚毅
+item.runic.upgrade.5= - 意志坚定
 item.runic.upgrade.6= - 紧急救护
-item.runic.upgrade.7= - //坚定（消除蓄积的效果+被动防止击退？）
-item.runic.upgrade.8= - //维护者(召唤自定义守护者?)
-item.runic.upgrade.9= - 纳米机械,孩子
+item.runic.upgrade.7= - 屹立不倒
+item.runic.upgrade.8= - 活力四射
+item.runic.upgrade.9= - 碌碌无为
 
 //Legacy TX
-item.ItemMaskEvil.name=残酷面具(未完成)
-death.attack.witherMask=%1$s 凋谢的远去 %2$s
+item.ItemMaskEvil.name=残酷面具
+death.attack.witherMask=%1$s 凋谢的离去 %2$s
 
 item.ItemHelmetRunicEnhanced.name=强化符文头盔
 item.ItemChestRunicEnhanced.name=强化符文胸甲
 item.ItemLegsRunicEnhanced.name=强化符文护腿
 item.ItemBootsRunicEnhanced.name=强化符文靴子
 
-item.ItemHelmetRunicPrimal.name=§5Abyssal 符文头盔§r
-item.ItemChestRunicPrimal.name=§5Abyssal 符文胸甲§r
-item.ItemLegsRunicPrimal.name=§5Abyssal 符文护腿§r
-item.ItemBootsRunicPrimal.name=§5Abyssal 符文靴子§r
+item.ItemHelmetRunicPrimal.name=深渊符文头盔
+item.ItemChestRunicPrimal.name=深渊符文胸甲
+item.ItemLegsRunicPrimal.name=深渊符文护腿
+item.ItemBootsRunicPrimal.name=深渊符文靴子
+
+//unused
+tdyes.nameAppend=扭曲
 
 
 ///////////
@@ -111,7 +114,7 @@ item.ItemBootsRunicPrimal.name=§5Abyssal 符文靴子§r
 ///////////
 
 # Categories 
-tc.research_category.DYES=神秘染料
+tc.research_category.DYES=神秘染料 
  
 # Research 
 tc.research_name.TD.DYEDROBE=血腥教徒长袍
@@ -183,11 +186,9 @@ tc.research_page.TD.crimson.1=通过对血腥教徒与血腥骑士提供的血�
 tc.research_page.TD.crimson.2=虽然靴子很容易改造，不过你‘放心’你的大多数教徒护甲不会在这个过程中受到持续过多的伤害.<BR>你可能需要仔细看看他们在外域之前的事情以便你破译其他内容.建议谨慎.<BR>然而，也有其他设置在书页中，你可能以前没有见过，以及损坏和丢失的书页.也许还有其他线索来解码-它可能是努力的通过教徒凑齐一些碎片.
 tc.research_page.TD.crimson.3=血腥护甲似乎是用类似附魔的布匹材料编织而成的.在这个基础上它应该是比较容易复杂的.<BR>然而，在这个过程中似乎损害了它的能力有效的Vis减免.
 
-
 tc.research_name.TD.CRIMSONCLERIC=血腥邪徒长袍
 tc.research_text.TD.CRIMSONCLERIC=异教者
 tc.research_page.TD.crimsonCleric.1=唱着奇怪的诗句，藏在长袍中，血腥教徒们采取了主动的方式解开了远古者的秘密.目前还不清楚他们最初是如何展开仪式的，但你的观察表明，他们正在尝试用自己的生命力量，为这最危险的做法加油吧.谢天谢地，他们似乎错过了完成仪式的一步关键，至少现在如此...
-
 
 tc.research_name.TD.CRIMSONKNIGHT=血腥邪徒护甲
 tc.research_text.TD.CRIMSONKNIGHT=血腥十字军
@@ -224,15 +225,7 @@ tc.research_page.TD.crimsonBanner.1=虽然旗帜只是你家中一个优秀的�
 tc.research_name.TD.RUNICARMOR=符文护甲
 tc.research_text.TD.RUNICARMOR=防护遗产
 tc.research_page.TD.RUNICARMOR.1=你从研究中发现了符文护甲.这个名字可能是一个误导，因为它不是传统意义上的护甲，而是一系列的特征，当你穿戴它时将拥有者类似封条似的防护层功能.<BR>这些设计创造出了一个神奇的魔力能量屏障，可以防止大多数类型的伤害.护甲的防护层提供了一个打击点，首先伤害从防护层中减去，保护穿戴者免受伤害.一旦其耗尽，穿戴着将开始正常受到伤害.
-tc.research_page.TD.RUNICARMOR.2=防护层需要随着时间推移而恢复,要求§2Terra§0 和 §eAer§0 vis来恢复其能力，但即使其防护层的能力耗尽护甲依旧会提供大致与皮革套相同的护甲值.<BR>该护甲不能保护溺水、饥饿或类似的环境伤害.<BR>由于它的性质，护甲不可像正常一样令人陶醉，但你肯定有办法提高它的有效性-你只需要发现它们.
-
-tc.research_name.TD.RUNICARMORUPGRADES=符文护甲升级
-tc.research_text.TD.RUNICARMORUPGRADES=最强防御！
-tc.research_page.TD.RUNICARMORUPGRADES.1=提高符文护甲已经被证明比预想中的容易.你已经放下了其的几个扩增，可以应用到多个方面，其实有一些是从你早期的符文实验中获得的小玩意了. <BR>然而，只有一个单一的增强却只能进行一次应用.看来神秘使们有些时候已经超出了自身的境界.<BR>值得注意的是对于非被动升级，放置相同的所有碎片可以增加额外的未知效果.因此，你指责有如此接近的‘魔力共鸣’.
-tc.research_page.TD.RUNICARMORUPGRADES.2=§n狂战士§r<BR>当你的符文防护层被打破时，它会释放一个魔法力量进入它的佩戴者，将持续数秒.这种效果的强度随着升级而变化.<BR> 这个效果有20秒的冷却时间.<BR>§n护盾联结§r<BR>这个升级增加了50%护盾强度.
-tc.research_page.TD.RUNICARMORUPGRADES.3=§n动力调节§r<BR>当你的符文防护层被打破时，这个能力会被释放产生爆炸.爆炸的伤害取决于你有多少升级.<BR>这个效果有30秒冷却时间.<BR>§n自我恢复§r<BR>当你的符文防护层被打破时，将释放一个再生的能量脉冲到它的佩戴者身上，将持续数秒.这种效果的强度取决于升级. <BR>这个效果有30秒的冷却时间.
-tc.research_page.TD.RUNICARMORUPGRADES.4=§n坚毅§r<BR>这个效果会使你的护甲的防护层进行防护，这种效果的强度随着升级而变化.<BR>§n紧急救护§r<BR>当你的符文防护层被打破时，这个升级将立刻给予你8点（或更多）防护层..每一个带有符文护盾的护甲也会增加8点防护层. <BR>这个效果有一二分钟的冷却时间.
-tc.research_page.TD.RUNICARMORUPGRADES.5=Enhanced Runic Armor is a masterwork of your magical prowess, and upgrades will only make it stronger, but how strong is it? To make work easier for future thaumaturges, you've included some of your calculations.<LINE>A fully §nHardened§r set will provide the wearer with a full armor bar.<BR>Two §nShield Nexus§r upgrades will double the maximum shielding of a piece.<BR>Slotting seven §nEmergency Shielding§r 增强符文护甲是一个杰作，随着你的魔法能力升级会使它变得更强，但是究竟有多强呢？为了使未来的操作更利于神秘使，你已经有了一些初步的计算.<LINE>A fully §n坚毅§r 设计一套完整的护甲提供给佩戴者.<BR>Two §n护盾联结§r 升级将增加最大防护层强度.<BR>Slotting seven §n紧急救护§r 升级提供了恢复防护层的能力-破坏其时进行增强.
+tc.research_page.TD.RUNICARMOR.2=防护层需要随着时间推移而恢复,要求§2Terra§0和§eAer§0vis来恢复其能力，但即使其防护层的能力耗尽护甲依旧会提供大致与皮革套相同的护甲值.<BR>该护甲不能保护溺水、饥饿或类似的环境伤害.<BR>由于它的性质，护甲不可像正常一样令人陶醉，但你肯定有办法提高它的有效性-你只需要发现它们.
 
 tc.research_name.TD.RUNICGOGGLES=符文揭示之护目镜
 tc.research_text.TD.RUNICGOGGLES=两全其美
@@ -243,15 +236,47 @@ tc.research_text.TD.RUNICBOOTSTRAVELLER=两全其美
 tc.research_page.TD.RUNICBOOTSTRAVELLER.1=对你而言，受符文护甲保护是至关重要的，你开始想念穿戴你的旅行者之靴获得的速度提升.为什么不两者同时拥有呢？<BR>通过将符文靴子的能力注入旅行者之靴中，使你可以享尽他们所带来的好处.<BR>你还没有成功的重复这个过程使其他通过注入增强的靴子也复有同样的功能，但也许你会有更好的运气在未来.
 
 
+tc.research_name.TD.RUNICARMORUPGRADES=符文护甲升级
+tc.research_text.TD.RUNICARMORUPGRADES=绝对防御！
+tc.research_page.TD.RUNICARMORUPGRADES.1=增加符文护甲的应用已经被证明比预期中的容易，你已经发现了护甲中的一些插槽，可以通过它作为桥梁，其中有一些则是你早期符文实验的小玩意。然而，就目前而言，只有一个等级的增强仅能使用一次。看来魔法有时候也还有自己的理智而言。 
+tc.research_page.TD.RUNICARMORUPGRADES.2=然而，只有一个单一的增强却只能进行一次应用.看来神秘使们有些时候已经超出了自身的境界.<BR>值得注意的是对于非被动升级，放置相同的所有碎片可以增加额外的未知效果.因此，你指责有如此接近的‘魔力共鸣’.
+tc.research_page.TD.RUNICARMORUPGRADES.a1=§n狂战士§r<BR>Type: Shield breach<BR>当你的符文防护层被打破时，它会释放一个魔法力量进入它的佩戴者，将持续数秒.这种效果的强度随着升级而变化。<BR> 这个效果有20秒的冷却时间。<BR>这个升级增加了符文护甲的应用，如果可能的话，能获得额外的叠加效果。
+tc.research_page.TD.RUNICARMORUPGRADES.a2=§n护盾联结§r<BR>类型：主动<BR>这个升级增加了50%护盾强度。<BR>这个升级增加了符文护甲的应用，如果可能的话，能获得额外的叠加效果。
+tc.research_page.TD.RUNICARMORUPGRADES.a3=§n动力调节§r<BR>类型：主动<BR>当你的符文防护层被打破时，这个能力会被释放产生爆炸.爆炸的伤害取决于你有多少升级。 <BR>这个效果有30秒冷却时间。<BR>这个升级增加了符文护甲的应用，如果可能的话，能获得额外的福利。
+tc.research_page.TD.RUNICARMORUPGRADES.a4=§n自我恢复§r<BR>类型：被动<BR>当你的符文防护层被打破时，将释放一个再生的能量脉冲到它的佩戴者身上，将持续数秒.这种效果的强度取决于升级。<BR>这个效果有30秒的冷却时间。<BR>这个升级增加了符文护甲的应用，如果可能的话，能获得额外的叠加效果。
+tc.research_page.TD.RUNICARMORUPGRADES.a5=§n坚毅§r<BR>T类型:主动<BR>这个升级每提升一级，符文护甲将增加最大符文护盾强度。<BR>这个升级增加了符文护甲的应用，如果可能的话，能获得额外的叠加效果。
+tc.research_page.TD.RUNICARMORUPGRADES.a6=§n意志坚定§r<BR>类型：被动 <BR>当你的符文护盾被攻破时，这个升级将立刻为你增加8点（或者更多）护盾。每升级一次增加获取的数量8点。<BR>这个能力有两分钟的冷却时间。<BR>这个升级增加了额外获取升级槽的能力。<BR>这个升级增加了符文护甲的应用，如果可能的话，能获得额外的叠加效果。
+tc.research_page.TD.RUNICARMORUPGRADES.a7=§n屹立不倒§r<BR>类型:主动<BR>这个升级赋予你20%击退抗性。 <BR>这个升级增加了符文护甲的应用，但仅能提升一次，所以不能获得额外的叠加效果。
+tc.research_page.TD.RUNICARMORUPGRADES.a8=§n活力四射§r<BR>类型：被动<BR>这个升级将增加最大生命值5格（10点）。<BR>这个升级增加了符文护甲的应用，但仅能提升一次，所以不能获得额外的叠加效果。
+tc.research_page.TD.RUNICARMORUPGRADES.a9=§n碌碌无为§r<BR>类型：主动<BR>这个升级为穿戴者提供一个速度效果，类似同名的附魔-急迫。它将给予穿戴者急迫II效果。<BR>这个升级增加了符文护甲的应用，但仅能提升一次，所以不能获得额外的叠加效果。
+tc.research_page.TD.RUNICARMORUPGRADES.E=增强符文护甲是一个杰作，随着你的魔法能力升级会使它变得更强，但是究竟有多强呢？为了使未来的操作更利于神秘使，你已经有了一些初步的计算。<LINE><LINE>A fully §n坚毅§r 设计一套完整的护甲提供给佩戴者.<BR>Two §n护盾联结§r 升级将增加最大防护层强度.<BR>Slotting seven §n紧急救护§r 升级提供了恢复防护层的能力-破坏其时进行增强.
+
 
 --Enhanced Runic Armor
 tc.research_name.TD.ENHANCEDRUNICARMOR=强化符文护甲
 tc.research_text.TD.ENHANCEDRUNICARMOR=挑战极限
 tc.research_page.TD.ENHANCEDRUNICARMOR.1=通过你的广泛研究，强化符文护甲已经离开了你对装备的了解范围，你何曾不想穿戴你的虚空长袍作为代替.不要气馁，你已经有一个‘合适’的构想能使强化符文护甲解决这么问题.<BR><BR>每个护甲每一个只能容纳一个强化，但允许使用两个升级进行增强获得更多的保护这种护甲也会像你的长袍一样被给予被动的削弱.只有一个隐情-成本.
-tc.research_page.TD.ENHANCEDRUNICARMOR.2=记住，强化符文护甲创造初衷是为了让护甲能得到增强.<BR><BR>如果你想要覆盖一个强化符文护甲的能力，你可以手持其右键单击并且互换位置进行增强.其次第一个将会显示在上面.<BR>
+tc.research_page.TD.ENHANCEDRUNICARMOR.2记住，强化符文护甲创造初衷是为了让护甲能得到增强.<BR><BR>如果你想要覆盖一个强化符文护甲的能力，你可以手持其右键单击并且互换位置进行增强.其次第一个将会显示在上面.<BR>
 //<BR>[配方待定...留下反馈]
 
 
+--Primal Runic Armor
+tc.research_name.TD.PRIMALRUNICARMOR=深渊符文护甲
+tc.research_text.TD.PRIMALRUNICARMOR=盯着深渊看得太久...
+tc.research_page.TD.PRIMALRUNICARMOR.1=<IMG>thaumcraft:textures/misc/eldritchajor2.png:0:255:255:255:.5</IMG><BR>§o        §msu nioj su emoceb
+//translator note - write "become us join us" after the §m, either forward or backward, whatever works best
+tc.research_page.TD.PRIMALRUNICARMOR.2=这是一个错误的决定。<BR>当你有机会的时候你真的应该停下来.<BR>你应该停下来...<BR> <BR>§o§m保护珍珠保护珍珠保护珍珠<BR> §r§0<BR>你干了些什么...？
+tc.research_page.TD.PRIMALRUNICARMOR.3=你将强化符文护甲与虚空神秘使套通过原始珍珠作为媒介创造了一套黑暗而又强大的护甲。它能克服一些增强时的缺陷，具有更大的能量。<BR>不过，只是有些故事...关于它的.你能听到附加微弱的话语声，在你的视线及空气中的角落里移动的影子，你无法看清它们是如何进行移动的...<BR>最好一次只穿戴其中的一件，而不是为了增加生存时间.除此以外，任何东西都有可能对穿戴者带来难以计数的影响。
+
+
+
+tc.research_name.TD.MASKEVIL=残酷面具
+tc.research_text.TD.MASKEVIL=我看到了你的终结
+tc.research_page.TD.maskEvil.1=这种邪恶的面具可以产生魔法杀死你看到的任何生物。确切的效果各不相同，但如果你有足够长的时间去凝视生物，就会使其产生痛苦，虚弱直至死亡.<BR>你的眼睛会释放一道黑色的闪电延伸到你的目标，但你的神秘使同伴们声称你一定是产生了幻觉.
+
+
+
+§§§
 
 #Copied research 
 tc.research_name.TD.UUUU=
@@ -260,7 +285,7 @@ tc.research_page.TD.UUUU=
 tc.research_name.TD.ARMORFORTRESS=神秘要塞甲胄 
 tc.research_text.TD.ARMORFORTRESS=百害莫侵
 tc.research_name.TD.VOIDMETAL=虚空金属
-tc.research_text.TD.VOIDMETAL=奇怪，它摸起来应该是凉的... 
+tc.research_text.TD.VOIDMETAL=奇怪，它摸起来应该是凉的...
 tc.research_name.TD.THAUMIUM=神秘锭
 tc.research_text.TD.THAUMIUM=魔导金属
 tc.research_name.TD.OUTERARRIVAL=外域
@@ -269,4 +294,3 @@ tc.research_name.TD.VOIDFORTRESS=虚空神秘使法袍
 tc.research_text.TD.VOIDFORTRESS=外域风情
 tc.research_name.TD.BOOTSTRAVELLER=旅行者之靴
 tc.research_text.TD.BOOTSTRAVELLER=专业行走设备
-

@@ -64,14 +64,14 @@ public class ItemRunicArmorEnhanced extends ItemRunicArmor implements IVisDiscou
 		double ratio = this.damageReduceAmount / 25.0D;
 	      
 	    if (getUpgrade(armor) == 5 || getUpgrade2(armor) == 5) {
-		    if (getUpgrade(armor) == 5 && getUpgrade2(armor) == 5) {
+		    /*if (getUpgrade(armor) == 5 && getUpgrade2(armor) == 5) {
 		    	priority = 1;
 		        ratio = this.damageReduceAmount / 8.3D; //more classic manual values, 25/3
 		    }
-		    else {
+		    else {*/
 		    	priority = 1;
-		        ratio = this.damageReduceAmount / 12.5D;
-		    }
+		        ratio = this.damageReduceAmount + 1 / 25.0D;
+		    //}
 	    }
 	    else if (source.isUnblockable())
 	      {
@@ -85,13 +85,9 @@ public class ItemRunicArmorEnhanced extends ItemRunicArmor implements IVisDiscou
 	@Override
 	public int getArmorDisplay(EntityPlayer player, ItemStack armor, int slot) {
 	    int dra = ((ItemArmor)armor.getItem()).damageReduceAmount;
+	    
 	    if (getUpgrade(armor) == 5 || getUpgrade2(armor) == 5) {
-		    if (getUpgrade(armor) == 5 && getUpgrade2(armor) == 5) {
-		    	dra *= 3;
-		    }
-		    else {
-		    	dra *= 2;
-		    }
+	    	dra += 1;
 	    }
 		return dra;
 	}
@@ -161,6 +157,7 @@ public class ItemRunicArmorEnhanced extends ItemRunicArmor implements IVisDiscou
 	
     public boolean onItemUse(ItemStack item, EntityPlayer player, World world, int par4, int par5, int par6, int par7, float par8, float par9, float par10)
     {
+    	
     	if (this.getUpgrade(item) > -1 && this.getUpgrade2(item) > -1) {
     		int u1 = this.getUpgrade(item);
     		int u2 = this.getUpgrade2(item);
@@ -196,6 +193,10 @@ public class ItemRunicArmorEnhanced extends ItemRunicArmor implements IVisDiscou
 				map.put(SharedMonsterAttributes.movementSpeed.getAttributeUnlocalizedName(), 
 						new AttributeModifier(uuid, "Runic speed", 0.03, 0)); //haste1/2/3 is 0.015/0.03/0.045
 			}
+		}
+		if (getUpgrade(armor) == 10 || getUpgrade2(armor) == 10 ) {
+			map.put(SharedMonsterAttributes.attackDamage.getAttributeUnlocalizedName(), 
+					new AttributeModifier(uuid, "Runic ravager", 2, 0));;
 		}
     	
     	//map.put(SharedMonsterAttributes.knockbackResistance.getAttributeUnlocalizedName(),new AttributeModifier(uuid, "Abyssal modifier " + aType, this.getArmorDisplay(null, armor, aType) / 20.0, 1)); 
