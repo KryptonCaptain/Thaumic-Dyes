@@ -80,6 +80,16 @@ item.ItemBootsRunic.name=符文靴子
 item.ItemGogglesRunic.name=符文揭示之护目镜
 item.ItemBootsTravellerRunic.name=符文旅行者之靴
 
+item.ItemHelmetRunicEnhanced.name=强化符文头盔
+item.ItemChestRunicEnhanced.name=强化符文胸甲
+item.ItemLegsRunicEnhanced.name=强化符文护腿
+item.ItemBootsRunicEnhanced.name=强化符文靴子
+
+item.ItemHelmetRunicPrimal.name=深渊符文头盔
+item.ItemChestRunicPrimal.name=深渊符文胸甲
+item.ItemLegsRunicPrimal.name=深渊符文护腿
+item.ItemBootsRunicPrimal.name=深渊符文靴子
+
 item.runic.upgrade.0= - 没有升级
 item.runic.upgrade.1= - 狂战士
 item.runic.upgrade.2= - 护盾联结
@@ -90,20 +100,18 @@ item.runic.upgrade.6= - 紧急救护
 item.runic.upgrade.7= - 屹立不倒
 item.runic.upgrade.8= - 活力四射
 item.runic.upgrade.9= - 碌碌无为
+item.runic.upgrade.10= - 讨伐
+
 
 //Legacy TX
 item.ItemMaskEvil.name=残酷面具
 death.attack.witherMask=%1$s 凋谢的离去 %2$s
 
-item.ItemHelmetRunicEnhanced.name=强化符文头盔
-item.ItemChestRunicEnhanced.name=强化符文胸甲
-item.ItemLegsRunicEnhanced.name=强化符文护腿
-item.ItemBootsRunicEnhanced.name=强化符文靴子
 
-item.ItemHelmetRunicPrimal.name=深渊符文头盔
-item.ItemChestRunicPrimal.name=深渊符文胸甲
-item.ItemLegsRunicPrimal.name=深渊符文护腿
-item.ItemBootsRunicPrimal.name=深渊符文靴子
+
+//other
+td.primalrunic.trigger=一股令人不安的耳语向你倾世着新的东西...
+
 
 //unused
 tdyes.nameAppend=扭曲
@@ -249,6 +257,8 @@ tc.research_page.TD.RUNICARMORUPGRADES.a6=§n意志坚定§r<BR>类型：被动 
 tc.research_page.TD.RUNICARMORUPGRADES.a7=§n屹立不倒§r<BR>类型:主动<BR>这个升级赋予你20%击退抗性。 <BR>这个升级增加了符文护甲的应用，但仅能提升一次，所以不能获得额外的叠加效果。
 tc.research_page.TD.RUNICARMORUPGRADES.a8=§n活力四射§r<BR>类型：被动<BR>这个升级将增加最大生命值5格（10点）。<BR>这个升级增加了符文护甲的应用，但仅能提升一次，所以不能获得额外的叠加效果。
 tc.research_page.TD.RUNICARMORUPGRADES.a9=§n碌碌无为§r<BR>类型：主动<BR>这个升级为穿戴者提供一个速度效果，类似同名的附魔-急迫。它将给予穿戴者急迫II效果。<BR>这个升级增加了符文护甲的应用，但仅能提升一次，所以不能获得额外的叠加效果。
+tc.research_page.TD.RUNICARMORUPGRADES.a10=§n讨伐§r<BR>类型：主动<BR>狂战士是一个好的开始，如果你的符文护盾被打破，它便给你一个优势-但有时你不能在等待中抓住机遇。<BR>符文的魅力也许集中在你的手上，给你任何武器，一点额外的力量。 但是，如果你想杀出一条血路，那你就必须使用拳头。<BR>这个升级增加了符文护甲的应用，但仅能提升一次，所以不能获得额外的叠加效果。
+
 tc.research_page.TD.RUNICARMORUPGRADES.E=增强符文护甲是一个杰作，随着你的魔法能力升级会使它变得更强，但是究竟有多强呢？为了使未来的操作更利于神秘使，你已经有了一些初步的计算。<LINE><LINE>A fully §n坚毅§r 设计一套完整的护甲提供给佩戴者.<BR>Two §n护盾联结§r 升级将增加最大防护层强度.<BR>Slotting seven §n紧急救护§r 升级提供了恢复防护层的能力-破坏其时进行增强.
 
 
@@ -267,6 +277,14 @@ tc.research_page.TD.PRIMALRUNICARMOR.1=<IMG>thaumcraft:textures/misc/eldritchajo
 //translator note - write "become us join us" after the §m, either forward or backward, whatever works best
 tc.research_page.TD.PRIMALRUNICARMOR.2=这是一个错误的决定。<BR>当你有机会的时候你真的应该停下来.<BR>你应该停下来...<BR> <BR>§o§m保护珍珠保护珍珠保护珍珠<BR> §r§0<BR>你干了些什么...？
 tc.research_page.TD.PRIMALRUNICARMOR.3=你将强化符文护甲与虚空神秘使套通过原始珍珠作为媒介创造了一套黑暗而又强大的护甲。它能克服一些增强时的缺陷，具有更大的能量。<BR>不过，只是有些故事...关于它的.你能听到附加微弱的话语声，在你的视线及空气中的角落里移动的影子，你无法看清它们是如何进行移动的...<BR>最好一次只穿戴其中的一件，而不是为了增加生存时间.除此以外，任何东西都有可能对穿戴者带来难以计数的影响。
+
+tc.research_name.TD.PRIMALRUNIC=深渊之海
+tc.research_text.TD.PRIMALRUNIC=已经一无所有，还是穷途末路。
+tc.research_page.TD.PRIMALRUNIC.1=这个‘护甲’似乎对教徒们来说有一种不可思议的亵渎意义，当它们结合起来的时候一定不是巧合。<BR>这可能是以前就已经存在的，你难道只是重新发掘吗？或者你被一股即强大又无害的能量所吸引，一些黑色的实体超出了空白?<BR>所有这方面的研究都不容乐观，甚至开始模糊起来。你开始认为你的记忆出现了偏差...
+tc.research_page.TD.PRIMALRUNIC.2=§n奇异性状§r<BR>护甲中最奇特的性质就是在集齐整套时触发的连锁反应。然而，这或许已经超过了你的认知-当它们靠近某些涵盖电子的对象时，外观变会稍稍的改变。<BR>几乎就快知道它与他们的联系，但却缺乏某些形式或者需要更加黑暗的魔法。
+tc.research_page.TD.PRIMALRUNIC.3=§n硬化性状§r<BR>偶然间你从一本书籍中读到了关于对它们改进的描述，但是‘硬化’却十分令人困惑。虽然它的工作与符文护甲有关，但似乎由你开发出来的这一属性效果却被大大降低。<BR>你认为将它放置在你的深渊符文护甲上没有任何效果，直到有一天它和你的工作台相撞-从此它不仅仅浮现在你的周围。<BR>
+tc.research_page.TD.PRIMALRUNIC.4=看来，使用铁块作为基座在材料应用领域有着有着临界质量共鸣的效果，所有魔法能量都十分紧密。<BR>从某些经典的理论上讲如果加入珍珠来提高混沌行为进行附魔是无法实现的。<BR>但是，如果你能仔细的进行分析，你可能可以使用一种已经发现的手段进行附魔。如果注入物被去掉或者更替，那么附魔将终止，因为没有足够的物质去束缚它们。
+
 
 
 
