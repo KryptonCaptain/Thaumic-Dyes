@@ -722,22 +722,24 @@ public class ConfigResearch {
 				   (new AspectList()).add(Aspect.FIRE, 20).add(Aspect.AIR, 20), 
 				   new Object[]{
 						" g ",
-						" H ",
+						"nHn",
 						" g ",
 						'H',new ItemStack(ItemHandler.itemCultistKnightHelmetDyed),
-						'g',new ItemStack(Items.dye, 1, 8)
+						'g',new ItemStack(Items.dye, 1, 8),
+						'n', "nuggetIron"
 						});
 		
 		ShapedArcaneRecipe recipeSunKniChest = ThaumcraftApi.addArcaneCraftingRecipe("TD.SUNNYD",
 				   new ItemStack(ItemHandler.itemSunKnightChest), 
 				   (new AspectList()).add(Aspect.FIRE, 20).add(Aspect.AIR, 20),
 				   new Object[]{
-						" r ",
+						"nrn",
 						"rCr",
-						" y ",
+						"nyn",
 						'C',new ItemStack(ItemHandler.itemCultistKnightChestDyed),
 						'r',new ItemStack(Items.dye, 1, 1),
-						'y',new ItemStack(Items.dye, 1, 11)
+						'y',new ItemStack(Items.dye, 1, 11),
+						'n', "nuggetIron"
 						});
 		 
 		 new ResearchItem("TD.SUNNYD", "DYES", 
@@ -751,7 +753,6 @@ public class ConfigResearch {
 						  })
 				  .setParentsHidden("TD.DYEDKNIGHT")
 				  .setConcealed()
-				  .setHidden()
 				  .registerResearchItem();
 	   
    }
@@ -1350,7 +1351,7 @@ public class ConfigResearch {
       				        				 
       				  })
 			  .setParents("TD.PRIMALRUNICARMOR")
-			  .setLost()
+			  .setConcealed()
 			  .registerResearchItem();
       
 			      
