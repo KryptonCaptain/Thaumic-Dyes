@@ -299,16 +299,5 @@ tc.research_page.TD.maskEvil.1=A relic thought lost to time, this sinister mask 
 tc.research_name.TD.UUUU=
 tc.research_text.TD.UUUU=
 tc.research_page.TD.UUUU=
-tc.research_name.TD.ARMORFORTRESS=Thaumium Fortress Armor 
-tc.research_text.TD.ARMORFORTRESS=Nothing is getting in 
-tc.research_name.TD.VOIDMETAL=Void metal 
-tc.research_text.TD.VOIDMETAL=Strange, it should feel cold... 
-tc.research_name.TD.THAUMIUM=Magical Metallurgy 
-tc.research_text.TD.THAUMIUM=Where metals meet magic
-tc.research_name.TD.OUTERARRIVAL=The Outer Lands 
-tc.research_text.TD.OUTERARRIVAL=We are not in Kansas anymore
-tc.research_name.TD.VOIDFORTRESS=Void Thaumaturge Robes
-tc.research_text.TD.VOIDFORTRESS=Otherworldly Style
-tc.research_name.TD.BOOTSTRAVELLER=Boots of the Traveler
-tc.research_text.TD.BOOTSTRAVELLER=These boots were made for walking
+
 
