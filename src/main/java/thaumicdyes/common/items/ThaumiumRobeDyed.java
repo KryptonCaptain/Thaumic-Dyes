@@ -38,10 +38,7 @@ public class ThaumiumRobeDyed extends ItemArmor implements IRepairable, IRunicAr
    public IIcon iconHelm;
    public IIcon iconChest;
    public IIcon iconLegs;
-   public IIcon iconChestOver;
-   public IIcon iconLegsOver;
    public IIcon iconBlank;
-   public IIcon iconHelmOver;
    ModelBiped model1 = null;
    ModelBiped model2 = null;
    ModelBiped model = null;
@@ -53,13 +50,10 @@ public class ThaumiumRobeDyed extends ItemArmor implements IRepairable, IRunicAr
 
    @SideOnly(Side.CLIENT)
    public void registerIcons(IIconRegister ir) {
-      this.iconHelmOver = ir.registerIcon("thaumicdyes:icon/thaumium_robe_helm"); //
-      this.iconChestOver = ir.registerIcon("thaumicdyes:icon/thaumium_robe_chest"); //
-      this.iconLegsOver = ir.registerIcon("thaumicdyes:icon/thaumium_robe_legs"); //
-      this.iconBlank = ir.registerIcon("thaumicdyes:blank");
-      this.iconChest = ir.registerIcon("thaumicdyes:blank");
-      this.iconLegs = ir.registerIcon("thaumicdyes:blank");
-  	this.iconHelm = ir.registerIcon("thaumicdyes:blank");
+	this.iconHelm = ir.registerIcon("thaumicdyes:icon/thaumium_robe_helm"); //
+	this.iconChest = ir.registerIcon("thaumicdyes:icon/thaumium_robe_chest"); //
+	this.iconLegs = ir.registerIcon("thaumicdyes:icon/thaumium_robe_legs"); //
+	this.iconBlank = ir.registerIcon("thaumicdyes:blank");
    }
 
    public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
@@ -74,8 +68,17 @@ public class ThaumiumRobeDyed extends ItemArmor implements IRepairable, IRunicAr
    
    //helm over
    public IIcon getIconFromDamageForRenderPass(int par1, int par2) {
-     return super.armorType == 2?this.iconLegsOver:(super.armorType == 1?this.iconChestOver:(super.armorType == 0?this.iconHelmOver:(super.armorType == 2?this.iconLegs:(super.armorType == 1?this.iconChest:(super.armorType == 0?this.iconHelm:this.iconBlank)))));
-   }
+		if (super.armorType == 1 && par2 == 0) {
+			return this.iconChest;
+		}
+		if (super.armorType == 2 && par2 == 0) {
+			return this.iconLegs;
+		}
+		if (super.armorType == 0 && par2 == 0) {
+			return this.iconHelm;
+		}
+		return this.iconBlank;
+	}
 
    public EnumRarity getRarity(ItemStack itemstack) {
       return EnumRarity.rare;
@@ -83,8 +86,13 @@ public class ThaumiumRobeDyed extends ItemArmor implements IRepairable, IRunicAr
 
    public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4) {
       list.add(EnumChatFormatting.DARK_PURPLE + StatCollector.translateToLocal("tc.visdiscount") + ": " + this.getVisDiscount(stack, player, (Aspect)null) + "%");
-      super.addInformation(stack, player, list, par4);
+      infoColour.addColour(stack, player, list, par4);
+	   super.addInformation(stack, player, list, par4);
    }
+		public void addColour(ItemStack stack, EntityPlayer player, List list, boolean par4) {
+
+	}
+
 
    public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack) {
       return par2ItemStack.isItemEqual(ItemApi.getItem("itemResource", 2))?true:super.getIsRepairable(par1ItemStack, par2ItemStack);
