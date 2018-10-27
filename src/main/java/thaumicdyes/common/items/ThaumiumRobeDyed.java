@@ -194,16 +194,15 @@ public class ThaumiumRobeDyed extends ItemArmor implements IRepairable, IRunicAr
       }
    }
 
-   public void removeColor(ItemStack par1ItemStack) {
-      NBTTagCompound nbttagcompound = par1ItemStack.getTagCompound();
-      if(nbttagcompound != null) {
-         NBTTagCompound nbttagcompound1 = nbttagcompound.getCompoundTag("display");
-         if(nbttagcompound1.hasKey("color")) {
-            nbttagcompound1.removeTag("color");
-         }
-      }
-
-   }
+	public void removeColor(ItemStack par1ItemStack) {
+		NBTTagCompound nbttagcompound = par1ItemStack.getTagCompound();
+		if (nbttagcompound != null) {
+			NBTTagCompound nbttagcompound1 = nbttagcompound.getCompoundTag("display");
+			if (nbttagcompound1.hasKey("color")) {
+				nbttagcompound1.setInteger("color", 16777215);
+			}
+		}
+	}
 
    public void func_82813_b(ItemStack par1ItemStack, int par2) {
       NBTTagCompound nbttagcompound = par1ItemStack.getTagCompound();
