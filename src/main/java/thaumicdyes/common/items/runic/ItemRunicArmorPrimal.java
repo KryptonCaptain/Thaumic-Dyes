@@ -204,7 +204,8 @@ public class ItemRunicArmorPrimal extends ItemRunicArmor implements IRevealer, I
 	
     public boolean onItemUse(ItemStack item, EntityPlayer player, World world, int par4, int par5, int par6, int par7, float par8, float par9, float par10)
     {
-    	if (this.getUpgrade(item) > -1 && this.getUpgrade2(item) > -1 && this.getUpgrade3(item) > -1) {
+    	
+    	if (this.getUpgrade(item) > 0 || this.getUpgrade2(item) > 0 || this.getUpgrade3(item) > 0) {
     		int u1 = this.getUpgrade(item);
     		int u2 = this.getUpgrade2(item);
     		int u3 = this.getUpgrade3(item);

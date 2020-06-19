@@ -158,9 +158,10 @@ public class ItemRunicArmorEnhanced extends ItemRunicArmor implements IVisDiscou
     public boolean onItemUse(ItemStack item, EntityPlayer player, World world, int par4, int par5, int par6, int par7, float par8, float par9, float par10)
     {
     	
-    	if (this.getUpgrade(item) > -1 && this.getUpgrade2(item) > -1) {
+    	if (this.getUpgrade(item) > 0 || this.getUpgrade2(item) > 0) {
     		int u1 = this.getUpgrade(item);
     		int u2 = this.getUpgrade2(item);
+    		//System.out.println("En RSA: u1, u2: " + u1 + " " + u2);
     		item.stackTagCompound.setByte("upgrade2",(byte) u1);
     		item.stackTagCompound.setByte("upgrade",(byte) u2);
     		return true;
